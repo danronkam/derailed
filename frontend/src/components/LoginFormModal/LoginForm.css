@@ -8,3 +8,10 @@
     height: 30px;
     width: 60px;
   }
+
+#modal-content {
+  padding-top: 20px;
+  padding-bottom: 20px;
+  padding-left: 40px;
+  padding-right: 40px;
+}

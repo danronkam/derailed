@@ -3,8 +3,13 @@
   }
 
 li {
-  position: relative;
-  justify-content: space-between;
+  display: inline;
+  font-size: 15px;
+  margin-right: 5%;
+}
+
+li > a {
+  padding: 15px;
 }
 
 #top_left_logo {
@@ -15,6 +20,8 @@ li {
 }
 ul{
   list-style-type: none;
+  justify-content: space-between;
+
 }
 
 

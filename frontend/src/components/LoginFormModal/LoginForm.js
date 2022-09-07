@@ -36,15 +36,16 @@ function LoginForm() {
       <ul>
         {errors.map(error => <li key={error}>{error}</li>)}
       </ul>
+
       <label>
-        Username or Email
+        Email Address
         <input
           type="text"
           value={credential}
           onChange={(e) => setCredential(e.target.value)}
           required
         />
-      </label>
+      </label> <br></br>
       <label>
         Password
         <input
