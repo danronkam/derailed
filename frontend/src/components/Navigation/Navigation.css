@@ -1,0 +1,36 @@
+.profile-dropdown {
+    position: absolute;
+  }
+
+li {
+  position: relative;
+  justify-content: space-between;
+}
+
+#top_left_logo {
+  /* float: left; */
+  height: auto;
+  width: 45%;
+  margin-left: 5%;
+}
+ul{
+  list-style-type: none;
+}
+
+
+
+.navbar {
+  overflow: hidden;
+  background-color: white;
+  position: fixed; 
+  top: 0; /* Position the navbar at the top of the page */
+  left: 0;
+  width: 100%; /* Full width */
+  border-bottom: 1px solid lightgray;
+  align-items: center;
+  display: flex;
+  justify-content: space-between;
+  margin-top: 1%;
+  
+  /* margin-bottom: 2%; */
+}

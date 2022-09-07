@@ -2,8 +2,9 @@ import React, { useState } from 'react';
 import * as sessionActions from '../../store/session';
 import { useDispatch, useSelector } from 'react-redux';
 import { Redirect } from 'react-router-dom';
+import './LoginForm.css'
 
-function LoginFormPage() {
+function LoginForm() {
   const dispatch = useDispatch();
   const sessionUser = useSelector(state => state.session.user);
   const [credential, setCredential] = useState('');
@@ -53,12 +54,12 @@ function LoginFormPage() {
           required
         />
       </label>
-      <button type="submit">Log In</button>
+      <button type="submit" id='login_button'>Log In</button>
     </form>
   );
 }
 
-export default LoginFormPage;
+export default LoginForm;
 
 
 // import React, { useState } from "react";
