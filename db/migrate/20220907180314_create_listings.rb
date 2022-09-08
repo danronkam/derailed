@@ -10,7 +10,7 @@ class CreateListings < ActiveRecord::Migration[7.0]
       t.string :category, null: false
       t.string :sub_category, null: false
       t.string :condition, null: false
-      t.boolean :sold, null: false, default: false
+      t.boolean :sold, default: false
       t.string :tags
       t.string :description, null: false
 
@@ -25,6 +25,5 @@ class CreateListings < ActiveRecord::Migration[7.0]
     add_index :listings, :category
     add_index :listings, :sub_category
     add_index :listings, :condition
-    add_index :listings, :sold
   end
 end

@@ -1,15 +1,22 @@
-import React, { useEffect }  from "react";
-import { useSelector } from "react-redux";
-import { useDispatch } from "react-redux";
-import { Link } from "react-router-dom";
+import { useEffect }  from "react";
+import { useDispatch, useSelector } from "react-redux";
+import { Link, useParams } from "react-router-dom";
+import { fetchListing, getListing } from "../../store/listings";
 
 
-function ListingShow() {
+
+const ListingShow = () => {
     const dispatch = useDispatch()
+    const {listingId} = useParams()
+    const listing = useSelector(getListing(listingId))
 
+    useEffect(() => {
+        dispatch(fetchListing(listingId))
+    }, [listingId])
 
     return(
         <>
+        {/* <img src={listing.photoURL}></img> */}
         
         
         

@@ -1,34 +1,100 @@
 /*
-Export the following action constants and write the corresponding actions:
-
-1. `RECEIVE_LISTINGS` (corresponding action should have a `reports` payload)
-2. `RECEIVE_LISTING` (corresponding action should have a `report` payload)
-3. `REMOVE_LISTING` (corresponding action should have a `reportId` payload)
+action constants
 */
 
+export const RECEIVE_LISTINGS = 'listings/RECEIVE_LISTINGS'
+export const RECEIVE_LISTING = 'listings/RECEIVE_LISTING'
+export const REMOVE_LISTING =  'listings/REMOVE_LISTING'
+
+
+export const getListing = listingId => state => {
+    if(!state || !state.listings) {
+        return null
+    } else {
+        return state.listings[listingId]
+    }
+}
+
+export const getListings = state => {
+    if(!state.listings) {
+        return []
+    } else {
+        return Object.values(state.listings)
+    }
+}
 /* 
-Export a `getReport` selector that takes in a `reportId` and returns the
-specified report from the store.
-
-Export a `getReports` selector that returns an array of all the reports in the
-store.
+action functions
 */
-/* 
-Export the following functions with the specified parameters:
 
-1. `fetchListings`
-2. `fetchListing(listingId)`
-3. `createListing(listingData)`
-4. `updateListing(listingData)`
-5. `deleteListing(listingId)`
+export const fetchListings  = () => async dispatch =>{
+    const res = await fetch(`api/listings`)
+    const payload = await res.json()
+    dispatch({type: RECEIVE_LISTINGS, payload})
+}
 
-Each function should call `fetch` to perform the desired database operation and
-dispatch the appropriate action upon a successful response. (You do not need to
-do anything if the `fetch` response is unsuccessful.) 
-*/
+export const fetchListing = listingId => async dispatch => {
+    const res = await fetch(`api/listings/${listingId}`)
+    const payload = await res.json()
+    dispatch({type: RECEIVE_LISTING, payload})
+}
+
+export const createListing = listingData => async dispatch => {
+    const res = await fetch(`api/listings`, {
+        method: 'POST',
+        body: JSON.stringify(listingData),
+        headers: {
+            'Content-Type': 'application/json',
+            'Accept': 'application/json'
+        }
+    })
+    const listing = await res.json()
+    dispatch({type: RECEIVE_LISTING, listing})
+}
+
+export const updateListing = listingData => async dispatch => {
+    const res = await fetch(`api/listings/${listingData.id}`, {
+        method:'PATCH',
+        body: JSON.stringify(listingData),
+        headers: {
+            'Content-Type': 'application/json',
+            'Accept': 'application/json'
+        }
+    })
+    const listing = await res.json()
+    dispatch({type: RECEIVE_LISTING, listing})
+}
+
+export const deleteListing = listingId => async dispatch => {
+    const res = await fetch(`api/listings/${listingId}`, {
+        method: 'DELETE'
+    })
+    if(res.ok) {
+        dispatch({type: REMOVE_LISTING, listingId})
+    }
+}
 
 /*
-Export a `listingReducer` function as the default export. It should take in the
-old state and an action. It should appropriately handle all report actions, as
-defined in the test specs.
+reducer
 */
+
+const listingsReducer = (state = {}, action) => {
+    Object.freeze(state)
+    const newState = {...state}
+
+    switch(action.type){
+        case RECEIVE_LISTINGS:
+            return action.payload.listings
+
+        case RECEIVE_LISTING:
+                newState[action.payload.id] = action.payload
+                return newState
+        case REMOVE_LISTING:
+            delete newState[action.listingId]
+            return newState
+        default:
+            return state
+    }
+
+}
+
+export default listingsReducer

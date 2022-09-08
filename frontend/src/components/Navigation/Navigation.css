@@ -24,12 +24,20 @@ ul{
 
 }
 
+.navbar_container{
+  /* border-bottom: 1px solid red; */
+
+}
+
+#profile_menu {
+  float: right;
+}
 
 
 .navbar {
   overflow: hidden;
   background-color: white;
-  position: fixed; 
+  /* position: fixed;  */
   top: 0; /* Position the navbar at the top of the page */
   left: 0;
   width: 100%; /* Full width */

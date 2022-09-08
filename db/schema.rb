@@ -52,7 +52,7 @@ ActiveRecord::Schema[7.0].define(version: 2022_09_07_181647) do
     t.string "category", null: false
     t.string "sub_category", null: false
     t.string "condition", null: false
-    t.boolean "sold", default: false, null: false
+    t.boolean "sold", default: false
     t.string "tags"
     t.string "description", null: false
     t.datetime "created_at", null: false
@@ -63,7 +63,6 @@ ActiveRecord::Schema[7.0].define(version: 2022_09_07_181647) do
     t.index ["price"], name: "index_listings_on_price"
     t.index ["shipping_price"], name: "index_listings_on_shipping_price"
     t.index ["size"], name: "index_listings_on_size"
-    t.index ["sold"], name: "index_listings_on_sold"
     t.index ["sub_category"], name: "index_listings_on_sub_category"
     t.index ["title"], name: "index_listings_on_title"
     t.index ["user_id"], name: "index_listings_on_user_id"

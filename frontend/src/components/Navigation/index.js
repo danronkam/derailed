@@ -14,15 +14,16 @@ function Navigation() {
   if (sessionUser) {
     sessionLinks = (
       <>    
-      <Link>SHOP</Link>
-      <Link>SELL</Link> <br></br>
+      <Link to={`/shop`}>SHOP</Link> 
+      <Link to={`/sell`}>SELL</Link>
       <ProfileButton user={sessionUser} id='profile_menu' /></>
   
     );
   } else {
     sessionLinks = (
       <>
-        <Link>SHOP</Link> 
+       
+        <Link>SHOP</Link>
         <Link>SELL</Link>
         <LoginFormModal />
         <SignUpFormModal></SignUpFormModal>
@@ -33,6 +34,7 @@ function Navigation() {
 
   return (
     <>   
+    <div class='navbar_container'>
       <div class="navbar"> 
       
       <NavLink exact to="/"><a href=''></a><img id='top_left_logo' src='https://process.fs.grailed.com/eEumRzf9QyS13BicdH4V' /> </NavLink>
@@ -45,6 +47,8 @@ function Navigation() {
           </li>
         </ul> 
       </div>
+    </div>
+      
     </>
 
   );

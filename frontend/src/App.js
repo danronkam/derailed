@@ -1,8 +1,10 @@
 import React from "react";
-import { Route, Switch } from "react-router-dom";
+import { Redirect, Route, Switch } from "react-router-dom";
 // import LoginFormPage from "./components/LoginFormModal/LoginForm";
 import SignupFormPage from "./components/SignupFormPage";
 import Navigation from "./components/Navigation";
+import ListingIndex from "./components/ListingIndex";
+import HomePage from "./components/HomePage";
 
 function App() {
   return (
@@ -15,6 +17,13 @@ function App() {
         <Route path="/signup">
           <SignupFormPage />
         </Route>
+        <Route exact path="/shop"> 
+          <ListingIndex />
+        </Route>
+        <Route exact path='/' >
+          <HomePage />  
+        </Route>
+        <Redirect to='/' />
       </Switch>
 
 
