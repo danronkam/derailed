@@ -14,8 +14,8 @@ const ListingIndexItem = ({listing}) => {
 
             <div class='feed-item'>
                 <img src="https://i.pinimg.com/originals/cb/7d/48/cb7d48c589412612f5fd4a554e36a325.png"></img> <br></br>
-                <Link to={`/listings/${listing.id}`}>{listing.designerBrand} {listing.price}</Link> <br></br>
-                <Link to={`/listings/${listing.id}`}>{listing.title}</Link> 
+                <Link to={`/listings/${listing.id}`} class='listing-brand'>{listing.designerBrand} {listing.price}</Link> <br></br>
+                <Link to={`/listings/${listing.id}`} class='listing-title'>{listing.title}</Link> 
             </div>      
 
             {/* <h1>{listing.sub_category}</h1> */}
