@@ -15,7 +15,8 @@ function Navigation() {
     sessionLinks = (
       <>    
       <Link>SHOP</Link>
-      <ProfileButton user={sessionUser} /></>
+      <Link>SELL</Link> <br></br>
+      <ProfileButton user={sessionUser} id='profile_menu' /></>
   
     );
   } else {
