@@ -32,31 +32,42 @@ function LoginForm() {
   }
 
   return (
+    <>
+    <h1>Log in</h1> 
+    {/* <p>Log in to your Grailed account to buy, sell, comment, and more.</p> */}
     <form onSubmit={handleSubmit}>
       <ul>
         {errors.map(error => <li key={error}>{error}</li>)}
       </ul>
 
       <label>
-        Email Address
+        Email Address <br></br> </label>
         <input
           type="text"
+          class='log_in_inputs'
           value={credential}
           onChange={(e) => setCredential(e.target.value)}
           required
         />
-      </label> <br></br>
+       <br></br>
       <label>
-        Password
+        Password     </label>
         <input
           type="password"
+          class='log_in_inputs'
           value={password}
           onChange={(e) => setPassword(e.target.value)}
           required
         />
-      </label>
-      <button type="submit" id='login_button'>Log In</button>
+   <br></br>
+      <div id='btns'>      
+        <button type="submit" class='login_button' >Log in</button>
+        <button type="submit" class='login_button'>Demo User</button>
+      </div>
+
+
     </form>
+    </>
   );
 }
 
