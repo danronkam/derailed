@@ -1,6 +1,8 @@
 img {
     height: 100px;
     width: auto;
+    padding-bottom: 10px;
+    border-bottom: 1px solid black;
 }
 
 .feed-item{
@@ -9,7 +11,7 @@ img {
 }
 
 .listing-brand {
-    border-top: 1px solid lightgray;
+    /* border-top: 1px solid lightgray; */
     width: 100%;
 }
 
