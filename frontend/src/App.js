@@ -5,6 +5,7 @@ import SignupFormPage from "./components/SignupFormPage";
 import Navigation from "./components/Navigation";
 import ListingIndex from "./components/ListingIndex";
 import HomePage from "./components/HomePage";
+import ListingCreate from "./components/ListingCreate/ListingCreate";
 
 function App() {
   return (
@@ -14,6 +15,9 @@ function App() {
         {/* <Route path="/login">
           <LoginFormPage />
         </Route> */}
+        <Route path="/sell">
+          <ListingCreate/>
+        </Route>
         <Route path="/signup">
           <SignupFormPage />
         </Route>
