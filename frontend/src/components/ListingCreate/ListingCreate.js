@@ -8,14 +8,35 @@ const ListingCreate = () => {
     const dispatch = useDispatch()
     const{listingId} = useParams()
     let listingData = useSelector(getListing(listingId))
+
+    useEffect(() => {
+        if(listingData) dispatch(fetchListing(listingId))
+    }, [listingId])
     
     const designers = ['Acne Studios', 'Adidas', 'Alexander McQueen', 'Amiri', 'Balenciaga', 'Bape', 'Bottega Veneta', 'Celine', 'Chanel', 'Chrome Hearts', 'Comme Des Garcons', 'Dior', 'Dries Van Noten', 'Fear of God', 'Gucci', 'Jacquemus', 'Kapital', 'Loewe', 'Louis Vuitton', 'Maison Margiela', 'Nike', 'Number (N)ine', 'Off-White', 'Prada', 'Raf Simons', 'Rick Owns', 'Saint Laurent Paris', 'Stone Island', 'Supreme', 'Undercover', 'Vintage']
+
+    // const handleSubmit= e => {
+    //     e.preventDefault();
+    //     const formData = new FormData();
+    //     formData.append('listing[title]', this.state.title);
+    //     if (this.state.photoFile) {
+        
+    //         formData.append('listing[photo]', this.state.photoFile);
+    //     }
+    //     $.ajax({
+    //         url: '/api/listings',
+    //         method: 'POST',
+    //         data: formData,
+    //         contentType: false,
+    //         processData: false
+    //     });
+    // }
 
     return(
         <>
         <div class="create-container">
             <h1>Add a new listing</h1>
-            <form class="create-form" autoComplete='off'>
+            <form class="create-form" autoComplete='off' >
              <h3>DETAILS</h3>
 
                 <div class='left '> 
@@ -85,6 +106,7 @@ const ListingCreate = () => {
                                 <option value="Indigo"/>
                                 <option value="Violet"/>
                             </datalist>
+          
 
             <h3> CONDITION </h3>
                 <select name='condition' id='condition'>
@@ -98,7 +120,23 @@ const ListingCreate = () => {
 
                 <input type='text' id='description' />
 
+            <h3> PRICE </h3>
 
+                <input type='text' id='description' />
+
+            <h3> SHIPPING FROM </h3>
+
+                <input list='shipping-countries' name='shipping' id='shipping' />
+                            <datalist id='shipping-countries'>
+                                <option value="Canada"/>
+                                <option value="United States"/>
+                            </datalist>
+            <h3> PHOTO </h3>
+                <input type="file" id="myFile" name="filename" />
+
+            <div class='button-container'>
+                <button type='submit' >PUBLISH</button>
+            </div>
             </form>
 
 

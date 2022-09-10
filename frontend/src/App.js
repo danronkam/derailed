@@ -6,6 +6,7 @@ import Navigation from "./components/Navigation";
 import ListingIndex from "./components/ListingIndex";
 import HomePage from "./components/HomePage";
 import ListingCreate from "./components/ListingCreate/ListingCreate";
+import ListingShow from "./components/ListingShow/index"
 
 function App() {
   return (
@@ -26,6 +27,9 @@ function App() {
         </Route>
         <Route exact path='/' >
           <HomePage />  
+        </Route>
+        <Route exact path="/listings/:listingId">
+          <ListingShow />
         </Route>
         <Redirect to='/' />
       </Switch>

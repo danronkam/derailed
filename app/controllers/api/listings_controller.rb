@@ -9,4 +9,13 @@ class Api::ListingsController < ApplicationController
         render :index
     end
 
+    def create 
+        @listing = Listing.create!(listing_params)
+    end
+
+    private
+    def listing_params 
+        params.require(listing).permit(:title, :price, :shipping_price, :designer_brand, :size, :category, :sub_category, :condition, :sold)
+    end
+
 end

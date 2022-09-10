@@ -46,18 +46,21 @@ ActiveRecord::Schema[7.0].define(version: 2022_09_07_181647) do
     t.bigint "user_id", null: false
     t.float "price", null: false
     t.float "shipping_price", null: false
+    t.float "country", null: false
     t.string "designer_brand", null: false
     t.string "title", null: false
     t.string "size", null: false
     t.string "category", null: false
     t.string "sub_category", null: false
     t.string "condition", null: false
+    t.string "color", null: false
     t.boolean "sold", default: false
     t.string "tags"
     t.string "description", null: false
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
     t.index ["category"], name: "index_listings_on_category"
+    t.index ["color"], name: "index_listings_on_color"
     t.index ["condition"], name: "index_listings_on_condition"
     t.index ["designer_brand"], name: "index_listings_on_designer_brand"
     t.index ["price"], name: "index_listings_on_price"

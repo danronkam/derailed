@@ -4,8 +4,9 @@ import { useDispatch } from "react-redux";
 import './ListingIndexItem.css'
 
 const ListingIndexItem = ({listing}) => {
+    // console.log(listing)
     const dispatch = useDispatch()
-
+    // { photoUrl } = listing;
 
     return(
         <>
@@ -13,9 +14,10 @@ const ListingIndexItem = ({listing}) => {
         {/* <h1>{listing.title}</h1> */}
 
             <div class='feed-item'>
-                <img src="https://i.pinimg.com/originals/cb/7d/48/cb7d48c589412612f5fd4a554e36a325.png"></img> <br></br>
-                <Link to={`/listings/${listing.id}`} class='listing-brand'>{listing.designerBrand} {listing.price}</Link> <br></br>
+                <img src={listing.photoUrl}></img> <br></br>
+                <Link to={`/listings/${listing.id}`} class='listing-brand'>{listing.designerBrand} {listing.size}</Link> <br></br>
                 <Link to={`/listings/${listing.id}`} class='listing-title'>{listing.title}</Link> 
+                <p>{listing.price}</p>
             </div>      
 
             {/* <h1>{listing.sub_category}</h1> */}

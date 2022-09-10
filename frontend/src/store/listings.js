@@ -80,6 +80,7 @@ reducer
 const listingsReducer = (state = {}, action) => {
     Object.freeze(state)
     const newState = {...state}
+    // debugger
 
     switch(action.type){
         case RECEIVE_LISTINGS:
