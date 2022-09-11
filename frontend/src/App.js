@@ -8,6 +8,7 @@ import HomePage from "./components/HomePage";
 import ListingCreate from "./components/ListingCreate/ListingCreate";
 import ListingShow from "./components/ListingShow/index"
 import FilterBar from "./components/FilterBar";
+import FilteredIndex from "./components/FilteredIndex";
 
 function App() {
   return (
@@ -37,6 +38,9 @@ function App() {
         </Route>
         <Route exact path="/listings/:listingId">
           <ListingShow />
+        </Route>
+        <Route exact path="/categories/:category">
+          <FilteredIndex />
         </Route>
         <Redirect to='/' />
       </Switch>

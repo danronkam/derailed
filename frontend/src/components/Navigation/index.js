@@ -4,6 +4,7 @@ import { useSelector } from 'react-redux';
 import ProfileButton from './ProfileButton';
 import LoginFormModal from '../LoginFormModal';
 import SignUpFormModal from '../SignUpFormModal';
+import SearchBar from '../SearchBar';
 import { Link } from 'react-router-dom';
 import './Navigation.css';
 
@@ -38,7 +39,7 @@ function Navigation() {
       <div class="navbar"> 
       
       <NavLink exact to="/"><a href=''></a><img id='top_left_logo' src='https://process.fs.grailed.com/eEumRzf9QyS13BicdH4V' /> </NavLink>
-
+      <SearchBar />
         {/* <img id='top_left_logo' src='https://process.fs.grailed.com/eEumRzf9QyS13BicdH4V' />  */}
         <ul>
           <li>

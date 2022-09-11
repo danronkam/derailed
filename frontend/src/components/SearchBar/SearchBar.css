@@ -1,0 +1,49 @@
+.search-container {
+    border: 1px solid black;
+    border-radius: 2px;
+    margin-left: 35px;
+  }
+  
+  .search-form {
+    display: flex;
+    align-items: center;
+    min-width: fit-content;
+  }
+  
+  .search-input:focus, .search-button:focus  {
+    outline: none;
+  }
+  
+  .search-input {
+    width: 440px;
+    height: 38px;
+    border: none;
+    font-size: 14px;
+    font-weight: 300;
+    color: black;
+  }
+  
+  .search-icon {
+    height: 35px;
+    width: 40px;
+    font-size: 16px;
+    font-weight: lighter;
+    border: none;
+    background-color: transparent;
+  }
+  
+  .search-button {
+    height: 33px;
+    width: 80px;
+    border: 1px solid rgb(221, 221, 221);
+    background-color: transparent;
+    margin-right: 5px;
+    border-radius: 4px;
+    font-size: 10px;
+    font-weight: 550;
+    font-family: 'Press Start 2P', cursive;
+  }
+  
+  .search-button:hover {
+    cursor: pointer;
+  }

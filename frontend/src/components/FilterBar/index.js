@@ -37,7 +37,7 @@ function FilterBar() {
                                 <i class="fa-solid fa-caret-down"></i>
                             </button>
                                 <div class='dropdown-content'>
-                                    <Link> All Categories </Link>
+                                    <Link to={`/shop`}> All Categories </Link>
                                     <Link> Tops </Link>
                                     <Link> Bottoms </Link>
                                     <Link> Outerwear </Link>
