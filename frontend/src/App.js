@@ -7,11 +7,18 @@ import ListingIndex from "./components/ListingIndex";
 import HomePage from "./components/HomePage";
 import ListingCreate from "./components/ListingCreate/ListingCreate";
 import ListingShow from "./components/ListingShow/index"
+import FilterBar from "./components/FilterBar";
 
 function App() {
   return (
     <>
-    <Navigation />    
+    <div class='header'>
+      <Navigation />   
+    </div>
+   
+
+    <div class='body'>
+      <FilterBar/>
       <Switch>
         {/* <Route path="/login">
           <LoginFormPage />
@@ -33,8 +40,13 @@ function App() {
         </Route>
         <Redirect to='/' />
       </Switch>
+    </div>
 
 
+    <div class='footer'>
+
+
+    </div>
     </>
   );
 }

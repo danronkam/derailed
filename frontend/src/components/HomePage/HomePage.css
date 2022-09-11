@@ -1,0 +1,22 @@
+ul {
+    margin: 0 auto;
+    text-align: center;
+    width: 100%;
+    justify-content: space-between;
+}
+
+li {
+    list-style-type: none;
+    display: inline-block;
+    top:50%
+    /* vertical-align: top; */
+}
+
+.trend-photos {
+    height: 150px;
+    width: 100%
+}
+
+.designer-circle {
+    border-radius: 50%;
+}

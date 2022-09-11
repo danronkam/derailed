@@ -10,6 +10,8 @@ const ListingIndex = () => {
     const dispatch = useDispatch()
     const listings = useSelector(getListings)
 
+    // console.log(listings)
+
     useEffect(() => {
         dispatch(fetchListings())
     }, [])
