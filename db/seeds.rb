@@ -43,7 +43,7 @@ ApplicationRecord.transaction do
       price: 10, 
       shipping_price: 5, 
       designer_brand: 'gucci', 
-      size: '6', category: 'Shoes', 
+      size: '6', category: 'Footwear', 
       condition: 'New/Never Worn', 
       sub_category: 'Loafers', 
       color: 'Black',

@@ -7,3 +7,15 @@
   width: 100%;
 
 }
+
+.listing-bar {
+  /* position: fixed; */
+  width: 100%;
+  border-bottom: 1px solid lightgray;
+  font-family: 'Inter', sans-serif;
+  font-weight: lighter;
+}
+
+/* .listing-bar {
+
+} */

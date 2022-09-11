@@ -48,13 +48,14 @@ function Slider()  {
             <div class='slider-right'>
                 <img id='slider-photo' src={photoUrl} />
             </div>
-        </div>
-        <button onClick={nextSlide} class='slide-button' id='left'>
+            <button onClick={nextSlide} class='slide-button' id='left'>
             <i class="fas fa-chevron-left"></i>
         </button>
         <button onClick={nextSlide} class='slide-button' id='right'>
             <i class="fas fa-chevron-right"></i>
         </button>
+        </div>
+ 
         </>
 
     )

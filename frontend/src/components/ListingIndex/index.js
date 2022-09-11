@@ -9,18 +9,26 @@ import './ListingIndex.css'
 const ListingIndex = () => {
     const dispatch = useDispatch()
     const listings = useSelector(getListings)
+    console.log(listings)
+
 
     // console.log(listings)
 
     useEffect(() => {
         dispatch(fetchListings())
     }, [])
+    const total = listings.length
+    console.log(total)
 
     return(
         <>
-        <h2>Avaliable Listings</h2>
+        <div class='listing-bar'>
+            {/* <p>test</p> */}
+            <h3>{total} listings</h3>
+        </div>
+       
         <div class='feed-container'>   
-
+            <h2>Avaliable Listings</h2> <br />
             {listings.map(listing => {
                 return <ListingIndexItem key={listing.id} listing={listing} />
             })}

@@ -24,25 +24,30 @@ const ListingShow = () => {
     if (!listing) {return null}
     return(
         <>
+        <div class='spacer'>
+            <p> <Link> {listing.designerBrand} </Link> >  <Link>{listing.category} </Link> > <Link> {listing.subCategory} </Link> > {listing.title}</p>
+        </div>
         <div class='ListingShow-MainContent'>
             <div class='leftColumn' >
                 <img src={listing.photoUrl}></img>
             </div>
 
             <div class='rightColumn'>
-                <div class='item-details'>
-                    <p>{listing.designerBrand}</p>
-                    <p>{listing.title}</p>
-                    <p>{listing.size}</p>
-                    <p>{listing.condition}</p>
+                <div class='rightColumn-content'>
+                    <div class='item-details'>
+                        <Link> <h3>{listing.designerBrand}</h3> </Link>
+                        <p>{listing.title}</p>
+                        <p> Size:  {listing.size}</p>
+                        <p> Color:  {listing.color}</p>
+                        <p>  Condition: {listing.condition}</p>
+                    </div>
+                    <div className="item-price">
+                        <p>{listing.price}</p>
+                    </div>
+                    <div className="item-shipping">
+                        <p>{shipping} Shipping to United States</p>
+                    </div>
                 </div>
-                <div className="item-price">
-                    <p>{listing.price}</p>
-                </div>
-                <div className="item-shipping">
-                    <p>{shipping} Shipping to United States</p>
-                </div>
-
             </div>
 
 

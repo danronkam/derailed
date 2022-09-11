@@ -12,9 +12,9 @@ import FilterBar from "./components/FilterBar";
 function App() {
   return (
     <>
-    <div class='header'>
+    {/* <div class='header'> */}
       <Navigation />   
-    </div>
+    {/* </div> */}
    
 
     <div class='body'>

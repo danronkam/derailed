@@ -1,7 +1,20 @@
 .rightColumn {
     float: right;
+    background-color: red;
+    height: 700px;
+    width: 50%;
+    display: block;
+    align-items: center;
 }
 
 .leftColumn {
     float: left;
+    height: 700px;
+    width: 50%;
+    /* margin-left: 1%; */
+}
+
+.leftColumn > img {
+    height: 100%;
+    width: auto;
 }
