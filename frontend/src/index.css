@@ -1,4 +1,6 @@
 /* TODO Add site wide styles */
 body {
     margin: 0;
+    /* margin-top: 27px; */
+    font-family: 'Inter', sans-serif;
 }

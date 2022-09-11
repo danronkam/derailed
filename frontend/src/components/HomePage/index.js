@@ -85,12 +85,44 @@ const HomePage =() => {
         <div class='designer-container'>
             <h1>Popular Designers</h1>
             <div>
-                <Link>  <img class='designer-circle' src='https://derailed-seed.s3.us-west-1.amazonaws.com/istockphoto-1147544807-612x612.jpg'/> </Link>
-                <Link>  <img class='designer-circle' src='https://derailed-seed.s3.us-west-1.amazonaws.com/istockphoto-1147544807-612x612.jpg'/> </Link>
-                <Link>  <img class='designer-circle' src='https://derailed-seed.s3.us-west-1.amazonaws.com/istockphoto-1147544807-612x612.jpg'/> </Link>
-                <Link>  <img class='designer-circle' src='https://derailed-seed.s3.us-west-1.amazonaws.com/istockphoto-1147544807-612x612.jpg'/> </Link>
-                <Link>  <img class='designer-circle' src='https://derailed-seed.s3.us-west-1.amazonaws.com/istockphoto-1147544807-612x612.jpg'/> </Link>
-                <Link>  <img class='designer-circle' src='https://derailed-seed.s3.us-west-1.amazonaws.com/istockphoto-1147544807-612x612.jpg'/> </Link>
+                <ul>
+                    <li>    
+                        <Link>  
+                            <img class='designer-circle' src='https://derailed-seed.s3.us-west-1.amazonaws.com/istockphoto-1147544807-612x612.jpg'/> <br></br>
+                            Nike 
+                        </Link>
+                    </li>
+                    <li>    
+                        <Link>  
+                            <img class='designer-circle' src='https://derailed-seed.s3.us-west-1.amazonaws.com/istockphoto-1147544807-612x612.jpg'/> <br></br>
+                            Nike 
+                        </Link>
+                    </li>
+                    <li>    
+                        <Link>  
+                            <img class='designer-circle' src='https://derailed-seed.s3.us-west-1.amazonaws.com/istockphoto-1147544807-612x612.jpg'/> <br></br>
+                            Nike 
+                        </Link>
+                    </li>
+                    <li>    
+                        <Link>  
+                            <img class='designer-circle' src='https://derailed-seed.s3.us-west-1.amazonaws.com/istockphoto-1147544807-612x612.jpg'/> <br></br>
+                            Nike 
+                        </Link>
+                    </li>
+                    <li>    
+                        <Link>  
+                            <img class='designer-circle' src='https://derailed-seed.s3.us-west-1.amazonaws.com/istockphoto-1147544807-612x612.jpg'/> <br></br>
+                            Nike 
+                        </Link>
+                    </li>
+                    <li>    
+                        <Link>  
+                            <img class='designer-circle' src='https://derailed-seed.s3.us-west-1.amazonaws.com/istockphoto-1147544807-612x612.jpg'/> <br></br>
+                            Nike 
+                        </Link>
+                    </li>
+                </ul>
             </div>
     
         </div>
