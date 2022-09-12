@@ -2,7 +2,7 @@ import { useState, useEffect } from 'react';
 import { useParams } from 'react-router-dom';
 import { useDispatch, useSelector } from 'react-redux';
 import { getListing, fetchListing, createListing } from '../../store/listings';
-
+import './ListingCreate.css'
 
 const ListingCreate = () => {
     const dispatch = useDispatch()
@@ -37,66 +37,67 @@ const ListingCreate = () => {
         <div class="create-container">
             <h1>Add a new listing</h1>
             <form class="create-form" autoComplete='off' >
-             <h3>DETAILS</h3>
-
-                <div class='left '> 
-                    <label htmlFor='category'>
-      
-                        <select name='category' id='category'>
-                            <option selected disabled>Department / Category</option>
-                            <option value='Tops'>Tops</option>
-                            <option value='Bottoms'>Bottoms</option>
-                            <option value='Outerwear'>Outerwear</option>
-                            <option value='Footwear'>Footwear</option>
-                            <option value='Accessories'>Accessories</option>
-                        </select>
-                    </label>
-
-                    <label>
-   
-                        <input list='designer-brands' name='designer-brand' id='designer-brand' />
-                            <datalist id='designer-brands'>
-                                <option value="Helmut Lang"/>
-                                <option value="Carhartt"/>
-                                <option value="Vintage"/>
-                                <option value="Dries Van Norton"/>
-                                <option value="Nike"/>
-                            </datalist>
-                    </label>
-                </div>
-
-                <div>
-                    <label htmlFor='sub-category'>
+             <h3>DETAILS</h3>   
+                <div class='details-containter' >
+                    <div class='left'> 
+                        <label htmlFor='category'>
         
-                        <select name='sub-category' id='sub-category'>
-                            <option selected disabled>Department / Category</option>
-                            <option value='Tops'>Tops</option>
-                            <option value='Bottoms'>Bottoms</option>
-                            <option value='Outerwear'>Outerwear</option>
-                            <option value='Footwear'>Footwear</option>
-                            <option value='Accessories'>Accessories</option>
+                            <select name='category' class='create-inputs' id='category'>
+                                <option selected disabled>Department / Category</option>
+                                <option value='Tops'>Tops</option>
+                                <option value='Bottoms'>Bottoms</option>
+                                <option value='Outerwear'>Outerwear</option>
+                                <option value='Footwear'>Footwear</option>
+                                <option value='Accessories'>Accessories</option>
+                            </select>
+                        </label>
+
+                        <label>
+    
+                            <input list='designer-brands' class='create-inputs' name='designer-brand' id='designer-brand' />
+                                <datalist id='designer-brands'>
+                                    <option value="Helmut Lang"/>
+                                    <option value="Carhartt"/>
+                                    <option value="Vintage"/>
+                                    <option value="Dries Van Norton"/>
+                                    <option value="Nike"/>
+                                </datalist>
+                        </label>
+                    </div>
+
+                    <div class='right'>
+                        <label htmlFor='sub-category'>
+            
+                            <select name='sub-category' class='create-inputs' id='sub-category'>
+                                <option selected disabled>Department / Category</option>
+                                <option value='Tops'>Tops</option>
+                                <option value='Bottoms'>Bottoms</option>
+                                <option value='Outerwear'>Outerwear</option>
+                                <option value='Footwear'>Footwear</option>
+                                <option value='Accessories'>Accessories</option>
+                            </select>
+                        </label>
+
+                    
+                        <select name='size' class='create-inputs' id='size'>
+                                <option selected disabled>Size (Please Select Category First) </option>
+                                <option value='Tops'>Tops</option>
+                                <option value='Bottoms'>Bottoms</option>
+                                <option value='Outerwear'>Outerwear</option>
+                                <option value='Footwear'>Footwear</option>
+                                <option value='Accessories'>Accessories</option>
                         </select>
-                    </label>
+                        
+                    </div>
+                </div>
 
                 
-                    <select name='size' id='size'>
-                            <option selected disabled>Size (Please Select Category First) </option>
-                            <option value='Tops'>Tops</option>
-                            <option value='Bottoms'>Bottoms</option>
-                            <option value='Outerwear'>Outerwear</option>
-                            <option value='Footwear'>Footwear</option>
-                            <option value='Accessories'>Accessories</option>
-                    </select>
-                    
-                </div>
-
-            
             <h3> ITEM NAME</h3>
                 <label htmlFor='label' />
-                <input id='label' />
-            <h3> COLOR </h3>
+                <input id='label' class='create-inputs' placeholder='Item name'/>
+            <h3 > COLOR </h3>
                 <label htmlFor='label' />
-                <input list='colors' name='color' id='color' />
+                <input list='colors' placeholder='Designer color name' name='color' id='color' class='create-inputs'/>
                             <datalist id='colors'>
                                 <option value="Red"/>
                                 <option value="Orange"/>
@@ -109,7 +110,7 @@ const ListingCreate = () => {
           
 
             <h3> CONDITION </h3>
-                <select name='condition' id='condition'>
+                <select name='condition' id='condition' class='create-inputs'> 
                                 <option selected disabled></option>
                                 <option value='Tops'>New/Never Worn</option>
                                 <option value='Bottoms'>Gently Used</option>
@@ -118,11 +119,13 @@ const ListingCreate = () => {
                 </select>
             <h3> DESCRIPTION </h3>
 
-                <input type='text' id='description' />
+                <input type='text' id='description' class='create-inputs' placeholder='Add details about conditions, hot the garment fits, additonal measurements, shipping policies, retail price, link to retail page, etc'/>
 
             <h3> PRICE </h3>
-
-                <input type='text' id='description' />
+                <div class='price-container' >
+                    <i class="fas fa-dollar-sign"></i>
+                    <input type='text' id='price' />
+                </div>
 
             <h3> SHIPPING FROM </h3>
 
@@ -138,7 +141,7 @@ const ListingCreate = () => {
                 <button type='submit' >PUBLISH</button>
             </div>
             </form>
-
+            
 
         </div>
         

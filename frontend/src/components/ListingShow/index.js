@@ -21,6 +21,8 @@ const ListingShow = () => {
         shipping = listing.shippingPrice
     }
 
+    console.log(listing)
+
     if (!listing) {return null}
     return(
         <>
@@ -47,6 +49,16 @@ const ListingShow = () => {
                     <div className="item-shipping">
                         <p>{shipping} Shipping to United States</p>
                     </div>
+                </div>
+                <div class='button-container' >
+                    <Link to={`/checkout`} ><button> Purchase </button> </Link>
+                </div>
+                <div class='profile-container' >
+
+                </div>
+                <div class='description-container'>
+                    <h3>Description</h3>
+                    <p>test</p>
                 </div>
             </div>
 

@@ -9,6 +9,7 @@ import ListingCreate from "./components/ListingCreate/ListingCreate";
 import ListingShow from "./components/ListingShow/index"
 import FilterBar from "./components/FilterBar";
 import FilteredIndex from "./components/FilteredIndex";
+import CheckOut from "./components/CheckOut";
 
 function App() {
   return (
@@ -41,6 +42,9 @@ function App() {
         </Route>
         <Route exact path="/categories/:category">
           <FilteredIndex />
+        </Route>
+        <Route exact path='/checkout'>
+          <CheckOut />
         </Route>
         <Redirect to='/' />
       </Switch>
