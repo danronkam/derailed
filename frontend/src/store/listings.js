@@ -1,6 +1,5 @@
-/*
-action constants
-*/
+import csrfFetch from "./csrf"
+import { RECEIVE_USER } from "./user"
 
 export const RECEIVE_LISTINGS = 'listings/RECEIVE_LISTINGS'
 export const RECEIVE_LISTING = 'listings/RECEIVE_LISTING'
@@ -28,20 +27,20 @@ action functions
 */
 
 export const fetchListings  = () => async dispatch =>{
-    const res = await fetch(`api/listings`)
+    const res = await csrfFetch(`/api/listings`)
     const payload = await res.json()
     dispatch({type: RECEIVE_LISTINGS, payload})
 }
 
 export const fetchListing = listingId => async dispatch => {
-    const res = await fetch(`api/listings/${listingId}`)
+    const res = await csrfFetch(`/api/listings/${listingId}`)
     const listing = await res.json()
     dispatch({type: RECEIVE_LISTING, listing})
 }
 
 export const createListing = (listingData) => async dispatch => {
     console.log('i am here')
-    const res = await fetch(`api/listings`, {
+    const res = await csrfFetch(`/api/listings`, {
         method: 'POST',
         body: JSON.stringify(listingData),
         headers: {
@@ -50,11 +49,12 @@ export const createListing = (listingData) => async dispatch => {
         }
     })
     const payload = await res.json()
+    console.log('payload')
     dispatch({type: RECEIVE_LISTING, payload})
 }
 
 export const updateListing = listingData => async dispatch => {
-    const res = await fetch(`/api/listings/${listingData.id}`, {
+    const res = await csrfFetch(`/api/listings/${listingData.id}`, {
         method:'PATCH',
         body: JSON.stringify(listingData),
         headers: {
@@ -67,7 +67,7 @@ export const updateListing = listingData => async dispatch => {
 }
 
 export const deleteListing = listingId => async dispatch => {
-    const res = await fetch(`api/listings/${listingId}`, {
+    const res = await csrfFetch(`/api/listings/${listingId}`, {
         method: 'DELETE'
     })
     if(res.ok) {
@@ -94,6 +94,8 @@ const listingsReducer = (state = {}, action) => {
         case REMOVE_LISTING:
             delete newState[action.listingId]
             return newState
+        case RECEIVE_USER:
+            return {...action.payload.listings}
         default:
             return state
     }

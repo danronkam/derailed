@@ -16,6 +16,12 @@
   font-weight: lighter;
 }
 
+.feed-rightside {
+  width: 100%;
+  right: 0;
+  background-color: red;
+}
 /* .listing-bar {
 
 } */
+

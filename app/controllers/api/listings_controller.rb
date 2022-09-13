@@ -10,19 +10,20 @@ class Api::ListingsController < ApplicationController
     end
 
     def create 
-        debugger
+        # debugger
         @listing = Listing.create!(listing_params)
 
         if @listing.save
             render :show
           else
             render json: @listing.errors.full_messages, status: :unprocessable_entity
+            console.log('COULD NOT MAKE')
         end
     end
 
     private
     def listing_params 
-        params.require(listing).permit(:title, :price, :photo, :shipping_price, :designer_brand, :size, :category, :sub_category, :condition, :sold, :country, :color, :description)
+        params.require(:listing).permit(:title, :price, :photo, :shipping_price, :designer_brand, :size, :category, :sub_category, :condition, :sold, :country, :color, :description)
     end
 
 end

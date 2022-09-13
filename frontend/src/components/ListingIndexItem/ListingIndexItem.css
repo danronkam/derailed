@@ -1,29 +1,39 @@
 .listing-image {
-    height: 150px;
-    width: auto;
+    object-fit: cover;
+    height: 255px;
+    width: 212px;
     padding-bottom: 10px;
     /* border-bottom: 1px solid black; */
 }
 
 .feed-details{
     /* height: fit-content; */
-    list-style-type: none;
+    /* list-style-type: none;
     text-decoration: none;
     padding: 5px;
-    margin-bottom: 15px;
+    margin-bottom: 15px; */
 }
 
 .listing-brand {
     /* border-top: 1px solid lightgray; */
-    width: 100%;
+    /* width: 100%; */
 }
 
 .listing-title {
     overflow: hidden;
+    white-space: nowrap;
 }
 
 .listing-link{
     text-decoration: none;
+    background-color: yellow;
+    border-bottom: 2px solid green;
+    min-width: 250px;
+    max-width: 250px;
+    height: 400px;
+    align-content: center;
+    padding-left: 2%;
+    padding-bottom: 1%;
 }
 
 .feed-price {
@@ -35,8 +45,10 @@
 .feed-list {
     display: flex;
     flex-wrap: wrap;
-    height: fit-content;
+    /* height: fit-content; */
     padding-bottom: 20px;
+    align-items: center;
+    justify-content: normal;
 }
 
 .feed-title {
@@ -47,4 +59,8 @@
     left: 0;
     display: flex;
     justify-content: space-between;
+}
+
+.avaliable-listings {
+    font-family: 'Inter', sans-serif;
 }

@@ -82,40 +82,53 @@ const ListingCreate = () => {
         }
     }
 
-    // const handleSubmit = e => {
-    //     console.log(e)
-    //     e.preventDefault();
-    //     let formData= new FormData()
-    //     formData.set('listing[title]', state.title);
-    //     formData.append('listing[price]', state.price);
-    //     formData.append('listing[shipping_price]', state.shipping_price);
-    //     formData.append('listing[designer_brand]', state.designer_brand);
-    //     formData.append('listing[size]', state.size);
-    //     formData.append('listing[category]', state.category);
-    //     formData.append('listing[condition]', state.condition);
-    //     formData.append('listing[sub_category]', state.sub_category);
-    //     formData.append('listing[country]', state.country);
-    //     formData.append('listing[sold]', state.sold);
-    //     formData.append('listing[color]', state.color);
+    const handleSubmit = e => {
+        // console.log(e)
+        e.preventDefault();
+        let formData= new FormData()
 
-    //     if(state.photoFile) {
-    //         formData.append('listing[photo]', state.photoUrl)
-    //     }
+        formData.append('listing[designer_brand]', state.designer_brand);
+        formData.set('listing[title]', state.title);
+        formData.append('listing[size]', state.size);
+        formData.append('listing[category]', state.category);
+        formData.append('listing[sub_category]', state.sub_category);
+        formData.append('listing[condition]', state.condition);
+        formData.append('listing[color]', state.color);
+        formData.append('listing[sold]', state.sold);
+        formData.append('listing[description]', state.description);
+        formData.append('listing[price]', state.price);
+        formData.append('listing[shipping_price]', state.shipping_price);
+        formData.append('listing[country]', state.country);
 
-    //     dispatch(createListing(formData))
-    //     console.log(state) 
-    //     console.log(formData) 
-    // }
+
+
+
+
+        if(state.photoFile) {
+            formData.append('listing[photo]', state.photoFile)
+        }
+        // $.ajax({
+        //     url: '/api/posts',
+        //     method: 'POST',
+        //     data: formData,
+        //     contentType: false,
+        //     processData: false
+        //   });
+        dispatch(createListing(formData))
+        console.log(state) 
+        console.log(formData) 
+    }
     
     // const designers = ['Acne Studios', 'Adidas', 'Alexander McQueen', 'Amiri', 'Balenciaga', 'Bape', 'Bottega Veneta', 'Celine', 'Chanel', 'Chrome Hearts', 'Comme Des Garcons', 'Dior', 'Dries Van Noten', 'Fear of God', 'Gucci', 'Jacquemus', 'Kapital', 'Loewe', 'Louis Vuitton', 'Maison Margiela', 'Nike', 'Number (N)ine', 'Off-White', 'Prada', 'Raf Simons', 'Rick Owns', 'Saint Laurent Paris', 'Stone Island', 'Supreme', 'Undercover', 'Vintage']
 
-    const handleSubmit = e => {
-        debugger
-        e.preventDefault()
-        console.log(listing)
-        dispatch(createListing(listing))
-        // debugger
-    }
+    // const handleSubmit = e => {
+    //     // debugger
+    //     e.preventDefault()
+    //     console.log(state)
+    //     dispatch(createListing(state))
+    //     // debugger
+    // }
+
     // const handleSubmit= e => {
     //     e.preventDefault();
     //     const formData = new FormData();
@@ -154,7 +167,7 @@ const ListingCreate = () => {
 
                         <label>
     
-                            <input list='designer-brands' class='create-inputs' name='designer-brand' id='designer-brand' onChange={e => {setListing({...listing, designer_brand: e.target.value})}}/>
+                            <input list='designer-brands' class='create-inputs' name='designer-brand' id='designer-brand' value={state.designer_brand} onChange={e => {setState({...state, designer_brand: e.target.value})}}/>
                                 <datalist id='designer-brands'>
                                     <option value="Helmut Lang"/>
                                     <option value="Carhartt"/>
@@ -168,7 +181,7 @@ const ListingCreate = () => {
                     <div class='right'>
                         <label htmlFor='sub_category'>
             
-                            <select name='sub_category' class='create-inputs' id='sub_category' onChange={e => {setListing({...listing, sub_category: e.target.value})}}>
+                            <select name='sub_category' class='create-inputs' id='sub_category' value={state.sub_category} onChange={e => {setState({...state, sub_category: e.target.value})}}>
                                 <option selected disabled>Department / Category</option>
                                 <option value='Sneakers'>Sneakers</option>
                                 <option value='Loafers'>Loafers</option>
@@ -179,7 +192,7 @@ const ListingCreate = () => {
                         </label>
 
                     
-                        <select name='size' class='create-inputs' id='size' onChange={e => {setListing({...listing, size: e.target.value})}}>
+                        <select name='size' class='create-inputs' id='size' value={state.size} onChange={e => {setState({...state, size: e.target.value})}}>
                                 <option selected disabled>Size (Please Select Category First) </option>
                                 <option value='XS'>XS</option>
                                 <option value='S'>S</option>
@@ -195,10 +208,10 @@ const ListingCreate = () => {
                 
             <h3> ITEM NAME</h3>
                 <label htmlFor='label' />
-                <input id='label' class='create-inputs' placeholder='Item name' onChange={e => {setListing({...listing, title: e.target.value})}}/>
+                <input id='label' class='create-inputs' placeholder='Item name' value={state.title} onChange={e => {setState({...state, title: e.target.value})}}/>
             <h3 > COLOR </h3>
                 <label htmlFor='color' />
-                <input list='colors' placeholder='Designer color name' name='color' id='color' class='create-inputs' onChange={e => {setListing({...listing, color: e.target.value})}}/>
+                <input list='colors' placeholder='Designer color name' name='color' id='color' class='create-inputs' onChange={e => {setState({...state, color: e.target.value})}}/>
                             <datalist id='colors'>
                                 <option value="Red"/>
                                 <option value="Orange"/>
@@ -212,33 +225,33 @@ const ListingCreate = () => {
 
             <h3> CONDITION </h3>
                 <label htmlFor='condition'>
-                    <select name='condition' id='condition' class='create-inputs' onChange={e => {setListing({...listing, condition: e.target.value})}}> 
-                                    <option selected disabled></option>
-                                    <option value='New/Never Worn'>New/Never Worn</option>
-                                    <option value='Gently Used'>Gently Used</option>
-                                    <option value='Used'>Used</option>
-                                    <option value='Very Worn'>Very Worn</option>
+                    <select name='condition' id='condition' class='create-inputs' value={state.condition} onChange={e => {setState({...state, condition: e.target.value})}}> 
+                            <option selected disabled></option>
+                            <option value='New/Never Worn'>New/Never Worn</option>
+                            <option value='Gently Used'>Gently Used</option>
+                            <option value='Used'>Used</option>
+                            <option value='Very Worn'>Very Worn</option>
                     </select>
                 </label>
             <h3> DESCRIPTION </h3>
 
-                <input type='text' id='description' class='create-inputs' onChange={e => {setListing({...listing, description: e.target.value})}} placeholder='Add details about conditions, hot the garment fits, additonal measurements, shipping policies, retail price, link to retail page, etc'/>
+                <input type='text' id='description' class='create-inputs' value={state.description} onChange={e => {setState({...listing, state: e.target.value})}} placeholder='Add details about conditions, hot the garment fits, additonal measurements, shipping policies, retail price, link to retail page, etc'/>
 
             <h3> PRICE </h3>
                 <div class='price-container' >
                     <i class="fas fa-dollar-sign"></i>
-                    <input type='text' id='price' onChange={e => {setListing({...listing, price: e.target.value})}}/>
+                    <input type='text' id='price' value={state.price} onChange={e => {setState({...listing, price: e.target.value})}}/>
                 </div>
 
             <h3> SHIPPING FROM </h3>
 
-                <input list='shipping-countries' name='shipping' id='shipping' onChange={e => {setListing({...listing, country: e.target.value})}}/>
+                <input list='shipping-countries' name='shipping' id='shipping' value={state.country} onChange={e => {setState({...state, country: e.target.value})}}/>
                             <datalist id='shipping-countries'>
                                 <option value="Canada"/>
                                 <option value="United States"/>
                             </datalist>
                 <label htmlFor='shipping_price'>
-                    <input  id='shipping_price' name='shipping_price' type='integer' onChange={e => {setListing({...listing, shipping_price: e.target.value})}} />
+                    <input  id='shipping_price' name='shipping_price' type='integer' value={state.shipping_price} onChange={e => {setState({...state, shipping_price: e.target.value})}} />
                 </label>
             
             <h3> PHOTO </h3>

@@ -17,6 +17,7 @@ const ListingIndex = () => {
     useEffect(() => {
         dispatch(fetchListings())
     }, [])
+
     const total = listings.length
     console.log(total)
 
@@ -27,13 +28,15 @@ const ListingIndex = () => {
             <h3>{total} listings</h3>
         </div>
        
-        <div class='feed-container'>   
-            <h2>Avaliable Listings</h2> <br />
-            <ul class='feed-list'>
-                {listings.map(listing => {
-                    return <ListingIndexItem key={listing.id} listing={listing} />
-                })}
-            </ul>
+        <div class='feed-container'>  
+            <div class='feed-rightside'>  
+                <h2 class='avaliable-listings'>Avaliable Listings</h2> <br />
+                <ul class='feed-list'>
+                    {listings.map(listing => {
+                        return <ListingIndexItem key={listing.id} listing={listing} />
+                    })}
+                </ul>
+            </div>
         </div>
         </>
     )

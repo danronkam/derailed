@@ -5,7 +5,7 @@
 li {
   display: inline;
   font-size: 15px;
-  margin-right: 5%;
+  /* margin-right: 5%; */
 }
 
 li > a {

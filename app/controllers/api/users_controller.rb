@@ -22,9 +22,10 @@ class Api::UsersController < ApplicationController
 
   def update
     if @user.update(user_params)
-      render: show
+      render :show
     else
       render json: @user.errors.full_messages, status: :unprocessable_entity
+    end
   end
 
   private
@@ -32,4 +33,5 @@ class Api::UsersController < ApplicationController
   def user_params
     params.require(:user).permit(:email, :username, :password)
   end
+
 end

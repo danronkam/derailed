@@ -12,6 +12,7 @@ import FilteredIndex from "./components/FilteredIndex";
 import CheckOut from "./components/CheckOut";
 import UserEdit from "./components/UserEdit";
 import UserShow from "./components/UserShow";
+import Footer from "./components/Footer";
 
 
 function App() {
@@ -49,7 +50,7 @@ function App() {
         <Route exact path='/checkout/:listingId'>
           <CheckOut />
         </Route>
-        <Route path="/users/myprofile">
+        <Route path="/users/:userId">
           <UserShow />
         </Route>
         <Route path="/users/:userId/edit">
@@ -60,8 +61,8 @@ function App() {
     </div>
 
 
-    <div class='footer'>
-
+    <div class='footer-container'>
+        <Footer />
 
     </div>
     </>

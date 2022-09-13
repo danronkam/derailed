@@ -1,14 +1,17 @@
-ul {
+.homepage-lists {
     margin: 0 auto;
     text-align: center;
     width: 100%;
     justify-content: space-between;
+    display: flex;
+    min-width: 100%;
 }
 
-li {
+.homepage-list-items {
     list-style-type: none;
     display: inline-block;
-    top:50%
+    top:50%;
+    /* padding-left: 1%; */
     /* vertical-align: top; */
 }
 
@@ -19,4 +22,16 @@ li {
 
 .designer-circle {
     border-radius: 50%;
+    height: 180px;
+    width: 180px;
+}
+
+.category-photos {
+    height: 180px;
+    width: 180px;
+}
+
+.style-photos {
+    height: 180px;
+    width: 180px;
 }

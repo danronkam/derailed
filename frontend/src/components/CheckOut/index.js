@@ -32,7 +32,7 @@ const CheckOut = () => {
             </div>
             <div class='right'>
                 <div>
-
+            
                 </div>
                 
             </div>
