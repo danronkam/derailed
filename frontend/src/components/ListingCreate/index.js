@@ -112,6 +112,7 @@ const ListingCreate = () => {
                                 <option value="Canada"/>
                                 <option value="United States"/>
                             </datalist>
+      
             <h3> PHOTO </h3>
                 <input type="file" id="myFile" name="filename" />
 

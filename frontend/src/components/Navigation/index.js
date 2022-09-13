@@ -24,7 +24,7 @@ function Navigation() {
     sessionLinks = (
       <>
        
-        <Link>SHOP</Link>
+        <Link to={`/shop`}>SHOP</Link>
         <Link>SELL</Link>
         <LoginFormModal />
         <SignUpFormModal></SignUpFormModal>

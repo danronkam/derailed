@@ -46,7 +46,7 @@ ActiveRecord::Schema[7.0].define(version: 2022_09_07_181647) do
     t.bigint "user_id", null: false
     t.float "price", null: false
     t.float "shipping_price", null: false
-    t.float "country", null: false
+    t.string "country", null: false
     t.string "designer_brand", null: false
     t.string "title", null: false
     t.string "size", null: false

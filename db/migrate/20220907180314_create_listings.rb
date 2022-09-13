@@ -4,7 +4,7 @@ class CreateListings < ActiveRecord::Migration[7.0]
       t.bigint :user_id, null: false, foreign_key: true
       t.float :price, null: false
       t.float :shipping_price, null: false
-      t.float :country, null: false
+      t.string :country, null: false
       t.string :designer_brand, null: false
       t.string :title, null: false
       t.string :size, null: false

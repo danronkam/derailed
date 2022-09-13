@@ -29,9 +29,11 @@ const ListingIndex = () => {
        
         <div class='feed-container'>   
             <h2>Avaliable Listings</h2> <br />
-            {listings.map(listing => {
-                return <ListingIndexItem key={listing.id} listing={listing} />
-            })}
+            <ul class='feed-list'>
+                {listings.map(listing => {
+                    return <ListingIndexItem key={listing.id} listing={listing} />
+                })}
+            </ul>
         </div>
         </>
     )

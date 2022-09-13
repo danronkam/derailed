@@ -8,13 +8,114 @@ const ListingCreate = () => {
     const dispatch = useDispatch()
     const{listingId} = useParams()
     let listingData = useSelector(getListing(listingId))
+    
+
+    const [listing, setListing] = useState(listingData)
 
     useEffect(() => {
         if(listingData) dispatch(fetchListing(listingId))
     }, [listingId])
-    
-    const designers = ['Acne Studios', 'Adidas', 'Alexander McQueen', 'Amiri', 'Balenciaga', 'Bape', 'Bottega Veneta', 'Celine', 'Chanel', 'Chrome Hearts', 'Comme Des Garcons', 'Dior', 'Dries Van Noten', 'Fear of God', 'Gucci', 'Jacquemus', 'Kapital', 'Loewe', 'Louis Vuitton', 'Maison Margiela', 'Nike', 'Number (N)ine', 'Off-White', 'Prada', 'Raf Simons', 'Rick Owns', 'Saint Laurent Paris', 'Stone Island', 'Supreme', 'Undercover', 'Vintage']
 
+    // const [selectedFile, setSelectedFile] = useState(); //currently picked file
+	// const [isFilePicked, setIsFilePicked] = useState(false); //has a filed been picked
+
+	// const changeHandler = (event) => {
+	// 	setSelectedFile(event.target.files[0]);
+	// 	setIsSelected(true);
+	// };
+
+	// const handleSubmission = () => {
+	// 	const formData = new FormData();
+
+	// 	formData.append('File', selectedFile);
+
+	// 	fetch(
+	// 		'https://freeimage.host/api/1/upload?key=<YOUR_API_KEY>',
+	// 		{
+	// 			method: 'POST',
+	// 			body: formData,
+	// 		}
+	// 	)
+	// 		.then((response) => response.json())
+	// 		.then((result) => {
+	// 			console.log('Success:', result);
+	// 		})
+	// 		.catch((error) => {
+	// 			console.error('Error:', error);
+	// 		});
+	// };
+	// };
+
+    const [state, setState] = useState({ //state is set to an empty listing
+        title: '',
+        price: null,
+        shipping_price: null,
+        designer_brand: '',
+        size: '',
+        category: '',
+        sub_category: '',
+        condition: '',
+        sold: false,
+        country: '',
+        color: '',
+        description: ''
+    })
+
+    const handleImage = e => {
+        const fileReader = new FileReader();
+        const file = e.currentTarget.files[0]
+
+        fileReader.onloadend = () => {
+            setState(prevState => {
+                return { ...prevState, photoFile: file}
+            })
+            setState(prevState => {
+                return { ...prevState, photoUrl: fileReader.result }
+            })
+        }
+        
+        if (file) {
+            fileReader.readAsDataURL(file);
+        } else {
+            setState({...state}, { photoFile: null })
+            setState({...state}, { photoUrl: null })
+        }
+    }
+
+    // const handleSubmit = e => {
+    //     console.log(e)
+    //     e.preventDefault();
+    //     let formData= new FormData()
+    //     formData.set('listing[title]', state.title);
+    //     formData.append('listing[price]', state.price);
+    //     formData.append('listing[shipping_price]', state.shipping_price);
+    //     formData.append('listing[designer_brand]', state.designer_brand);
+    //     formData.append('listing[size]', state.size);
+    //     formData.append('listing[category]', state.category);
+    //     formData.append('listing[condition]', state.condition);
+    //     formData.append('listing[sub_category]', state.sub_category);
+    //     formData.append('listing[country]', state.country);
+    //     formData.append('listing[sold]', state.sold);
+    //     formData.append('listing[color]', state.color);
+
+    //     if(state.photoFile) {
+    //         formData.append('listing[photo]', state.photoUrl)
+    //     }
+
+    //     dispatch(createListing(formData))
+    //     console.log(state) 
+    //     console.log(formData) 
+    // }
+    
+    // const designers = ['Acne Studios', 'Adidas', 'Alexander McQueen', 'Amiri', 'Balenciaga', 'Bape', 'Bottega Veneta', 'Celine', 'Chanel', 'Chrome Hearts', 'Comme Des Garcons', 'Dior', 'Dries Van Noten', 'Fear of God', 'Gucci', 'Jacquemus', 'Kapital', 'Loewe', 'Louis Vuitton', 'Maison Margiela', 'Nike', 'Number (N)ine', 'Off-White', 'Prada', 'Raf Simons', 'Rick Owns', 'Saint Laurent Paris', 'Stone Island', 'Supreme', 'Undercover', 'Vintage']
+
+    const handleSubmit = e => {
+        debugger
+        e.preventDefault()
+        console.log(listing)
+        dispatch(createListing(listing))
+        // debugger
+    }
     // const handleSubmit= e => {
     //     e.preventDefault();
     //     const formData = new FormData();
@@ -36,13 +137,12 @@ const ListingCreate = () => {
         <>
         <div class="create-container">
             <h1>Add a new listing</h1>
-            <form class="create-form" autoComplete='off' >
+            <form class="create-form" autoComplete='off' onSubmit={handleSubmit}>
              <h3>DETAILS</h3>   
                 <div class='details-containter' >
                     <div class='left'> 
                         <label htmlFor='category'>
-        
-                            <select name='category' class='create-inputs' id='category'>
+                            <select name='category' class='create-inputs' value={state.category} id='category' onChange={e => {setState({...state, category: e.target.value})}}>
                                 <option selected disabled>Department / Category</option>
                                 <option value='Tops'>Tops</option>
                                 <option value='Bottoms'>Bottoms</option>
@@ -54,7 +154,7 @@ const ListingCreate = () => {
 
                         <label>
     
-                            <input list='designer-brands' class='create-inputs' name='designer-brand' id='designer-brand' />
+                            <input list='designer-brands' class='create-inputs' name='designer-brand' id='designer-brand' onChange={e => {setListing({...listing, designer_brand: e.target.value})}}/>
                                 <datalist id='designer-brands'>
                                     <option value="Helmut Lang"/>
                                     <option value="Carhartt"/>
@@ -66,26 +166,27 @@ const ListingCreate = () => {
                     </div>
 
                     <div class='right'>
-                        <label htmlFor='sub-category'>
+                        <label htmlFor='sub_category'>
             
-                            <select name='sub-category' class='create-inputs' id='sub-category'>
+                            <select name='sub_category' class='create-inputs' id='sub_category' onChange={e => {setListing({...listing, sub_category: e.target.value})}}>
                                 <option selected disabled>Department / Category</option>
-                                <option value='Tops'>Tops</option>
-                                <option value='Bottoms'>Bottoms</option>
-                                <option value='Outerwear'>Outerwear</option>
-                                <option value='Footwear'>Footwear</option>
-                                <option value='Accessories'>Accessories</option>
+                                <option value='Sneakers'>Sneakers</option>
+                                <option value='Loafers'>Loafers</option>
+                                <option value='Sandles'>Sandles</option>
+                                <option value='Boots'>Boots</option>
+                                <option value='Athletic'>Athletic</option>
                             </select>
                         </label>
 
                     
-                        <select name='size' class='create-inputs' id='size'>
+                        <select name='size' class='create-inputs' id='size' onChange={e => {setListing({...listing, size: e.target.value})}}>
                                 <option selected disabled>Size (Please Select Category First) </option>
-                                <option value='Tops'>Tops</option>
-                                <option value='Bottoms'>Bottoms</option>
-                                <option value='Outerwear'>Outerwear</option>
-                                <option value='Footwear'>Footwear</option>
-                                <option value='Accessories'>Accessories</option>
+                                <option value='XS'>XS</option>
+                                <option value='S'>S</option>
+                                <option value='M'>M</option>
+                                <option value='L'>L</option>
+                                <option value='XL'>XL</option>
+
                         </select>
                         
                     </div>
@@ -94,10 +195,10 @@ const ListingCreate = () => {
                 
             <h3> ITEM NAME</h3>
                 <label htmlFor='label' />
-                <input id='label' class='create-inputs' placeholder='Item name'/>
+                <input id='label' class='create-inputs' placeholder='Item name' onChange={e => {setListing({...listing, title: e.target.value})}}/>
             <h3 > COLOR </h3>
-                <label htmlFor='label' />
-                <input list='colors' placeholder='Designer color name' name='color' id='color' class='create-inputs'/>
+                <label htmlFor='color' />
+                <input list='colors' placeholder='Designer color name' name='color' id='color' class='create-inputs' onChange={e => {setListing({...listing, color: e.target.value})}}/>
                             <datalist id='colors'>
                                 <option value="Red"/>
                                 <option value="Orange"/>
@@ -110,37 +211,43 @@ const ListingCreate = () => {
           
 
             <h3> CONDITION </h3>
-                <select name='condition' id='condition' class='create-inputs'> 
-                                <option selected disabled></option>
-                                <option value='Tops'>New/Never Worn</option>
-                                <option value='Bottoms'>Gently Used</option>
-                                <option value='Outerwear'>Used</option>
-                                <option value='Footwear'>Very Worn</option>
-                </select>
+                <label htmlFor='condition'>
+                    <select name='condition' id='condition' class='create-inputs' onChange={e => {setListing({...listing, condition: e.target.value})}}> 
+                                    <option selected disabled></option>
+                                    <option value='New/Never Worn'>New/Never Worn</option>
+                                    <option value='Gently Used'>Gently Used</option>
+                                    <option value='Used'>Used</option>
+                                    <option value='Very Worn'>Very Worn</option>
+                    </select>
+                </label>
             <h3> DESCRIPTION </h3>
 
-                <input type='text' id='description' class='create-inputs' placeholder='Add details about conditions, hot the garment fits, additonal measurements, shipping policies, retail price, link to retail page, etc'/>
+                <input type='text' id='description' class='create-inputs' onChange={e => {setListing({...listing, description: e.target.value})}} placeholder='Add details about conditions, hot the garment fits, additonal measurements, shipping policies, retail price, link to retail page, etc'/>
 
             <h3> PRICE </h3>
                 <div class='price-container' >
                     <i class="fas fa-dollar-sign"></i>
-                    <input type='text' id='price' />
+                    <input type='text' id='price' onChange={e => {setListing({...listing, price: e.target.value})}}/>
                 </div>
 
             <h3> SHIPPING FROM </h3>
 
-                <input list='shipping-countries' name='shipping' id='shipping' />
+                <input list='shipping-countries' name='shipping' id='shipping' onChange={e => {setListing({...listing, country: e.target.value})}}/>
                             <datalist id='shipping-countries'>
                                 <option value="Canada"/>
                                 <option value="United States"/>
                             </datalist>
+                <label htmlFor='shipping_price'>
+                    <input  id='shipping_price' name='shipping_price' type='integer' onChange={e => {setListing({...listing, shipping_price: e.target.value})}} />
+                </label>
+            
             <h3> PHOTO </h3>
-                <input type="file" id="myFile" name="filename" />
+                <input type="file" id="myFile" name="filename" onChange={handleImage} />
 
             <div class='button-container'>
                 <button type='submit' >PUBLISH</button>
             </div>
-            </form>
+        </form>
             
 
         </div>

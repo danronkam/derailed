@@ -12,14 +12,14 @@ const ListingIndexItem = ({listing}) => {
         <>
         {/* <img src='https://www.pngitem.com/pimgs/m/238-2381636_happy-face-color-in-smiley-face-hd-png.png'></img> */}
         {/* <h1>{listing.title}</h1> */}
-
-            <div class='feed-item'>
-                <img src={listing.photoUrl}></img> <br></br>
-                <Link to={`/listings/${listing.id}`} class='listing-brand'>{listing.designerBrand} {listing.size}</Link> <br></br>
-                <Link to={`/listings/${listing.id}`} class='listing-title'>{listing.title}</Link> 
-                <p>{listing.price}</p>
+        <Link to={`/listings/${listing.id}`} class='listing-link'><li className="feed-items">
+            <img src={listing.photoUrl} class='listing-image'/> 
+            <div class='feed-details'>
+                <h3 class='feed-title'>{listing.designerBrand} {listing.size}</h3>
+                <p>{listing.title}</p>
+                <p class='feed-price'>${listing.price}</p>
             </div>      
-
+            </li></Link>
             {/* <h1>{listing.sub_category}</h1> */}
             {/* <p>{listing.price}</p> */}
 

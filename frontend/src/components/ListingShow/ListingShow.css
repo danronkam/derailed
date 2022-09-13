@@ -1,11 +1,13 @@
 .rightColumn {
     float: right;
-    background-color: red;
+    /* background-color: red; */
     height: 700px;
     width: 50%;
     display: block;
     align-items: center;
+    font-family: 'Inter', sans-serif;
 }
+
 
 .leftColumn {
     float: left;
@@ -17,4 +19,29 @@
 .leftColumn > img {
     height: 100%;
     width: auto;
+}
+
+.route{
+    font-weight: 400;
+    font-size: 12px;
+    font-style: none;
+}
+
+a:visited {
+    color: black;
+}
+
+.item-brand {
+    font-weight: bold;
+    font-size: 18px;
+}
+
+.item-details{
+    font-size: 14px;
+    font-weight: normal;
+}
+
+.item-price {
+    font-family: 'Press Start 2P', cursive;
+    
 }

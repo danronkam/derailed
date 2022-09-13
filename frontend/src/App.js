@@ -43,7 +43,7 @@ function App() {
         <Route exact path="/categories/:category">
           <FilteredIndex />
         </Route>
-        <Route exact path='/checkout'>
+        <Route exact path='/checkout/:listingId'>
           <CheckOut />
         </Route>
         <Redirect to='/' />

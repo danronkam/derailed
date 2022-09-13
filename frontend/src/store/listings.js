@@ -34,11 +34,12 @@ export const fetchListings  = () => async dispatch =>{
 
 export const fetchListing = listingId => async dispatch => {
     const res = await fetch(`api/listings/${listingId}`)
-    const payload = await res.json()
-    dispatch({type: RECEIVE_LISTING, payload})
+    const listing = await res.json()
+    dispatch({type: RECEIVE_LISTING, listing})
 }
 
-export const createListing = listingData => async dispatch => {
+export const createListing = (listingData) => async dispatch => {
+    console.log('i am here')
     const res = await fetch(`api/listings`, {
         method: 'POST',
         body: JSON.stringify(listingData),
@@ -47,12 +48,12 @@ export const createListing = listingData => async dispatch => {
             'Accept': 'application/json'
         }
     })
-    const listing = await res.json()
-    dispatch({type: RECEIVE_LISTING, listing})
+    const payload = await res.json()
+    dispatch({type: RECEIVE_LISTING, payload})
 }
 
 export const updateListing = listingData => async dispatch => {
-    const res = await fetch(`api/listings/${listingData.id}`, {
+    const res = await fetch(`/api/listings/${listingData.id}`, {
         method:'PATCH',
         body: JSON.stringify(listingData),
         headers: {

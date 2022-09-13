@@ -18,16 +18,29 @@ const ListingShow = () => {
     if(listing.shippingPrice === 0) {
         shipping = 'FREE'
     } else {
-        shipping = listing.shippingPrice
+        shipping = '+ $' + listing.shippingPrice
+    }
+
+    let country;
+    if(listing.country === 'Canada') {
+        country = 'CA'
+    } else {
+        country = 'US'
     }
 
     console.log(listing)
 
+    const handlePress = e => {
+        dispatch() //what am i dispatching from here? i want to pass the item into here into /checkout
+    }
+
+    const carat = '>'
+
     if (!listing) {return null}
     return(
         <>
-        <div class='spacer'>
-            <p> <Link> {listing.designerBrand} </Link> >  <Link>{listing.category} </Link> > <Link> {listing.subCategory} </Link> > {listing.title}</p>
+        <div class='route'>
+            <p> <Link> {listing.designerBrand} </Link> {carat} <Link>{listing.category} </Link> {carat} <Link> {listing.subCategory} </Link> {carat} {listing.title}</p>
         </div>
         <div class='ListingShow-MainContent'>
             <div class='leftColumn' >
@@ -37,28 +50,29 @@ const ListingShow = () => {
             <div class='rightColumn'>
                 <div class='rightColumn-content'>
                     <div class='item-details'>
-                        <Link> <h3>{listing.designerBrand}</h3> </Link>
+                        <Link> <h3 class='item-brand'>{listing.designerBrand}</h3> </Link>
                         <p>{listing.title}</p>
                         <p> Size:  {listing.size}</p>
                         <p> Color:  {listing.color}</p>
                         <p>  Condition: {listing.condition}</p>
                     </div>
                     <div className="item-price">
-                        <p>{listing.price}</p>
+                        <p>${listing.price}</p>
                     </div>
                     <div className="item-shipping">
-                        <p>{shipping} Shipping to United States</p>
+                        <p>{shipping} Shipping: {country} to</p> 
+                        <input ></input>
                     </div>
                 </div>
                 <div class='button-container' >
-                    <Link to={`/checkout`} ><button> Purchase </button> </Link>
+                    <Link to={`/checkout/${listing.id}`} ><button> Purchase </button> </Link>
                 </div>
                 <div class='profile-container' >
 
                 </div>
                 <div class='description-container'>
                     <h3>Description</h3>
-                    <p>test</p>
+                    <p>{listing.description}</p>
                 </div>
             </div>
 
