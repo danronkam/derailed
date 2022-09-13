@@ -12,14 +12,20 @@ class Api::UsersController < ApplicationController
     end
   end
 
-  # def show
-  # end 
+  def show
+    @user = User.find(params[:id])
+    render :show
+  end 
 
   # def destroy
   # end
 
-  # def update
-  # end
+  def update
+    if @user.update(user_params)
+      render: show
+    else
+      render json: @user.errors.full_messages, status: :unprocessable_entity
+  end
 
   private
 

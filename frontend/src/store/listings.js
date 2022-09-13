@@ -8,6 +8,7 @@ export const REMOVE_LISTING =  'listings/REMOVE_LISTING'
 
 
 export const getListing = listingId => state => {
+    console.log(state.session.user.id)
     if(!state || !state.listings) {
         return null
     } else {

@@ -10,6 +10,9 @@ import ListingShow from "./components/ListingShow/index"
 import FilterBar from "./components/FilterBar";
 import FilteredIndex from "./components/FilteredIndex";
 import CheckOut from "./components/CheckOut";
+import UserEdit from "./components/UserEdit";
+import UserShow from "./components/UserShow";
+
 
 function App() {
   return (
@@ -45,6 +48,12 @@ function App() {
         </Route>
         <Route exact path='/checkout/:listingId'>
           <CheckOut />
+        </Route>
+        <Route path="/users/myprofile">
+          <UserShow />
+        </Route>
+        <Route path="/users/:userId/edit">
+          <UserEdit />
         </Route>
         <Redirect to='/' />
       </Switch>

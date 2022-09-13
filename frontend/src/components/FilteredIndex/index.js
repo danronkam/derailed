@@ -1,10 +1,12 @@
-import React from "react";
+import React, { useEffect } from "react";
 import { useDispatch, useSelector } from "react-redux";
 import { getListings } from "../../store/listings";
 
 const FilteredIndex = () => {
     const dispatch = useDispatch()
     const listings = useSelector(getListings)
+
+
 
     return(
         <>

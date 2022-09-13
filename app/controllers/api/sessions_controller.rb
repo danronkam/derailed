@@ -24,6 +24,7 @@ class Api::SessionsController < ApplicationController
 
   def destroy
     logout!
+    # console.log('i am herer')
     render json: { message: 'success' }
   end
 end
