@@ -3,7 +3,7 @@ import './Slider.css'
 
 function Slider()  {
     const content =[
-        {title : 'Shop Accessories', blurb: 'PUT A RING ON IT', path: '', photoUrl: 'https://derailed-seed.s3.us-west-1.amazonaws.com/istockphoto-1147544807-612x612.jpg'},
+        {title : 'Shop Accessories', blurb: 'PUT A RING ON IT', path: '', photoUrl: 'https://derailed-seed.s3.us-west-1.amazonaws.com/rings.png'},
         {title: 'Shop Outerwear', blurb: 'TOO ICEY', path: '', photoUrl: 'https://derailed-seed.s3.us-west-1.amazonaws.com/istockphoto-1147544807-612x612.jpg'},
         {title: 'Sell Your Listings On Grailed', blurb: 'SELL FASTER', path: '', photoUrl: 'https://derailed-seed.s3.us-west-1.amazonaws.com/istockphoto-1147544807-612x612.jpg'},
         {title: 'Shop Sneakers and Get Them Under Retail', blurb: 'SNEAKER STEALS', path: '', photoUrl: 'https://derailed-seed.s3.us-west-1.amazonaws.com/istockphoto-1147544807-612x612.jpg'}   

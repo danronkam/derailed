@@ -15,6 +15,13 @@
     /* vertical-align: top; */
 }
 
+.homepage-titles {
+    font-size: 20px;
+    font-weight: bold; 
+    font-family: 'Inter', sans-serif;
+    padding-left: 40px;
+}
+
 .trend-photos {
     height: 150px;
     width: 300px;
@@ -24,6 +31,7 @@
     border-radius: 50%;
     height: 180px;
     width: 180px;
+    border: 1px solid lightgray;
 }
 
 .category-photos {

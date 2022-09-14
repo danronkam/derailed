@@ -1,5 +1,6 @@
 import React from "react";
 import { Link } from "react-router-dom";
+import './Footer.css'
 // import './'
 
 const Footer = () => {
@@ -8,10 +9,10 @@ const Footer = () => {
     return (
         <>
         <div class='footer-links' >
-            <Link > About </Link>
-            <Link > Contact </Link>
-            <Link > Trust </Link>
-            <Link > Grailed </Link>
+            <Link > ABOUT </Link>
+            <Link > CONTACT </Link>
+            <Link > TRUST </Link>
+            <a href="grailed.com">GRAILED</a>
         </div>
         <div class='footer-icons'>
             <i class="fab fa-github-square"></i>
