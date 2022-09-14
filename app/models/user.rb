@@ -17,6 +17,10 @@ class User < ApplicationRecord
       foreign_key: :user_id,
       class_name: :Listing
 
+    has_many :comments,
+      foreign_key: :author_id,
+      class_name: :Comment
+
     before_validation :ensure_session_token
 
     def self.find_by_credentials(credential, password)
