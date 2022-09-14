@@ -1,8 +1,7 @@
-class CommentsController < ApplicationController
+class Api::CommentsController < ApplicationController
     before_action :require_logged_in, only: [:create, :destroy]
 
     def create 
-        @listing = Listing.find(params[:listing_id])
         @comment = Comment.new(comment_params)
 
         if @comment.save 
@@ -34,12 +33,11 @@ class CommentsController < ApplicationController
 
 
     def destroy 
-        @listing = Listing.find(params[:listing_id])
         @comment = Comment.find_by(id: params[:id])
         if @comment && @comment.destroy 
             render :show 
         else
-            render json: @comment.errors.full_messages, status: 422
+            render json: @comment.errors.full_messages, status: :unprocessable_entity
         end
     end
 

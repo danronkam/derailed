@@ -38,7 +38,7 @@ export const fetchListing = listingId => async dispatch => {
 }
 
 export const createListing = (listingData) => async dispatch => {
-    console.log('i am here')
+    // console.log('i am here')
     const res = await csrfFetch(`/api/listings`, {
         method: 'POST',
         body: JSON.stringify(listingData),

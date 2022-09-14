@@ -2,6 +2,7 @@ import { useEffect }  from "react";
 import { useDispatch, useSelector } from "react-redux";
 import { Link, useParams } from "react-router-dom";
 import { fetchListing, getListing } from "../../store/listings";
+import CommentCreate from "../CommentCreate";
 import './ListingShow.css'
 
 
@@ -78,7 +79,7 @@ const ListingShow = () => {
 
 
         </div>
-        
+        <CommentCreate/>
         </>
     )
 }

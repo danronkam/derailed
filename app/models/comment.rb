@@ -1,5 +1,5 @@
 class Comment < ApplicationRecord
-    validates :listing_id, :body, :author_id, presence: true
+    validates :body,  presence: true
 
     belongs_to :author,
       foreign_key: :author_id,
