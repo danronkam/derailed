@@ -4,6 +4,7 @@ import { Link, useParams } from "react-router-dom";
 import { fetchListing, getListing } from "../../store/listings";
 import CommentCreate from "../CommentCreate";
 import './ListingShow.css'
+import CommentIndex from "../CommentIndex";
 
 
 const ListingShow = () => {
@@ -29,6 +30,13 @@ const ListingShow = () => {
         country = 'US'
     }
 
+    function capitalize(word) {
+        return word.charAt(0).toUpperCase() + word.slice(1)
+    }
+
+    let brand = listing.designerBrand
+    let captBrand = capitalize(brand)
+
     console.log(listing)
 
     const handlePress = e => {
@@ -40,20 +48,21 @@ const ListingShow = () => {
     if (!listing) {return null}
     return(
         <>
-        <div class='route'>
-            <p> <Link> {listing.designerBrand} </Link> {carat} <Link>{listing.category} </Link> {carat} <Link> {listing.subCategory} </Link> {carat} {listing.title}</p>
-        </div>
+  
         <div class='ListingShow-MainContent'>
             <div class='leftColumn' >
+            <div class='route'>
+                <p> <Link> {captBrand} </Link> {carat} <Link>{listing.category} </Link> {carat} <Link> {listing.subCategory} </Link> {carat} {listing.title}</p>
+            </div>
                 <img src={listing.photoUrl}></img>
             </div>
 
             <div class='rightColumn'>
                 <div class='rightColumn-content'>
                     <div class='item-details'>
-                        <Link> <h3 class='item-brand'>{listing.designerBrand}</h3> </Link>
+                        <Link> <h3 class='item-brand'>{captBrand}</h3> </Link>
                         <p>{listing.title}</p>
-                        <p> Size:  {listing.size}</p>
+                        <p> Size: Men's US {listing.size}</p>
                         <p> Color:  {listing.color}</p>
                         <p>  Condition: {listing.condition}</p>
                     </div>
@@ -61,15 +70,15 @@ const ListingShow = () => {
                         <p>${listing.price}</p>
                     </div>
                     <div className="item-shipping">
-                        <p>{shipping} Shipping: {country} to</p> 
-                        <input ></input>
+                        <p class='shipping-paragraph'><strong>{shipping}</strong> shipping from {country}</p> 
+
                     </div>
                 </div>
                 <div class='button-container' >
-                    <Link to={`/checkout/${listing.id}`} ><button> Purchase </button> </Link>
+                    <Link to={`/checkout/${listing.id}`} ><button class='purchase-button'> Purchase </button> </Link>
                 </div>
                 <div class='profile-container' >
-
+                    <Link to={`/users/${listing.userId}`}> TEST </Link>
                 </div>
                 <div class='description-container'>
                     <h3>Description</h3>
@@ -80,6 +89,7 @@ const ListingShow = () => {
 
         </div>
         <CommentCreate/>
+        <CommentIndex listingId={listingId}/>
         </>
     )
 }

@@ -10,9 +10,9 @@ class Api::ListingsController < ApplicationController
     end
 
     def create 
-        # debugger
+        debugger
         @listing = Listing.create!(listing_params)
-
+        # console.log(listing_params)
         if @listing.save
             render :show
           else

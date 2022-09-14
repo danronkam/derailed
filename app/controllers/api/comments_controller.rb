@@ -12,8 +12,9 @@ class Api::CommentsController < ApplicationController
     end
 
     def index 
-        @listing = Listing.find(params[:listing_id])
-        @comments = @listing.comments
+        @comments = Comment.where(listing_id: params[:listing_id])
+        # @listing = Listing.find_by(id: params[:listing_id])
+        # @comments = @listing.comments
         render :index
     end
 

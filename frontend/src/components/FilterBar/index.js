@@ -11,7 +11,7 @@ function FilterBar() {
         <>
         <div class='filterbar-container'>
             <div class='filterbar'>
-                <ul>
+                <ul class='filter-list'>
                     <li>
                         <div class='dropdown'>
                             <button class='dropdown-button'> DESIGNERS  

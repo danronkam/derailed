@@ -23,7 +23,7 @@ const CheckoutShippingForm = () => {
                 </label>
                 <label> Country
                     <select name='category' class='create-inputs' id='category'>
-                        <option selected disabled></option>
+                        <option defaultValue={{ label: "Select Category", value: 0 }} disabled></option>
                         <option value='Tops'>Canada</option>
                         <option value='Bottoms'>United States</option>
                     </select>

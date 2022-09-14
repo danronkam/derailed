@@ -39,12 +39,12 @@ function ProfileButton({ user }) {
         <ul className="">
             <Link to={`/users/${user.id}`}>My Profile</Link>
             <Link to={`/users/${user.id}/edit`}>Settings</Link>
-            <p>test</p>
+            {/* <p>test</p>
             <li>{user.username}</li>
             <li>{user.email}</li>
             <li>
               <button onClick={logout}>Log Out</button>
-            </li>
+            </li> */}
           </ul>
       </div>
 

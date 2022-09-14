@@ -1,8 +1,11 @@
 .listing-image {
     object-fit: cover;
     height: 255px;
-    width: 212px;
-    padding-bottom: 10px;
+    width: 100%;
+    padding-bottom: 00px;
+    /* padding-left: 5%; */
+    /* border-bottom: 1px solid lightgray; */
+
     /* border-bottom: 1px solid black; */
 }
 
@@ -19,27 +22,29 @@
     /* width: 100%; */
 }
 
-.listing-title {
+/* .listing-title {
     overflow: hidden;
     white-space: nowrap;
-}
+} */
 
 .listing-link{
     text-decoration: none;
-    background-color: yellow;
-    border-bottom: 2px solid green;
+    /* background-color: yellow;
+    border-bottom: 2px solid green; */
     min-width: 250px;
     max-width: 250px;
-    height: 400px;
+    height: 350px;
     align-content: center;
     padding-left: 2%;
-    padding-bottom: 1%;
+    /* padding-bottom: 1%; */
 }
 
 .feed-price {
     font-family: 'Press Start 2P', cursive;
     /* left: 0; */
     display: flex;
+    font-size: 12px;
+    padding-top: 1%;
 }
 
 .feed-list {
@@ -52,10 +57,19 @@
 }
 
 .feed-title {
+    display: block;
+    overflow: hidden; 
+    white-space: nowrap;
+    font-size: 12px;
+    font-weight: normal;
+}
+
+.feed-brand {
     border-top: 1px solid lightgray;
     padding-top: 15px;
     line-height: 3px;
-    font-weight: 500;
+    font-weight: bolder;
+    font-size: 12px;
     left: 0;
     display: flex;
     justify-content: space-between;
@@ -63,4 +77,5 @@
 
 .avaliable-listings {
     font-family: 'Inter', sans-serif;
+    margin-left: 6.5%;
 }

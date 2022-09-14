@@ -1,30 +1,43 @@
+.ListingShow-MainContent{
+    display: flex;
+    margin-top: 1%;
+}
+
 .rightColumn {
     float: right;
     /* background-color: red; */
     height: 700px;
-    width: 50%;
+    width: 40%;
     display: block;
+    margin-right: 20px;
     align-items: center;
     font-family: 'Inter', sans-serif;
+    margin-left: 8%;
+    margin-top: 5%;
 }
 
 
 .leftColumn {
     float: left;
     height: 700px;
-    width: 50%;
-    /* margin-left: 1%; */
+    width: 60%;
+    margin-left: 10%;
 }
 
 .leftColumn > img {
     height: 100%;
-    width: auto;
+    width: 100%;
+    object-fit: cover;
+    /* padding-right: 1%; */
 }
+
+.item-details > children 
 
 .route{
     font-weight: 400;
     font-size: 12px;
     font-style: none;
+    margin-left: 8%;
 }
 
 a:visited {
@@ -32,7 +45,7 @@ a:visited {
 }
 
 .item-brand {
-    font-weight: bold;
+    font-weight: 900;
     font-size: 18px;
 }
 
@@ -44,4 +57,42 @@ a:visited {
 .item-price {
     font-family: 'Press Start 2P', cursive;
     
+}
+
+.shipping-paragraph {
+    /* font-size: 10px; */
+}
+
+.purchase-button {
+    border: 1px solid lightgray;
+    box-shadow: none;
+    box-sizing: border-box;
+    cursor: pointer;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    margin: 0;
+    text-align: center;
+    transition: background-color 250ms ease,border-color 250ms ease,color 250ms ease;
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    appearance: none;
+    text-decoration: none;
+    font-weight: 500;
+    letter-spacing: .03em;
+    line-height: 1.3;
+    font-family: 'Press Start 2P', cursive;
+    text-transform: uppercase;
+    width: 200px;
+    height: 40px;
+    color: white;
+    background-color: black;
+    padding-left: 15%;
+    padding-right: 15%;
+
+}
+
+.profile-container{
+    border-top: 1px solid lightgrey;
+    border-bottom: 1px solid lightgrey;
 }

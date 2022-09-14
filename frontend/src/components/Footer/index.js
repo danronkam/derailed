@@ -17,7 +17,7 @@ const Footer = () => {
         <div class='footer-icons'>
             <i class="fab fa-github-square"></i>
             <i class="fab fa-linkedin"></i>
-            <h9>Derailed </h9>
+            <h5>Derailed </h5>
         </div>
         
         

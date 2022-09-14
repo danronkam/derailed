@@ -8,8 +8,9 @@ const ListingIndexItem = ({listing}) => {
     const dispatch = useDispatch()
     // { photoUrl } = listing;
 
-    console.log(listing)
 
+    const brand = listing.designerBrand
+    const capsBrand = brand.toUpperCase()
     return(
         <>
         {/* <img src='https://www.pngitem.com/pimgs/m/238-2381636_happy-face-color-in-smiley-face-hd-png.png'></img> */}
@@ -18,9 +19,9 @@ const ListingIndexItem = ({listing}) => {
             <li className="feed-items">
                 <img src={listing.photoUrl} class='listing-image'/> 
                 <div class='feed-details'>
-                    <h3 class='feed-title'>{listing.designerBrand} {listing.size}</h3>
-                    <p>{listing.title}</p>
-                    <p class='feed-price'>${listing.price}</p>
+                    <h3 class='feed-brand'>{capsBrand} {listing.size}</h3>
+                    <span class='feed-title'>{listing.title}</span>
+                    <span class='feed-price'>${listing.price}</span>
                 </div>      
                 </li>
             </Link>

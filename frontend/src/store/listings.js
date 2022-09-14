@@ -38,7 +38,7 @@ export const fetchListing = listingId => async dispatch => {
 }
 
 export const createListing = (listingData) => async dispatch => {
-    // console.log('i am here')
+    // console.log()
     const res = await csrfFetch(`/api/listings`, {
         method: 'POST',
         body: JSON.stringify(listingData),
@@ -88,7 +88,7 @@ const listingsReducer = (state = {}, action) => {
             return action.payload.listings
 
         case RECEIVE_LISTING:
-                newState[action.payload.id] = action.payload
+                newState[action.listing.id] = action.listing
                 return newState
         case REMOVE_LISTING:
             delete newState[action.listingId]
