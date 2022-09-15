@@ -89,6 +89,7 @@ const ListingShow = () => {
                 </div>
                 <div class='button-container' >
                     <Link to={`/checkout/${listing.id}`} ><button class='purchase-button'> Purchase </button> </Link>
+                    <Link to={`/listings/${listing.id}/edit`} ><button class='purchase-button'> Edit </button> </Link>
                 </div>
                 <div class='profile-container' >
                     <Link to={`/users/${listing.userId}`} class='list-owner'>

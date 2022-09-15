@@ -24,10 +24,18 @@ class Api::ListingsController < ApplicationController
         end
     end
 
-    def updated
+    def update
+        if @listing.update(listing_params)
+            render :show
+        else
+            render json: @listing.errors.full_messages, status: :unprocessable_entity
+        end
     end
 
     def destroy
+        @listing = Listing.find(params[:id])
+        @listing.destroy
+        render :index
     end
 
     private

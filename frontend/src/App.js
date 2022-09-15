@@ -13,6 +13,7 @@ import CheckOut from "./components/CheckOut";
 import UserEdit from "./components/UserEdit";
 import UserShow from "./components/UserShow";
 import Footer from "./components/Footer";
+import ListingEdit from "./components/ListingEdit";
 
 
 function App() {
@@ -40,6 +41,9 @@ function App() {
         </Route>
         <Route exact path="/listings/:listingId">
           <ListingShow />
+        </Route>
+        <Route exact path="/listings/:listingId/edit">
+          <ListingEdit />
         </Route>
         <Route exact path="/categories/:category">
           <FilteredIndex />
