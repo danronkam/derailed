@@ -113,7 +113,7 @@ const HomePage =() => {
                             </Link>
                         </li >
                         <li class='homepage-list-items'>    
-                            <Link>  
+                            <Link to={`/shop/:Stussy`}>  
                                 <img class='designer-circle' src='https://derailed-seed.s3.us-west-1.amazonaws.com/stussy.jpg'/> <br></br>
                      
                             </Link>
