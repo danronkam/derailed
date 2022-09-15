@@ -18,10 +18,16 @@ li > a {
   width: auto;
   margin-left: 5%;
 }
-ul{
+
+.navbar-list{
   list-style-type: none;
   justify-content: space-between;
 
+}
+
+#home-logo {
+  padding-left: 5%;
+  padding-right: %;
 }
 
 
@@ -29,6 +35,11 @@ ul{
 #profile_menu {
   float: right;
 }
+
+/* .navbar-container {
+  margin-left: 5%;
+
+} */
 
 
 .navbar {
@@ -42,8 +53,13 @@ ul{
   border-bottom: 1px solid lightgray;
   align-items: center;
   display: flex;
-  justify-content: space-between;
+  /* justify-content: space-between; */
 
   
   /* margin-bottom: 2%; */
+}
+
+.navbar-right{
+  display: flex;
+  margin-left: 22%;
 }

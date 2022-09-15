@@ -20,6 +20,8 @@
     font-weight: bold; 
     font-family: 'Inter', sans-serif;
     padding-left: 40px;
+    padding-bottom: 10px;
+    padding-top: 0px;
 }
 
 .trend-photos {

@@ -35,18 +35,20 @@ function Navigation() {
 
   return (
     <>   
-    <div class='navbar_container'>
+    <div class='navbar-container'>
       <div class="navbar"> 
       
-      <NavLink exact to="/"><a href=''></a><img id='top_left_logo' src='https://process.fs.grailed.com/eEumRzf9QyS13BicdH4V' /> </NavLink>
-      <SearchBar />
-        {/* <img id='top_left_logo' src='https://process.fs.grailed.com/eEumRzf9QyS13BicdH4V' />  */}
-        <ul>
-          <li>
-            {/* <NavLink exact to="/">Home</NavLink> */}
-            {sessionLinks}
-          </li>
-        </ul> 
+        <NavLink exact to="/" id='home-logo'><a href=''></a><img id='top_left_logo' src='https://process.fs.grailed.com/eEumRzf9QyS13BicdH4V' /> </NavLink>
+        <SearchBar />
+          {/* <img id='top_left_logo' src='https://process.fs.grailed.com/eEumRzf9QyS13BicdH4V' />  */}
+        <div class='navbar-right'>
+          <ul class='navbar-list'>
+            <li>
+              {/* <NavLink exact to="/">Home</NavLink> */}
+              {sessionLinks}
+            </li>
+          </ul> 
+        </div>
       </div>
     </div>
       

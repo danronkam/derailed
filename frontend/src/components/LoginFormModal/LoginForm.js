@@ -33,7 +33,7 @@ function LoginForm() {
 
   return (
     <>
-    <h1>Log in</h1> 
+    <h1 class='login-headings'>Log in</h1> 
     {/* <p>Log in to your Grailed account to buy, sell, comment, and more.</p> */}
     <form onSubmit={handleSubmit}>
       <ul>

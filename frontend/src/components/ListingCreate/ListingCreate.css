@@ -18,7 +18,9 @@ h3 {
   color: black;
 }
 
-.left{
+.details-container {
+  display: flex;
+  justify-content: space-around;
 
 }
 

@@ -29,17 +29,14 @@ function App() {
         {/* <Route path="/login">
           <LoginFormPage />
         </Route> */}
-        <Route path="/sell">
+        <Route exact path="/sell">
           <ListingCreate/>
         </Route>
-        <Route path="/signup">
+        <Route exact path="/signup">
           <SignupFormPage />
         </Route>
         <Route exact path="/shop"> 
           <ListingIndex />
-        </Route>
-        <Route exact path='/' >
-          <HomePage />  
         </Route>
         <Route exact path="/listings/:listingId">
           <ListingShow />
@@ -50,11 +47,14 @@ function App() {
         <Route exact path='/checkout/:listingId'>
           <CheckOut />
         </Route>
-        <Route path="/users/:userId">
+        <Route exact path="/users/:userId">
           <UserShow />
         </Route>
-        <Route path="/users/:userId/edit">
+        <Route exact path="/users/:userId/edit">
           <UserEdit />
+        </Route>
+        <Route exact path='/' >
+          <HomePage />  
         </Route>
         <Redirect to='/' />
       </Switch>

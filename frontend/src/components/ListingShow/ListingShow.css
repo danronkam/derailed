@@ -1,6 +1,7 @@
 .ListingShow-MainContent{
     display: flex;
     margin-top: 1%;
+    margin-bottom: 5%;
 }
 
 .rightColumn {
@@ -14,6 +15,18 @@
     font-family: 'Inter', sans-serif;
     margin-left: 8%;
     margin-top: 5%;
+
+    /* min-height: 1000px; */
+}
+
+.description-content {
+    padding-bottom: 100px;
+    border-bottom: 1px solid lightgray;
+}
+
+.posted-date {
+    font-weight: lighter;
+    font-size: 12px;
 }
 
 
@@ -31,13 +44,14 @@
     /* padding-right: 1%; */
 }
 
-.item-details > children 
+
 
 .route{
     font-weight: 400;
     font-size: 12px;
     font-style: none;
-    margin-left: 8%;
+    margin-left: -8%;
+
 }
 
 a:visited {
@@ -89,10 +103,17 @@ a:visited {
     background-color: black;
     padding-left: 15%;
     padding-right: 15%;
+    margin-bottom: 22px;
+}
 
+.description-heading {
+    font-weight: bold;
+    letter-spacing: -.5px;
 }
 
 .profile-container{
     border-top: 1px solid lightgrey;
     border-bottom: 1px solid lightgrey;
+    padding-top: 15px;
+    padding-bottom: 15px;
 }

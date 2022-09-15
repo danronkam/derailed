@@ -1,4 +1,6 @@
 class Api::ListingsController < ApplicationController
+    wrap_parameters include: Listing.attribute_names + [:photo], format: :multipart_form
+
     def show 
         @listing = Listing.find(params[:id])
         render :show
@@ -10,8 +12,9 @@ class Api::ListingsController < ApplicationController
     end
 
     def create 
-        debugger
-        @listing = Listing.create!(listing_params)
+        # debugger
+        @listing = Listing.new(listing_params)
+        @listing.user_id = current_user.id
         # console.log(listing_params)
         if @listing.save
             render :show
@@ -21,9 +24,28 @@ class Api::ListingsController < ApplicationController
         end
     end
 
+    def updated
+    end
+
+    def destroy
+    end
+
     private
     def listing_params 
-        params.require(:listing).permit(:title, :price, :photo, :shipping_price, :designer_brand, :size, :category, :sub_category, :condition, :sold, :country, :color, :description)
+        params.require(:listing).permit(
+            :title, 
+            :price, 
+            :photo, 
+            :shipping_price, 
+            :designer_brand, 
+            :size, 
+            :category, 
+            :sub_category, 
+            :condition, 
+            :sold, 
+            :country, 
+            :color, 
+            :description)
     end
 
 end

@@ -41,9 +41,8 @@ export const createListing = (listingData) => async dispatch => {
     // console.log()
     const res = await csrfFetch(`/api/listings`, {
         method: 'POST',
-        body: JSON.stringify(listingData),
+        body: listingData,
         headers: {
-            'Content-Type': 'application/json',
             'Accept': 'application/json'
         }
     })
