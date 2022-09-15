@@ -17,17 +17,17 @@ function FilterBar() {
                             <button class='dropdown-button'> DESIGNERS  
                             </button>
                                 <div class='dropdown-content'>
-                                    <Link> Comme Des Garçons' </Link>
-                                    <Link> Dries Van Noten </Link>
-                                    <Link> Gucci </Link>
-                                    <Link> Helmut Lang </Link>
-                                    <Link> Issey Miyaki </Link>
-                                    <Link> Jjjjound </Link>
+                                    <Link to={`/shop/:CommeDesGarcon`}> Comme Des Garçons' </Link>
+                                    <Link to={`/shop/:DriesVanNorton`}> Dries Van Noten </Link>
+                                    <Link to={`/shop/:Gucci`}> Gucci </Link>
+                                    <Link to={`/shop/:HelmutLang`}> Helmut Lang </Link>
+                                    <Link to={`/shop/:IsseyMiyaki`}> Issey Miyaki </Link>
+                                    <Link to={`/shop/:Jjjjound`}> Jjjjound </Link>
                                     <Link> Maison Margiela </Link>
-                                    <Link> Nike </Link>
-                                    <Link> Stussy </Link>
-                                    <Link> Tumi </Link>
-                                    <Link> Vintage </Link>
+                                    <Link to={`/shop/:Nike`}> Nike </Link>
+                                    <Link to={`/shop/:Stussy`}> Stussy </Link>
+                                    <Link to={`/shop/:Tumi`}> Tumi </Link>
+                                    <Link to={`/shop/:Vintage`}> Vintage </Link>
                                 </div>
                         </div>
                     </li>

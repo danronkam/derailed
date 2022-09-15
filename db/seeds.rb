@@ -42,7 +42,7 @@ ApplicationRecord.transaction do
       user_id: 1, 
       price: 10, 
       shipping_price: 5, 
-      designer_brand: 'gucci', 
+      designer_brand: 'Gucci', 
       size: '6', 
       category: 'Footwear', 
       condition: 'New/Never Worn', 

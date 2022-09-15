@@ -7,7 +7,7 @@ const HomePage =() => {
     return(
         <>
         <div class='homepage-container'>
-        <Slider/>
+        <Slider/> 
 
             <div class='trend-container'>
                 <h1 class='homepage-titles' > Shop Latest Trends</h1>
@@ -89,13 +89,13 @@ const HomePage =() => {
                 <div>
                     <ul class="homepage-lists">
                         <li class='homepage-list-circles'>    
-                            <Link>  
+                            <Link to={`/shop/:Nike`}>  
                                 <img class='designer-circle' src='https://derailed-seed.s3.us-west-1.amazonaws.com/nike.jpg'/> <br></br>
                              
                             </Link>
                         </li>
                         <li class='homepage-list-items'>    
-                            <Link>  
+                            <Link to={`/shop/:Carhartt`}>  
                                 <img class='designer-circle' src='https://derailed-seed.s3.us-west-1.amazonaws.com/carhartt.jpg'/> <br></br>
                            
                             </Link>
@@ -107,7 +107,7 @@ const HomePage =() => {
                             </Link>
                         </li>
                         <li class='homepage-list-items'>    
-                            <Link>  
+                            <Link to={`/shop/:Gucci`}>  
                                 <img class='designer-circle' src='https://derailed-seed.s3.us-west-1.amazonaws.com/mm6.jpg'/> <br></br>
                               
                             </Link>
