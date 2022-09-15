@@ -42,6 +42,7 @@ function Slider()  {
         <>
         <Link to={`/shop`}>
         <div class='slider-container'>
+            <div class='slides' >            
             <div class='slider-left' >
                 <h3>{blurb}</h3>
                 <h1>{title}</h1>
@@ -50,6 +51,8 @@ function Slider()  {
             <div class='slider-right'>
                 <img id='slider-photo' src={photoUrl} />
             </div>
+        </div>
+
         </div>
         </Link>
 

@@ -43,7 +43,7 @@ li > a {
 
 
 .navbar {
-  overflow: hidden;
+  /* overflow: hidden; */
   background-color: white;
   position: fixed; 
   top: 0; /* Position the navbar at the top of the page */
