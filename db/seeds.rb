@@ -62,7 +62,7 @@ ApplicationRecord.transaction do
       user_id: 5, 
       price: 15, 
       shipping_price: 5, 
-      designer_brand: 'vintage', 
+      designer_brand: 'Vintage', 
       size: 'M', category: 'Tops', 
       condition: 'Gently Used', 
       sub_category: 'Shirt', 

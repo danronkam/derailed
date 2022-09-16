@@ -17,13 +17,11 @@ function FilterBar() {
                             <button class='dropdown-button'> DESIGNERS  
                             </button>
                                 <div class='dropdown-content'>
-                                    <Link to={`/shop/:CommeDesGarcon`}> Comme Des Garçons' </Link>
-                                    <Link to={`/shop/:DriesVanNorton`}> Dries Van Noten </Link>
+                                    <Link to={`/shop/:Adidas`}> Adidas </Link>
+                                    <Link to={`/shop/:Bape`}> Bape </Link>
+                                    <Link to={`/shop/:Dime`}> Dime MTL </Link>
                                     <Link to={`/shop/:Gucci`}> Gucci </Link>
-                                    <Link to={`/shop/:HelmutLang`}> Helmut Lang </Link>
-                                    <Link to={`/shop/:IsseyMiyaki`}> Issey Miyaki </Link>
                                     <Link to={`/shop/:Jjjjound`}> Jjjjound </Link>
-                                    <Link> Maison Margiela </Link>
                                     <Link to={`/shop/:Nike`}> Nike </Link>
                                     <Link to={`/shop/:Stussy`}> Stussy </Link>
                                     <Link to={`/shop/:Tumi`}> Tumi </Link>
@@ -38,12 +36,13 @@ function FilterBar() {
                             </button>
                                 <div class='dropdown-content'>
                                     <Link to={`/shop`}> All Categories </Link>
-                                    <Link> Tops </Link>
-                                    <Link> Bottoms </Link>
-                                    <Link> Outerwear </Link>
-                                    <Link> Footwear </Link>
-                                    <Link> Tailoring </Link>
-                                    <Link> Accessories </Link>
+                                    <Link to={`/shop/:Tops`}> Tops </Link>
+                                    <Link to={`/shop/:Bottoms`}> Bottoms </Link>
+                                    <Link to={`/shop/:Outerwear`}> Outerwear </Link>
+                                    <Link to={`/shop/:Footwear`}> Footwear </Link>
+                                    <Link to={`/shop/:Sneakers`}> Sneakers </Link>
+                                    <Link to={`/shop/:Tailoring`}> Tailoring </Link>
+                                    <Link to={`/shop/:Accessories`}> Accessories </Link>
                                 </div>
                         </div>
                     </li>

@@ -30,31 +30,37 @@ function SignUpForm() {
     }
 
     return (
-<form onSubmit={handleSubmit}>
-      <ul>
-        {errors.map(error => <li key={error}>{error}</li>)}
-      </ul>
+      <>
+        <h1 class='login-headings'>Sign up</h1> 
+          <form onSubmit={handleSubmit}>
+            <ul>
+              {errors.map(error => <li key={error}>{error}</li>)}
+            </ul>
 
-      <label>
-        Email Address
-        <input
-          type="text"
-          value={email}
-          onChange={(e) => setEmail(e.target.value)}
-          required
-        />
-      </label> <br></br>
-      <label>
-        Password
-        <input
-          type="password"
-          value={password}
-          onChange={(e) => setPassword(e.target.value)}
-          required
-        />
-      </label>
-      <button type="submit" id='signup_button'>SIGN UP</button>
-    </form>
+            <label>
+              Email Address</label> 
+              <input
+                type="text"
+                value={email}
+                class='log_in_inputs'
+                onChange={(e) => setEmail(e.target.value)}
+                required
+              />
+              <br></br>
+            
+            <label>
+              Password      </label>
+              <input
+                type="password"
+                value={password}
+                class='log_in_inputs'
+                onChange={(e) => setPassword(e.target.value)}
+                required
+              />
+       
+            <button type="submit" class='login_button'>SIGN UP</button>
+          </form> 
+    </>
     )
 
 }

@@ -28,7 +28,7 @@ const ListingIndex = () => {
        
         <div class='feed-container'>  
             <div class='feed-rightside'>  
-                <h2 class='avaliable-listings'>Avaliable Listings</h2>
+                <h2 class='avaliable-listings'>Avaliable Listings</h2> <br />
                 <ul class='feed-list'>
                     {listings.map(listing => {
                         return <ListingIndexItem key={listing.id} listing={listing} />

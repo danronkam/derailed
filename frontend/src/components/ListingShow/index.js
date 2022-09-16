@@ -13,10 +13,13 @@ const ListingShow = () => {
     const {listingId} = useParams()
     const listing = useSelector(getListing(listingId))
     const listingOwner = useSelector(getUser(listing.userId))
-    
 
-    const date = listing.createdAt
-    // const year = date.slice(0,4)
+
+
+    const sessionUser = useSelector(state => state.session.user);
+    console.log(sessionUser)
+    console.log('look here^^')
+
     useEffect(() => {
         dispatch(fetchUser(listing.userId))
     }, [listing.userId])
@@ -24,6 +27,28 @@ const ListingShow = () => {
     useEffect(() => {
         dispatch(fetchListing(listingId))
     }, [listingId])
+    
+    let buttons;
+    if (sessionUser.id === listing.userId) {
+        buttons = (
+        <>    
+        <Link to={`/checkout/${listing.id}`} ><button class='purchase-button'> Purchase </button> </Link>
+        <Link to={`/listings/${listing.id}/edit`} ><button class='purchase-button'> Edit </button> </Link>
+        </>
+      );
+    } else {
+        buttons = (
+        <> 
+         <Link to={`/checkout/${listing.id}`} ><button class='purchase-button'> Purchase </button> </Link>
+  
+        </>
+      );
+    }
+    
+
+    const date = listing.createdAt
+    // const year = date.slice(0,4)
+
 
     console.log('THIS IS THE LISTING OWNER:')
     console.log(listing.userId)
@@ -52,9 +77,9 @@ const ListingShow = () => {
 
     console.log(listing)
 
-    const handlePress = e => {
-        dispatch() //what am i dispatching from here? i want to pass the item into here into /checkout
-    }
+    // const handlePress = e => {
+    //     dispatch() //what am i dispatching from here? i want to pass the item into here into /checkout
+    // }
 
     const carat = '>'
 
@@ -65,7 +90,7 @@ const ListingShow = () => {
         <div class='ListingShow-MainContent'>
             <div class='leftColumn' >
             <div class='route'>
-                <p> <Link> {captBrand} </Link> {carat} <Link>{listing.category} </Link> {carat} <Link> {listing.subCategory} </Link> {carat} {listing.title}</p>
+                <p> <Link to={``}> {captBrand} </Link> {carat} <Link>{listing.category} </Link> {carat} <Link> {listing.subCategory} </Link> {carat} {listing.title}</p>
             </div>
                 <img src={listing.photoUrl}></img>
             </div>
@@ -88,8 +113,7 @@ const ListingShow = () => {
                     </div>
                 </div>
                 <div class='button-container' >
-                    <Link to={`/checkout/${listing.id}`} ><button class='purchase-button'> Purchase </button> </Link>
-                    <Link to={`/listings/${listing.id}/edit`} ><button class='purchase-button'> Edit </button> </Link>
+                    {buttons}
                 </div>
                 <div class='profile-container' >
                     <Link to={`/users/${listing.userId}`} class='list-owner'>

@@ -1,10 +1,9 @@
 .homepage-lists {
     margin: 0 auto;
     text-align: center;
-    width: 100%;
+    /* width: 100%; */
     justify-content: space-between;
     display: flex;
-    min-width: 100%;
 }
 
 .homepage-list-items {

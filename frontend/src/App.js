@@ -15,6 +15,7 @@ import UserShow from "./components/UserShow";
 import Footer from "./components/Footer";
 import ListingEdit from "./components/ListingEdit";
 import DesignerIndex from "./components/DesignerIndex";
+import CategoryIndex from "./components/CategoryIndex";
 
 
 function App() {
@@ -45,6 +46,9 @@ function App() {
         </Route> */}
         <Route exact path="/shop/:designerBrand">
           <DesignerIndex /> 
+        </Route>
+        <Route exact path="/shop/:category">
+          <CategoryIndex /> 
         </Route>
         <Route exact path="/listings/:listingId">
           <ListingShow />

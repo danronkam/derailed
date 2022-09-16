@@ -17,6 +17,7 @@
 }
 
 .feed-rightside {
+  /* display: flex; */
   width: 100%;
   right: 0;
   /* background-color: red; */

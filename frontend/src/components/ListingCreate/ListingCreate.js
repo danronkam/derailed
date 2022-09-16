@@ -3,12 +3,15 @@ import { useParams } from 'react-router-dom';
 import { useDispatch, useSelector } from 'react-redux';
 import { getListing, fetchListing, createListing } from '../../store/listings';
 import './ListingCreate.css'
+import { useHistory } from 'react-router-dom';
 
 const ListingCreate = () => {
     const sessionUser = useSelector(state => state.session.user);
     const dispatch = useDispatch()
     const{listingId} = useParams()
     let listingData = useSelector(getListing(listingId))
+    const history = useHistory();
+
     
 
     // const [listing, setListing] = useState(listingData)
@@ -198,11 +201,15 @@ const ListingCreate = () => {
         }
     }
 
+
+
     // const [errors, onSubmit] = useSubmit({
     const handleSubmit = e => {
             // debugger
+            // console.log(sessionUser.id)
         e.preventDefault();
         const formData = new FormData();
+        formData.append('user_id', sessionUser.id)
         formData.append('title', title);
         formData.append('price', price);
         formData.append('shipping_price', shipping_price);
@@ -223,8 +230,9 @@ const ListingCreate = () => {
             formData.append('photo', photoFile);
         }
         dispatch(createListing(formData))
+
         //   return createListing(formData);
-        // onSuccess: () => history.push('/')
+        history.push('/')
     };
 
 

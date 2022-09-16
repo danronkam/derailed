@@ -1,0 +1,72 @@
+.profile-dropdown {
+    position: absolute;
+  }
+
+#log_in_button {
+    background-color: white;
+    border: 1px solid lightgray;
+    height: 30px;
+    width: 60px;
+    font-family: 'Press Start 2P', cursive;
+    font-size: 10px;
+    margin-right: 30px;
+  }
+
+#sign_up_button {
+  border: 1px solid black;
+  color: white;
+  background-color: black;   
+  font-family: 'Press Start 2P', cursive;
+  font-size: 10px;
+  height: 30px;
+/* margin-left: 1%; */
+
+}
+
+#modal-content {
+  padding-top: 20px;
+  padding-bottom: 20px;
+  padding-left: 40px;
+  padding-right: 40px;
+  background-color: white;
+  width: 300px;
+  font-family: Arial, Helvetica, sans-serif;
+  border-radius: 10px;
+}
+
+.login-headings {
+  padding-top: 20px;
+  padding-bottom: 15px;
+  font-weight: bolder;
+}
+
+.login_button {
+  display: block;
+  background-color: black;
+  color: white;
+  width: 275px;
+  height: 50px;
+  border-radius: 5px;
+  margin-top: 20px;
+  font-family: Arial, Helvetica, sans-serif;
+  font-weight: 550;
+}
+
+.log_in_inputs {
+  width: 310px;
+  height: 40px;
+  border-radius: 5px;
+  border-color: lightgrey;
+  border-width: 1px;
+  text-align: justify;
+}
+
+label {
+  display: flex;
+  margin-top: 20px;
+  font-weight: 550;
+}
+text {
+  margin-left: auto;
+  margin-right: auto;
+}

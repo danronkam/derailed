@@ -53,7 +53,7 @@
     /* height: fit-content; */
     padding-bottom: 20px;
     align-items: center;
-    justify-content: normal;
+    justify-content: right;
 }
 
 .feed-title {
