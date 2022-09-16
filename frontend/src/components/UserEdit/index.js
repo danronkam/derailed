@@ -4,6 +4,7 @@ import { useDispatch, useSelector } from "react-redux";
 import { useParams } from "react-router-dom";
 import * as sessionActions from '../../store/session';
 import { useHistory } from "react-router-dom";
+import './UserEdit.css'
 
 
 const UserEdit = () => {
@@ -60,15 +61,15 @@ const UserEdit = () => {
             </div>
         </div>
         <div class='edit-form-container' >
-            <h3 class='edit-title'>Edit Your Profile</h3>
+            <h3 class='user-edit-title'>Edit Your Profile</h3>
             <form class='edit-form' onSubmit={handleSubmit}>
                 <div class='form-row-1'>
-                    <label htmlFor="user_username"> Username
-                        <input id='user_username' value={user.username} onChange={e => {setUser({...user, username: e.target.value})}} />
-                    </label>
-                    <label htmlFor="user_email"> Email
-                        <input id='user_email' value={email} onChange={e => {setUser({...user, email: e.target.value})}}/>
-                    </label>
+                    <label htmlFor="user_username"> Username <br />  </label>
+                        <input id='user_username' class='log_in_inputs' value={user.username} onChange={e => {setUser({...user, username: e.target.value})}} />
+                   
+                    <label htmlFor="user_email"> Email    </label>
+                        <input id='user_email' class='log_in_inputs' value={email} onChange={e => {setUser({...user, email: e.target.value})}}/>
+                  
                 </div>
                 <div class='form-row-2'>
                     {/* <label htmlFor="user_location"> Location
@@ -77,8 +78,8 @@ const UserEdit = () => {
                                 <option value="United States">United  States</option>
                             </select>
                     </label> */}
-                    <label htmlFor="user_top"> Top Size
-                        <select id='user_top' value={top} onChange={e => {setUser({...user, top_size: e.target.value})}}>
+                    <label htmlFor="user_top"> Top Size <br /> </label>
+                        <select id='user_top' value={top} class='log_in_inputs' onChange={e => {setUser({...user, top_size: e.target.value})}}>
                             <option value='XS'>XS</option>
                             <option value='S'>S</option>
                             <option value='M'>M</option>
@@ -86,9 +87,9 @@ const UserEdit = () => {
                             <option value='XL'>XL</option>
                             <option value='2XL'>2XL</option>
                         </select>
-                    </label>
-                    <label htmlFor="user_bottom"> Bottom Size
-                    <select id='user_bottom' value={bottom} onChange={e => {setUser({...user, waist_size: e.target.value})}}>
+                    
+                    <label htmlFor="user_bottom"> Bottom Size   <br />     </label>
+                    <select id='user_bottom' value={bottom} class='log_in_inputs' onChange={e => {setUser({...user, waist_size: e.target.value})}}>
                             <option value='28'>28</option>
                             <option value='29'>29</option>
                             <option value='30'>30</option>
@@ -99,13 +100,13 @@ const UserEdit = () => {
                             <option value='35'>35</option>
                             <option value='36'>36</option>
                         </select>
-                    </label>
+             
                 </div>
-                <input type='submit' value="Update"/> 
+                <input type='submit' class='login_button' value="Update"/> 
                 {/* <input type='submit'> Update </input> */}
 
             </form>
-            <button onClick={logout} >Log Out</button>
+            <button onClick={logout} class='login_button' >Log Out</button>
         </div>
 
         </>

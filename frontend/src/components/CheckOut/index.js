@@ -66,8 +66,8 @@ const CheckOut = () => {
                         </div>
                         <div class='shipping-price-container'>
                         
-                            <p>{listing.price}</p>
-                            <p>{listing.shipping_price}</p>
+                            <p>{listing.price}</p> <br />
+                            <p>{listing.shippingPrice}</p>
                         </div>
                     </div>
 

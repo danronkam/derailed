@@ -1,8 +1,7 @@
 import React from "react";
 import { useDispatch, useSelector } from "react-redux";
 import { useParams } from "react-router-dom";
-import { fetchListings, getListings } from "../../store/listings";
-import { fetchUser, getUser } from "../../store/user";
+import { fetchUser } from "../../store/user";
 import './UserShow.css'
 import { useEffect } from "react";
 import ListingIndexItem from "../ListingIndexItem";

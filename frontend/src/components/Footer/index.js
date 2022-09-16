@@ -9,16 +9,14 @@ const Footer = () => {
     return (
         <>
         <div class='footer-links' >
-            <Link > ABOUT </Link>
-            <Link > CONTACT </Link>
-            <Link > TRUST </Link>
-            <a href="grailed.com">GRAILED</a>
+
+            <a href="https://www.grailed.com/">GRAILED</a>
         </div>
         <div class='footer-icons'>
-            <i class="fab fa-github-square"></i>
-            <i class="fab fa-linkedin"></i>
-            <h5>Derailed </h5>
+            <a href='https://github.com/danronkam/'>  <i class="fab fa-github-square" /></a>
+            <a href='https://linkedin.com/in/danronkam'> <i class="fab fa-linkedin"></i> </a>
         </div>
+        <a href='https://github.com/danronkam/derailed'> DERAILED </a>
         
         
         </>

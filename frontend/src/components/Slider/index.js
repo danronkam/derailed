@@ -17,7 +17,7 @@ function Slider()  {
 
     function nextSlide() {
         console.log(contentIdx)
-        if(contentIdx != content.length -1) {
+        if(contentIdx !== content.length -1) {
             contentIdx += 1
             currentSlide = content[contentIdx]
         } else {
@@ -48,7 +48,7 @@ function Slider()  {
                 <button id='shop-button'>SHOP NOW</button>
             </div>
             <div class='slider-right'>
-                <img id='slider-photo' src={photoUrl} />
+                <img id='slider-photo' alt='' src={photoUrl} />
             </div>
         </div>
 

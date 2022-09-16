@@ -90,7 +90,7 @@ const ListingShow = () => {
         <div class='ListingShow-MainContent'>
             <div class='leftColumn' >
             <div class='route'>
-                <p> <Link to={``}> {captBrand} </Link> {carat} <Link>{listing.category} </Link> {carat} <Link> {listing.subCategory} </Link> {carat} {listing.title}</p>
+                <p> <Link to={`/shop/:${captBrand}`}> {captBrand} </Link> {carat} <Link to={`/shop/menswear/:${listing.category}`}>{listing.category} </Link> {carat} <Link to={`/shop/menswear/:${listing.subCategory}`}> {listing.subCategory} </Link> {carat} {listing.title}</p>
             </div>
                 <img src={listing.photoUrl}></img>
             </div>
@@ -118,6 +118,7 @@ const ListingShow = () => {
                 <div class='profile-container' >
                     <Link to={`/users/${listing.userId}`} class='list-owner'>
                     <i class="fa-solid fa-circle-user" id='avatar'></i>
+                    <h3 id='see-more' >See More From This Store</h3>
                     </Link>
                 </div>
                 <div class='description-container'>
