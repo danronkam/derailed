@@ -18,8 +18,8 @@ const CategoryIndex = () => {
 
     let filtered = []
 
-    const filterListings = listings.filter(listing => {
-        debugger
+    const filterListings = listings.map(listing => {
+        // debugger
         // console.log(listing.category)
         if(listing.category === category.slice(1)) {
             
@@ -43,6 +43,7 @@ const CategoryIndex = () => {
                 <h2 class='avaliable-listings'>Avaliable Listings</h2>
                 <ul class='feed-list'>
                     {filtered.map(listing => {
+                        console.log(listing)
                         return <ListingIndexItem key={listing.id} listing={listing} />
                     })}
                 </ul>

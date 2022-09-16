@@ -40,7 +40,7 @@ function Slider()  {
 
     return(
         <>
-        <Link to={`/shop`}>
+        <Link to={`/shop/menswear/:Accessories`}>
         <div class='slider-container'>
             <div class='slides' >            
             <div class='slider-left' >

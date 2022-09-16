@@ -30,28 +30,40 @@ const HomePage =() => {
                 <h1 class='homepage-titles' >Shop Menswear</h1>
                 <ul class="homepage-lists">
                     <li class='homepage-list-items'>
-                        <img class='category-photos' src='https://derailed-seed.s3.us-west-1.amazonaws.com/footwear.jpg'/>
-                        <h3>Footwear</h3>
+                        <Link to={`/shop/menswear/:Footwear`}>
+                            <img class='category-photos' src='https://derailed-seed.s3.us-west-1.amazonaws.com/footwear.jpg'/>
+                            <h3>Footwear</h3>
+                        </Link>
                     </li>
                     <li class='homepage-list-items'>
-                        <img class='category-photos'src='https://derailed-seed.s3.us-west-1.amazonaws.com/outerwear.jpg'/>
-                        <h3>Outerwear</h3>
+                        <Link to={`/shop/menswear/:Outerwear`}>
+                            <img class='category-photos'src='https://derailed-seed.s3.us-west-1.amazonaws.com/outerwear.jpg'/>
+                            <h3>Outerwear</h3>
+                        </Link>
                     </li>
                     <li class='homepage-list-items'> 
-                        <img class='category-photos' src='https://derailed-seed.s3.us-west-1.amazonaws.com/tops.jpg'/>
-                        <h3>Tops</h3>
+                        <Link to={`/shop/menswear/:Tops`}>
+                            <img class='category-photos' src='https://derailed-seed.s3.us-west-1.amazonaws.com/tops.jpg'/>
+                            <h3>Tops</h3>
+                        </Link>
                     </li>
                     <li class='homepage-list-items'>
-                        <img class='category-photos' src='https://derailed-seed.s3.us-west-1.amazonaws.com/bottoms.jpg'/>
-                        <h3>Bottoms</h3>
+                        <Link to={`/shop/menswear/:Bottoms`} >
+                            <img class='category-photos' src='https://derailed-seed.s3.us-west-1.amazonaws.com/bottoms.jpg'/>
+                            <h3>Bottoms</h3>
+                        </Link>
                     </li>
                     <li class='homepage-list-items'>
-                        <img class='category-photos' src='https://derailed-seed.s3.us-west-1.amazonaws.com/Tairloring.jpg'/>
-                        <h3>Tailoring</h3>
+                        <Link to={`/shop/menswear/:Tailoring`}>
+                            <img class='category-photos' src='https://derailed-seed.s3.us-west-1.amazonaws.com/Tairloring.jpg'/>
+                            <h3>Tailoring</h3>
+                        </Link>
                     </li>
                     <li class='homepage-list-items'>
-                        <img class='category-photos' src='https://derailed-seed.s3.us-west-1.amazonaws.com/accessories.jpg'/>
-                        <h3>Accessories</h3>
+                        <Link to={`/shop/menswear/:Accessories`}>
+                            <img class='category-photos' src='https://derailed-seed.s3.us-west-1.amazonaws.com/accessories.jpg'/>
+                            <h3>Accessories</h3>
+                        </Link>
                     </li>
                 </ul>
             </div>

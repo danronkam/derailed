@@ -27,13 +27,26 @@ li > a {
 
 #home-logo {
   padding-left: 5%;
-  padding-right: %;
 }
 
 
 
 #profile_menu {
   float: right;
+}
+
+#profile_menu:hover {
+  color: blue
+;}
+
+.navbar-links > a{
+  text-decoration: none;
+  font-weight: bold;
+}
+
+.navbar-links > a:hover{
+  text-decoration: none;
+ color: blue;
 }
 
 /* .navbar-container {

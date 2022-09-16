@@ -47,7 +47,7 @@ function App() {
         <Route exact path="/shop/:designerBrand">
           <DesignerIndex /> 
         </Route>
-        <Route exact path="/shop/:category">
+        <Route exact path="/shop/menswear/:category">
           <CategoryIndex /> 
         </Route>
         <Route exact path="/listings/:listingId">

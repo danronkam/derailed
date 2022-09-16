@@ -36,21 +36,21 @@ function FilterBar() {
                             </button>
                                 <div class='dropdown-content'>
                                     <Link to={`/shop`}> All Categories </Link>
-                                    <Link to={`/shop/:Tops`}> Tops </Link>
-                                    <Link to={`/shop/:Bottoms`}> Bottoms </Link>
-                                    <Link to={`/shop/:Outerwear`}> Outerwear </Link>
-                                    <Link to={`/shop/:Footwear`}> Footwear </Link>
-                                    <Link to={`/shop/:Sneakers`}> Sneakers </Link>
-                                    <Link to={`/shop/:Tailoring`}> Tailoring </Link>
-                                    <Link to={`/shop/:Accessories`}> Accessories </Link>
+                                    <Link to={`/shop/menswear/:Tops`}> Tops </Link>
+                                    <Link to={`/shop/menswear/:Bottoms`}> Bottoms </Link>
+                                    <Link to={`/shop/menswear/:Outerwear`}> Outerwear </Link>
+                                    <Link to={`/shop/menswear/:Footwear`}> Footwear </Link>
+                                 
+                                    <Link to={`/shop/menswear/:Tailoring`}> Tailoring </Link>
+                                    <Link to={`/shop/menswear/:Accessories`}> Accessories </Link>
                                 </div>
                         </div>
                     </li>
                     <li>
-                        <Link exact to=''> <button>SNEAKERS </button> </Link>
+                        <Link exact to={`/shop/menswear/:Sneakers`}> <button>SNEAKERS </button> </Link>
                     </li>
                     <li>
-                        <Link exact to='/shop/staff-picks'> <button> STAFF PICKS </button> </Link>
+                        <Link exact to='/shop'> <button> STAFF PICKS </button> </Link>
                     </li>
 
                 </ul>

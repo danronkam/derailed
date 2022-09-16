@@ -43,7 +43,7 @@ function Navigation() {
           {/* <img id='top_left_logo' src='https://process.fs.grailed.com/eEumRzf9QyS13BicdH4V' />  */}
         <div class='navbar-right'>
           <ul class='navbar-list'>
-            <li>
+            <li class='navbar-links'>
               {/* <NavLink exact to="/">Home</NavLink> */}
               {sessionLinks}
             </li>
