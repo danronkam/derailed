@@ -88,7 +88,7 @@ ApplicationRecord.transaction do
       designer_brand: 'Stussy', 
       size: 'OS', category: 'Accessories', 
       condition: 'New/Never Worn', 
-      sub_category: 'Shirt', 
+      sub_category: 'Ties', 
       color: 'Black',
       country: 'United States',
       description: 'damn thats crazy'})
@@ -337,6 +337,45 @@ ApplicationRecord.transaction do
     Comment.create({body: 'no way ur serious with this price', author_id:1, listing_id: 11})
     Comment.create({body: '$50? lmk', author_id:1, listing_id: 11})
 #________________________________________________________________________________________________________________
+
+demo_listing12 = Listing.create!({
+  title: 'Vintage Carhartt Double Knee Canvas Work Pants Jeans Destroyed Wip Black', 
+  user_id: 8, 
+  price: 260, 
+  shipping_price: 9.25, 
+  designer_brand: 'Carhartt', 
+  size: '29', category: 'Bottoms', 
+  condition: 'Used', 
+  sub_category: 'Jeans', 
+  color: 'Black',
+  country: 'United States',
+  description: 'Vintage Carhartt Double Knee Canvas Work Pants
+  - Size: 32-33 x 29, see measurements
+  
+  - Color: Black
+  
+  - Condition: Pre-owned, has wear / holes / distressing throughout. The buttocks area fabric is thin. Original Fit. Made in USA. See all photos for condition.'})
+
+  
+file12 = URI.open('https://derailed-seed.s3.us-west-1.amazonaws.com/s-l400.jpg')
+demo_listing12.photo.attach(io: file12, filename: 'nike_panda.jpg')
+#________________________________________________________________________________________________________________
+
+demo_listing13 = Listing.create!({
+  title: 'LV BACKPACK TRIO', 
+  user_id: 7, 
+  price: 3850, 
+  shipping_price: 0, 
+  designer_brand: 'LV', 
+  size: 'OS', category: 'Accessories', 
+  condition: 'New', 
+  sub_category: 'Bags', 
+  color: 'Black',
+  country: 'United States',
+  description: 'The new Trio backpack is a fashion-forward blend of heritage and modernity, combining Louis Vuitton’s classic Monogram Eclipse canvas with an array of imaginative signature touches by designer Virgil Abloh. Conceived for comfort and convenience, it offers a body-friendly supple texture, a secure magnetic closure system and multiple pockets inside and out.'})
+
+  
+file1 = URI.open('https://derailed-seed.s3.us-west-1.amazonaws.com/louis-vuitton--M45538_PM2_Front+view.jpg')
 
 
     # More users

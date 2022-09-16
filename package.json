@@ -1,0 +1,25 @@
+{
+  "name": "derailed",
+  "version": "1.0.0",
+  "description": "",
+  "directories": {
+    "lib": "lib"
+  },
+  "scripts": {
+    "build": "npm install --prefix frontend && npm run build --prefix frontend"
+  },
+  "engines": {
+    "node": "16.x"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/danronkam/derailed.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/danronkam/derailed/issues"
+  },
+  "homepage": "https://github.com/danronkam/derailed#readme"
+}

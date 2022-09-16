@@ -38,7 +38,7 @@ export const fetchListing = listingId => async dispatch => {
 }
 
 export const createListing = (listingData) => async dispatch => {
-    // console.log()
+    // debugger
     const res = await csrfFetch(`/api/listings`, {
         method: 'POST',
         body: listingData,
@@ -80,7 +80,6 @@ reducer
 const listingsReducer = (state = {}, action) => {
     Object.freeze(state)
     const newState = {...state}
-    // debugger
 
     switch(action.type){
         case RECEIVE_LISTINGS:

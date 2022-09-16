@@ -16,8 +16,7 @@ class Api::ListingsController < ApplicationController
         @listing = Listing.new(listing_params)
         # @listing.user_id = current_user.id
         # console.log(listing_params)
-        debugger
-        if @listing.save
+        if @listing.save!
             render :show
           else
             render json: @listing.errors.full_messages, status: :unprocessable_entity
@@ -27,7 +26,6 @@ class Api::ListingsController < ApplicationController
 
     def update
         @listing = Listing.find(params[:id])
-        # debugger
 
         if @listing.update(listing_params)
             render :show

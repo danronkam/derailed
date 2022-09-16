@@ -105,11 +105,10 @@
 //     // const designers = ['Acne Studios', 'Adidas', 'Alexander McQueen', 'Amiri', 'Balenciaga', 'Bape', 'Bottega Veneta', 'Celine', 'Chanel', 'Chrome Hearts', 'Comme Des Garcons', 'Dior', 'Dries Van Noten', 'Fear of God', 'Gucci', 'Jacquemus', 'Kapital', 'Loewe', 'Louis Vuitton', 'Maison Margiela', 'Nike', 'Number (N)ine', 'Off-White', 'Prada', 'Raf Simons', 'Rick Owns', 'Saint Laurent Paris', 'Stone Island', 'Supreme', 'Undercover', 'Vintage']
 
 //     // const handleSubmit = e => {
-//     //     // debugger
+//     
 //     //     e.preventDefault()
 //     //     console.log(state)
 //     //     dispatch(createListing(state))
-//     //     // debugger
 //     // }
 
 //     // const handleSubmit= e => {
@@ -205,7 +204,6 @@
 
 //     // const [errors, onSubmit] = useSubmit({
 //     const handleSubmit = e => {
-//             // debugger
 //             // console.log(sessionUser.id)
 //         e.preventDefault();
 //         const formData = new FormData();
@@ -479,7 +477,6 @@ const ListingCreate = () => {
 
     // const [errors, onSubmit] = useSubmit({
     const handleSubmit = e => {
-            // debugger
             // console.log(sessionUser.id)
         e.preventDefault();
         const formData = new FormData();

@@ -19,7 +19,6 @@ const DesignerIndex = () => {
     let filtered = []
 
     const filterListings = listings.filter(listing => {
-        // debugger
         if(listing.designerBrand === designerBrand.slice(1)) {
             filtered.push(listing)
         }

@@ -7,7 +7,7 @@ import { getUser } from "../../store/user";
 const CommentIndexItem = (comment) => {
     const userId = comment.listing.authorId
     const user = useSelector(getUser(userId))
-    // debugger
+    // 
     
     console.log(user)
     return(
