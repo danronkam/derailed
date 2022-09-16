@@ -1,8 +1,33 @@
 .user-logo {
-    border-right: 1px solid lightgray;
+
 }
 
 #avatar {
     height: 100%;
     width: 100%;
+    font-size: 75px;
+    float: left;
+    margin-top: 1vh;
+    margin-right: 2vw;
+}
+
+.user-show-bar {
+    margin-left: 17vw;
+    margin-right: 17vw;
+    display: flex;
+    align-items: center;
+    border-bottom: 1px solid lightgray;
+}
+
+#user-show-name {
+    font-size: 20px;
+}
+
+.user-show-info {
+    border-right: 1px solid lightgray;
+    padding-right: 1vw;
+}
+
+.user-show-text{
+    font-weight: normal;
 }

@@ -13,14 +13,19 @@ const UserShow = () => {
     const {userId} = useParams()
     // const user = useSelector(getUser(userId))
     const user = useSelector(state => state.users)
-    // const date = user.createdAt.slice(0, 4)
+    // const rawDate = user.createdAt.year
+    // const date = rawDate.slice(0, 4)
     const listings = useSelector(state => Object.values(state.listings))
+    let name = user.username
+    if(!name) {
+        name=user.email
+    }
 
     useEffect(() => {
         dispatch(fetchUser(userId))
     },[])
     
-    console.log(listings)
+    // console.log(rawDate)
     console.log(user)
     return(
         <>
@@ -30,9 +35,13 @@ const UserShow = () => {
                     <i class="fa-solid fa-circle-user" id='avatar'></i>
                 </div>
                 <div class='user-show-info'>
-                    <h4>{user.username}</h4>
-                    <h5>joined in {}</h5>
+                    <h4 id='user-show-name'>{name}</h4>
+                    <h5 class='user-show-text'>Joined in 2022</h5>
                     <i class="fa-solid fa-globe"></i>
+                    <p>{user.country}</p>
+                </div>
+                <div class='feedback-container'>
+                    <h5 class='user-show-text'>no feedback yet</h5>
                 </div>
             </div>
             <div class='feed-container'>  
