@@ -514,9 +514,9 @@ const ListingCreate = () => {
     return(
         <>
         <div class="create-container">
-            <h1>Add a new listing</h1>
+            <h1 class='create-headers'>Add a new listing</h1>
             <form class="create-form" onSubmit={handleSubmit}>
-             <h3>DETAILS</h3>   
+             <h3 class='create-headers'>DETAILS</h3>   
                 <div class='details-container' >
                     <div class='left'> 
                         <label htmlFor='category'>
@@ -599,30 +599,33 @@ const ListingCreate = () => {
                         </select>
                     </label>
             </div>
-            <h3> DESCRIPTION </h3>
+            <div class='details-container-3'>
+                
+                <h3> DESCRIPTION </h3>
 
                 <input type='text' id='description' class='create-inputs' value={description} onChange={e=> {setDescription(e.target.value)}} placeholder='Add details about conditions, hot the garment fits, additonal measurements, shipping policies, retail price, link to retail page, etc'/>
+            </div>
+            <div class='details-container-2'>
+                <h3> PRICE </h3>
+                    <div class='price-container' >
+                        <i class="fas fa-dollar-sign"></i>
+                        <input type='text' id='price' value={price} onChange={e=> {setPrice(e.target.value)}}/>
+                    </div>
 
-            <h3> PRICE </h3>
-                <div class='price-container' >
-                    <i class="fas fa-dollar-sign"></i>
-                    <input type='text' id='price' value={price} onChange={e=> {setPrice(e.target.value)}}/>
-                </div>
+                <h3> SHIPPING FROM </h3>
 
-            <h3> SHIPPING FROM </h3>
-
-                <input list='shipping-countries' name='shipping' id='shipping' value={country} onChange={e=> {setCountry(e.target.value)}}/>
-                            <datalist id='shipping-countries'>
-                                <option value="Canada"/>
-                                <option value="United States"/>
-                            </datalist>
-                <label htmlFor='shipping_price'>
-                    <input  id='shipping_price' name='shipping_price' type='integer' value={shipping_price} onChange={e=> {setShipping(e.target.value)}} />
-                </label>
-            
-            <h3> PHOTO </h3>
-                <input type="file"  onChange={handleImage} />
-
+                    <input list='shipping-countries' name='shipping' id='shipping' value={country} onChange={e=> {setCountry(e.target.value)}}/>
+                                <datalist id='shipping-countries'>
+                                    <option value="Canada"/>
+                                    <option value="United States"/>
+                                </datalist>
+                    <label htmlFor='shipping_price'>
+                        <input  id='shipping_price' name='shipping_price' type='integer' value={shipping_price} onChange={e=> {setShipping(e.target.value)}} />
+                    </label>
+                
+                <h3> PHOTO </h3>
+                    <input type="file"  onChange={handleImage} />
+            </div>
             <div class='button-container'>
                 <button type='submit' >PUBLISH</button>
             </div>

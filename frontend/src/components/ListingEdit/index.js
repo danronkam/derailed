@@ -24,6 +24,11 @@ const ListingEdit = () => {
 
     const [listing, setListing] = useState(listingData)
 
+    const handleClick = e => {
+        dispatch(deleteListing(listingId))
+        history.push('/')
+    }
+
     const handleSubmit = e => {
         e.preventDefault()
         const newListing = {}
@@ -111,10 +116,10 @@ const ListingEdit = () => {
                     <div class ='details-container-2' > 
                         <h3> ITEM NAME</h3>
                             <label htmlFor='edit-title' />
-                            <input id='edit-title' name='edit-title' class='create-inputs' value={listingData.title} onChange={e=> {setListing({...listing, title: e.target.value})}}/>
+                            <input id='edit-title' name='edit-title' class='create-inputs' value={listing.title} onChange={e=> {setListing({...listing, title: e.target.value})}}/>
                         <h3 > COLOR </h3>
                             <label htmlFor='color' />
-                            <select name='color' class='create-inputs' id='color' value={listingData.color} onChange={e=> {setListing({...listing, color: e.target.value})}}>
+                            <select name='color' class='create-inputs' id='color' value={listing.color} onChange={e=> {setListing({...listing, color: e.target.value})}}>
                                         <option value='Red'>Red</option>
                                         <option value='Orange'>Orange</option>
                                         <option value='Yellow'>Yellow</option>
@@ -128,7 +133,7 @@ const ListingEdit = () => {
 
                         <h3> CONDITION </h3>
                             <label htmlFor='condition'>
-                                <select name='condition' id='condition' class='create-inputs' value={listingData.condition} onChange={e=> {setListing({...listing, condition: e.target.value})}}> 
+                                <select name='condition' id='condition' class='create-inputs' value={listing.condition} onChange={e=> {setListing({...listing, condition: e.target.value})}}> 
                                         <option selected disabled></option>
                                         <option value='New/Never Worn'>New/Never Worn</option>
                                         <option value='Gently Used'>Gently Used</option>
@@ -137,33 +142,37 @@ const ListingEdit = () => {
                                 </select>
                             </label>
                     </div>
-                    <h3> DESCRIPTION </h3>
+                    <div class='details-container-3'>
+                        <h3> DESCRIPTION </h3>
 
-                        <input type='text' id='description' class='create-inputs' value={listing.description} onChange={e=> {setListing({...listing, description: e.target.value})}} />
+                            <input type='text' id='description' class='create-inputs' value={listing.description} onChange={e=> {setListing({...listing, description: e.target.value})}} />
+                    </div>
+                    <div class='details-container-2'>
+                        <h3> PRICE </h3>
+                            <div class='price-container' >
+                                <i class="fas fa-dollar-sign"></i>
+                                <input type='text' id='price' value={listing.price} onChange={e=> {setListing({...listing, price: e.target.value})}}/>
+                            </div>
+                   
 
-                    <h3> PRICE </h3>
-                        <div class='price-container' >
-                            <i class="fas fa-dollar-sign"></i>
-                            <input type='text' id='price' value={listingData.price} onChange={e=> {setListing({...listing, price: e.target.value})}}/>
+                        <h3> SHIPPING FROM </h3>
+
+                            <input list='shipping-countries' name='shipping' id='shipping' value={listing.country} onChange={e=> {setListing({...listing, country: e.target.value})}}/>
+                                        <datalist id='shipping-countries'>
+                                            <option value="Canada"/>
+                                            <option value="United States"/>
+                                        </datalist>
+                            <label htmlFor='shipping_price'>
+                                <input  id='shipping_price' name='shipping_price' type='integer' value={listing.shipping_price} onChange={e=> {setListing({...listing, shipping_price: e.target.value})}} />
+                            </label>
                         </div>
-
-                    <h3> SHIPPING FROM </h3>
-
-                        <input list='shipping-countries' name='shipping' id='shipping' value={listingData.country} onChange={e=> {setListing({...listing, country: e.target.value})}}/>
-                                    <datalist id='shipping-countries'>
-                                        <option value="Canada"/>
-                                        <option value="United States"/>
-                                    </datalist>
-                        <label htmlFor='shipping_price'>
-                            <input  id='shipping_price' name='shipping_price' type='integer' value={listingData.shipping_price} onChange={e=> {setListing({...listing, shipping_price: e.target.value})}} />
-                        </label>
 
                     <div class='button-container'>
                         <button type='submit' >UPDATE</button>
                        
                     </div>
                 </form>
-                <button onClick={e => {dispatch(deleteListing(listingId))}}>DELETE</button>
+                <button onClick={handleClick}>DELETE</button>
             </div>
         </>
     )

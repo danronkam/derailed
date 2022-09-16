@@ -18,6 +18,10 @@ h3 {
   color: black;
 }
 
+.create-headers{
+  margin-left: 13vw;
+}
+
 .details-container {
   display: flex;
   justify-content: space-around;

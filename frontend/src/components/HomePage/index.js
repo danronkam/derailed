@@ -119,14 +119,14 @@ const HomePage =() => {
                             </Link>
                         </li>
                         <li class='homepage-list-items'>    
-                            <Link>  
+                            <Link to={`/shop/:LV`}>  
                                 <img class='designer-circle' src='https://derailed-seed.s3.us-west-1.amazonaws.com/lv.jpg'/> <br></br>
                               
                             </Link>
                         </li>
                         <li class='homepage-list-items'>    
                             <Link to={`/shop/:Gucci`}>  
-                                <img class='designer-circle' src='https://derailed-seed.s3.us-west-1.amazonaws.com/mm6.jpg'/> <br></br>
+                                <img class='designer-circle' src='https://derailed-seed.s3.us-west-1.amazonaws.com/Vector-Gucci-Logo-Transparent-PNG.png'/> <br></br>
                               
                             </Link>
                         </li >
