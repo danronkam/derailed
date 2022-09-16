@@ -1,4 +1,5 @@
 import React from "react";
+import './CheckoutShippingForm.css'
 
 const CheckoutShippingForm = () => {
 
@@ -6,32 +7,57 @@ const CheckoutShippingForm = () => {
         <>
         <div class='shippingform-container'>
             <form class='shippingform'>
-                <label> Name
-                    <input type='text'></input>
-                </label>
-                <label> Street address
-                    <input type='text' class='fullsized'/>
-                </label>
-                <label> Apt/Suite
-                    <input type='text' class='halfsized'/>
-                </label>
-                <label> City
-                    <input type='text'></input>
-                </label>
-                <label> State
-                    <input type='text' class='halfsized'/>
-                </label>
-                <label> Country
-                    <select name='category' class='create-inputs' id='category'>
-                        <option defaultValue={{ label: "Select Category", value: 0 }} disabled></option>
-                        <option value='Tops'>Canada</option>
-                        <option value='Bottoms'>United States</option>
-                    </select>
-                </label>
-                <label> ZIP code
-                    <input type='text' class='halfsized'/>
-                </label>
-                <input type='submit' />
+                <div >
+                    <h3 class='shipping-titles'>Name </h3>
+                    <label>
+                        <input type='text' class='shipping-name'></input>
+                    </label>
+                </div>
+                <div class='shipping-content-container'>
+                    <div class='shipping-content-container-left'>
+                        <h3 class='shipping-titles'> Street address</h3>
+                            <label> 
+                                <input type='text' class='fullsized'/>
+                            </label>
+                    </div>
+                    <div class='shipping-content-container-right'>
+                        <h3 class='shipping-titles' > Apt/Suite </h3>
+                            <label>
+                                <input type='text' class='halfsized'/>
+                            </label>
+                    </div>
+                </div>
+                <div class='shipping-content-container'> 
+                    <div class='shipping-content-container-left'> 
+                        <h3 class='shipping-titles'>City</h3>
+                            <label> 
+                                <input type='text' class='fullsized'></input>
+                            </label>
+                    </div>
+                    <div class='shipping-content-container-right'>
+
+                        <h3 class='shipping-titles'>State</h3>
+                            <label> 
+                                <input type='text' class='halfsized'/>
+                            </label>
+                    </div>
+                </div>
+                <div class='shipping-content-container'>
+                    <div class='shipping-content-container-left'>
+                        <h3 class='shipping-titles'>Country</h3>
+                            <label> 
+                                <input type='text' class='fullsized'/>
+                            </label>
+                    </div>
+                    <div class='shipping-content-container-right'>
+                        <h3 class='shipping-titles'>ZIP code</h3>
+                            <label> 
+                                <input type='text' class='halfsized'/>
+                            </label>
+                    </div>
+                </div>
+                
+                {/* <input type='submit' /> */}
             </form>
         </div>
         

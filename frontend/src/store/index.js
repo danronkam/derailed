@@ -7,8 +7,8 @@ import commentsReducer from './comment';
 
 const rootReducer = combineReducers({
   session: sessionReducer,
-  listings: listingsReducer,
   users: usersReducer,
+  listings: listingsReducer,
   comments: commentsReducer
 });
 

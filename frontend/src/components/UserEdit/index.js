@@ -3,6 +3,7 @@ import { fetchUser, getUser, updateUser } from "../../store/user";
 import { useDispatch, useSelector } from "react-redux";
 import { useParams } from "react-router-dom";
 import * as sessionActions from '../../store/session';
+import { useHistory } from "react-router-dom";
 
 
 const UserEdit = () => {
@@ -14,6 +15,7 @@ const UserEdit = () => {
     const username = userData.user.username
     const bottom = userData.user.waist_size
     const top = userData.user.top_size
+    const history = useHistory();
 
     useEffect(() => {
         dispatch(fetchUser(userId))
@@ -28,13 +30,21 @@ const UserEdit = () => {
     const logout = (e) => {
         e.preventDefault();
         dispatch(sessionActions.logout());
+        history.push('/')
     };
 
     const handleSubmit = e => {
+        const newUser = {}
+        newUser.id = user.user.id
+        newUser.email = user.email
+        newUser.top_size = user.top_size
+        newUser.waist_size = user.waist_size
+        newUser.username = user.username
+        // user.id = user.user.id
         e.preventDefault()
-        console.log(user)
-        dispatch(updateUser(user))
-
+        console.log(newUser)
+        dispatch(updateUser(newUser))
+        history.push("/")
     }
 
     return(
@@ -54,10 +64,10 @@ const UserEdit = () => {
             <form class='edit-form' onSubmit={handleSubmit}>
                 <div class='form-row-1'>
                     <label htmlFor="user_username"> Username
-                        <input id='user_username'  onChange={e => {setUser({...user, username: e.target.value})}} />
+                        <input id='user_username' value={user.username} onChange={e => {setUser({...user, username: e.target.value})}} />
                     </label>
                     <label htmlFor="user_email"> Email
-                        <input id='user_email'  onChange={e => {setUser({...user, email: e.target.value})}}/>
+                        <input id='user_email' value={email} onChange={e => {setUser({...user, email: e.target.value})}}/>
                     </label>
                 </div>
                 <div class='form-row-2'>
@@ -68,7 +78,7 @@ const UserEdit = () => {
                             </select>
                     </label> */}
                     <label htmlFor="user_top"> Top Size
-                        <select id='user_top'  onChange={e => {setUser({...user, top_size: e.target.value})}}>
+                        <select id='user_top' value={top} onChange={e => {setUser({...user, top_size: e.target.value})}}>
                             <option value='XS'>XS</option>
                             <option value='S'>S</option>
                             <option value='M'>M</option>
@@ -78,16 +88,16 @@ const UserEdit = () => {
                         </select>
                     </label>
                     <label htmlFor="user_bottom"> Bottom Size
-                    <select id='user_bottom'  onChange={e => {setUser({...user, bottom_size: e.target.value})}}>
+                    <select id='user_bottom' value={bottom} onChange={e => {setUser({...user, waist_size: e.target.value})}}>
                             <option value='28'>28</option>
-                            <option value='28'>29</option>
-                            <option value='28'>30</option>
-                            <option value='28'>31</option>
-                            <option value='28'>32</option>
-                            <option value='28'>33</option>
-                            <option value='28'>34</option>
-                            <option value='28'>36</option>
-                            <option value='28'>37</option>
+                            <option value='29'>29</option>
+                            <option value='30'>30</option>
+                            <option value='31'>31</option>
+                            <option value='32'>32</option>
+                            <option value='33'>33</option>
+                            <option value='34'>34</option>
+                            <option value='35'>35</option>
+                            <option value='36'>36</option>
                         </select>
                     </label>
                 </div>

@@ -25,8 +25,8 @@ export const updateUser = userData => async dispatch => {
             'Accept': 'application/json'
         }
     })
-    const user  = await res.json()
-    dispatch({type: RECEIVE_USER, user})
+    const payload  = await res.json()
+    dispatch({type: RECEIVE_USER, payload})
 }
 
 const usersReducer = (state = {}, action ) => {

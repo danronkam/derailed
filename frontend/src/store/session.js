@@ -1,4 +1,6 @@
 import csrfFetch from "./csrf.js";
+import { RECEIVE_USER } from "./user.js";
+import { RECEIVE_LISTING } from "./listings.js";
 
 const SET_CURRENT_USER = 'session/setCurrentUser';
 const REMOVE_CURRENT_USER = 'session/removeCurrentUser';
@@ -32,6 +34,11 @@ export const login = ({ credential, password }) => async dispatch => {
     dispatch(setCurrentUser(data.user));
     return response;
 };
+
+export const updateUser = user => async dispatch => {
+
+  dispatch(setCurrentUser(user ))  
+}
   
 export const restoreSession = () => async dispatch => {
     const response = await csrfFetch("/api/session");
@@ -77,6 +84,10 @@ const sessionReducer = (state = initialState, action) => {
         return { ...state, user: action.payload };
       case REMOVE_CURRENT_USER:
         return { ...state, user: null };
+      case RECEIVE_USER:
+        return {...state, user: action.payload.user}
+      case RECEIVE_LISTING:
+        return {...state, listing: action.listing}
       default:
         return state;
     }

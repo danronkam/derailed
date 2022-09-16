@@ -1,0 +1,47 @@
+.shippingform-container{
+    width: 100%;
+}
+
+.shipping-name {
+    width: 100%;
+    height: 38px;
+    border: 1px solid lightgray;
+    font-size: 14px;
+    font-weight: 300;
+    font-family: 'Inter', sans-serif;
+    color: black;
+}
+
+.shipping-content-container {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+}
+
+.shipping-titles {
+    font-weight: normal;
+    font-size: 14px;
+}
+
+.fullsized {
+    width: 400px;
+    height: 38px;
+    border: 1px solid lightgray;
+    font-size: 14px;
+    font-weight: 300;
+    font-family: 'Inter', sans-serif;
+    color: black;
+}
+
+.halfsized{
+    height: 38px;
+    border: 1px solid lightgray;
+    font-size: 14px;
+    font-weight: 300;
+    font-family: 'Inter', sans-serif;
+    color: black;
+}
+
+.payment-heading {
+    font-size: 14px;
+}

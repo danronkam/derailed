@@ -52,7 +52,7 @@ export const createListing = (listingData) => async dispatch => {
 }
 
 export const updateListing = listingData => async dispatch => {
-    const res = await csrfFetch(`/api/listings/${listingData.id}`, {
+    const res = await csrfFetch(`/api/listings/${listingData.listing.id}`, {
         method:'PATCH',
         body: JSON.stringify(listingData),
         headers: {

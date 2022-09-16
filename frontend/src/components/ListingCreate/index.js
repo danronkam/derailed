@@ -13,11 +13,12 @@ const ListingCreate = () => {
     
     const designers = ['Acne Studios', 'Adidas', 'Alexander McQueen', 'Amiri', 'Balenciaga', 'Bape', 'Bottega Veneta', 'Celine', 'Chanel', 'Chrome Hearts', 'Comme Des Garcons', 'Dior', 'Dries Van Noten', 'Fear of God', 'Gucci', 'Jacquemus', 'Kapital', 'Loewe', 'Louis Vuitton', 'Maison Margiela', 'Nike', 'Number (N)ine', 'Off-White', 'Prada', 'Raf Simons', 'Rick Owns', 'Saint Laurent Paris', 'Stone Island', 'Supreme', 'Undercover', 'Vintage']
 
+
     return(
         <>
         <div class="create-container">
             <h1>Add a new listing</h1>
-            <form class="create-form" autoComplete='off'>
+            <form class="create-form" onSubmit={handleSubmit}>
              <h3>DETAILS</h3>
 
                 <div class='left '> 

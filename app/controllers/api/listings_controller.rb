@@ -12,7 +12,7 @@ class Api::ListingsController < ApplicationController
     end
 
     def create 
-        # debugger
+        debugger
         @listing = Listing.new(listing_params)
         @listing.user_id = current_user.id
         # console.log(listing_params)
@@ -25,6 +25,9 @@ class Api::ListingsController < ApplicationController
     end
 
     def update
+        @listing = Listing.find(params[:id])
+        # debugger
+
         if @listing.update(listing_params)
             render :show
         else
@@ -41,6 +44,7 @@ class Api::ListingsController < ApplicationController
     private
     def listing_params 
         params.require(:listing).permit(
+            :user_id,
             :title, 
             :price, 
             :photo, 
