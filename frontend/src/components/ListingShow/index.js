@@ -12,7 +12,7 @@ const ListingShow = () => {
     const dispatch = useDispatch()
     const {listingId} = useParams()
     const listing = useSelector(getListing(listingId))
-    const listingOwner = useSelector(getUser(listing.userId))
+    // const listingOwner = useSelector(getUser(listing.userId))
 
 
 
@@ -20,9 +20,9 @@ const ListingShow = () => {
     console.log(sessionUser)
     console.log('look here^^')
 
-    useEffect(() => {
-        dispatch(fetchUser(listing.userId))
-    }, [listing.userId])
+    // useEffect(() => {
+    //     dispatch(fetchUser(listing.userId))
+    // }, [listing.userId])
 
     useEffect(() => {
         dispatch(fetchListing(listingId))
@@ -52,7 +52,7 @@ const ListingShow = () => {
 
     console.log('THIS IS THE LISTING OWNER:')
     console.log(listing.userId)
-    console.log(listingOwner)
+    // console.log(listingOwner)
 
     let shipping;
     if(listing.shippingPrice === 0) {

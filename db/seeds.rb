@@ -12,6 +12,7 @@ ApplicationRecord.transaction do
     # Unnecessary if using `rails db:seed:replant`
     Listing.destroy_all
     User.destroy_all
+    Comment.destroy_all
 
   
     puts "Resetting primary keys..."
@@ -55,6 +56,7 @@ ApplicationRecord.transaction do
     file1 = URI.open("https://derailed-seed.s3.us-west-1.amazonaws.com/P00461579_b2.jpg")
 
     demo_listing1.photo.attach(io: file1, filename: 'gucci_shoes.jpg')
+    Comment.create({body: 'you would have gucci loafers', author_id:'2', listing_id: 1})
 #________________________________________________________________________________________________________________
 
     demo_listing2 = Listing.create!({
@@ -74,6 +76,8 @@ ApplicationRecord.transaction do
       file2 = URI.open('https://derailed-seed.s3.us-west-1.amazonaws.com/vintage+Paul+Frank+industries+army+monkey+hoodie.webp')
 
       demo_listing2.photo.attach(io: file2, filename: 'paul_frank_hoodie.jpg')
+      Comment.create({body: 'HARD', author_id:5, listing_id: 2})
+
 #________________________________________________________________________________________________________________
 
     demo_listing3 = Listing.create!({
@@ -93,6 +97,8 @@ ApplicationRecord.transaction do
       file3 = URI.open('https://derailed-seed.s3.us-west-1.amazonaws.com/St%C3%BCssy+Ransom+Jacquard+Tie.webp')
 
       demo_listing3.photo.attach(io: file3, filename: 'stussy_tie.jpg')
+      Comment.create({body: 'good deal IMO', author_id:6, listing_id: 3})
+
 #________________________________________________________________________________________________________________
 
     demo_listing4 = Listing.create!({
@@ -114,6 +120,9 @@ ApplicationRecord.transaction do
     file4 = URI.open('https://derailed-seed.s3.us-west-1.amazonaws.com/2000s+Vintage+TUMI+Black+Traveler+Cargo+Vest.webp')
 
     demo_listing4.photo.attach(io: file4, filename: 'tumi_vest.jpg')
+    Comment.create({body: 'no way ur serious with this price', author_id:1, listing_id: 4})
+    Comment.create({body: '$50? lmk', author_id:1, listing_id: 4})
+
 #________________________________________________________________________________________________________________
 
     demo_listing5 = Listing.create!({
@@ -146,6 +155,8 @@ ApplicationRecord.transaction do
     file5 = URI.open('https://derailed-seed.s3.us-west-1.amazonaws.com/2004+Helmut+Lang+%E2%80%9CCowboy%E2%80%9D+T-Shirt.webp')
 
     demo_listing5.photo.attach(io: file5, filename: 'cowboy_hl.jpg')
+    Comment.create({body: 'no way ur serious with this price', author_id:1, listing_id: 5})
+    Comment.create({body: '$? lmk', author_id:1, listing_id: 5})
 #________________________________________________________________________________________________________________
 
     demo_listing6 = Listing.create!({
@@ -165,6 +176,8 @@ ApplicationRecord.transaction do
     file6 = URI.open('https://derailed-seed.s3.us-west-1.amazonaws.com/Asics+%C3%97+Jjjjound+Gel+Kayano+14+Silver+White.webp')
 
     demo_listing6.photo.attach(io: file6, filename: 'jound_ascics.jpg')
+    Comment.create({body: 'no way ur serious with this price', author_id:1, listing_id: 6})
+    Comment.create({body: '$50? lmk', author_id:1, listing_id: 6})
 #________________________________________________________________________________________________________________
 
     demo_listing7 = Listing.create!({
@@ -212,6 +225,8 @@ ApplicationRecord.transaction do
 
       
     file7 = URI.open('https://derailed-seed.s3.us-west-1.amazonaws.com/Comme+Des+Gar%C3%A7ons+Homme+Plus+Suit+(Jacket+%26+Pants)+Sz+Large.webp')
+    Comment.create({body: 'no way ur serious with this price', author_id:1, listing_id: 7})
+    Comment.create({body: '$50? lmk', author_id:1, listing_id: 7})
 
     demo_listing7.photo.attach(io: file7, filename: 'cdg_suit.jpg')
 #________________________________________________________________________________________________________________
@@ -238,6 +253,8 @@ ApplicationRecord.transaction do
     file8 = URI.open('https://derailed-seed.s3.us-west-1.amazonaws.com/Dries+Van+Noten+Black+Strap+Harness+Shirt.webp')
 
     demo_listing8.photo.attach(io: file8, filename: 'dvn_harness.jpg')
+    Comment.create({body: 'no way ur serious with this price', author_id:1, listing_id: 8})
+    Comment.create({body: '$50? lmk', author_id:1, listing_id: 8})
 #________________________________________________________________________________________________________________
 
     demo_listing9 = Listing.create!({
@@ -264,6 +281,8 @@ ApplicationRecord.transaction do
     file9 = URI.open('https://derailed-seed.s3.us-west-1.amazonaws.com/H%26M+x+Margiela+Open+Clasp+Watch+Bracelet.webp')
 
     demo_listing9.photo.attach(io: file9, filename: 'faceless.jpg')
+    Comment.create({body: 'no way ur serious with this price', author_id:1, listing_id: 9})
+    Comment.create({body: '$50? lmk', author_id:1, listing_id: 9})
 #________________________________________________________________________________________________________________
 
     demo_listing10 = Listing.create!({
@@ -283,6 +302,8 @@ ApplicationRecord.transaction do
     file10 = URI.open('https://derailed-seed.s3.us-west-1.amazonaws.com/Issey+Miyake+Homme+Plisse+Blazer.webp')
 
     demo_listing10.photo.attach(io: file10, filename: 'plisse_blazer.jpg')
+    Comment.create({body: 'no way ur serious with this price', author_id:1, listing_id: 10})
+    Comment.create({body: '$50? lmk', author_id:1, listing_id: 10})
 #________________________________________________________________________________________________________________
     demo_listing11 = Listing.create!({
       title: 'Nike Dunk Low Panda', 
@@ -313,6 +334,8 @@ ApplicationRecord.transaction do
     file11 = URI.open('https://derailed-seed.s3.us-west-1.amazonaws.com/Nike+Dunk+Low+Panda.webp')
 
     demo_listing11.photo.attach(io: file11, filename: 'nike_panda.jpg')
+    Comment.create({body: 'no way ur serious with this price', author_id:1, listing_id: 11})
+    Comment.create({body: '$50? lmk', author_id:1, listing_id: 11})
 #________________________________________________________________________________________________________________
 
 

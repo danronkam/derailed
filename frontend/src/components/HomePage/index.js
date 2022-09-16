@@ -12,10 +12,12 @@ const HomePage =() => {
             <div class='trend-container'>
                 <h1 class='homepage-titles' > Shop Latest Trends</h1>
                 <ul class="homepage-lists">
-                    <li class='homepage-list-items' >
-                        <img class='trend-photos' src='https://derailed-seed.s3.us-west-1.amazonaws.com/cool_pants.jpg'/>
-                        <h3>Cool Pants</h3>
-                    </li>
+                    <Link to={`/shop/menswear/:Shirt`}>
+                        <li class='homepage-list-items' >
+                            <img class='trend-photos' src='https://derailed-seed.s3.us-west-1.amazonaws.com/cool_pants.jpg'/>
+                            <h3>Cool Pants</h3>
+                        </li>
+                    </Link>
                     <li class='homepage-list-items'>
                         <img class='trend-photos' src='https://derailed-seed.s3.us-west-1.amazonaws.com/designer_boots.jpg'/>
                         <h3>Designer Boots</h3>

@@ -44,6 +44,14 @@ button {
     margin: 0; /* Important for vertical align on mobile phones */
 }
 
+.filter-bar-links:hover {
+  color: blue;
+}
+
+.dropdown-button:hover {
+  color: blue;
+}
+
 .dropdown-content {
     display: none;
     position: absolute;
@@ -60,6 +68,16 @@ button {
     text-decoration: none;
     display: block;
     text-align: left;
+  }
+
+  .dropdown-content a:hover {
+    float: none;
+    color: black;
+    padding: 12px 16px;
+    text-decoration: none;
+    display: block;
+    text-align: left;
+    color: blue;
   }
 
   .dropdown:hover .dropdown-content {

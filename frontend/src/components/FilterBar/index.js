@@ -47,10 +47,10 @@ function FilterBar() {
                         </div>
                     </li>
                     <li>
-                        <Link exact to={`/shop/menswear/:Sneakers`}> <button>SNEAKERS </button> </Link>
+                        <Link exact to={`/shop/menswear/:Sneakers`} > <button class='filter-bar-links'>SNEAKERS </button> </Link>
                     </li>
                     <li>
-                        <Link exact to='/shop'> <button> STAFF PICKS </button> </Link>
+                        <Link exact to='/shop'> <button class='filter-bar-links'> STAFF PICKS </button> </Link>
                     </li>
 
                 </ul>

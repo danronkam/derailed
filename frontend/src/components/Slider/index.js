@@ -4,15 +4,14 @@ import './Slider.css'
 
 function Slider()  {
     const content =[
-        {title : 'Shop Accessories', blurb: 'PUT A RING ON IT', path: '', photoUrl: 'https://derailed-seed.s3.us-west-1.amazonaws.com/rings.png'},
-        {title: 'Shop Outerwear', blurb: 'TOO ICEY', path: '', photoUrl: 'https://derailed-seed.s3.us-west-1.amazonaws.com/istockphoto-1147544807-612x612.jpg'},
-        {title: 'Sell Your Listings On Grailed', blurb: 'SELL FASTER', path: '', photoUrl: 'https://derailed-seed.s3.us-west-1.amazonaws.com/istockphoto-1147544807-612x612.jpg'},
-        {title: 'Shop Sneakers and Get Them Under Retail', blurb: 'SNEAKER STEALS', path: '', photoUrl: 'https://derailed-seed.s3.us-west-1.amazonaws.com/istockphoto-1147544807-612x612.jpg'}   
+        {title : 'Shop Accessories', blurb: 'PUT A RING ON IT', path: '/shop/menswear/:Accessories', photoUrl: 'https://derailed-seed.s3.us-west-1.amazonaws.com/rings.png'},
+        {title: 'Shop Outerwear', blurb: 'TOO ICEY', path: '/shop/menswear/:Outerwear', photoUrl: 'https://derailed-seed.s3.us-west-1.amazonaws.com/https___hypebeast.com_image_2018_11_best-puffer-jackets-fall-winter-2018-our-legacy.jpg'},
+        {title: 'Shop Sneakers and Get Them Under Retail', blurb: 'SNEAKER STEALS', path: '/shop/menswear/:Sneakers', photoUrl: 'https://derailed-seed.s3.us-west-1.amazonaws.com/sneaker_steal.jpg'}   
     ]
 
 
-
-    let contentIdx = 0
+    let length = content.length
+    let contentIdx = Math.floor(Math.random() * length)
     //  titles = currentSlide[:title]
 
 
@@ -40,7 +39,7 @@ function Slider()  {
 
     return(
         <>
-        <Link to={`/shop/menswear/:Accessories`}>
+        <Link to={path}>
         <div class='slider-container'>
             <div class='slides' >            
             <div class='slider-left' >
@@ -56,12 +55,12 @@ function Slider()  {
         </div>
         </Link>
 
-            <button onClick={nextSlide} class='slide-button' id='left'>
+            {/* <button onClick={nextSlide} class='slide-button' id='left'>
             <i class="fas fa-chevron-left"></i>
         </button>
         <button onClick={nextSlide} class='slide-button' id='right'>
             <i class="fas fa-chevron-right"></i>
-        </button>
+        </button> */}
 
 
  

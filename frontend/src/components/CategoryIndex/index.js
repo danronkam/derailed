@@ -21,7 +21,7 @@ const CategoryIndex = () => {
     const filterListings = listings.map(listing => {
         // debugger
         // console.log(listing.category)
-        if(listing.category === category.slice(1)) {
+        if((listing.category === category.slice(1)) || (listing.subCategory === category.slice(1))){
             
             filtered.push(listing)
         }
