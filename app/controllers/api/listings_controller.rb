@@ -12,10 +12,11 @@ class Api::ListingsController < ApplicationController
     end
 
     def create 
-        debugger
+        # 
         @listing = Listing.new(listing_params)
         # @listing.user_id = current_user.id
         # console.log(listing_params)
+        debugger
         if @listing.save
             render :show
           else

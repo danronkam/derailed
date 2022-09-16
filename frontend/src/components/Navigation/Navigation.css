@@ -70,5 +70,6 @@ li > a {
 
 .navbar-right{
   display: flex;
-  margin-left: 22%;
+  /* margin-left: 22%; */
 }
+

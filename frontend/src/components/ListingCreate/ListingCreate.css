@@ -24,6 +24,14 @@ h3 {
 
 }
 
+.details-container-2 {
+  margin-left: 13vw;
+}
+
+.details-container-3 {
+  margin-left: 13vw;
+}
+
 #color{
   font-style: italic;
 }
@@ -31,9 +39,15 @@ h3 {
 #description {
   width: 800px;
   min-height: 140px;
+  width: 1001px;
+  min-height: 140px;
 }
 
 #price {
+  border: none;
+  height: 100%;
+}
+#price2 {
   border: none;
   height: 100%;
 }

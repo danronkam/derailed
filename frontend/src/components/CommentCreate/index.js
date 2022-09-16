@@ -19,7 +19,7 @@ const CommentCreate = ({commentData}) => {
     // const [comment, setComment] = useState(reportData)
 
     const handleSubmit = (e) => {
-        debugger
+        // debugger
         e.preventDefault();
         console.log(sessionUser.id)
         console.log(listing.id)
