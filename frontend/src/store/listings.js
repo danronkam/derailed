@@ -5,6 +5,16 @@ export const RECEIVE_LISTINGS = 'listings/RECEIVE_LISTINGS'
 export const RECEIVE_LISTING = 'listings/RECEIVE_LISTING'
 export const REMOVE_LISTING =  'listings/REMOVE_LISTING'
 
+export const receiveListings = (payload) => ({
+    type: RECEIVE_LISTINGS,
+    payload
+})
+
+export const receiveListing = (payload) => ({
+    type: RECEIVE_LISTING,
+    payload
+})
+
 
 export const getListing = listingId => state => {
     if(!state || !state.listings) {
@@ -21,6 +31,17 @@ export const getListings = state => {
         return Object.values(state.listings)
     }
 }
+
+// SearchBar
+
+export const getSearchedListings = (query) => async dispatch => {
+    const res = await csrfFetch()
+}
+
+
+// SearchBar
+
+
 /* 
 action functions
 */

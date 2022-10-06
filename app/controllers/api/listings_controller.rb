@@ -6,6 +6,12 @@ class Api::ListingsController < ApplicationController
         render :show
     end
 
+    def search
+        query = params[:query]
+        @listings = Product.where('title ILIKE or body ILIKE ?', "%#{query}", "%#{query}")
+        render :index
+    end
+
     def index 
         @listings = Listing.all
         render :index
