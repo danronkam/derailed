@@ -21,13 +21,15 @@ import CategoryIndex from "./components/CategoryIndex";
 function App() {
   return (
     <>
-    {/* <div class='header'> */}
+    <div class='body-container'>
+    <div class='header'>
       <Navigation />   
-    {/* </div> */}
-   
+      <hr />
+    </div>
+    <FilterBar/>
 
-    <div class='body'>
-      <FilterBar/>
+
+    
       <Switch>
         {/* <Route path="/login">
           <LoginFormPage />
