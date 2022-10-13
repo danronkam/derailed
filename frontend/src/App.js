@@ -21,65 +21,60 @@ import CategoryIndex from "./components/CategoryIndex";
 function App() {
   return (
     <>
-    <div class='body-container'>
-    <div class='header'>
-      <Navigation />   
-      <hr />
+    <div class='content-container'>
+      <div class='header'>
+        <Navigation />   
+        <FilterBar/>
+      </div>
+
+
+      
+        <Switch>
+          <Route exact path="/sell">
+            <ListingCreate/>
+          </Route>
+          <Route exact path="/signup">
+            <SignupFormPage />
+          </Route>
+          <Route exact path="/shop"> 
+            <ListingIndex />
+          </Route>
+          <Route exact path="/shop/:designerBrand">
+            <DesignerIndex /> 
+          </Route>
+          <Route exact path="/shop/menswear/:category">
+            <CategoryIndex /> 
+          </Route>
+          <Route exact path="/listings/:listingId">
+            <ListingShow />
+          </Route>
+          <Route exact path="/listings/:listingId/edit">
+            <ListingEdit />
+          </Route>
+
+          <Route exact path='/checkout/:listingId'>
+            <CheckOut />
+          </Route>
+          <Route exact path="/users/:userId">
+            <UserShow />
+          </Route>
+          <Route exact path="/users/:userId/edit">
+            <UserEdit />
+          </Route>
+          <Route exact path='/' >
+            <HomePage />  
+          </Route>
+          <Redirect to='/' />
+        </Switch>
+
+        
+      <div class='footer-container'>
+          <Footer />
+
+      </div>
     </div>
-    <FilterBar/>
 
 
-    
-      <Switch>
-        {/* <Route path="/login">
-          <LoginFormPage />
-        </Route> */}
-        <Route exact path="/sell">
-          <ListingCreate/>
-        </Route>
-        <Route exact path="/signup">
-          <SignupFormPage />
-        </Route>
-        <Route exact path="/shop"> 
-          <ListingIndex />
-        </Route>
-        {/* <Route exact path="/shop/:category">
-          <FilteredIndex />
-        </Route> */}
-        <Route exact path="/shop/:designerBrand">
-          <DesignerIndex /> 
-        </Route>
-        <Route exact path="/shop/menswear/:category">
-          <CategoryIndex /> 
-        </Route>
-        <Route exact path="/listings/:listingId">
-          <ListingShow />
-        </Route>
-        <Route exact path="/listings/:listingId/edit">
-          <ListingEdit />
-        </Route>
-
-        <Route exact path='/checkout/:listingId'>
-          <CheckOut />
-        </Route>
-        <Route exact path="/users/:userId">
-          <UserShow />
-        </Route>
-        <Route exact path="/users/:userId/edit">
-          <UserEdit />
-        </Route>
-        <Route exact path='/' >
-          <HomePage />  
-        </Route>
-        <Redirect to='/' />
-      </Switch>
-    </div>
-
-
-    <div class='footer-container'>
-        <Footer />
-
-    </div>
     </>
   );
 }

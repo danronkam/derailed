@@ -39,6 +39,9 @@ function Slider()  {
 
     return(
         <>
+                <button onClick={nextSlide} class='slide-button' id='left'>
+            <i class="fas fa-chevron-left"></i>
+        </button>
         <Link to={path}>
         <div class='slider-container'>
             <div class='slides' >            
@@ -55,12 +58,10 @@ function Slider()  {
         </div>
         </Link>
 
-            {/* <button onClick={nextSlide} class='slide-button' id='left'>
-            <i class="fas fa-chevron-left"></i>
-        </button>
+
         <button onClick={nextSlide} class='slide-button' id='right'>
             <i class="fas fa-chevron-right"></i>
-        </button> */}
+        </button>
 
 
  

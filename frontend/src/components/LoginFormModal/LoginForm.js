@@ -2,6 +2,7 @@ import React, { useState } from 'react';
 import * as sessionActions from '../../store/session';
 import { useDispatch, useSelector } from 'react-redux';
 import { Redirect } from 'react-router-dom';
+// import { login } from '../../store/session';
 import './LoginForm.css'
 
 function LoginForm() {
@@ -13,9 +14,16 @@ function LoginForm() {
 
   if (sessionUser) return <Redirect to="/" />;
 
+  const demoLogin = (e) => {
+    e.preventDefault();
+    return dispatch(sessionActions.login({ credential: "lb@demo.com", password: "password" }));
+  };
+
   const handleSubmit = (e) => {
     e.preventDefault();
     setErrors([]);
+    console.log(credential)
+
     return dispatch(sessionActions.login({ credential, password }))
       .catch(async (res) => {
         let data;
@@ -62,7 +70,7 @@ function LoginForm() {
    <br></br>
       <div id='btns'>      
         <button type="submit" class='login_button' >Log in</button>
-        <button type="submit" class='login_button'>Demo User</button>
+        <button type="submit" class='login_button' onClick={demoLogin}>Demo User</button>
       </div>
 
 

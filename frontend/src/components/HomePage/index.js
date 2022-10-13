@@ -6,32 +6,8 @@ import './HomePage.css'
 const HomePage =() => {
     return(
         <>
-        <div class='homepage-container'>
+        <div class='content-container'>
         <Slider/> 
-
-            <div class='trend-container'>
-                <h1 class='homepage-titles' > Shop Latest Trends</h1>
-                <ul class="homepage-lists">
-                    <Link to={`/shop/menswear/:Bottoms`}>
-                        <li class='homepage-list-items' >
-                            <img class='trend-photos' alt='' src='https://derailed-seed.s3.us-west-1.amazonaws.com/cool_pants.jpg'/>
-                            <h3>Cool Pants</h3>
-                        </li>
-                    </Link >
-                    <Link >
-                        <li class='homepage-list-items'>
-                            <img class='trend-photos' alt='' src='https://derailed-seed.s3.us-west-1.amazonaws.com/designer_boots.jpg'/>
-                            <h3>Designer Boots</h3>
-                        </li>
-                    </Link>
-                    <Link to={`/shop/menswear/:Shirts`}>
-                        <li class='homepage-list-items'>
-                            <img class='trend-photos' alt='' src='https://derailed-seed.s3.us-west-1.amazonaws.com/vintage_pants.jpg'/>
-                            <h3>Summer Tees</h3>
-                        </li>
-                    </Link>
-                </ul>
-            </div>
             <div class='menswear-container'>
                 <h1 class='homepage-titles' >Shop Menswear</h1>
                 <ul class="homepage-lists">
@@ -73,6 +49,30 @@ const HomePage =() => {
                     </li>
                 </ul>
             </div>
+            <div class='trend-container'>
+                <h1 class='homepage-titles' > Shop Latest Trends</h1>
+                <ul class="homepage-lists">
+                    <Link to={`/shop/menswear/:Bottoms`}>
+                        <li class='homepage-list-items' >
+                            <img class='trend-photos' alt='' src='https://derailed-seed.s3.us-west-1.amazonaws.com/cool_pants.jpg'/>
+                            <h3>Cool Pants</h3>
+                        </li>
+                    </Link >
+                    <Link >
+                        <li class='homepage-list-items'>
+                            <img class='trend-photos' alt='' src='https://derailed-seed.s3.us-west-1.amazonaws.com/designer_boots.jpg'/>
+                            <h3>Designer Boots</h3>
+                        </li>
+                    </Link>
+                    <Link to={`/shop/menswear/:Shirts`}>
+                        <li class='homepage-list-items'>
+                            <img class='trend-photos' alt='' src='https://derailed-seed.s3.us-west-1.amazonaws.com/vintage_pants.jpg'/>
+                            <h3>Summer Tees</h3>
+                        </li>
+                    </Link>
+                </ul>
+            </div>
+            
             {/* <div class='style-container'>
                 <h1>Shop by Style</h1>
                     <ul class="homepage-lists">
