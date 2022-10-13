@@ -41,7 +41,7 @@ function LoginForm() {
 
   return (
     <>
-    <h1 class='login-headings'>Log in</h1> 
+    <h1 className='login-headings'>Log in</h1> 
     {/* <p>Log in to your Grailed account to buy, sell, comment, and more.</p> */}
     <form onSubmit={handleSubmit}>
       <ul>
@@ -52,7 +52,7 @@ function LoginForm() {
         Email Address <br></br> </label>
         <input
           type="text"
-          class='log_in_inputs'
+          className='log_in_inputs'
           value={credential}
           onChange={(e) => setCredential(e.target.value)}
           required
@@ -62,15 +62,15 @@ function LoginForm() {
         Password     </label>
         <input
           type="password"
-          class='log_in_inputs'
+          className='log_in_inputs'
           value={password}
           onChange={(e) => setPassword(e.target.value)}
           required
         />
    <br></br>
       <div id='btns'>      
-        <button type="submit" class='login_button' >Log in</button>
-        <button type="submit" class='login_button' onClick={demoLogin}>Demo User</button>
+        <button type="submit" className='login_button' >Log in</button>
+        <button type="submit" className='login_button' onClick={demoLogin}>Demo User</button>
       </div>
 
 

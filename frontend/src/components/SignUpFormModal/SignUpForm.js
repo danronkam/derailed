@@ -31,7 +31,7 @@ function SignUpForm() {
 
     return (
       <>
-        <h1 class='login-headings'>Sign up</h1> 
+        <h1 className='login-headings'>Sign up</h1> 
           <form onSubmit={handleSubmit}>
             <ul>
               {errors.map(error => <li key={error}>{error}</li>)}
@@ -42,7 +42,7 @@ function SignUpForm() {
               <input
                 type="text"
                 value={email}
-                class='log_in_inputs'
+                className='log_in_inputs'
                 onChange={(e) => setEmail(e.target.value)}
                 required
               />
@@ -53,12 +53,12 @@ function SignUpForm() {
               <input
                 type="password"
                 value={password}
-                class='log_in_inputs'
+                className='log_in_inputs'
                 onChange={(e) => setPassword(e.target.value)}
                 required
               />
        
-            <button type="submit" class='login_button'>SIGN UP</button>
+            <button type="submit" className='login_button'>SIGN UP</button>
           </form> 
     </>
     )

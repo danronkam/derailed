@@ -30,15 +30,15 @@ const DesignerIndex = () => {
 
     return(
         <>
-        <div class='listing-bar'>
+        <div className='listing-bar'>
             {/* <p>test</p> */}
             <h3>{total} listings</h3>
         </div>
        
-        <div class='feed-container'>  
-            <div class='feed-rightside'>  
-                <h2 class='avaliable-listings'>Avaliable Listings</h2>
-                <ul class='feed-list'>
+        <div className='feed-container'>  
+            <div className='feed-rightside'>  
+                <h2 className='avaliable-listings'>Avaliable Listings</h2>
+                <ul className='feed-list'>
                     {filtered.map(listing => {
                         return <ListingIndexItem key={listing.id} listing={listing} />
                     })}

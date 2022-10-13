@@ -14,7 +14,7 @@ const CommentIndex = ({ listingId }) => {
     return (
         <div>
             <h3>comments</h3>
-            <ul class='comment-list'>
+            <ul className='comment-list'>
                     {comments.map(comment => {
                         return <CommentIndexItem key={comment.id} listing={comment} />
                     })}

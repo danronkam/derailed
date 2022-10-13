@@ -31,11 +31,11 @@ function ProfileButton({ user }) {
 
   return (
     <>
-    <div class='dropdown'>
-      <button class='dropdown-button'>
-        <i class="fas fa-user-circle"></i>
+    <div className='dropdown'>
+      <button className='dropdown-button'>
+        <i className="fas fa-user-circle"></i>
       </button>
-      <div class='dropdown-content'>
+      <div className='dropdown-content'>
         <ul className="">
             <Link to={`/users/${user.id}`}>My Profile</Link>
             <Link to={`/users/${user.id}/edit`}>Settings</Link>

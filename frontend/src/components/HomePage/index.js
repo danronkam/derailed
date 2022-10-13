@@ -6,133 +6,133 @@ import './HomePage.css'
 const HomePage =() => {
     return(
         <>
-        <div class='content-container'>
+        <div className='content-container'>
         <Slider/> 
-            <div class='menswear-container'>
-                <h1 class='homepage-titles' >Shop Menswear</h1>
-                <ul class="homepage-lists">
-                    <li class='homepage-list-items'>
-                        <Link to={`/shop/menswear/:Footwear`}>
-                            <img class='category-photos' alt='' src='https://derailed-seed.s3.us-west-1.amazonaws.com/footwear.jpg'/>
+            <div className='menswear-container'>
+                <h1 className='homepage-titles' >Shop Menswear</h1>
+                <ul className="homepage-lists">
+                    <li className='homepage-list-items'>
+                        <Link exact to={`/shop/menswear/:Footwear`}>
+                            <img className='category-photos' alt='' src='https://derailed-seed.s3.us-west-1.amazonaws.com/footwear.jpg'/>
                             <h3>Footwear</h3>
                         </Link>
                     </li>
-                    <li class='homepage-list-items'>
-                        <Link to={`/shop/menswear/:Outerwear`}>
-                            <img class='category-photos' alt='' src='https://derailed-seed.s3.us-west-1.amazonaws.com/outerwear.jpg'/>
+                    <li className='homepage-list-items'>
+                        <Link exact to={`/shop/menswear/:Outerwear`}>
+                            <img className='category-photos' alt='' src='https://derailed-seed.s3.us-west-1.amazonaws.com/outerwear.jpg'/>
                             <h3>Outerwear</h3>
                         </Link>
                     </li>
-                    <li class='homepage-list-items'> 
-                        <Link to={`/shop/menswear/:Tops`}>
-                            <img class='category-photos' alt='' src='https://derailed-seed.s3.us-west-1.amazonaws.com/tops.jpg'/>
+                    <li className='homepage-list-items'> 
+                        <Link exact to={`/shop/menswear/:Tops`}>
+                            <img className='category-photos' alt='' src='https://derailed-seed.s3.us-west-1.amazonaws.com/tops.jpg'/>
                             <h3>Tops</h3>
                         </Link>
                     </li>
-                    <li class='homepage-list-items'>
-                        <Link to={`/shop/menswear/:Bottoms`} >
-                            <img class='category-photos' alt='' src='https://derailed-seed.s3.us-west-1.amazonaws.com/bottoms.jpg'/>
+                    <li className='homepage-list-items'>
+                        <Link exact to={`/shop/menswear/:Bottoms`} >
+                            <img className='category-photos' alt='' src='https://derailed-seed.s3.us-west-1.amazonaws.com/bottoms.jpg'/>
                             <h3>Bottoms</h3>
                         </Link>
                     </li>
-                    <li class='homepage-list-items'>
-                        <Link to={`/shop/menswear/:Tailoring`}>
-                            <img class='category-photos'alt='' src='https://derailed-seed.s3.us-west-1.amazonaws.com/Tairloring.jpg'/>
+                    <li className='homepage-list-items'>
+                        <Link exact to={`/shop/menswear/:Tailoring`}>
+                            <img className='category-photos'alt='' src='https://derailed-seed.s3.us-west-1.amazonaws.com/Tairloring.jpg'/>
                             <h3>Tailoring</h3>
                         </Link>
                     </li>
-                    <li class='homepage-list-items'>
-                        <Link to={`/shop/menswear/:Accessories`}>
-                            <img class='category-photos' alt='' src='https://derailed-seed.s3.us-west-1.amazonaws.com/accessories.jpg'/>
+                    <li className='homepage-list-items'>
+                        <Link exact to={`/shop/menswear/:Accessories`}>
+                            <img className='category-photos' alt='' src='https://derailed-seed.s3.us-west-1.amazonaws.com/accessories.jpg'/>
                             <h3>Accessories</h3>
                         </Link>
                     </li>
                 </ul>
             </div>
-            <div class='trend-container'>
-                <h1 class='homepage-titles' > Shop Latest Trends</h1>
-                <ul class="homepage-lists">
-                    <Link to={`/shop/menswear/:Bottoms`}>
-                        <li class='homepage-list-items' >
-                            <img class='trend-photos' alt='' src='https://derailed-seed.s3.us-west-1.amazonaws.com/cool_pants.jpg'/>
+            <div className='trend-container'>
+                <h1 className='homepage-titles' > Shop Latest Trends</h1>
+                <ul className="homepage-lists">
+                    <Link exact to={`/shop/menswear/:Bottoms`}>
+                        <li className='homepage-list-items' >
+                            <img className='trend-photos' alt='' src='https://derailed-seed.s3.us-west-1.amazonaws.com/cool_pants.jpg'/>
                             <h3>Cool Pants</h3>
                         </li>
                     </Link >
-                    <Link >
-                        <li class='homepage-list-items'>
-                            <img class='trend-photos' alt='' src='https://derailed-seed.s3.us-west-1.amazonaws.com/designer_boots.jpg'/>
+                    <Link exact to={`/shop/menswear/:Footwear`}>
+                        <li className='homepage-list-items'>
+                            <img className='trend-photos' alt='' src='https://derailed-seed.s3.us-west-1.amazonaws.com/designer_boots.jpg'/>
                             <h3>Designer Boots</h3>
                         </li>
                     </Link>
-                    <Link to={`/shop/menswear/:Shirts`}>
-                        <li class='homepage-list-items'>
-                            <img class='trend-photos' alt='' src='https://derailed-seed.s3.us-west-1.amazonaws.com/vintage_pants.jpg'/>
+                    <Link exact to={`/shop/menswear/:Shirts`}>
+                        <li className='homepage-list-items'>
+                            <img className='trend-photos' alt='' src='https://derailed-seed.s3.us-west-1.amazonaws.com/vintage_pants.jpg'/>
                             <h3>Summer Tees</h3>
                         </li>
                     </Link>
                 </ul>
             </div>
             
-            {/* <div class='style-container'>
+            {/* <div className='style-container'>
                 <h1>Shop by Style</h1>
-                    <ul class="homepage-lists">
-                        <li class='homepage-list-items'>
-                            <img class='style-photos' src='https://derailed-seed.s3.us-west-1.amazonaws.com/istockphoto-1147544807-612x612.jpg'/>
+                    <ul className="homepage-lists">
+                        <li className='homepage-list-items'>
+                            <img className='style-photos' src='https://derailed-seed.s3.us-west-1.amazonaws.com/istockphoto-1147544807-612x612.jpg'/>
                             <h3>Footwear</h3>
                         </li>
-                        <li class='homepage-list-items'>
-                            <img class='style-photos' src='https://derailed-seed.s3.us-west-1.amazonaws.com/istockphoto-1147544807-612x612.jpg'/>
+                        <li className='homepage-list-items'>
+                            <img className='style-photos' src='https://derailed-seed.s3.us-west-1.amazonaws.com/istockphoto-1147544807-612x612.jpg'/>
                             <h3>Outerwear</h3>
                         </li>
-                        <li class='homepage-list-items'>
-                            <img class='style-photos' src='https://derailed-seed.s3.us-west-1.amazonaws.com/istockphoto-1147544807-612x612.jpg'/>
+                        <li className='homepage-list-items'>
+                            <img className='style-photos' src='https://derailed-seed.s3.us-west-1.amazonaws.com/istockphoto-1147544807-612x612.jpg'/>
                             <h3>Tops</h3>
                         </li>
-                        <li class='homepage-list-items'>
-                            <img class='style-photos' src='https://derailed-seed.s3.us-west-1.amazonaws.com/istockphoto-1147544807-612x612.jpg'/>
+                        <li className='homepage-list-items'>
+                            <img className='style-photos' src='https://derailed-seed.s3.us-west-1.amazonaws.com/istockphoto-1147544807-612x612.jpg'/>
                             <h3>Bottoms</h3>
                         </li>
-                        <li class='homepage-list-items'>
-                            <img class='style-photos' src='https://derailed-seed.s3.us-west-1.amazonaws.com/istockphoto-1147544807-612x612.jpg'/>
+                        <li className='homepage-list-items'>
+                            <img className='style-photos' src='https://derailed-seed.s3.us-west-1.amazonaws.com/istockphoto-1147544807-612x612.jpg'/>
                             <h3>Tailoring</h3>
                         </li>
-                        <li class='homepage-list-items'>
-                            <img class='style-photos' src='https://derailed-seed.s3.us-west-1.amazonaws.com/istockphoto-1147544807-612x612.jpg'/>
+                        <li className='homepage-list-items'>
+                            <img className='style-photos' src='https://derailed-seed.s3.us-west-1.amazonaws.com/istockphoto-1147544807-612x612.jpg'/>
                             <h3>Accessories</h3>
                         </li>
                     </ul>
             </div> */}
-            <div class='designer-container'>
-                <h1 class='homepage-titles' >Popular Designers</h1>
+            <div className='designer-container'>
+                <h1 className='homepage-titles' >Popular Designers</h1>
                 <div>
-                    <ul class="homepage-lists">
-                        <li class='homepage-list-circles'>    
+                    <ul className="homepage-lists">
+                        <li className='homepage-list-circles'>    
                             <Link to={`/shop/:Nike`}>  
-                                <img class='designer-circle' alt='' src='https://derailed-seed.s3.us-west-1.amazonaws.com/nike.jpg'/> <br></br>
+                                <img className='designer-circle' alt='' src='https://derailed-seed.s3.us-west-1.amazonaws.com/nike.jpg'/> <br></br>
                              
                             </Link>
                         </li>
-                        <li class='homepage-list-items'>    
+                        <li className='homepage-list-items'>    
                             <Link to={`/shop/:Carhartt`}>  
-                                <img class='designer-circle' alt='' src='https://derailed-seed.s3.us-west-1.amazonaws.com/carhartt.jpg'/> <br></br>
+                                <img className='designer-circle' alt='' src='https://derailed-seed.s3.us-west-1.amazonaws.com/carhartt.jpg'/> <br></br>
                            
                             </Link>
                         </li>
-                        <li class='homepage-list-items'>    
+                        <li className='homepage-list-items'>    
                             <Link to={`/shop/:LV`}>  
-                                <img class='designer-circle' alt='' src='https://derailed-seed.s3.us-west-1.amazonaws.com/lv.jpg'/> <br></br>
+                                <img className='designer-circle' alt='' src='https://derailed-seed.s3.us-west-1.amazonaws.com/lv.jpg'/> <br></br>
                               
                             </Link>
                         </li>
-                        <li class='homepage-list-items'>    
+                        <li className='homepage-list-items'>    
                             <Link to={`/shop/:Gucci`}>  
-                                <img class='designer-circle' alt='' src='https://derailed-seed.s3.us-west-1.amazonaws.com/Vector-Gucci-Logo-Transparent-PNG.png'/> <br></br>
+                                <img className='designer-circle' alt='' src='https://derailed-seed.s3.us-west-1.amazonaws.com/Vector-Gucci-Logo-Transparent-PNG.png'/> <br></br>
                               
                             </Link>
                         </li >
-                        <li class='homepage-list-items'>    
+                        <li className='homepage-list-items'>    
                             <Link to={`/shop/:Stussy`}>  
-                                <img class='designer-circle' alt='' src='https://derailed-seed.s3.us-west-1.amazonaws.com/stussy.jpg'/> <br></br>
+                                <img className='designer-circle' alt='' src='https://derailed-seed.s3.us-west-1.amazonaws.com/stussy.jpg'/> <br></br>
                      
                             </Link>
                         </li>

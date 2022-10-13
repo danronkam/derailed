@@ -21,12 +21,10 @@ import CategoryIndex from "./components/CategoryIndex";
 function App() {
   return (
     <>
-    <div class='content-container'>
-      <div class='header'>
+    <div className='content-container'>
         <Navigation />   
-        <FilterBar/>
-      </div>
-
+   
+      <FilterBar/>
 
       
         <Switch>
@@ -68,7 +66,7 @@ function App() {
         </Switch>
 
         
-      <div class='footer-container'>
+      <div className='footer-container'>
           <Footer />
 
       </div>

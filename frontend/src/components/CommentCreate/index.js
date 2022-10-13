@@ -29,7 +29,7 @@ const CommentCreate = ({commentData}) => {
 
     return(
         <>
-        <div class='comment-form-container' onSubmit={handleSubmit}>
+        <div className='comment-form-container' onSubmit={handleSubmit}>
             <form id='comment-form'>
 
                 <textarea name='comment' form='comment-form' onChange={(e) => setBody(e.target.value)} ></textarea>

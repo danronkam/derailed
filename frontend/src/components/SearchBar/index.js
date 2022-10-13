@@ -5,14 +5,14 @@ const SearchBar = () => {
 
     return(
         <> 
-            <div class='search-container'>
-                <form class='search-form'>
-                    <button class='search-icon'> <i class="fas fa-search" /> </button>
-                    <input class="search-input"
+            <div className='search-container'>
+                <form className='search-form'>
+                    <button className='search-icon'> <i className="fas fa-search" /> </button>
+                    <input className="search-input"
                             type="text"
                             placeholder="Search" 
                             />
-                    <button type='submit' class='search-button'>SEARCH</button>
+                    <button type='submit' className='search-button'>SEARCH</button>
                 </form>
             </div>
         

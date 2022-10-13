@@ -15,13 +15,13 @@ const ListingIndexItem = ({listing}) => {
         <>
         {/* <img src='https://www.pngitem.com/pimgs/m/238-2381636_happy-face-color-in-smiley-face-hd-png.png'></img> */}
         {/* <h1>{listing.title}</h1> */}
-        <Link to={`/listings/${listing.id}`} class='listing-link'>
+        <Link to={`/listings/${listing.id}`} className='listing-link'>
             <li className="feed-items">
-                <img src={listing.photoUrl} class='listing-image'/> 
-                <div class='feed-details'>
-                    <h3 class='feed-brand'>{capsBrand} {listing.size}</h3>
-                    <span class='feed-title'>{listing.title}</span>
-                    <span class='feed-price'>${listing.price}</span>
+                <img src={listing.photoUrl} className='listing-image'/> 
+                <div className='feed-details'>
+                    <h3 className='feed-brand'>{capsBrand} {listing.size}</h3>
+                    <span className='feed-title'>{listing.title}</span>
+                    <span className='feed-price'>${listing.price}</span>
                 </div>      
                 </li>
             </Link>

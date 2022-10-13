@@ -8,13 +8,13 @@ const Footer = () => {
 
     return (
         <>
-        <div class='footer-links' >
+        <div className='footer-links' >
 
             <a href="https://www.grailed.com/">GRAILED</a>
         </div>
-        <div class='footer-icons'>
-            <a href='https://github.com/danronkam/'>  <i class="fab fa-github-square" /></a>
-            <a href='https://linkedin.com/in/danronkam'> <i class="fab fa-linkedin"></i> </a>
+        <div className='footer-icons'>
+            <a href='https://github.com/danronkam/'>  <i className="fab fa-github-square" /></a>
+            <a href='https://linkedin.com/in/danronkam'> <i className="fab fa-linkedin"></i> </a>
         </div>
         <a href='https://github.com/danronkam/derailed'> DERAILED </a>
         

@@ -3,15 +3,21 @@ import { useDispatch, useSelector } from "react-redux";
 import { fetchListings, getListings } from "../../store/listings";
 import { useParams } from "react-router-dom";
 import ListingIndexItem from "../ListingIndexItem";
+import { useState } from "react";
 
 
 const CategoryIndex = () => {
     const dispatch = useDispatch()
     const {category} = useParams()
     const listings = useSelector(getListings)
+    const [isLoading, setIsLoading] = useState(true);
+
 
     useEffect(() => {
         dispatch(fetchListings())
+        setTimeout(function () {
+            setIsLoading(false);
+        }, 5000);
     },[])
     console.log(category)
     console.log(listings)
@@ -32,22 +38,29 @@ const CategoryIndex = () => {
 
     return(
         <>
-        <div class='listing-bar'>
+        {isLoading ? (
+            <h1>imagine this is a loading gif</h1>
+        ) : (
+            <>
+                <div className='listing-bar'>
             {/* <p>test</p> */}
-            <h3>{total} listings</h3>
-        </div>
+                    <h3>{total} listings</h3>
+                </div>
        
-        <div class='feed-container'>  
-            <div class='feed-rightside'>  
-                <h2 class='avaliable-listings'>Avaliable Listings</h2>
-                <ul class='feed-list'>
-                    {filtered.map(listing => {
-                        console.log(listing)
-                        return <ListingIndexItem key={listing.id} listing={listing} />
-                    })}
-                </ul>
-            </div>
-        </div>
+                <div className='feed-container'>  
+                    <div className='feed-rightside'>  
+                        <h2 className='avaliable-listings'>Avaliable Listings</h2>
+                        <ul className='feed-list'>
+                            {filtered.map(listing => {
+                                console.log(listing)
+                                return <ListingIndexItem key={listing.id} listing={listing} />
+                            })}
+                        </ul>
+                    </div>
+                </div>
+            </>
+        )}
+       
         
         </>
     )

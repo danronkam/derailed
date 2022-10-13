@@ -28,28 +28,28 @@ const UserShow = () => {
     console.log(user)
     return(
         <>
-        <div class='user-show-container'>
-            <div class='user-show-bar'>
-                <div class='user-logo'>
-                    <i class="fa-solid fa-circle-user" id='avatar'></i>
+        <div className='user-show-container'>
+            <div className='user-show-bar'>
+                <div className='user-logo'>
+                    <i className="fa-solid fa-circle-user" id='avatar'></i>
                 </div>
-                <div class='user-show-info'>
+                <div className='user-show-info'>
                     <h4 id='user-show-name'>{name}</h4>
-                    <h5 class='user-show-text'>Joined in 2022</h5>
-                    <i class="fa-solid fa-globe"></i>
+                    <h5 className='user-show-text'>Joined in 2022</h5>
+                    <i className="fa-solid fa-globe"></i>
                     <p>{user.country}</p>
                 </div>
-                <div class='feedback-container'>
-                    <h5 class='user-show-text'>no feedback yet</h5>
+                <div className='feedback-container'>
+                    <h5 className='user-show-text'>no feedback yet</h5>
                 </div>
             </div>
-            <div class='feed-container'>  
-                <div class='feed-leftside' >
+            <div className='feed-container'>  
+                <div className='feed-leftside' >
                 
             </div>
-            <div class='user-feed'>  
-                <h2 class='avaliable-listings'>Avaliable Listings</h2> <br />
-                <ul class='feed-list'>
+            <div className='user-feed'>  
+                <h2 className='avaliable-listings'>Avaliable Listings</h2> <br />
+                <ul className='feed-list'>
                     {listings.map(listing => {
                         return <ListingIndexItem key={listing.id} listing={listing} />
                     })}

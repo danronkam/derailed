@@ -39,18 +39,18 @@ function Slider()  {
 
     return(
         <>
-                <button onClick={nextSlide} class='slide-button' id='left'>
-            <i class="fas fa-chevron-left"></i>
+                <button onClick={nextSlide} className='slide-button' id='left'>
+            <i className="fas fa-chevron-left"></i>
         </button>
         <Link to={path}>
-        <div class='slider-container'>
-            <div class='slides' >            
-            <div class='slider-left' >
+        <div className='slider-container'>
+            <div className='slides' >            
+            <div className='slider-left' >
                 <h3>{blurb}</h3>
                 <h1>{title}</h1>
                 <button id='shop-button'>SHOP NOW</button>
             </div>
-            <div class='slider-right'>
+            <div className='slider-right'>
                 <img id='slider-photo' alt='' src={photoUrl} />
             </div>
         </div>
@@ -59,8 +59,8 @@ function Slider()  {
         </Link>
 
 
-        <button onClick={nextSlide} class='slide-button' id='right'>
-            <i class="fas fa-chevron-right"></i>
+        <button onClick={nextSlide} className='slide-button' id='right'>
+            <i className="fas fa-chevron-right"></i>
         </button>
 
 

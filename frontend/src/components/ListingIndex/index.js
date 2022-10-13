@@ -21,15 +21,15 @@ const ListingIndex = () => {
 
     return(
         <>
-        <div class='listing-bar'>
+        <div className='listing-bar'>
             {/* <p>test</p> */}
             <h3>{total} listings</h3>
         </div>
        
-        <div class='feed-container'>  
-            <div class='feed-rightside'>  
-                <h2 class='avaliable-listings'>Avaliable Listings</h2> <br />
-                <ul class='feed-list'>
+        <div className='feed-container'>  
+            <div className='feed-rightside'>  
+                <h2 className='avaliable-listings'>Avaliable Listings</h2> <br />
+                <ul className='feed-list'>
                     {listings.map(listing => {
                         return <ListingIndexItem key={listing.id} listing={listing} />
                     })}
