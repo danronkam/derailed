@@ -26,7 +26,6 @@ li > a {
 }
 
 #home-logo {
-  padding-left: 19.5vw;
 }
 
 
@@ -71,7 +70,6 @@ li > a {
 
 .navbar-right{
   display: flex;
-  padding-right: 19.5vw;
-  /* margin-left: 22%; */
+
 }
 

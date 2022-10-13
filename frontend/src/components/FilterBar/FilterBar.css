@@ -14,6 +14,16 @@
     text-decoration: none;
 }
 
+.filterbar {
+      background-color: white;
+      position: absolute;
+      left: 0;
+      width: 100vw;
+      border-bottom: 1px solid lightgray;
+      align-items: center;
+      justify-content: space-between;
+}
+
 .dropdown {
     float: left;
     overflow: hidden;
