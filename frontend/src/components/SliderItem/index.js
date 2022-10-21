@@ -17,6 +17,7 @@ const SliderItem = ({content}) => {
                 <div className='slider-right'>
                     <img src={content.photoUrl} />
                 </div>
+                <div></div>
 
 
 
