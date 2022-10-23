@@ -5,7 +5,7 @@ import SignupFormPage from "./components/SignupFormPage";
 import Navigation from "./components/Navigation";
 import ListingIndex from "./components/ListingIndex";
 import HomePage from "./components/HomePage";
-import ListingCreate from "./components/ListingCreate/ListingCreate";
+import ListingCreate from "./components/ListingCreate";
 import ListingShow from "./components/ListingShow/index"
 import FilterBar from "./components/FilterBar";
 import FilteredIndex from "./components/FilteredIndex";
