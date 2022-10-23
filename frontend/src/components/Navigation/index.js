@@ -5,11 +5,13 @@ import ProfileButton from './ProfileButton';
 import LoginFormModal from '../LoginFormModal';
 import SignUpFormModal from '../SignUpFormModal';
 import SearchBar from '../SearchBar';
-import { Link } from 'react-router-dom';
+import { Link, useHistory } from 'react-router-dom';
 import './Navigation.css';
 
 function Navigation() {
   const sessionUser = useSelector(state => state.session.user);
+  const history = useHistory();
+
 
   let sessionLinks;
   if (sessionUser) {
@@ -25,7 +27,7 @@ function Navigation() {
       <>
        
         <Link to={`/shop`}>SHOP</Link>
-        <Link>SELL</Link>
+        <Link >SELL</Link>
         <LoginFormModal />
         <SignUpFormModal></SignUpFormModal>
 
