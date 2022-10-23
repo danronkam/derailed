@@ -3,6 +3,7 @@ import { useDispatch, useSelector } from "react-redux";
 // import { Link } from "react-router-dom";
 import { getListings, fetchListings } from "../../store/listings";
 import ListingIndexItem from "../ListingIndexItem";
+import LoginFormModal from "../LoginFormModal";
 import './ListingIndex.css'
 // import Listin
 
@@ -25,7 +26,6 @@ const ListingIndex = () => {
             {/* <p>test</p> */}
             <h3>{total} listings</h3>
         </div>
-       
         <div className='feed-container'>  
             <div className='feed-rightside'>  
                 <h2 className='avaliable-listings'>Avaliable Listings</h2> <br />

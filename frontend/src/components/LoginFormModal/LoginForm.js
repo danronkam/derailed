@@ -42,39 +42,40 @@ function LoginForm() {
   return (
     <>
     <h1 className='login-headings'>Log in</h1> 
-    {/* <p>Log in to your Grailed account to buy, sell, comment, and more.</p> */}
-    <form onSubmit={handleSubmit}>
-      <ul>
-        {errors.map(error => <li key={error}>{error}</li>)}
-      </ul>
+      {/* <p>Log in to your Grailed account to buy, sell, comment, and more.</p> */}
+      <form onSubmit={handleSubmit}>
+        <ul>
+          {errors.map(error => <li key={error}>{error}</li>)}
+        </ul>
 
-      <label>
-        Email Address <br></br> </label>
-        <input
-          type="text"
-          className='log_in_inputs'
-          value={credential}
-          onChange={(e) => setCredential(e.target.value)}
-          required
-        />
-       <br></br>
-      <label>
-        Password     </label>
-        <input
-          type="password"
-          className='log_in_inputs'
-          value={password}
-          onChange={(e) => setPassword(e.target.value)}
-          required
-        />
-   <br></br>
-      <div id='btns'>      
-        <button type="submit" className='login_button' >Log in</button>
-        <button type="submit" className='login_button' onClick={demoLogin}>Demo User</button>
-      </div>
+        <label>
+          Email Address <br></br> </label>
+          <input
+            type="text"
+            className='log_in_inputs'
+            value={credential}
+            onChange={(e) => setCredential(e.target.value)}
+            required
+          />
+        <br></br>
+        <label>
+          Password     </label>
+          <input
+            type="password"
+            className='log_in_inputs'
+            value={password}
+            onChange={(e) => setPassword(e.target.value)}
+            required
+          />
+    <br></br>
+        <div id='btns'>      
+          <button type="submit" className='login_button' >Log in</button>
+          <button type="submit" className='login_button' onClick={demoLogin}>Demo User</button>
+        </div>
 
 
-    </form>
+      </form>
+      <p>Don't have an account? <a>Sign Up</a></p>
     </>
   );
 }
