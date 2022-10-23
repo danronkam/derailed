@@ -5,12 +5,15 @@ import { Redirect } from 'react-router-dom';
 // import { login } from '../../store/session';
 import './LoginForm.css'
 
+
 function LoginForm() {
   const dispatch = useDispatch();
   const sessionUser = useSelector(state => state.session.user);
   const [credential, setCredential] = useState('');
   const [password, setPassword] = useState('');
   const [errors, setErrors] = useState([]);
+  const [showModal, setShowModal] = useState(false);
+
 
   if (sessionUser) return <Redirect to="/" />;
 
@@ -37,6 +40,13 @@ function LoginForm() {
         else if (data) setErrors([data]);
         else setErrors([res.statusText]);
       });
+  }
+
+  const handleClick = e => {
+    e.preventDefault();
+    console.log('LETS GOT')
+    setShowModal(false)
+
   }
 
   return (
@@ -75,7 +85,7 @@ function LoginForm() {
 
 
       </form>
-      <p>Don't have an account? <a>Sign Up</a></p>
+      <p>Don't have an account? <a onClick={handleClick}>Sign Up</a></p>
     </>
   );
 }

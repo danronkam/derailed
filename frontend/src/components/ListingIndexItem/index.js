@@ -5,6 +5,9 @@ import './ListingIndexItem.css'
 import { Modal } from '../../context/Modal';
 import LoginForm from "../LoginFormModal/LoginForm";
 import SignUpForm from "../SignUpFormModal/SignUpForm";
+import { fetchListing } from "../../store/listings";
+import { useHistory } from "react-router-dom";
+
 
 import LoginFormModal from "../LoginFormModal";
 import SignUpFormModal from "../SignUpFormModal";
@@ -14,6 +17,7 @@ const ListingIndexItem = ({listing}) => {
     const dispatch = useDispatch()
     const [loginModal, showLoginModal] = useState(false);
     const [signModal, showSignModal] = useState(false);
+    const history = useHistory();
 
 
     const sessionUser = useSelector(state => state.session.user);
@@ -26,7 +30,8 @@ const ListingIndexItem = ({listing}) => {
             console.log('test')
             showLoginModal(true)
         } else {
-
+            history.push(link)
+            // dispatch(fetchListing(listing.id))
         }
 
     }
