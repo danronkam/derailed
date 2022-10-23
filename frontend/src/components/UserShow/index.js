@@ -5,27 +5,40 @@ import { fetchUser } from "../../store/user";
 import './UserShow.css'
 import { useEffect } from "react";
 import ListingIndexItem from "../ListingIndexItem";
+import { getUser } from "../../store/user";
 
 
 const UserShow = () => {
     const dispatch = useDispatch()
     const {userId} = useParams()
-    // const user = useSelector(getUser(userId))
-    const user = useSelector(state => state.users)
+    const user = useSelector(getUser(userId))
+    console.log(user)
+    // const user = useSelector(state => state.users)
     // const rawDate = user.createdAt.year
     // const date = rawDate.slice(0, 4)
     const listings = useSelector(state => Object.values(state.listings))
-    let name = user.username
+    let name = user.user.username
     if(!name) {
-        name=user.email
+        name=user.user.email
     }
-
     useEffect(() => {
         dispatch(fetchUser(userId))
     },[])
+    let filtered = []
+
+    const filterListings = listings.filter(listing => {
+        console.log(listing.userId)
+        // console.log(userId)
+        let user = userId
+        console.log(user)
+        if(String(listing.userId) === userId) {
+            console.log('yes')
+            filtered.push(listing)
+        }
+    });
     
     // console.log(rawDate)
-    console.log(user)
+  
     return(
         <>
         <div className='user-show-container'>
@@ -50,7 +63,7 @@ const UserShow = () => {
             <div className='user-feed'>  
                 <h2 className='avaliable-listings'>Avaliable Listings</h2> <br />
                 <ul className='feed-list'>
-                    {listings.map(listing => {
+                    {filtered.map(listing => {
                         return <ListingIndexItem key={listing.id} listing={listing} />
                     })}
                 </ul>

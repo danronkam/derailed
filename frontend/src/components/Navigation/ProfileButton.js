@@ -6,6 +6,7 @@ import { Link } from "react-router-dom";
 function ProfileButton({ user }) {
   const dispatch = useDispatch();
   const [showMenu, setShowMenu] = useState(false);
+  const userId = user.id
   
   const openMenu = () => {
     if (showMenu) return;
@@ -37,8 +38,8 @@ function ProfileButton({ user }) {
       </button>
       <div className='dropdown-content'>
         <ul className="">
-            <Link to={`/users/${user.id}`}>My Profile</Link>
-            <Link to={`/users/${user.id}/edit`}>Settings</Link>
+            <Link to={`myprofile/${user.id}`}>My Profile</Link>
+            <Link to={`myprofile/edit`}>Settings</Link>
             {/* <p>test</p>
             <li>{user.username}</li>
             <li>{user.email}</li>

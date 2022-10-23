@@ -16,6 +16,7 @@ import Footer from "./components/Footer";
 import ListingEdit from "./components/ListingEdit";
 import DesignerIndex from "./components/DesignerIndex";
 import CategoryIndex from "./components/CategoryIndex";
+import UserIndex from "./components/UserIndex";
 
 
 function App() {
@@ -49,15 +50,17 @@ function App() {
           <Route exact path="/listings/:listingId/edit">
             <ListingEdit />
           </Route>
-
           <Route exact path='/checkout/:listingId'>
             <CheckOut />
           </Route>
-          <Route exact path="/users/:userId">
+          <Route exact path="/myprofile/edit">
+            <UserEdit />
+          </Route>
+          <Route exact path="/myprofile/:userId">
             <UserShow />
           </Route>
-          <Route exact path="/users/:userId/edit">
-            <UserEdit />
+          <Route exact path="/users/:userId">
+            <UserIndex />
           </Route>
           <Route exact path='/' >
             <HomePage />  

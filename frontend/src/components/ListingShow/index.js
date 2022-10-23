@@ -50,8 +50,8 @@ const ListingShow = () => {
     // const year = date.slice(0,4)
 
 
-    console.log('THIS IS THE LISTING OWNER:')
-    console.log(listing.userId)
+    // console.log('THIS IS THE LISTING OWNER:')
+    // console.log(listing.userId)
     // console.log(listingOwner)
 
     let shipping;
@@ -116,7 +116,7 @@ const ListingShow = () => {
                     {buttons}
                 </div>
                 <div className='profile-container' >
-                    <Link to={`/users/${listing.userId}`} className='list-owner'>
+                    <Link to={`/users/${listing.userId}`} className='list-owner' >
                     <i className="fa-solid fa-circle-user" id='avatar'></i>
                     <h3 id='see-more' >See More From This Store</h3>
                     </Link>
