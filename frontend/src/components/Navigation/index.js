@@ -1,4 +1,4 @@
-import React from 'react';
+import React, {useState }  from 'react';
 import { NavLink } from 'react-router-dom';
 import { useSelector } from 'react-redux';
 import ProfileButton from './ProfileButton';
@@ -7,11 +7,23 @@ import SignUpFormModal from '../SignUpFormModal';
 import SearchBar from '../SearchBar';
 import { Link, useHistory } from 'react-router-dom';
 import './Navigation.css';
+import { Modal } from '../../context/Modal';
+import LoginForm from '../LoginFormModal/LoginForm';
+import SignUpForm from '../SignUpFormModal/SignUpForm';
 
 function Navigation() {
   const sessionUser = useSelector(state => state.session.user);
   const history = useHistory();
+  const [loginModal, showLoginModal] = useState(false);
+  const [signModal, showSignModal] = useState(false);
 
+
+
+  const handleClick = e => {
+    e.preventDefault();
+    console.log('LOL')
+    showLoginModal(true)
+}
 
   let sessionLinks;
   if (sessionUser) {
@@ -27,7 +39,7 @@ function Navigation() {
       <>
        
         <Link to={`/shop`}>SHOP</Link>
-        <Link >SELL</Link>
+        <Link onClick={handleClick}>SELL</Link>
         <LoginFormModal />
         <SignUpFormModal></SignUpFormModal>
 
@@ -53,7 +65,16 @@ function Navigation() {
         </div>
       </div>
     </div>
-      
+    {loginModal && (
+            <Modal id='log_in_modal' onClose={() => showLoginModal(false)}>
+            <LoginForm />
+            </Modal>
+        )}
+         {signModal && (
+            <Modal id='sign_up_modal' onClose={() => showSignModal(false)}>
+              <SignUpForm />
+            </Modal>
+          )}
     </>
 
   );
