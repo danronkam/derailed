@@ -40,7 +40,7 @@ ApplicationRecord.transaction do
 
     demo_listing1 = Listing.create!({
       title: '42 VOTC HEDI SLIMANE AW04 SUEDE CALF BOOT', 
-      user_id: 1, 
+      user_id: 5, 
       price: 320, 
       shipping_price: 0, 
       designer_brand: 'Dior', 
@@ -62,9 +62,9 @@ ApplicationRecord.transaction do
 	NEW WELTED SOLE IS HIGH QUALITY AND FOLLOWS THE SAME COLOUR AS THE ORIGINAL
 
 	SOLE SHOWS SOME SCUFFING. WORN TWICE SINCE RESOLING.'})
-
+    
       
-    	file1 = URI.open("https://derailed-seed.s3.us-west-1.amazonaws.com/1.jpg")
+    	file1 = URI.open("https://derailed-seed.s3.us-west-1.amazonaws.com/Asics+%C3%97+Jjjjound+Gel+Kayano+14+Silver+White.webp")
 
     demo_listing1.photo.attach(io: file1, filename: 'gucci_shoes.jpg')
     Comment.create({body: 'you would have gucci loafers', author_id:'2', listing_id: 1})
@@ -73,7 +73,7 @@ ApplicationRecord.transaction do
 
     demo_listing2 = Listing.create!({
       title: 'CHUNKY-SOLE LEATHER BOOTS', 
-      user_id: 1, 
+      user_id: 5, 
       price: 628, 
       shipping_price: 20, 
       designer_brand: 'RickOwens', 
@@ -112,7 +112,7 @@ Refunds will be made within 7 business days of receiving the item by us.'})
 # -----------------------------------------------------------------------------------------------------------------------------
     demo_listing3 = Listing.create!({
       title: 'Rick Owens Pink Pony Hair Geobaskets', 
-      user_id: 1, 
+      user_id: 5, 
       price: 1850, 
       shipping_price: 50, 
       designer_brand: 'RickOwens', 
@@ -151,7 +151,7 @@ Please message me if you have any questions, thanks.'})
 # -----------------------------------------------------------------------------------------------------------------------------
     demo_listing4 = Listing.create!({
       title: '1/100 Limited Edition destroyed trashed white paris sneakers', 
-      user_id: 1, 
+      user_id: 6, 
       price: 3000, 
       shipping_price: 80, 
       designer_brand: 'Balenciaga', 
@@ -177,7 +177,7 @@ brand new with box & dustbags'})
 # -----------------------------------------------------------------------------------------------------------------------------
     demo_listing5 = Listing.create!({
       title: "2006 N*E*R*D X BAPESTA FS-001 LOW 'RED' US 8.5", 
-      user_id: 1, 
+      user_id: 6, 
       price: 17500, 
       shipping_price: 0, 
       designer_brand: 'Bape', 
@@ -257,7 +257,7 @@ hmu
 # -----------------------------------------------------------------------------------------------------------------------------
     demo_listing6 = Listing.create!({
       title: 'Rick Owens 09AW Mainline Ramones Black B340', 
-      user_id: 1, 
+      user_id: 7, 
       price: 1395, 
       shipping_price: 30, 
       designer_brand: 'RickOwens', 
@@ -279,7 +279,7 @@ hmu
 # -----------------------------------------------------------------------------------------------------------------------------
     demo_listing7 = Listing.create!({
       title: 'New! Derby', 
-      user_id: 1, 
+      user_id: 7, 
       price: 800, 
       shipping_price: 30, 
       designer_brand: 'ThomBrowne', 
@@ -302,7 +302,7 @@ no trades'})
 # -----------------------------------------------------------------------------------------------------------------------------
     demo_listing8 = Listing.create!({
       title: 'CANCELLED 1/15 Rodeo Santiag Boots Brand New', 
-      user_id: 1, 
+      user_id: 7, 
       price: 5000, 
       shipping_price: 55, 
       designer_brand: 'Balenciaga', 
@@ -332,7 +332,7 @@ I will accept reasonable offers if payment ready'})
 # -----------------------------------------------------------------------------------------------------------------------------
     demo_listing9 = Listing.create!({
       title: 'Balenciaga Rhino Derby', 
-      user_id: 1, 
+      user_id: 8, 
       price: 1035, 
       shipping_price: 70, 
       designer_brand: 'Balenciaga', 
@@ -377,7 +377,7 @@ Please message me if you have any questions, thanks.'})
 # -----------------------------------------------------------------------------------------------------------------------------
     demo_listing10 = Listing.create!({
       title: 'SS10 Dior Homme laced hi tops', 
-      user_id: 1, 
+      user_id: 8, 
       price: 473, 
       shipping_price: 0, 
       designer_brand: 'Dior', 

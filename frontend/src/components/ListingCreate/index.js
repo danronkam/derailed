@@ -246,11 +246,12 @@ const ListingCreate = () => {
                         <label htmlFor='category'>
                             <select name='category' class='create-inputs' value={category} id='category' placeholder='Category' onChange={e=> {setCategory(e.target.value)}}>
                                 <optgroup label='Department / Category'>
-                                    <option value='Tops'>Tops</option>
-                                    <option value='Bottoms'>Bottoms</option>
-                                    <option value='Outerwear'>Outerwear</option>
-                                    <option value='Footwear'>Footwear</option>
-                                    <option value='Accessories'>Accessories</option>
+                                    <option value='Boots'>Boots</option>
+                                    <option value='Casual'>Casual Leather Shoes</option>
+                                    <option value='Formal'>Formal Shoes</option>
+                                    <option value='Sneakers'>Sneakers</option>
+                                    <option value='Sandals'>Sandals</option>
+                                    <option value='Slides'>Slip Ons</option>
                                 </optgroup>
                             </select>
                         </label>
@@ -260,13 +261,14 @@ const ListingCreate = () => {
                             <select class='create-inputs' name='designer-brand' id='designer-brand' value={designer_brand} onChange={e=> {setBrand(e.target.value)}}>
                                 <optgroup label='Designer'>
                                     <option value='Adidas'>Adidas</option>
+                                    <option value='Balenciaga'>Balenciaga</option>
                                     <option value='Bape'>Bape</option>
-                                    <option value='Carhartt'>Carhartt</option>
+                                    <option value='Dior'>Dior</option>
                                     <option value='Dime'>Dime MTL</option>
                                     <option value='Gucci'>Gucci</option>
                                     <option value='Jjjjound'>Jjjjound</option>
                                     <option value='Nike'>Nike</option>
-                                    <option value='Tumi'>Tumi</option>
+                                    <option value='Stussy'>Stussy</option>
                                     <option value='Vintage'>Vintage</option>
                                 </optgroup>
                             </select>
@@ -278,72 +280,30 @@ const ListingCreate = () => {
                         <label htmlFor='sub_category'>
             
                             <select name='sub_category' class='create-inputs' id='sub_category' value={sub_category} onChange={e=> {setSub(e.target.value)}}>
-                                <optgroup label='Footwear'>
-                                    <option value='Sneakers'>Sneakers</option>
-                                    <option value='Loafers'>Loafers</option>
-                                    <option value='Sandles'>Sandles</option>
-                                    <option value='Boots'>Boots</option>
+                                <optgroup label='Tag'>
                                     <option value='Athletic'>Athletic</option>
+                                    <option value='Hitop'>Hi Top</option>
+                                    <option value='Leather'>Leather</option>
+                                    <option value='Loafers'>Loafers</option>
+                                    <option value='Lowtop'>Sandles</option>
                                 </optgroup>
-                                <optgroup label='Tops'>
-                                    <option value='LongSleeve'>Long Sleeve T-Shirt</option>
-                                    <option value='Loafers'>Polos</option>
-                                    <option value='Shirts'>Shirts</option>
-                                    <option value='ButtonUp'>Button Ups</option>
-                                    <option value='TankTop'>Tank Top</option>
-                                </optgroup>
-                                <optgroup label='Bottoms'>
-                                    <option value='Casual'>Casual Pants</option>
-                                    <option value='Cropped'>Cropped Pants</option>
-                                    <option value='Denim'>Denim</option>
-                                    <option value='Shorts'>Shorts</option>
-                                    <option value='Swimwear'>Swimwear</option>
-                                </optgroup>
-                                <optgroup label='Outerwear'>
-                                    <option value='Bomber'>Bomber</option>
-                                    <option value='Leather'>Leather Jackets</option>
-                                    <option value='Parka'>Parka</option>
-                                    <option value='Vests'>Vests</option>
-                                </optgroup>
-                                <optgroup label='Tailoring'>
-                                    <option value='Blazers'>Blazers</option>
-                                    <option value='Suits'>Suits</option>
-                                    <option value='Tuxedos'>Tuxedos</option>
-                                </optgroup>
-                                <optgroup label='Accessories'>
-                                    <option value='Bags'>Bags</option>
-                                    <option value='Hats'>Hats</option>
-                                    <option value='Jewelry'>Jewelry</option>
-                                    <option value='Wallets'>Wallets</option>
-                                    <option value='Sunglasses'>Sunglasses</option>
-                                </optgroup>
+                                
                             </select>
                         </label>
 
                     
                         <select name='size' class='create-inputs' id='size' value={size} onChange={e=> {setSize(e.target.value)}} >
-                                <optgroup label='Footwear'>
+                                <optgroup label='Footwear US Sizes'>
+                                    <option value='6'>6</option>
+                                    <option value='7'>7</option>
                                     <option value='8'>8</option>
                                     <option value='9'>9</option>
                                     <option value='10'>10</option>
                                     <option value='11'>11</option>
                                     <option value='12'>12</option>
+                                    <option value='13'>11</option>
+                                    <option value='14'>12</option>
                                 </optgroup>
-                                <optgroup label='Tops'>
-                                    <option value='XS'>XS</option>
-                                    <option value='S'>S</option>
-                                    <option value='M'>M</option>
-                                    <option value='L'>L</option>
-                                    <option value='XL'>XL</option>
-                                </optgroup>
-                                <optgroup label='Bottoms'>
-                                    <option value='Casual'>29</option>
-                                    <option value='Cropped'>30</option>
-                                    <option value='Denim'>31</option>
-                                    <option value='Shorts'>32</option>
-                                    <option value='Swimwear'>33</option>
-                                </optgroup>
-
                         </select>
                         
                     </div>
@@ -397,7 +357,9 @@ const ListingCreate = () => {
 
                                 <select id='country' onChange={e=> {setCountry(e.target.value)}}>
                                     <optgroup label=''>
+                                        <option value="Asia">Asia</option>
                                         <option value="Canada">Canada </option>
+                                        <option value="Europe">Europe</option>
                                         <option value="United States"> United States</option>
                                     </optgroup>
                                 </select>
