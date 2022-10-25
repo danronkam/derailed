@@ -66,7 +66,7 @@ ApplicationRecord.transaction do
       
     	file1 = URI.open("https://derailed-seed.s3.us-west-1.amazonaws.com/Asics+%C3%97+Jjjjound+Gel+Kayano+14+Silver+White.webp")
 
-    demo_listing1.photo.attach(io: file1, filename: 'gucci_shoes.jpg')
+    demo_listing1.photo.attach(io: file1, filename: 'dior_heidi.jpg')
     Comment.create({body: 'you would have gucci loafers', author_id:'2', listing_id: 1})
 
 # -----------------------------------------------------------------------------------------------------------------------------
@@ -106,7 +106,7 @@ Refunds will be made within 7 business days of receiving the item by us.'})
       
     file2 = URI.open("https://derailed-seed.s3.us-west-1.amazonaws.com/2.jpg")
 
-    demo_listing2.photo.attach(io: file2, filename: 'gucci_shoes.jpg')
+    demo_listing2.photo.attach(io: file2, filename: 'RickMartins.jpg')
     Comment.create({body: 'you would have gucci loafers', author_id:'2', listing_id: 1})
 
 # -----------------------------------------------------------------------------------------------------------------------------
@@ -146,7 +146,7 @@ Please message me if you have any questions, thanks.'})
       
     file3 = URI.open("https://derailed-seed.s3.us-west-1.amazonaws.com/3.jpg")
 
-    demo_listing3.photo.attach(io: file3, filename: 'gucci_shoes.jpg')
+    demo_listing3.photo.attach(io: file3, filename: 'RickPink.jpg')
     Comment.create({body: 'you would have gucci loafers', author_id:'2', listing_id: 3})
 # -----------------------------------------------------------------------------------------------------------------------------
     demo_listing4 = Listing.create!({
@@ -172,7 +172,7 @@ brand new with box & dustbags'})
       
     file4 = URI.open("https://derailed-seed.s3.us-west-1.amazonaws.com/4.jpg")
 
-    demo_listing4.photo.attach(io: file4, filename: 'gucci_shoes.jpg')
+    demo_listing4.photo.attach(io: file4, filename: 'trash.jpg')
     Comment.create({body: 'you would have gucci loafers', author_id:'2', listing_id: 4})
 # -----------------------------------------------------------------------------------------------------------------------------
     demo_listing5 = Listing.create!({
@@ -252,7 +252,7 @@ hmu
       
     file5 = URI.open("https://derailed-seed.s3.us-west-1.amazonaws.com/5.jpg")
 
-    demo_listing5.photo.attach(io: file5, filename: 'gucci_shoes.jpg')
+    demo_listing5.photo.attach(io: file5, filename: 'bapesta.jpg')
     Comment.create({body: 'you would have gucci loafers', author_id:'2', listing_id: 5})
 # -----------------------------------------------------------------------------------------------------------------------------
     demo_listing6 = Listing.create!({
@@ -274,7 +274,7 @@ hmu
       
     file6 = URI.open("https://derailed-seed.s3.us-west-1.amazonaws.com/6.jpg")
 
-    demo_listing6.photo.attach(io: file6, filename: 'gucci_shoes.jpg')
+    demo_listing6.photo.attach(io: file6, filename: 'RORamone.jpg')
     Comment.create({body: 'you would have gucci loafers', author_id:'2', listing_id: 6})
 # -----------------------------------------------------------------------------------------------------------------------------
     demo_listing7 = Listing.create!({
@@ -297,7 +297,7 @@ no trades'})
       
     file7 = URI.open("https://derailed-seed.s3.us-west-1.amazonaws.com/7.jpg")
 
-    demo_listing7.photo.attach(io: file7, filename: 'gucci_shoes.jpg')
+    demo_listing7.photo.attach(io: file7, filename: 'TBDB.jpg')
     Comment.create({body: 'you would have gucci loafers', author_id:'2', listing_id: 7})
 # -----------------------------------------------------------------------------------------------------------------------------
     demo_listing8 = Listing.create!({
@@ -327,7 +327,7 @@ I will accept reasonable offers if payment ready'})
       
     file8 = URI.open("https://derailed-seed.s3.us-west-1.amazonaws.com/8.jpg")
 
-    demo_listing8.photo.attach(io: file8, filename: 'gucci_shoes.jpg')
+    demo_listing8.photo.attach(io: file8, filename: 'balenciaga_rodeo.jpg')
     Comment.create({body: 'you would have gucci loafers', author_id:'2', listing_id: 8})
 # -----------------------------------------------------------------------------------------------------------------------------
     demo_listing9 = Listing.create!({
@@ -372,7 +372,7 @@ Please message me if you have any questions, thanks.'})
       
     file9 = URI.open("https://derailed-seed.s3.us-west-1.amazonaws.com/9.jpg")
 
-    demo_listing9.photo.attach(io: file9, filename: 'gucci_shoes.jpg')
+    demo_listing9.photo.attach(io: file9, filename: 'Balenciagaderby.jpg')
     Comment.create({body: 'you would have gucci loafers', author_id:'2', listing_id: 9})
 # -----------------------------------------------------------------------------------------------------------------------------
     demo_listing10 = Listing.create!({
@@ -394,7 +394,7 @@ Size 41, fits 41-42'})
       
     file10 = URI.open("https://derailed-seed.s3.us-west-1.amazonaws.com/10.jpg")
 
-    demo_listing10.photo.attach(io: file10, filename: 'gucci_shoes.jpg')
+    demo_listing10.photo.attach(io: file10, filename: 'Diorsneaker.jpg')
     Comment.create({body: 'you would have gucci loafers', author_id:'2', listing_id: 10})
 
 # --------------------------------------------------------------------------------------------------------------------------------
