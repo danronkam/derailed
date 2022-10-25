@@ -48,7 +48,7 @@ function FilterBar() {
                         <Link exact to={`/shop/menswear/:Sneakers`} > <button className='filter-bar-links'>SNEAKERS </button> </Link>
                     </div>
                     <div className="filter-list-items">
-                        <Link exact to='/shop'> <button className='filter-bar-links'> STAFF PICKS </button> </Link>
+                        <Link exact to={`/shop`}> <button className='filter-bar-links'> STAFF PICKS </button> </Link>
                     </div>
             </div>
         </div>
