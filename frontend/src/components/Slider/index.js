@@ -165,8 +165,8 @@ function Slider()  {
             <div className="Containers slider-container">
                 <div className='slides'>
                     <div className="slider-left">
-                        <h3>blurb 1</h3>
-                        <h1>title 1</h1>
+                        <h3>Formal Shoes for Any Ocassion</h3>
+                        <h1>WDNG SZN</h1>
                         <button id='shop-button'>SHOP NOW</button>
                     </div>
                     <div className="slider-right">
