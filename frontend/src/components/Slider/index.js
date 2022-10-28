@@ -157,9 +157,15 @@ function Slider()  {
    return(
          <>
             {isLoading ? (
-                <h1>test</h1>
+                <>
+                    <div className="loading_container">
+                        <h1>insert loading gif here</h1>    
+                    </div>
+
+                </>
+             
             ) : (
-            <h1>this works</h1>
+                <div></div>
             )}
          
             <div className="Containers slider-container">

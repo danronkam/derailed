@@ -14,37 +14,37 @@ const HomePage =() => {
                     <li className='homepage-list-items'>
                         <Link exact to={`/shop/menswear/:Footwear`}>
                             <img className='category-photos' alt='' src='https://derailed-seed.s3.us-west-1.amazonaws.com/footwear.jpg'/>
-                            <h3>Footwear</h3>
+                            <h3>Boots</h3>
                         </Link>
                     </li>
                     <li className='homepage-list-items'>
                         <Link exact to={`/shop/menswear/:Outerwear`}>
                             <img className='category-photos' alt='' src='https://derailed-seed.s3.us-west-1.amazonaws.com/outerwear.jpg'/>
-                            <h3>Outerwear</h3>
+                            <h3>Sneakers</h3>
                         </Link>
                     </li>
                     <li className='homepage-list-items'> 
                         <Link exact to={`/shop/menswear/:Tops`}>
                             <img className='category-photos' alt='' src='https://derailed-seed.s3.us-west-1.amazonaws.com/tops.jpg'/>
-                            <h3>Tops</h3>
+                            <h3>Formal</h3>
                         </Link>
                     </li>
                     <li className='homepage-list-items'>
                         <Link exact to={`/shop/menswear/:Bottoms`} >
                             <img className='category-photos' alt='' src='https://derailed-seed.s3.us-west-1.amazonaws.com/bottoms.jpg'/>
-                            <h3>Bottoms</h3>
+                            <h3>Loafers</h3>
                         </Link>
                     </li>
                     <li className='homepage-list-items'>
                         <Link exact to={`/shop/menswear/:Tailoring`}>
                             <img className='category-photos'alt='' src='https://derailed-seed.s3.us-west-1.amazonaws.com/Tairloring.jpg'/>
-                            <h3>Tailoring</h3>
+                            <h3>Slides</h3>
                         </Link>
                     </li>
                     <li className='homepage-list-items'>
                         <Link exact to={`/shop/menswear/:Accessories`}>
                             <img className='category-photos' alt='' src='https://derailed-seed.s3.us-west-1.amazonaws.com/accessories.jpg'/>
-                            <h3>Accessories</h3>
+                            <h3>Slip Ons</h3>
                         </Link>
                     </li>
                 </ul>
@@ -55,7 +55,7 @@ const HomePage =() => {
                     <Link exact to={`/shop/menswear/:Bottoms`}>
                         <li className='homepage-list-items' >
                             <img className='trend-photos' alt='' src='https://derailed-seed.s3.us-west-1.amazonaws.com/cool_pants.jpg'/>
-                            <h3>Cool Pants</h3>
+                            <h3>Cowboy Boots</h3>
                         </li>
                     </Link >
                     <Link exact to={`/shop/menswear/:Footwear`}>
@@ -67,7 +67,7 @@ const HomePage =() => {
                     <Link exact to={`/shop/menswear/:Shirts`}>
                         <li className='homepage-list-items'>
                             <img className='trend-photos' alt='' src='https://derailed-seed.s3.us-west-1.amazonaws.com/vintage_pants.jpg'/>
-                            <h3>Summer Tees</h3>
+                            <h3>Birkenstock Bostons</h3>
                         </li>
                     </Link>
                 </ul>
