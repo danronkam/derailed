@@ -1,16 +1,16 @@
-import { useState, useEffect } from 'react';
-import { useParams } from 'react-router-dom';
-import { useDispatch, useSelector } from 'react-redux';
-import { getListing, fetchListing, createListing } from '../../store/listings';
-import './ListingCreate.css'
-import { useHistory } from 'react-router-dom';
+// import { useState, useEffect } from 'react';
+// import { useParams } from 'react-router-dom';
+// import { useDispatch, useSelector } from 'react-redux';
+// import { getListing, fetchListing, createListing } from '../../store/listings';
+// import './ListingCreate.css'
+// import { useHistory } from 'react-router-dom';
 
-const ListingCreate = () => {
-    const sessionUser = useSelector(state => state.session.user);
-    const dispatch = useDispatch()
-    const{listingId} = useParams()
-    let listingData = useSelector(getListing(listingId))
-    const history = useHistory();
+// const ListingCreate = () => {
+//     const sessionUser = useSelector(state => state.session.user);
+//     const dispatch = useDispatch()
+//     const{listingId} = useParams()
+//     let listingData = useSelector(getListing(listingId))
+//     const history = useHistory();
 
     
 
@@ -128,283 +128,48 @@ const ListingCreate = () => {
     //     });
     // }
 
-    function useInput(initialValue) {
-        const [value, setValue] = useState(initialValue);
-        const onChange = (e) => setValue(e.target.value);
-        return [value, onChange];
-      }
+//     function useInput(initialValue) {
+//         const [value, setValue] = useState(initialValue);
+//         const onChange = (e) => setValue(e.target.value);
+//         return [value, onChange];
+//       }
       
-    function useSubmit({ createAction, action, validate, onSuccess }){
-        const dispatch = useDispatch();
-        const [errors, setErrors] = useState([]);
+//     function useSubmit({ createAction, action, validate, onSuccess }){
+//         const dispatch = useDispatch();
+//         const [errors, setErrors] = useState([]);
       
-        if (!action) {
-          action = createAction?.();
-        }
+//         if (!action) {
+//           action = createAction?.();
+//         }
       
-        const onSubmit = async (e) => {
-          e.preventDefault();
+//         const onSubmit = async (e) => {
+//           e.preventDefault();
       
-          const errors = validate?.();
-          if (errors) {
-            setErrors(errors);
-          } else {
-            setErrors([]);
-            return dispatch(action).then(
-              onSuccess,
-              async (res) => {
-                let data;
-                try {
-                  // .clone() essentially allows you to read the response body twice
-                  data = await res.clone().json();
-                } catch {
-                  data = await res.text(); // Will hit this case if, e.g., server is down
-                }
-                if (data?.errors) setErrors(data.errors);
-                else if (data) setErrors([data]);
-                else setErrors([res.statusText]);
-              }
-            );
-          }
-        };
+//           const errors = validate?.();
+//           if (errors) {
+//             setErrors(errors);
+//           } else {
+//             setErrors([]);
+//             return dispatch(action).then(
+//               onSuccess,
+//               async (res) => {
+//                 let data;
+//                 try {
+//                   // .clone() essentially allows you to read the response body twice
+//                   data = await res.clone().json();
+//                 } catch {
+//                   data = await res.text(); // Will hit this case if, e.g., server is down
+//                 }
+//                 if (data?.errors) setErrors(data.errors);
+//                 else if (data) setErrors([data]);
+//                 else setErrors([res.statusText]);
+//               }
+//             );
+//           }
+//         };
       
-        return [errors, onSubmit];
-    }
-
-    const [title, setTitle] = useState('');
-    const [price, setPrice] = useState(0);
-    const [shipping_price, setShipping] = useState(0);
-    const [designer_brand, setBrand] = useState('');
-    const [size, setSize] = useState('');
-    const [category, setCategory] = useState('');
-    const [sub_category, setSub] = useState('');
-    const [condition, setCondition] = useState('');
-    const [sold, setSold] = useState(false);
-    const [country, setCountry] = useState('');
-    const [color, setColor] = useState('');
-    const [description, setDescription] = useState('');
-    const [photoFile, setPhotoFile] = useState(null);
-    const [photoUrl, setPhotoUrl] = useState(null);
-
-    const handleImage = e => {
-        // const fileReader = new FileReader();
-        const file = e.currentTarget.files[0]
-
-        if (file) {
-            const fileReader = new FileReader();
-            fileReader.readAsDataURL(file);
-            fileReader.onload = () => {
-              setPhotoFile(file);
-              setPhotoUrl(fileReader.result);
-            };
-        }
-    }
-
-
-
-    // const [errors, onSubmit] = useSubmit({
-    const handleSubmit = e => {
-            // console.log(sessionUser.id)
-        e.preventDefault();
-        const formData = new FormData();
-        formData.append('user_id', sessionUser.id)
-        formData.append('title', title);
-        formData.append('price', price);
-        formData.append('shipping_price', shipping_price);
-        formData.append('designer_brand', designer_brand);
-        formData.append('size', size);
-        formData.append('category', category);
-        formData.append('sub_category', sub_category);
-        formData.append('condition', condition);
-        formData.append('sold', sold);
-        formData.append('country', country);
-        formData.append('color', color);
-        formData.append('description', description);
-        formData.append('photoFile', photoFile);
-        formData.append('photoUrl', photoUrl);
-        //   console.log(formData)
-      
-        if (photoFile) {
-            formData.append('photo', photoFile);
-        }
-        dispatch(createListing(formData))
-
-        //   return createListing(formData);
-        // history.push('/')
-    };
-
-
-
-    return(
-        <>
-        <div class="create-container">
-            <h1>Add a new listing</h1>
-            <form class="create-form" onSubmit={handleSubmit}>
-             <h3>DETAILS</h3>   
-                <div class='details-container' >
-                    <div class='left'> 
-                        <label htmlFor='category'>
-                            <select name='category' class='create-inputs' value={category} id='category' placeholder='Category' onChange={e=> {setCategory(e.target.value)}}>
-                                <optgroup label='Department / Category'>
-                                    <option value='Boots'>Boots</option>
-                                    <option value='Casual'>Casual Leather Shoes</option>
-                                    <option value='Formal'>Formal Shoes</option>
-                                    <option value='Sneakers'>Sneakers</option>
-                                    <option value='Sandals'>Sandals</option>
-                                    <option value='Slides'>Slip Ons</option>
-                                </optgroup>
-                            </select>
-                        </label>
-
-                        <label>
-    
-                            <select class='create-inputs' name='designer-brand' id='designer-brand' value={designer_brand} onChange={e=> {setBrand(e.target.value)}}>
-                                <optgroup label='Designer'>
-                                    <option value='Adidas'>Adidas</option>
-                                    <option value='Balenciaga'>Balenciaga</option>
-                                    <option value='Bape'>Bape</option>
-                                    <option value='Dior'>Dior</option>
-                                    <option value='Dime'>Dime MTL</option>
-                                    <option value='Gucci'>Gucci</option>
-                                    <option value='Jjjjound'>Jjjjound</option>
-                                    <option value='Nike'>Nike</option>
-                                    <option value='Stussy'>Stussy</option>
-                                    <option value='Vintage'>Vintage</option>
-                                </optgroup>
-                            </select>
-       
-                        </label>
-                    </div>
-
-                    <div class='right'>
-                        <label htmlFor='sub_category'>
-            
-                            <select name='sub_category' class='create-inputs' id='sub_category' value={sub_category} onChange={e=> {setSub(e.target.value)}}>
-                                <optgroup label='Tag'>
-                                    <option value='Athletic'>Athletic</option>
-                                    <option value='Hitop'>Hi Top</option>
-                                    <option value='Leather'>Leather</option>
-                                    <option value='Loafers'>Loafers</option>
-                                    <option value='Lowtop'>Sandles</option>
-                                </optgroup>
-                                
-                            </select>
-                        </label>
-
-                    
-                        <select name='size' class='create-inputs' id='size' value={size} onChange={e=> {setSize(e.target.value)}} >
-                                <optgroup label='Footwear US Sizes'>
-                                    <option value='6'>6</option>
-                                    <option value='7'>7</option>
-                                    <option value='8'>8</option>
-                                    <option value='9'>9</option>
-                                    <option value='10'>10</option>
-                                    <option value='11'>11</option>
-                                    <option value='12'>12</option>
-                                    <option value='13'>11</option>
-                                    <option value='14'>12</option>
-                                </optgroup>
-                        </select>
-                        
-                    </div>
-                </div>
-
-            <div class ='details-container-2' > 
-                <h3> ITEM NAME</h3>
-                    <label htmlFor='label' />
-                    <input id='label' class='create-inputs' placeholder='Item name' value={title} onChange={e=> {setTitle(e.target.value)}}/>
-                <h3 > COLOR </h3>
-                    <label htmlFor='color' />
-        
-                        <select name='color' class='create-inputs' value={color} id='color'  onChange={e=> {setColor(e.target.value)}}>
-                            <optgroup label='Designer Colors'>
-                                <option value='Red'>Red</option>
-                                <option value='Orange'>Orange</option>
-                                <option value='Yellow'>Yellow</option>
-                                <option value='Green'>Green</option>
-                                <option value='Blue'>Blue</option>
-                                <option value='Indigo'>Indigo</option>
-                                <option value='Violet'>Violet</option>
-                            </optgroup>
-                        </select>
-
-          
-
-                <h3> CONDITION </h3>
-                    <label htmlFor='condition'>
-                        <select name='condition' id='condition' class='create-inputs' value={condition} onChange={e=> {setCondition(e.target.value)}}> 
-                                <option  disabled></option>
-                                <option value='New/Never Worn'>New/Never Worn</option>
-                                <option value='Gently Used'>Gently Used</option>
-                                <option value='Used'>Used</option>
-                                <option value='Very Worn'>Very Worn</option>
-                        </select>
-                    </label>
-            </div>
-            <div class='details-container-3'>
-                <h3> DESCRIPTION </h3>
-
-                    <input type='text' id='description' class='create-inputs' value={description} onChange={e=> {setDescription(e.target.value)}} placeholder='Add details about conditions, hot the garment fits, additonal measurements, shipping policies, retail price, link to retail page, etc'/>
-            </div>
-            <div class='details-container-2'>
-                <h3> PRICE </h3>
-                    <div class='price-container' >
-                        <i class="fas fa-dollar-sign"></i>
-                        <input type='text' id='price' placeholder='Price (USD)' value={price} onChange={e=> {setPrice(e.target.value)}}/>
-                    </div>
-
-                <h3> SHIPPING FROM </h3>
-
-                                <select id='country' onChange={e=> {setCountry(e.target.value)}}>
-                                    <optgroup label=''>
-                                        <option value="Asia">Asia</option>
-                                        <option value="Canada">Canada </option>
-                                        <option value="Europe">Europe</option>
-                                        <option value="United States"> United States</option>
-                                    </optgroup>
-                                </select>
-                    <div class='price-container'>
-                            <i class="fas fa-dollar-sign"></i>
-                            <input  name='shipping_price' type='integer' id='price2' value={shipping_price} onChange={e=> {setShipping(e.target.value)}} />
-                    </div>
-                    
-                
-                <h3> PHOTO </h3>
-                    <input type="file"  onChange={handleImage} />
-            </div>
-
-            <div class='button-container'>
-                <button type='submit' >PUBLISH</button>
-            </div>
-        </form>
-            
-
-        </div>
-        
-        
-        
-        
-        </>
-    )
-}
-
-export default ListingCreate
-
-// ----------------------^^THIS BROKE 
-
-// import { useState, useEffect } from 'react';
-// import { useParams } from 'react-router-dom';
-// import { useDispatch, useSelector } from 'react-redux';
-// import { getListing, fetchListing, createListing } from '../../store/listings';
-// import './ListingCreate.css'
-// import { useHistory } from 'react-router-dom';
-
-// const ListingCreate = () => {
-//     const sessionUser = useSelector(state => state.session.user);
-//     const dispatch = useDispatch()
-//     const{listingId} = useParams()
-//     let listingData = useSelector(getListing(listingId))
-//     const history = useHistory();
+//         return [errors, onSubmit];
+//     }
 
 //     const [title, setTitle] = useState('');
 //     const [price, setPrice] = useState(0);
@@ -465,7 +230,7 @@ export default ListingCreate
 //         dispatch(createListing(formData))
 
 //         //   return createListing(formData);
-//         history.push('/')
+//         // history.push('/')
 //     };
 
 
@@ -473,32 +238,41 @@ export default ListingCreate
 //     return(
 //         <>
 //         <div class="create-container">
-//             <h1 class='create-headers'>Add a new listing</h1>
+//             <h1>Add a new listing</h1>
 //             <form class="create-form" onSubmit={handleSubmit}>
-//              <h3 class='create-headers'>DETAILS</h3>   
+//              <h3>DETAILS</h3>   
 //                 <div class='details-container' >
 //                     <div class='left'> 
 //                         <label htmlFor='category'>
-//                             <select name='category' class='create-inputs' value={category} id='category' onChange={e=> {setCategory(e.target.value)}}>
-//                                 <option selected disabled>Department / Category</option>
-//                                 <option value='Tops'>Tops</option>
-//                                 <option value='Bottoms'>Bottoms</option>
-//                                 <option value='Outerwear'>Outerwear</option>
-//                                 <option value='Footwear'>Footwear</option>
-//                                 <option value='Accessories'>Accessories</option>
+//                             <select name='category' class='create-inputs' value={category} id='category' placeholder='Category' onChange={e=> {setCategory(e.target.value)}}>
+//                                 <optgroup label='Department / Category'>
+//                                     <option value='Boots'>Boots</option>
+//                                     <option value='Casual'>Casual Leather Shoes</option>
+//                                     <option value='Formal'>Formal Shoes</option>
+//                                     <option value='Sneakers'>Sneakers</option>
+//                                     <option value='Sandals'>Sandals</option>
+//                                     <option value='Slides'>Slip Ons</option>
+//                                 </optgroup>
 //                             </select>
 //                         </label>
 
 //                         <label>
     
-//                             <input list='designer-brands' class='create-inputs' name='designer-brand' id='designer-brand' value={designer_brand} onChange={e=> {setBrand(e.target.value)}}/>
-//                                 <datalist id='designer-brands'>
-//                                     <option value="Helmut Lang"/>
-//                                     <option value="Carhartt"/>
-//                                     <option value="Vintage"/>
-//                                     <option value="Dries Van Norton"/>
-//                                     <option value="Nike"/>
-//                                 </datalist>
+//                             <select class='create-inputs' name='designer-brand' id='designer-brand' value={designer_brand} onChange={e=> {setBrand(e.target.value)}}>
+//                                 <optgroup label='Designer'>
+//                                     <option value='Adidas'>Adidas</option>
+//                                     <option value='Balenciaga'>Balenciaga</option>
+//                                     <option value='Bape'>Bape</option>
+//                                     <option value='Dior'>Dior</option>
+//                                     <option value='Dime'>Dime MTL</option>
+//                                     <option value='Gucci'>Gucci</option>
+//                                     <option value='Jjjjound'>Jjjjound</option>
+//                                     <option value='Nike'>Nike</option>
+//                                     <option value='Stussy'>Stussy</option>
+//                                     <option value='Vintage'>Vintage</option>
+//                                 </optgroup>
+//                             </select>
+       
 //                         </label>
 //                     </div>
 
@@ -506,24 +280,30 @@ export default ListingCreate
 //                         <label htmlFor='sub_category'>
             
 //                             <select name='sub_category' class='create-inputs' id='sub_category' value={sub_category} onChange={e=> {setSub(e.target.value)}}>
-//                                 <option selected disabled >Department / Category</option>
-//                                 <option value='Sneakers'>Sneakers</option>
-//                                 <option value='Loafers'>Loafers</option>
-//                                 <option value='Sandles'>Sandles</option>
-//                                 <option value='Boots'>Boots</option>
-//                                 <option value='Athletic'>Athletic</option>
+//                                 <optgroup label='Tag'>
+//                                     <option value='Athletic'>Athletic</option>
+//                                     <option value='Hitop'>Hi Top</option>
+//                                     <option value='Leather'>Leather</option>
+//                                     <option value='Loafers'>Loafers</option>
+//                                     <option value='Lowtop'>Sandles</option>
+//                                 </optgroup>
+                                
 //                             </select>
 //                         </label>
 
                     
 //                         <select name='size' class='create-inputs' id='size' value={size} onChange={e=> {setSize(e.target.value)}} >
-//                                 <option selected disabled >Size (Please Select Category First) </option>
-//                                 <option value='XS'>XS</option>
-//                                 <option value='S'>S</option>
-//                                 <option value='M'>M</option>
-//                                 <option value='L'>L</option>
-//                                 <option value='XL'>XL</option>
-
+//                                 <optgroup label='Footwear US Sizes'>
+//                                     <option value='6'>6</option>
+//                                     <option value='7'>7</option>
+//                                     <option value='8'>8</option>
+//                                     <option value='9'>9</option>
+//                                     <option value='10'>10</option>
+//                                     <option value='11'>11</option>
+//                                     <option value='12'>12</option>
+//                                     <option value='13'>11</option>
+//                                     <option value='14'>12</option>
+//                                 </optgroup>
 //                         </select>
                         
 //                     </div>
@@ -535,22 +315,25 @@ export default ListingCreate
 //                     <input id='label' class='create-inputs' placeholder='Item name' value={title} onChange={e=> {setTitle(e.target.value)}}/>
 //                 <h3 > COLOR </h3>
 //                     <label htmlFor='color' />
-//                     <input list='colors' placeholder='Designer color name' name='color' value={color} id='color' class='create-inputs' onChange={e=> {setColor(e.target.value)}}/>
-//                                 <datalist id='colors'>
-//                                     <option value="Red"/>
-//                                     <option value="Orange"/>
-//                                     <option value="Yellow"/>
-//                                     <option value="Green"/>
-//                                     <option value="Blue"/>
-//                                     <option value="Indigo"/>
-//                                     <option value="Violet"/>
-//                                 </datalist>
+        
+//                         <select name='color' class='create-inputs' value={color} id='color'  onChange={e=> {setColor(e.target.value)}}>
+//                             <optgroup label='Designer Colors'>
+//                                 <option value='Red'>Red</option>
+//                                 <option value='Orange'>Orange</option>
+//                                 <option value='Yellow'>Yellow</option>
+//                                 <option value='Green'>Green</option>
+//                                 <option value='Blue'>Blue</option>
+//                                 <option value='Indigo'>Indigo</option>
+//                                 <option value='Violet'>Violet</option>
+//                             </optgroup>
+//                         </select>
+
           
 
 //                 <h3> CONDITION </h3>
 //                     <label htmlFor='condition'>
 //                         <select name='condition' id='condition' class='create-inputs' value={condition} onChange={e=> {setCondition(e.target.value)}}> 
-//                                 <option selected disabled></option>
+//                                 <option  disabled></option>
 //                                 <option value='New/Never Worn'>New/Never Worn</option>
 //                                 <option value='Gently Used'>Gently Used</option>
 //                                 <option value='Used'>Used</option>
@@ -559,32 +342,37 @@ export default ListingCreate
 //                     </label>
 //             </div>
 //             <div class='details-container-3'>
-                
 //                 <h3> DESCRIPTION </h3>
 
-//                 <input type='text' id='description' class='create-inputs' value={description} onChange={e=> {setDescription(e.target.value)}} placeholder='Add details about conditions, hot the garment fits, additonal measurements, shipping policies, retail price, link to retail page, etc'/>
+//                     <input type='text' id='description' class='create-inputs' value={description} onChange={e=> {setDescription(e.target.value)}} placeholder='Add details about conditions, hot the garment fits, additonal measurements, shipping policies, retail price, link to retail page, etc'/>
 //             </div>
 //             <div class='details-container-2'>
 //                 <h3> PRICE </h3>
 //                     <div class='price-container' >
 //                         <i class="fas fa-dollar-sign"></i>
-//                         <input type='text' id='price' value={price} onChange={e=> {setPrice(e.target.value)}}/>
+//                         <input type='text' id='price' placeholder='Price (USD)' value={price} onChange={e=> {setPrice(e.target.value)}}/>
 //                     </div>
 
 //                 <h3> SHIPPING FROM </h3>
 
-//                     <input list='shipping-countries' name='shipping' id='shipping' value={country} onChange={e=> {setCountry(e.target.value)}}/>
-//                                 <datalist id='shipping-countries'>
-//                                     <option value="Canada"/>
-//                                     <option value="United States"/>
-//                                 </datalist>
-//                     <label htmlFor='shipping_price'>
-//                         <input  id='shipping_price' name='shipping_price' type='integer' value={shipping_price} onChange={e=> {setShipping(e.target.value)}} />
-//                     </label>
+//                                 <select id='country' onChange={e=> {setCountry(e.target.value)}}>
+//                                     <optgroup label=''>
+//                                         <option value="Asia">Asia</option>
+//                                         <option value="Canada">Canada </option>
+//                                         <option value="Europe">Europe</option>
+//                                         <option value="United States"> United States</option>
+//                                     </optgroup>
+//                                 </select>
+//                     <div class='price-container'>
+//                             <i class="fas fa-dollar-sign"></i>
+//                             <input  name='shipping_price' type='integer' id='price2' value={shipping_price} onChange={e=> {setShipping(e.target.value)}} />
+//                     </div>
+                    
                 
 //                 <h3> PHOTO </h3>
 //                     <input type="file"  onChange={handleImage} />
 //             </div>
+
 //             <div class='button-container'>
 //                 <button type='submit' >PUBLISH</button>
 //             </div>
@@ -601,3 +389,215 @@ export default ListingCreate
 // }
 
 // export default ListingCreate
+
+// ----------------------^^THIS BROKE 
+
+import { useState, useEffect } from 'react';
+import { useParams } from 'react-router-dom';
+import { useDispatch, useSelector } from 'react-redux';
+import { getListing, fetchListing, createListing } from '../../store/listings';
+import './ListingCreate.css'
+import { useHistory } from 'react-router-dom';
+
+const ListingCreate = () => {
+    const sessionUser = useSelector(state => state.session.user);
+    const dispatch = useDispatch()
+    const{listingId} = useParams()
+    let listingData = useSelector(getListing(listingId))
+    const history = useHistory();
+
+    const [title, setTitle] = useState('');
+    const [price, setPrice] = useState(0);
+    const [shipping_price, setShipping] = useState(0);
+    const [designer_brand, setBrand] = useState('');
+    const [size, setSize] = useState('');
+    const [category, setCategory] = useState('');
+    const [sub_category, setSub] = useState('');
+    const [condition, setCondition] = useState('');
+    const [sold, setSold] = useState(false);
+    const [country, setCountry] = useState('');
+    const [color, setColor] = useState('');
+    const [description, setDescription] = useState('');
+    const [photoFile, setPhotoFile] = useState(null);
+    const [photoUrl, setPhotoUrl] = useState(null);
+
+    const handleImage = e => {
+        // const fileReader = new FileReader();
+        const file = e.currentTarget.files[0]
+
+        if (file) {
+            const fileReader = new FileReader();
+            fileReader.readAsDataURL(file);
+            fileReader.onload = () => {
+              setPhotoFile(file);
+              setPhotoUrl(fileReader.result);
+            };
+        }
+    }
+
+
+
+    // const [errors, onSubmit] = useSubmit({
+    const handleSubmit = e => {
+            // console.log(sessionUser.id)
+        e.preventDefault();
+        const formData = new FormData();
+        formData.append('user_id', sessionUser.id)
+        formData.append('title', title);
+        formData.append('price', price);
+        formData.append('shipping_price', shipping_price);
+        formData.append('designer_brand', designer_brand);
+        formData.append('size', size);
+        formData.append('category', category);
+        formData.append('sub_category', sub_category);
+        formData.append('condition', condition);
+        formData.append('sold', sold);
+        formData.append('country', country);
+        formData.append('color', color);
+        formData.append('description', description);
+        formData.append('photoFile', photoFile);
+        formData.append('photoUrl', photoUrl);
+        //   console.log(formData)
+      
+        if (photoFile) {
+            formData.append('photo', photoFile);
+        }
+        dispatch(createListing(formData))
+
+        //   return createListing(formData);
+        history.push('/')
+    };
+
+
+
+    return(
+        <>
+        <div class="create-container">
+            <h1 class='create-headers'>Add a new listing</h1>
+            <form class="create-form" onSubmit={handleSubmit}>
+             <h3 class='create-headers'>DETAILS</h3>   
+                <div class='details-container' >
+                    <div class='left'> 
+                        <label htmlFor='category'>
+                            <select name='category' class='create-inputs' value={category} id='category' onChange={e=> {setCategory(e.target.value)}}>
+                                <option selected disabled>Department / Category</option>
+                                <option value='Tops'>Tops</option>
+                                <option value='Bottoms'>Bottoms</option>
+                                <option value='Outerwear'>Outerwear</option>
+                                <option value='Footwear'>Footwear</option>
+                                <option value='Accessories'>Accessories</option>
+                            </select>
+                        </label>
+
+                        <label>
+    
+                            <input list='designer-brands' class='create-inputs' name='designer-brand' id='designer-brand' value={designer_brand} onChange={e=> {setBrand(e.target.value)}}/>
+                                <datalist id='designer-brands'>
+                                    <option value="Helmut Lang"/>
+                                    <option value="Carhartt"/>
+                                    <option value="Vintage"/>
+                                    <option value="Dries Van Norton"/>
+                                    <option value="Nike"/>
+                                </datalist>
+                        </label>
+                    </div>
+
+                    <div class='right'>
+                        <label htmlFor='sub_category'>
+            
+                            <select name='sub_category' class='create-inputs' id='sub_category' value={sub_category} onChange={e=> {setSub(e.target.value)}}>
+                                <option selected disabled >Department / Category</option>
+                                <option value='Sneakers'>Sneakers</option>
+                                <option value='Loafers'>Loafers</option>
+                                <option value='Sandles'>Sandles</option>
+                                <option value='Boots'>Boots</option>
+                                <option value='Athletic'>Athletic</option>
+                            </select>
+                        </label>
+
+                    
+                        <select name='size' class='create-inputs' id='size' value={size} onChange={e=> {setSize(e.target.value)}} >
+                                <option selected disabled >Size (Please Select Category First) </option>
+                                <option value='XS'>XS</option>
+                                <option value='S'>S</option>
+                                <option value='M'>M</option>
+                                <option value='L'>L</option>
+                                <option value='XL'>XL</option>
+
+                        </select>
+                        
+                    </div>
+                </div>
+
+            <div class ='details-container-2' > 
+                <h3> ITEM NAME</h3>
+                    <label htmlFor='label' />
+                    <input id='label' class='create-inputs' placeholder='Item name' value={title} onChange={e=> {setTitle(e.target.value)}}/>
+                <h3 > COLOR </h3>
+                    <label htmlFor='color' />
+                    <input list='colors' placeholder='Designer color name' name='color' value={color} id='color' class='create-inputs' onChange={e=> {setColor(e.target.value)}}/>
+                                <datalist id='colors'>
+                                    <option value="Red"/>
+                                    <option value="Orange"/>
+                                    <option value="Yellow"/>
+                                    <option value="Green"/>
+                                    <option value="Blue"/>
+                                    <option value="Indigo"/>
+                                    <option value="Violet"/>
+                                </datalist>
+          
+
+                <h3> CONDITION </h3>
+                    <label htmlFor='condition'>
+                        <select name='condition' id='condition' class='create-inputs' value={condition} onChange={e=> {setCondition(e.target.value)}}> 
+                                <option selected disabled></option>
+                                <option value='New/Never Worn'>New/Never Worn</option>
+                                <option value='Gently Used'>Gently Used</option>
+                                <option value='Used'>Used</option>
+                                <option value='Very Worn'>Very Worn</option>
+                        </select>
+                    </label>
+            </div>
+            <div class='details-container-3'>
+                
+                <h3> DESCRIPTION </h3>
+
+                <input type='text' id='description' class='create-inputs' value={description} onChange={e=> {setDescription(e.target.value)}} placeholder='Add details about conditions, hot the garment fits, additonal measurements, shipping policies, retail price, link to retail page, etc'/>
+            </div>
+            <div class='details-container-2'>
+                <h3> PRICE </h3>
+                    <div class='price-container' >
+                        <i class="fas fa-dollar-sign"></i>
+                        <input type='text' id='price' value={price} onChange={e=> {setPrice(e.target.value)}}/>
+                    </div>
+
+                <h3> SHIPPING FROM </h3>
+
+                    <input list='shipping-countries' name='shipping' id='shipping' value={country} onChange={e=> {setCountry(e.target.value)}}/>
+                                <datalist id='shipping-countries'>
+                                    <option value="Canada"/>
+                                    <option value="United States"/>
+                                </datalist>
+                    <label htmlFor='shipping_price'>
+                        <input  id='shipping_price' name='shipping_price' type='integer' value={shipping_price} onChange={e=> {setShipping(e.target.value)}} />
+                    </label>
+                
+                <h3> PHOTO </h3>
+                    <input type="file"  onChange={handleImage} />
+            </div>
+            <div class='button-container'>
+                <button type='submit' >PUBLISH</button>
+            </div>
+        </form>
+            
+
+        </div>
+        
+        
+        
+        
+        </>
+    )
+}
+
+export default ListingCreate

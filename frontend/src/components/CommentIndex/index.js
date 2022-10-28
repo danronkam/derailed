@@ -6,6 +6,8 @@ import CommentIndexItem from '../CommentIndexItem';
 const CommentIndex = ({ listingId }) => {
     const dispatch = useDispatch();
     const comments = useSelector(state => Object.values(state.comments))
+    const sessionUser = useSelector(state => state.session.user);
+
     console.log(comments)
     useEffect(() => {
         dispatch(fetchComments(listingId))

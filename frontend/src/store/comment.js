@@ -48,7 +48,7 @@ export const createComment = (commentData) => async dispatch => {
 }
 
 export const deleteComment = commentId => async dispatch => {
-    const res = await csrfFetch(`/api/listings/${commentId}`, {
+    const res = await csrfFetch(`/api/comments/${commentId}`, {
         method: 'DELETE'
     })
     if(res.ok) {
