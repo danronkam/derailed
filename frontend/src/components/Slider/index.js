@@ -207,7 +207,7 @@ function Slider()  {
                     <button onClick={nextSlide} className='slide-button' id='left'>
                 <i className="fas fa-chevron-left"></i>
             </button>
-            <Link to='/shop'>
+            {/* <Link to='/shop'>
             <div className='slider-container'>
                 <div className='slides' >            
                 <div className='slider-left' >
@@ -221,7 +221,7 @@ function Slider()  {
             </div>
 
             </div>
-            </Link>
+            </Link> */}
 
 
             <button onClick={nextSlide} className='slide-button' id='right'>

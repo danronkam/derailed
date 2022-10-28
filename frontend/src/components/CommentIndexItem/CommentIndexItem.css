@@ -1,0 +1,18 @@
+.comment_container{
+    border-bottom: 1px solid lightgray;
+    padding-top: 2vh;
+}
+
+.comment_username{
+    font-weight: bold;
+    letter-spacing: -.5px;
+}
+
+.comment-header-container{
+    display: flex;
+}
+
+#comment_avatar{
+    font-size: 2vw;
+    padding-right: .5vw;
+}

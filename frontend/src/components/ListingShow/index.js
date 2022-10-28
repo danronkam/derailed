@@ -133,8 +133,9 @@ const ListingShow = () => {
 
 
         </div>
-        <CommentCreate/>
         <CommentIndex listingId={listingId}/>
+        <CommentCreate/>
+
         </>
     )
 }

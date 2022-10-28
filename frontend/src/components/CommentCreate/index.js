@@ -4,6 +4,7 @@ import { useParams } from "react-router-dom";
 import { createComment } from "../../store/comment";
 import { useState } from "react";
 import { getListing } from "../../store/listings";
+import "./CommentCreate.css"
 
 
 const CommentCreate = ({commentData}) => {
@@ -32,8 +33,8 @@ const CommentCreate = ({commentData}) => {
         <div className='comment-form-container' onSubmit={handleSubmit}>
             <form id='comment-form'>
 
-                <textarea name='comment' form='comment-form' onChange={(e) => setBody(e.target.value)} ></textarea>
-
+                <textarea name='comment' form='comment-form' id="comment_text_area" onChange={(e) => setBody(e.target.value)} ></textarea>
+                <br />
                 <input type='submit' />
             </form>
             
