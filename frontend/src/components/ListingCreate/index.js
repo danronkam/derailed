@@ -481,11 +481,11 @@ const ListingCreate = () => {
                         <label htmlFor='category'>
                             <select name='category' class='create-inputs' value={category} id='category' onChange={e=> {setCategory(e.target.value)}}>
                                 <option selected disabled>Department / Category</option>
-                                <option value='Tops'>Tops</option>
-                                <option value='Bottoms'>Bottoms</option>
-                                <option value='Outerwear'>Outerwear</option>
-                                <option value='Footwear'>Footwear</option>
-                                <option value='Accessories'>Accessories</option>
+                                <option value='Sneakers'>Sneakers</option>
+                                <option value='Boots'>Boots</option>
+                                <option value='Loafers'>Loafers</option>
+                                <option value='Formal'>Formal</option>
+                                <option value='Slip'>Slip Ons</option>
                             </select>
                         </label>
 
@@ -493,11 +493,11 @@ const ListingCreate = () => {
     
                             <input list='designer-brands' class='create-inputs' name='designer-brand' id='designer-brand' value={designer_brand} onChange={e=> {setBrand(e.target.value)}}/>
                                 <datalist id='designer-brands'>
-                                    <option value="Helmut Lang"/>
-                                    <option value="Carhartt"/>
-                                    <option value="Vintage"/>
-                                    <option value="Dries Van Norton"/>
+                                    <option value="Balenciaga"/>
+                                    <option value="Bape"/>
+                                    <option value="Gucci"/>
                                     <option value="Nike"/>
+                                    <option value="Dior"/>
                                 </datalist>
                         </label>
                     </div>
@@ -506,10 +506,10 @@ const ListingCreate = () => {
                         <label htmlFor='sub_category'>
             
                             <select name='sub_category' class='create-inputs' id='sub_category' value={sub_category} onChange={e=> {setSub(e.target.value)}}>
-                                <option selected disabled >Department / Category</option>
-                                <option value='Sneakers'>Sneakers</option>
-                                <option value='Loafers'>Loafers</option>
-                                <option value='Sandles'>Sandles</option>
+                                <option selected disabled >Tag</option>
+                                <option value='Sneakers'>Hi Top Sneaker</option>
+                                <option value='Loafers'>Low Sneakers</option>
+                                <option value='Sandles'>Leather</option>
                                 <option value='Boots'>Boots</option>
                                 <option value='Athletic'>Athletic</option>
                             </select>
@@ -517,12 +517,15 @@ const ListingCreate = () => {
 
                     
                         <select name='size' class='create-inputs' id='size' value={size} onChange={e=> {setSize(e.target.value)}} >
-                                <option selected disabled >Size (Please Select Category First) </option>
-                                <option value='XS'>XS</option>
-                                <option value='S'>S</option>
-                                <option value='M'>M</option>
-                                <option value='L'>L</option>
-                                <option value='XL'>XL</option>
+                                <option selected disabled >Size (US MENS) </option>
+                                <option value='6'>6</option>
+                                <option value='7'>7</option>
+                                <option value='8'>8</option>
+                                <option value='9'>9</option>
+                                <option value='10'>10</option>
+                                <option value='11'>11</option>
+                                <option value='12'>12</option>
+                                <option value='13'>13</option>
 
                         </select>
                         

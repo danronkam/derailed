@@ -3,6 +3,10 @@
     height: 475px;
 }
 
+.loading-container{
+  text-align: center;
+}
+
 .slider-right {
     float: right;
     width: 50%;

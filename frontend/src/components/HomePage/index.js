@@ -141,6 +141,9 @@ const HomePage =() => {
                 </div>
         
             </div>
+            <div className="shop-now-container">
+
+            </div>
         </div>
         </>
     )

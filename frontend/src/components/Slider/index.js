@@ -19,7 +19,7 @@ function Slider()  {
         const timer = setTimeout(function () {
             setIsLoading(false);
             nextSlide()
-          }, 3000);
+          }, 1000);
           return () => clearTimeout(timer);
             }, []);
 
@@ -158,7 +158,7 @@ function Slider()  {
          <>
             {isLoading ? (
                 <>
-                    <div className="loading_container">
+                    <div className="slider-container loading-container">
                         <h1>insert loading gif here</h1>    
                     </div>
 
