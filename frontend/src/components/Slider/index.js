@@ -159,7 +159,7 @@ function Slider()  {
             {isLoading ? (
                 <>
                     <div className="slider-container loading-container">
-                        <h1>insert loading gif here</h1>    
+                        <img src="https://derailed-seed.s3.us-west-1.amazonaws.com/ezgif-2-8d83b97af8.gif" />    
                     </div>
 
                 </>
@@ -177,20 +177,20 @@ function Slider()  {
                     </div>
                     <div className="slider-right">
                         <div className="MessageInfo"> test 1 </div>
-                        <img src="https://derailed-seed.s3.us-west-1.amazonaws.com/rings.png" />
+                        <img src="https://derailed-seed.s3.us-west-1.amazonaws.com/rings.png" className="slider-photo" />
                     </div>
                 </div>
             </div>
             <div className="Containers slider-container">
                 <div className='slides'>
                     <div className="slider-left">
-                        <h3>blurb 2</h3>
-                        <h1>title 2</h1>
+                        <h3>Unique Sneakers</h3>
+                        <h1>OUT THERE DESIGNS</h1>
                         <button id='shop-button'>SHOP NOW</button>
                     </div>
                     <div className="slider-right">
                         <div className="MessageInfo"> test 1 </div>
-                        <img src="https://derailed-seed.s3.us-west-1.amazonaws.com/puffer.png" />
+                        <img src="https://derailed-seed.s3.us-west-1.amazonaws.com/puffer.png" className="slider-photo"/>
                     </div>
                 </div>
             </div>
@@ -198,13 +198,13 @@ function Slider()  {
                 <Link exact to='/shop'>
                 <div className='slides'>
                     <div className="slider-left">
-                        <h3>blurb 3</h3>
-                        <h1>title 3</h1>
+                        <h3>Prep Reimagined</h3>
+                        <h1>CHUNKY LOAFERS</h1>
                         <button id='shop-button'>SHOP NOW</button>
                     </div>
                     <div className="slider-right">
                         <div className="MessageInfo"> test 1 </div>
-                        <img src="https://derailed-seed.s3.us-west-1.amazonaws.com/travi.jpg" />
+                        <img src="https://derailed-seed.s3.us-west-1.amazonaws.com/gobstomper-twitter.png"  className="slider-photo" />
                     </div>
                 </div>
                 </Link>

@@ -24,8 +24,10 @@
 }
 
 .trend-photos {
-    height: 150px;
-    width: 300px;
+    height: 20vh;
+    width: 25vw;
+    max-width: 350px;
+    object-fit: cover;
 }
 
 .designer-circle {
@@ -38,6 +40,7 @@
 .category-photos {
     height: 180px;
     width: 180px;
+    object-fit: cover;
 }
 
 .style-photos {

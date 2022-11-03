@@ -12,61 +12,62 @@ const HomePage =() => {
                 <h1 className='homepage-titles' >Shop Menswear</h1>
                 <ul className="homepage-lists">
                     <li className='homepage-list-items'>
-                        <Link exact to={`/shop/menswear/:Footwear`}>
+                        <Link exact to={`/shop/menswear/:Boots`}>
                             <img className='category-photos' alt='' src='https://derailed-seed.s3.us-west-1.amazonaws.com/footwear.jpg'/>
                             <h3>Boots</h3>
                         </Link>
                     </li>
                     <li className='homepage-list-items'>
-                        <Link exact to={`/shop/menswear/:Outerwear`}>
-                            <img className='category-photos' alt='' src='https://derailed-seed.s3.us-west-1.amazonaws.com/outerwear.jpg'/>
+                        <Link exact to={`/shop/menswear/:Sneakers`}>
+                            <img className='category-photos' alt='' src='https://derailed-seed.s3.us-west-1.amazonaws.com/trend3.jpeg'/>
                             <h3>Sneakers</h3>
                         </Link>
                     </li>
                     <li className='homepage-list-items'> 
-                        <Link exact to={`/shop/menswear/:Tops`}>
-                            <img className='category-photos' alt='' src='https://derailed-seed.s3.us-west-1.amazonaws.com/tops.jpg'/>
+                        <Link exact to={`/shop/menswear/:Formal`}>
+                            <img className='category-photos' alt='' src='https://derailed-seed.s3.us-west-1.amazonaws.com/IMG_2829.jpg'/>
                             <h3>Formal</h3>
                         </Link>
                     </li>
                     <li className='homepage-list-items'>
-                        <Link exact to={`/shop/menswear/:Bottoms`} >
-                            <img className='category-photos' alt='' src='https://derailed-seed.s3.us-west-1.amazonaws.com/bottoms.jpg'/>
+                        <Link exact to={`/shop/menswear/:Loafers`} >
+                            <img className='category-photos' alt='' src='https://derailed-seed.s3.us-west-1.amazonaws.com/IMG_2852.jpg'/>
                             <h3>Loafers</h3>
                         </Link>
                     </li>
                     <li className='homepage-list-items'>
-                        <Link exact to={`/shop/menswear/:Tailoring`}>
+                        <Link exact to={`/shop/menswear/:Slides`}>
                             <img className='category-photos'alt='' src='https://derailed-seed.s3.us-west-1.amazonaws.com/Tairloring.jpg'/>
                             <h3>Slides</h3>
                         </Link>
                     </li>
                     <li className='homepage-list-items'>
-                        <Link exact to={`/shop/menswear/:Accessories`}>
+                        <Link exact to={`/shop/menswear/:Slipon`}>
                             <img className='category-photos' alt='' src='https://derailed-seed.s3.us-west-1.amazonaws.com/accessories.jpg'/>
                             <h3>Slip Ons</h3>
                         </Link>
                     </li>
                 </ul>
             </div>
+            {/* <img src='https://derailed-seed.s3.us-west-1.amazonaws.com/1.jpg'></img> //image test */}
             <div className='trend-container'>
                 <h1 className='homepage-titles' > Shop Latest Trends</h1>
                 <ul className="homepage-lists">
                     <Link exact to={`/shop/menswear/:Bottoms`}>
                         <li className='homepage-list-items' >
-                            <img className='trend-photos' alt='' src='https://derailed-seed.s3.us-west-1.amazonaws.com/cool_pants.jpg'/>
+                            <img className='trend-photos' alt='' src='https://derailed-seed.s3.us-west-1.amazonaws.com/trend1.jpeg'/>
                             <h3>Cowboy Boots</h3>
                         </li>
                     </Link >
                     <Link exact to={`/shop/menswear/:Footwear`}>
                         <li className='homepage-list-items'>
-                            <img className='trend-photos' alt='' src='https://derailed-seed.s3.us-west-1.amazonaws.com/designer_boots.jpg'/>
+                            <img className='trend-photos' alt='' src='https://derailed-seed.s3.us-west-1.amazonaws.com/trend2.jpeg'/>
                             <h3>Designer Boots</h3>
                         </li>
                     </Link>
                     <Link exact to={`/shop/menswear/:Shirts`}>
                         <li className='homepage-list-items'>
-                            <img className='trend-photos' alt='' src='https://derailed-seed.s3.us-west-1.amazonaws.com/vintage_pants.jpg'/>
+                            <img className='trend-photos' alt='' src='https://derailed-seed.s3.us-west-1.amazonaws.com/trend3.jpeg'/>
                             <h3>Birkenstock Bostons</h3>
                         </li>
                     </Link>

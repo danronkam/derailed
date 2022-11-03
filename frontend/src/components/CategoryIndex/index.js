@@ -39,7 +39,9 @@ const CategoryIndex = () => {
     return(
         <>
         {isLoading ? (
-            <h1>imagine this is a loading gif</h1>
+                <div className="slider-container loading-container">
+                   <img src="https://derailed-seed.s3.us-west-1.amazonaws.com/ezgif-2-8d83b97af8.gif" />    
+               </div>
         ) : (
             <>
                 <div className='listing-bar'>

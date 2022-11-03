@@ -45,7 +45,7 @@ const UserEdit = () => {
         e.preventDefault()
         console.log(newUser)
         dispatch(updateUser(newUser))
-        history.push("/")
+        history.push("/myprofile")
     }
 
     return(
@@ -65,41 +65,14 @@ const UserEdit = () => {
             <form className='edit-form' onSubmit={handleSubmit}>
                 <div className='form-row-1'>
                     <label htmlFor="user_username"> Username <br />  </label>
-                        <input id='user_username' className='log_in_inputs' value={user.username} onChange={e => {setUser({...user, username: e.target.value})}} />
+                        <input id='user_username' className='log_in_inputs' value={user.user.username} onChange={e => {setUser({...user, username: e.target.value})}} />
                    
                     <label htmlFor="user_email"> Email    </label>
                         <input id='user_email' className='log_in_inputs' value={email} onChange={e => {setUser({...user, email: e.target.value})}}/>
                   
                 </div>
                 <div className='form-row-2'>
-                    {/* <label htmlFor="user_location"> Location
-                            <select id='user_location'>
-                                <option value="Canada">Canada</option>
-                                <option value="United States">United  States</option>
-                            </select>
-                    </label> */}
-                    <label htmlFor="user_top"> Top Size <br /> </label>
-                        <select id='user_top' value={top} className='log_in_inputs' onChange={e => {setUser({...user, top_size: e.target.value})}}>
-                            <option value='XS'>XS</option>
-                            <option value='S'>S</option>
-                            <option value='M'>M</option>
-                            <option value='L'>L</option>
-                            <option value='XL'>XL</option>
-                            <option value='2XL'>2XL</option>
-                        </select>
-                    
-                    <label htmlFor="user_bottom"> Bottom Size   <br />     </label>
-                    <select id='user_bottom' value={bottom} className='log_in_inputs' onChange={e => {setUser({...user, waist_size: e.target.value})}}>
-                            <option value='28'>28</option>
-                            <option value='29'>29</option>
-                            <option value='30'>30</option>
-                            <option value='31'>31</option>
-                            <option value='32'>32</option>
-                            <option value='33'>33</option>
-                            <option value='34'>34</option>
-                            <option value='35'>35</option>
-                            <option value='36'>36</option>
-                        </select>
+
              
                 </div>
                 <input type='submit' className='login_button' value="Update"/> 
