@@ -539,6 +539,7 @@ const ListingCreate = () => {
                 <h3 > COLOR </h3>
                     <label htmlFor='color' />
                     <select  placeholder='Designer color name' name='color' value={color} id='color' class='create-inputs' onChange={e=> {setColor(e.target.value)}}>
+                        <option selected disabled></option>
                         <option value="Red">Red</option>
                         <option value="Orange">Orange</option>
                         <option value="Yellow">Yellow</option>

@@ -17,6 +17,7 @@ import ListingEdit from "./components/ListingEdit";
 import DesignerIndex from "./components/DesignerIndex";
 import CategoryIndex from "./components/CategoryIndex";
 import UserIndex from "./components/UserIndex";
+import About from "./components/About";
 
 
 function App() {
@@ -29,6 +30,9 @@ function App() {
 
       
         <Switch>
+          <Route exact path="/about">
+            <About/>
+          </Route>
           <Route exact path="/sell">
             <ListingCreate/>
           </Route>

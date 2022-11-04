@@ -9,8 +9,8 @@ h3 {
 }
 
 .create-inputs {
-  width: 440px;
-  height: 38px;
+  width: 20vw;
+  height: 5vh;
   border: 1px solid lightgray;
   font-size: 14px;
   font-weight: 300;
