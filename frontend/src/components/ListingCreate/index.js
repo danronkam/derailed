@@ -465,22 +465,22 @@ const ListingCreate = () => {
         dispatch(createListing(formData))
 
         //   return createListing(formData);
-        history.push('/')
+        history.push('/myprofile')
     };
 
 
 
     return(
         <>
-        <div class="create-container">
-            <h1 class='create-headers'>Add a new listing</h1>
-            <form class="create-form" onSubmit={handleSubmit}>
-             <h3 class='create-headers'>DETAILS</h3>   
-                <div class='details-container' >
-                    <div class='left'> 
+        <div className="create-container">
+            <h1 className='create-headers'>Add a new listing</h1>
+            <form className="create-form" onSubmit={handleSubmit}>
+             <h3 className='create-headers'>DETAILS</h3>   
+                <div className='details-container' >
+                    <div className='left'> 
                         <label htmlFor='category'>
-                            <select name='category' class='create-inputs' value={category} id='category' onChange={e=> {setCategory(e.target.value)}}>
-                                <option selected disabled>Department / Category</option>
+                            <select name='category' className='create-inputs' value={category} id='category' onChange={e=> {setCategory(e.target.value)}}>
+                                <option selected disabled></option>
                                 <option value='Sneakers'>Sneakers</option>
                                 <option value='Boots'>Boots</option>
                                 <option value='Loafers'>Loafers</option>
@@ -491,7 +491,8 @@ const ListingCreate = () => {
 
                         <label htmlFor='designer-brand'>
     
-                            <select class='create-inputs' name='designer-brand' id='designer-brand' value={designer_brand} onChange={e=> {setBrand(e.target.value)}}>
+                            <select className='create-inputs' name='designer-brand' id='designer-brand' value={designer_brand} onChange={e=> {setBrand(e.target.value)}}>
+                                    <option selected disabled></option>
                                     <option value="Balenciaga"> Balenciaga </option>
                                     <option value="Bape"> Bape </option>
                                     <option value="Gucci"> Gucci </option>
@@ -502,11 +503,11 @@ const ListingCreate = () => {
                         <p className='contact-admin'>Don't see the brand you need? <Link className='contact-admin-link' exact to={`/about`}>Contact an Admin</Link></p>
                     </div>
 
-                    <div class='right'>
+                    <div className='right'>
                         <label htmlFor='sub_category'>
             
-                            <select name='sub_category' class='create-inputs' id='sub_category' value={sub_category} onChange={e=> {setSub(e.target.value)}}>
-                                <option selected disabled >Tag</option>
+                            <select defaultValue='test' name='sub_category' className='create-inputs' id='sub_category' value={sub_category} onChange={e=> {setSub(e.target.value)}}>
+                                <option selected disabled ></option>
                                 <option value='Sneakers'>Hi Top Sneaker</option>
                                 <option value='Loafers'>Low Sneakers</option>
                                 <option value='Sandles'>Leather</option>
@@ -516,8 +517,8 @@ const ListingCreate = () => {
                         </label>
 
                     
-                        <select name='size' class='create-inputs' id='size' value={size} onChange={e=> {setSize(e.target.value)}} >
-                                <option selected disabled >Size (US MENS) </option>
+                        <select name='size' className='create-inputs' id='size' value={size} onChange={e=> {setSize(e.target.value)}} >
+                                <option selected disabled ></option>
                                 <option value='6'>6</option>
                                 <option value='7'>7</option>
                                 <option value='8'>8</option>
@@ -532,13 +533,13 @@ const ListingCreate = () => {
                     </div>
                 </div>
 
-            <div class ='details-container-2' > 
+            <div className ='details-container-2' > 
                 <h3> ITEM NAME</h3>
                     <label htmlFor='label' />
-                    <input id='label' class='create-inputs' placeholder='Item name' value={title} onChange={e=> {setTitle(e.target.value)}}/>
+                    <input id='label' className='create-inputs' placeholder='Item name' value={title} onChange={e=> {setTitle(e.target.value)}}/>
                 <h3 > COLOR </h3>
                     <label htmlFor='color' />
-                    <select  placeholder='Designer color name' name='color' value={color} id='color' class='create-inputs' onChange={e=> {setColor(e.target.value)}}>
+                    <select  placeholder='Designer color name' name='color' value={color} id='color' className='create-inputs' onChange={e=> {setColor(e.target.value)}}>
                         <option selected disabled></option>
                         <option value="Red">Red</option>
                         <option value="Orange">Orange</option>
@@ -556,7 +557,7 @@ const ListingCreate = () => {
 
                 <h3> CONDITION </h3>
                     <label htmlFor='condition'>
-                        <select name='condition' id='condition' class='create-inputs' value={condition} onChange={e=> {setCondition(e.target.value)}}> 
+                        <select name='condition' id='condition' className='create-inputs' value={condition} onChange={e=> {setCondition(e.target.value)}}> 
                                 <option selected disabled></option>
                                 <option value='New/Never Worn'>New/Never Worn</option>
                                 <option value='Gently Used'>Gently Used</option>
@@ -565,16 +566,16 @@ const ListingCreate = () => {
                         </select>
                     </label>
             </div>
-            <div class='details-container-3'>
+            <div className='details-container-3'>
                 
                 <h3> DESCRIPTION </h3>
 
-                <input type='text' id='description' class='create-inputs' value={description} onChange={e=> {setDescription(e.target.value)}} placeholder='Add details about conditions, hot the garment fits, additonal measurements, shipping policies, retail price, link to retail page, etc'/>
+                <input type='text' id='description' className='create-inputs' value={description} onChange={e=> {setDescription(e.target.value)}} placeholder='Add details about conditions, hot the garment fits, additonal measurements, shipping policies, retail price, link to retail page, etc'/>
             </div>
-            <div class='details-container-2'>
+            <div className='details-container-2'>
                 <h3> PRICE </h3>
-                    <div class='price-container' >
-                        <i class="fas fa-dollar-sign"></i>
+                    <div className='price-container' >
+                        <i className="fas fa-dollar-sign"></i>
                         <input type='text' id='price' value={price} onChange={e=> {setPrice(e.target.value)}}/>
                     </div>
 
@@ -593,7 +594,7 @@ const ListingCreate = () => {
                 <h3> PHOTO </h3>
                     <input type="file"  onChange={handleImage} />
             </div>
-            <div class='button-container'>
+            <div className='button-container'>
                 <button type='submit' >PUBLISH</button>
             </div>
         </form>

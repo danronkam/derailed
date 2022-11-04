@@ -38,7 +38,7 @@ function ProfileButton({ user }) {
       </button>
       <div className='dropdown-content'>
         <ul className="">
-            <Link to={`myprofile/${user.id}`}>My Profile</Link>
+            <Link to={`myprofile`} userId={userId}>My Profile</Link>
             <Link to={`myprofile/edit`}>Settings</Link>
             {/* <p>test</p>
             <li>{user.username}</li>

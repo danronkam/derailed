@@ -60,7 +60,7 @@ function App() {
           <Route exact path="/myprofile/edit">
             <UserEdit />
           </Route>
-          <Route exact path="/myprofile/:userId">
+          <Route exact path="/myprofile/">
             <UserShow />
           </Route>
           <Route exact path="/users/:userId">

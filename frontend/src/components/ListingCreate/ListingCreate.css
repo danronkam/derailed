@@ -29,6 +29,7 @@ h3 {
 .details-container {
   display: flex;
   justify-content: space-around;
+  margin-left: 13vw;
 
 }
 

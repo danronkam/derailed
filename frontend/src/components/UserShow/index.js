@@ -8,34 +8,41 @@ import ListingIndexItem from "../ListingIndexItem";
 import { getUser } from "../../store/user";
 
 
-const UserShow = () => {
+const UserShow = ({userId}) => {
     const dispatch = useDispatch()
-    const {userId} = useParams()
+    // const {userId} = useParams()
     const user = useSelector(getUser(userId))
+    const ID = user.user.id
     console.log(user)
     // const user = useSelector(state => state.users)
+    console.log(ID)
+
+    // const userId = user.id
     // const rawDate = user.createdAt.year
     // const date = rawDate.slice(0, 4)
     const listings = useSelector(state => Object.values(state.listings))
+    console.log(listings)
     let name = user.user.username
     if(!name) {
         name=user.user.email
     }
     useEffect(() => {
-        dispatch(fetchUser(userId))
+        dispatch(fetchUser(ID))
     },[])
     let filtered = []
 
     const filterListings = listings.filter(listing => {
         console.log(listing.userId)
         // console.log(userId)
-        let user = userId
-        console.log(user)
-        if(String(listing.userId) === userId) {
+        // let user = userId
+        console.log(ID)
+        if(String(listing.userId) === ID) {
             console.log('yes')
             filtered.push(listing)
         }
     });
+
+    console.log(filtered)
     
     // console.log(rawDate)
   
@@ -63,7 +70,7 @@ const UserShow = () => {
             <div className='user-feed'>  
                 <h2 className='avaliable-listings'>Avaliable Listings</h2> <br />
                 <ul className='feed-list'>
-                    {filtered.map(listing => {
+                    {listings.map(listing => {
                         return <ListingIndexItem key={listing.id} listing={listing} />
                     })}
                 </ul>
