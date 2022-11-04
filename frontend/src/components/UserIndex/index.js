@@ -1,31 +1,43 @@
-import React, { useEffect } from "react";
+import { useEffect } from "react";
 import { useDispatch, useSelector } from "react-redux";
-import { fetchListings, getListings } from "../../store/listings";
+import { getListings, fetchListings } from "../../store/listings";
 import { useParams } from "react-router-dom";
 import ListingIndexItem from "../ListingIndexItem";
+import LoginFormModal from "../LoginFormModal";
+import './UserIndex.css'
+import { fetchUser, getUser } from "../../store/user";
+// import Listin
 
-
-const DesignerIndex = () => {
+const UserIndex = () => {
     const dispatch = useDispatch()
-    const {designerBrand} = useParams()
+    const {userId} = useParams()
     const listings = useSelector(getListings)
+    const user = useSelector(getUser(userId))
+    console.log(user)
+    console.log(listings)
+
+
 
     useEffect(() => {
         dispatch(fetchListings())
-    },[])
+        // dispatch(fetchUser(userId))
 
-    console.log(listings)
+    }, [])
 
     let filtered = []
 
     const filterListings = listings.filter(listing => {
-        if(listing.designerBrand === designerBrand.slice(1)) {
+        console.log(listing.userId)
+        // console.log(userId)
+        let user = userId
+        console.log(user)
+        if(String(listing.userId) === userId) {
+            console.log('yes')
             filtered.push(listing)
         }
     });
 
-    const total = filtered.length
-    console.log(designerBrand.slice(1))
+    const total = filtered.length;
     console.log(filtered)
 
     return(
@@ -34,10 +46,9 @@ const DesignerIndex = () => {
             {/* <p>test</p> */}
             <h3>{total} listings</h3>
         </div>
-       
         <div className='feed-container'>  
             <div className='feed-rightside'>  
-                <h2 className='avaliable-listings'>Avaliable Listings</h2>
+                <h2 className='avaliable-listings'>User's Listings</h2> <br />
                 <ul className='feed-list'>
                     {filtered.map(listing => {
                         return <ListingIndexItem key={listing.id} listing={listing} />
@@ -45,9 +56,8 @@ const DesignerIndex = () => {
                 </ul>
             </div>
         </div>
-        
         </>
     )
 }
 
-export default DesignerIndex
+export default UserIndex

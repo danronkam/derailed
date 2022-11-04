@@ -14,7 +14,7 @@ li > a {
 
 #top_left_logo {
   /* float: left; */
-  height: 27px;
+  height: 7vh;
   width: auto;
   margin-left: 5%;
 }
@@ -26,7 +26,6 @@ li > a {
 }
 
 #home-logo {
-  padding-left: 5%;
 }
 
 
@@ -56,12 +55,13 @@ li > a {
 
 
 .navbar {
+  z-index: 9999;
   background-color: white;
   position: fixed;
   top: 0;
   left: 0;
   width: 100vw;
-  height: 75px;
+  height: 7vh;
   border-bottom: 1px solid lightgray;
   align-items: center;
   display: flex;
@@ -70,6 +70,6 @@ li > a {
 
 .navbar-right{
   display: flex;
-  /* margin-left: 22%; */
+
 }
 

@@ -1,10 +1,4 @@
-.filterbar-container{
-    overflow: hidden;
-    background-color: white;
-    width: 100%;
-    border-bottom: 1px solid lightgray;
-    font-size: 10px;
-}
+
 
 .filterbar-container Link{
     float: left;
@@ -14,13 +8,26 @@
     text-decoration: none;
 }
 
+.filterbar {
+    height: 3.5vh;
+    background-color: white;
+    position: absolute;
+    left: 0;
+    width: 100vw;
+    border-bottom: 1px solid lightgray;
+    align-items: center;
+    justify-content: space-between;
+    display: flex;
+}
+
 .dropdown {
     float: left;
     overflow: hidden;
 }
 
 .filter-list {
-  display: flex;
+  max-width: 1280px;
+  /* display: inline-block; */
   list-style-type: none;
   justify-content: space-between;
 }

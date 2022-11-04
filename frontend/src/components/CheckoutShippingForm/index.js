@@ -5,54 +5,54 @@ const CheckoutShippingForm = () => {
 
     return(
         <>
-        <div class='shippingform-container'>
-            <form class='shippingform'>
+        <div className='shippingform-container'>
+            <form className='shippingform'>
                 <div >
-                    <h3 class='shipping-titles'>Name </h3>
+                    <h3 className='shipping-titles'>Name </h3>
                     <label>
-                        <input type='text' class='shipping-name'></input>
+                        <input type='text' className='shipping-name'></input>
                     </label>
                 </div>
-                <div class='shipping-content-container'>
-                    <div class='shipping-content-container-left'>
-                        <h3 class='shipping-titles'> Street address</h3>
+                <div className='shipping-content-container'>
+                    <div className='shipping-content-container-left'>
+                        <h3 className='shipping-titles'> Street address</h3>
                             <label> 
-                                <input type='text' class='fullsized'/>
+                                <input type='text' className='fullsized'/>
                             </label>
                     </div>
-                    <div class='shipping-content-container-right'>
-                        <h3 class='shipping-titles' > Apt/Suite </h3>
+                    <div className='shipping-content-container-right'>
+                        <h3 className='shipping-titles' > Apt/Suite </h3>
                             <label>
-                                <input type='text' class='halfsized'/>
+                                <input type='text' className='halfsized'/>
                             </label>
                     </div>
                 </div>
-                <div class='shipping-content-container'> 
-                    <div class='shipping-content-container-left'> 
-                        <h3 class='shipping-titles'>City</h3>
+                <div className='shipping-content-container'> 
+                    <div className='shipping-content-container-left'> 
+                        <h3 className='shipping-titles'>City</h3>
                             <label> 
-                                <input type='text' class='fullsized'></input>
+                                <input type='text' className='fullsized'></input>
                             </label>
                     </div>
-                    <div class='shipping-content-container-right'>
+                    <div className='shipping-content-container-right'>
 
-                        <h3 class='shipping-titles'>State</h3>
+                        <h3 className='shipping-titles'>State</h3>
                             <label> 
-                                <input type='text' class='halfsized'/>
+                                <input type='text' className='halfsized'/>
                             </label>
                     </div>
                 </div>
-                <div class='shipping-content-container'>
-                    <div class='shipping-content-container-left'>
-                        <h3 class='shipping-titles'>Country</h3>
+                <div className='shipping-content-container'>
+                    <div className='shipping-content-container-left'>
+                        <h3 className='shipping-titles'>Country</h3>
                             <label> 
-                                <input type='text' class='fullsized'/>
+                                <input type='text' className='fullsized'/>
                             </label>
                     </div>
-                    <div class='shipping-content-container-right'>
-                        <h3 class='shipping-titles'>ZIP code</h3>
+                    <div className='shipping-content-container-right'>
+                        <h3 className='shipping-titles'>ZIP code</h3>
                             <label> 
-                                <input type='text' class='halfsized'/>
+                                <input type='text' className='halfsized'/>
                             </label>
                     </div>
                 </div>

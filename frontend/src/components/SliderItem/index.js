@@ -8,15 +8,16 @@ const SliderItem = ({content}) => {
 
     return(
         <>
-            <div class='slider-container'>
-                <div class='slider-left' >
+            <div className='slider-container'>
+                <div className='slider-left' >
                     <h1>{content.blurb}</h1>
                     <h1>{content.title}</h1>
                     <button>SHOP NOW</button>
                 </div>
-                <div class='slider-right'>
+                <div className='slider-right'>
                     <img src={content.photoUrl} />
                 </div>
+                <div></div>
 
 
 

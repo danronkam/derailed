@@ -25,6 +25,7 @@ const storeCurrentUser = user => {
   }
   
 export const login = ({ credential, password }) => async dispatch => {
+  console.log(credential, '^credential')
     const response = await csrfFetch("/api/session", {
       method: "POST",
       body: JSON.stringify({ credential, password })

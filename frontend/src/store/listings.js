@@ -58,8 +58,22 @@ export const fetchListing = listingId => async dispatch => {
     dispatch({type: RECEIVE_LISTING, listing})
 }
 
+// export const fetchUserListings = id => async dispatch => {
+//     try {
+//         const res = await csrfFetch(`/api/confessions/user/${id}`);
+//         const confessions = await res.json();
+//         dispatch(receiveConfessions(confessions));
+//     } catch (err) {
+//         const resBody = await err.json();
+//         if (resBody.statusCode === 400) {
+//             return dispatch(receiveErrors(resBody.errors))
+//         }
+//     }
+// };
+
 export const createListing = (listingData) => async dispatch => {
     // debugger
+    console.log(listingData)
     const res = await csrfFetch(`/api/listings`, {
         method: 'POST',
         body: listingData,

@@ -39,343 +39,365 @@ ApplicationRecord.transaction do
     shop_4 = User.create(username: "RuePorter", email: "rueporter@demo.com", password: "password")
 
     demo_listing1 = Listing.create!({
-      title: 'DEADSTOCK Horsebit Gucci Loafers', 
-      user_id: 1, 
-      price: 10, 
-      shipping_price: 5, 
-      designer_brand: 'Gucci', 
-      size: '6', 
-      category: 'Footwear', 
-      condition: 'New/Never Worn', 
-      sub_category: 'Loafers', 
-      color: 'Black',
-      country: 'Canada',
-      description: 'damn thats crazy'})
+      title: '42 VOTC HEDI SLIMANE AW04 SUEDE CALF BOOT', 
+      user_id: 5, 
+      price: 320, 
+      shipping_price: 0, 
+      designer_brand: 'Dior', 
+      size: '9', 
+      category: 'Boots', 
+      condition: 'Gently Used', 
+      sub_category: 'Suede', 
+      color: 'Beige',
+      country: 'Europe',
+      description: 'MARKED AN EU 42 FITS A US10
 
+	VERY GOOD CONDITION
+
+	HEDI SLIMANE ERA CHRISTIAN DIOR AW04
+	"VICTIM OF THE CRIME" RUNWAY SHOW PIECE
+
+	RESOLED FROM THE BRITTLE CREPE SOLE
+
+	NEW WELTED SOLE IS HIGH QUALITY AND FOLLOWS THE SAME COLOUR AS THE ORIGINAL
+
+	SOLE SHOWS SOME SCUFFING. WORN TWICE SINCE RESOLING.'})
+    
       
-    file1 = URI.open("https://derailed-seed.s3.us-west-1.amazonaws.com/P00461579_b2.jpg")
+    	file1 = URI.open("https://derailed-seed.s3.us-west-1.amazonaws.com/Asics+%C3%97+Jjjjound+Gel+Kayano+14+Silver+White.webp")
 
-    demo_listing1.photo.attach(io: file1, filename: 'gucci_shoes.jpg')
+    demo_listing1.photo.attach(io: file1, filename: 'dior_heidi.jpg')
     Comment.create({body: 'you would have gucci loafers', author_id:'2', listing_id: 1})
-#________________________________________________________________________________________________________________
+
+# -----------------------------------------------------------------------------------------------------------------------------
 
     demo_listing2 = Listing.create!({
-      title: 'Paul Frank Industries Hoodie', 
+      title: 'CHUNKY-SOLE LEATHER BOOTS', 
       user_id: 5, 
-      price: 15, 
-      shipping_price: 5, 
-      designer_brand: 'Vintage', 
-      size: 'M', category: 'Tops', 
-      condition: 'Gently Used', 
-      sub_category: 'Shirt', 
-      color: 'Grey',
-      country: 'United States',
-      description: 'damn thats crazy'})
+      price: 628, 
+      shipping_price: 20, 
+      designer_brand: 'RickOwens', 
+      size: '13', 
+      category: 'Boots', 
+      condition: 'New', 
+      sub_category: 'Leather', 
+      color: 'Black',
+      country: 'Europe',
+      description: 'IF YOU WANT TO BUY THIS ITEM,PLEASE READ THIS
+
+CONDITION AND SIZE
+CAREFULLY CHECK SIZE AND CONDITION BEFORE PURCHASE.
+
+SHIPPING
+1.WE DONT SHIPPING WITHOUT PHONE NUMBER AND EMAIL.
+2.SHIPPING ONLY VIA UPS EXPRESS SERVICE ALL AROUND THE WORLD
+EXPRESS-ONE WEEK SHIPPING ALL AROUND THE WORLD
+AND WE HAVE TWO DAYS SHIPPING FOR EXTRA FEE!
+
+TAXES
+1.YOU PAY TAXES ACCORDING TO SITE RULES WHEN YOU BUYING
+2.WHEN YOU RECEIVE THE ITEM, YOU DO NOT PAY TAXES
+
+RETURNS
+1.WE ACCEPT RETURNS FOR ANY REASON
+You just need write in dm and we will agree how we will do it.
+Refunds will be made within 7 business days of receiving the item by us.'})
 
       
-      file2 = URI.open('https://derailed-seed.s3.us-west-1.amazonaws.com/vintage+Paul+Frank+industries+army+monkey+hoodie.webp')
+    file2 = URI.open("https://derailed-seed.s3.us-west-1.amazonaws.com/2.jpg")
 
-      demo_listing2.photo.attach(io: file2, filename: 'paul_frank_hoodie.jpg')
-      Comment.create({body: 'HARD', author_id:5, listing_id: 2})
+    demo_listing2.photo.attach(io: file2, filename: 'RickMartins.jpg')
+    Comment.create({body: 'you would have gucci loafers', author_id:'2', listing_id: 1})
 
-#________________________________________________________________________________________________________________
-
+# -----------------------------------------------------------------------------------------------------------------------------
     demo_listing3 = Listing.create!({
-      title: 'Stussy Ransom Jacquard Tie', 
+      title: 'Rick Owens Pink Pony Hair Geobaskets', 
       user_id: 5, 
-      price: 50, 
-      shipping_price: 0, 
-      designer_brand: 'Stussy', 
-      size: 'OS', category: 'Accessories', 
-      condition: 'New/Never Worn', 
-      sub_category: 'Ties', 
-      color: 'Black',
-      country: 'United States',
-      description: 'damn thats crazy'})
+      price: 1850, 
+      shipping_price: 50, 
+      designer_brand: 'RickOwens', 
+      size: '10', 
+      category: 'Sneakers', 
+      condition: 'New', 
+      sub_category: 'Hi Top Sneakers', 
+      color: 'Pink',
+      country: 'Europe',
+      description: 'Selling these brand new, never worn pairs of Rick Owens FW22 "STROBE" Runway Geobaskets Sneakers in the Dirty Pink colourway. This leather is a hair-on cowhide.
+
+Comes with original box, pink laces and totebag.
+
+Size: 43
+
+COLOR: DIRTY PINK/MILK WHITE
+MATERIAL: UPPER 100% COW REAL FUR
+TOE 100% CALF LEATHER
+LINING 100% CALF LEATHER
+INSOLE 100% CALF LEATHER
+SOLE 100% RUBBER
+
+Shipping tracked from Sweden. DHL Express shipping avaliable for a extra fee as well.
+
+Serious offers welcome but im not accepting lowballs.
+Message me on lG for a faster response @olofhohner
+
+All sales final. No returns/refunds. No exchanges. Under any circumstance.
+Please message me if you have any questions, thanks.'})
 
       
-      file3 = URI.open('https://derailed-seed.s3.us-west-1.amazonaws.com/St%C3%BCssy+Ransom+Jacquard+Tie.webp')
+    file3 = URI.open("https://derailed-seed.s3.us-west-1.amazonaws.com/3.jpg")
 
-      demo_listing3.photo.attach(io: file3, filename: 'stussy_tie.jpg')
-      Comment.create({body: 'good deal IMO', author_id:6, listing_id: 3})
-
-#________________________________________________________________________________________________________________
-
+    demo_listing3.photo.attach(io: file3, filename: 'RickPink.jpg')
+    Comment.create({body: 'you would have gucci loafers', author_id:'2', listing_id: 3})
+# -----------------------------------------------------------------------------------------------------------------------------
     demo_listing4 = Listing.create!({
-      title: '2000s Vintage TUMI Black Traveler Cargo Vest', 
-      user_id: 5, 
-      price: 200, 
-      shipping_price: 20, 
-      designer_brand: 'Tumi', 
-      size: 'S', category: 'Outerwear', 
-      condition: 'Gently Used', 
-      sub_category: 'Vest', 
-      color: 'Black',
-      country: 'United States',
-      description: '2000s Vintage TUMI Black Traveler Cargo Vest
-
-      Please ask if you have any questions.'})
-
-      
-    file4 = URI.open('https://derailed-seed.s3.us-west-1.amazonaws.com/2000s+Vintage+TUMI+Black+Traveler+Cargo+Vest.webp')
-
-    demo_listing4.photo.attach(io: file4, filename: 'tumi_vest.jpg')
-    Comment.create({body: 'no way ur serious with this price', author_id:1, listing_id: 4})
-    Comment.create({body: '$50? lmk', author_id:1, listing_id: 4})
-
-#________________________________________________________________________________________________________________
-
-    demo_listing5 = Listing.create!({
-      title: '2004 Helmut Lang “Cowboy” T-Shirt', 
-      user_id: 7, 
-      price: 600, 
-      shipping_price: 7, 
-      designer_brand: 'Helmut Lang', 
-      size: 'S', category: 'Tops', 
-      condition: 'Used', 
-      sub_category: 'Shirt', 
+      title: '1/100 Limited Edition destroyed trashed white paris sneakers', 
+      user_id: 6, 
+      price: 3000, 
+      shipping_price: 80, 
+      designer_brand: 'Balenciaga', 
+      size: '8', 
+      category: 'Sneakers', 
+      condition: 'New', 
+      sub_category: 'Hi Top Sneakers', 
       color: 'White',
-      country: 'United States',
-      description: "Iconic 2004 Helmut Lang 'Cowboy' T-Shirt From The Original Release.
+      country: 'Europe',
+      description: 'Balenciaga by Demna Gvasalia. These are the limited 1/100 trashed Paris sneakers in the dirty white (yellow) version! The concept behind these destroyed sneakers is to search for the beauty in imperfection and accept the more natural cycle of life. It reminds us that all things including us and life itself, are impermanent, incomplete, and imperfect. Perfection, then, is impossible and impermanence is the only way. 🖤
 
-      Not Re-Edition. Currently NFS (Away From Home).
-      
-      Labeled Size XS. Fits S TTS. 8/10 Condition. Yellowing + Wear As To Be Expected After Almost 20+ Years.
-      
-      DM For Purchase / Rental Inquiries.
-      
-      International Buyers – Please Note:
-      Import duties, taxes, and charges are not included in the item price or shipping cost. These charges are the buyer's responsibility.
-      Please check with your country's customs office to determine what these additional costs will be prior to bidding or buying.
-      
-      Best,
-      Kollaps Corp."})
+As seen on Mr Vert (Lil Uzi)
+
+Limited to 100 pairs
+Size 41 (fit large ideal for US8.5-9)
+brand new with box & dustbags'})
 
       
-    file5 = URI.open('https://derailed-seed.s3.us-west-1.amazonaws.com/2004+Helmut+Lang+%E2%80%9CCowboy%E2%80%9D+T-Shirt.webp')
+    file4 = URI.open("https://derailed-seed.s3.us-west-1.amazonaws.com/4.jpg")
 
-    demo_listing5.photo.attach(io: file5, filename: 'cowboy_hl.jpg')
-    Comment.create({body: 'no way ur serious with this price', author_id:1, listing_id: 5})
-    Comment.create({body: '$? lmk', author_id:1, listing_id: 5})
-#________________________________________________________________________________________________________________
-
-    demo_listing6 = Listing.create!({
-      title: 'Gel Kayano 14 Silver White', 
-      user_id: 5, 
-      price: 350, 
-      shipping_price: 20, 
-      designer_brand: 'Jjjjound', 
-      size: '12', category: 'Footwear', 
-      condition: 'New', 
-      sub_category: 'Low Top Sneaker', 
-      color: 'Silver',
-      country: 'United States',
-      description: 'jjjjound x Asics Gel Kayano 14 in Silver/White. Just purchased today, will ship as soon as I receive them.'})
-
-      
-    file6 = URI.open('https://derailed-seed.s3.us-west-1.amazonaws.com/Asics+%C3%97+Jjjjound+Gel+Kayano+14+Silver+White.webp')
-
-    demo_listing6.photo.attach(io: file6, filename: 'jound_ascics.jpg')
-    Comment.create({body: 'no way ur serious with this price', author_id:1, listing_id: 6})
-    Comment.create({body: '$50? lmk', author_id:1, listing_id: 6})
-#________________________________________________________________________________________________________________
-
-    demo_listing7 = Listing.create!({
-      title: 'Comme Des Garçons Homme Plus Suit (Jacket & Pants) Sz Large', 
-      user_id: 7, 
-      price: 1250, 
+    demo_listing4.photo.attach(io: file4, filename: 'trash.jpg')
+    Comment.create({body: 'you would have gucci loafers', author_id:'2', listing_id: 4})
+# -----------------------------------------------------------------------------------------------------------------------------
+    demo_listing5 = Listing.create!({
+      title: "2006 N*E*R*D X BAPESTA FS-001 LOW 'RED' US 8.5", 
+      user_id: 6, 
+      price: 17500, 
       shipping_price: 0, 
-      designer_brand: 'Comme Des Garçons', 
-      size: '34R', category: 'Tailoring', 
-      condition: 'New', 
-      sub_category: 'Suits', 
-      color: 'Grey',
-      country: 'United States',
-      description: 'NEW w TAG
-
-      Jacket: XJ-01012L
-      
-      Material: 44% cotton 28% wool 28% mohair
-      
-      Size: L
-      
-      Shoulder to shoulder: 19 inches
-      
-      Shoulder to cuff: 27 inches
-      
-      Chest: 22 inches
-      
-      Length: 33 inches
-      
-      Pants: XP-01006L
-      
-      Material: 44% cotton 28% wool 28% mohair
-      
-      Size: L
-      
-      Waist: 34 inches
-      
-      Length: 46 inches
-      
-      Inseam: 34 inches
-      
-      New with tags
-      
-      Any questions, please ask.'})
-
-      
-    file7 = URI.open('https://derailed-seed.s3.us-west-1.amazonaws.com/Comme+Des+Gar%C3%A7ons+Homme+Plus+Suit+(Jacket+%26+Pants)+Sz+Large.webp')
-    Comment.create({body: 'no way ur serious with this price', author_id:1, listing_id: 7})
-    Comment.create({body: '$50? lmk', author_id:1, listing_id: 7})
-
-    demo_listing7.photo.attach(io: file7, filename: 'cdg_suit.jpg')
-#________________________________________________________________________________________________________________
-
-    demo_listing8 = Listing.create!({
-      title: 'Dries Van Noten Black Strap Harness Shirt', 
-      user_id: 7, 
-      price: 250, 
-      shipping_price: 8, 
-      designer_brand: 'Dries Van Noten', 
-      size: 'XS', category: 'Tops', 
-      condition: 'Preowned', 
-      sub_category: 'Button Up Shirt', 
-      color: 'Black',
-      country: 'Canada',
-      description: 'Harness Shirt from Dries Van Noten
-
-      Size: 44 (XS-S, Fits TTS)
-      Condition: 8/10 (lost the front piece that covers the top button, otherwise condition is flawless)
-      
-      *US Shipping preferably'})
-
-      
-    file8 = URI.open('https://derailed-seed.s3.us-west-1.amazonaws.com/Dries+Van+Noten+Black+Strap+Harness+Shirt.webp')
-
-    demo_listing8.photo.attach(io: file8, filename: 'dvn_harness.jpg')
-    Comment.create({body: 'no way ur serious with this price', author_id:1, listing_id: 8})
-    Comment.create({body: '$50? lmk', author_id:1, listing_id: 8})
-#________________________________________________________________________________________________________________
-
-    demo_listing9 = Listing.create!({
-      title: 'AW 2006-2007 MARTIN MARGIELA X H&M faceless watch bracelet', 
-      user_id: 7, 
-      price: 350, 
-      shipping_price: 0, 
-      designer_brand: 'Maison Margiela', 
-      size: 'OS', category: 'Accessories', 
+      designer_brand: 'Bape', 
+      size: '8.5', 
+      category: 'Sneakers', 
       condition: 'Gently Used', 
-      color: 'Silver',
+      sub_category: 'Low Top Sneakers', 
+      color: 'Red',
       country: 'United States',
-      sub_category: 'Watches', 
-      description: 'AW 2006-2007 MARTIN MARGIELA X H&M faceless watch bracelet.
-      This bracelet is a re-edition of a Martin Margiela faceless watch bracelet from Autumn-Winter 2006-2007 collection, part of the 2012 Maison Martin Margiela X H&M collection.
-      Condition 8/10, few scuffs and marks, see pictures.
-      Stainless steel, 13 cm long open / 10 cm long closed, bracelet is 1,7 cm wide and watch is 3,5 cm wide.
-      
-      Combined shipping is possible.
-      All sales are final, no return.
-      Ask anything you need to know on sizing, details or condition before purchase.'})
+      description: "N*E*R*D X BAPESTA FS-001 LOW 'RED'
+
+size 8.5 US
+
+released in 2006
+
+these are straight from Shae Haley's personal collection
+
+thats right, 1/3 of N*E*R*D
+
+Shae Haley, Pharrell Williams, and Chad Hugo made up the band N*E*R*D
+
+the lineage of these shoes are unmatched
+
+limited to 100 pairs made
+
+major collectors item
+
+these were partially released by raffle at BAPE stores & select streetwear retailers that were chosen by Nigo & Pharrell
+
+the rest were gifted to friends and family
+
+hence Shae owning a pair
+
+patent leather upper
+
+N*E*R*D 'brain' graphic embroidered on the heel
+
+BAPE has since been attempted to retro this colorway, but never with the N*E*R*D 'brain' motif
+
+it is amazing that the patent leather has not been cracked and entirely destroyed considering that they are 16 years old
+
+but that is because they have been properly stored in a climate controlled storage unit that entire time (aside from Shae wearing them once)
+
+pre-owned
+
+no major flaws
+
+light signs of wear / dirt
+
+any visible flaws are shown in pictures
+
+original box NOT included - replacement box will be included
+
+plenty of life left
+
+100% authentic
+
+premium quality
+
+& FREE SHIPPING IN USA
+SIGNATURE CONFIRMATION WILL BE APPLIED TO PACKAGE UPON REQUEST
+
+hmu
+
+#hangdryy
+
+*in hand & ready to ship
+*free stickers included with all orders
+*ships in a sealed bag within the package for protection
+*ALL SALES ARE FINAL*"})
 
       
-    file9 = URI.open('https://derailed-seed.s3.us-west-1.amazonaws.com/H%26M+x+Margiela+Open+Clasp+Watch+Bracelet.webp')
+    file5 = URI.open("https://derailed-seed.s3.us-west-1.amazonaws.com/5.jpg")
 
-    demo_listing9.photo.attach(io: file9, filename: 'faceless.jpg')
-    Comment.create({body: 'no way ur serious with this price', author_id:1, listing_id: 9})
-    Comment.create({body: '$50? lmk', author_id:1, listing_id: 9})
-#________________________________________________________________________________________________________________
-
-    demo_listing10 = Listing.create!({
-      title: 'Issey Miyake Homme Plisse Blazer', 
+    demo_listing5.photo.attach(io: file5, filename: 'bapesta.jpg')
+    Comment.create({body: 'you would have gucci loafers', author_id:'2', listing_id: 5})
+# -----------------------------------------------------------------------------------------------------------------------------
+    demo_listing6 = Listing.create!({
+      title: 'Rick Owens 09AW Mainline Ramones Black B340', 
       user_id: 7, 
-      price: 600, 
-      shipping_price: 0, 
-      designer_brand: 'Issey Miyake', 
-      size: 'XL', category: 'Outerwear', 
-      condition: 'Used', 
-      sub_category: 'Light Jackets', 
+      price: 1395, 
+      shipping_price: 30, 
+      designer_brand: 'RickOwens', 
+      size: '11', 
+      category: 'Sneakers', 
+      condition: 'Gently Used', 
+      sub_category: 'Hi Top Sneakers', 
       color: 'Black',
-      country: 'United States',
-      description: 'Pre-owned, but in excellent condition. Worn only a few times with no flaws. Tagged as size 4 (fits M - L, more on the L side).'})
+      country: 'Asia',
+      description: 'Rick Owens 09AW Mainline Ramones Black B340
+-Size: 44
+-Calf leather'})
 
       
-    file10 = URI.open('https://derailed-seed.s3.us-west-1.amazonaws.com/Issey+Miyake+Homme+Plisse+Blazer.webp')
+    file6 = URI.open("https://derailed-seed.s3.us-west-1.amazonaws.com/6.jpg")
 
-    demo_listing10.photo.attach(io: file10, filename: 'plisse_blazer.jpg')
-    Comment.create({body: 'no way ur serious with this price', author_id:1, listing_id: 10})
-    Comment.create({body: '$50? lmk', author_id:1, listing_id: 10})
-#________________________________________________________________________________________________________________
-    demo_listing11 = Listing.create!({
-      title: 'Nike Dunk Low Panda', 
+    demo_listing6.photo.attach(io: file6, filename: 'RORamone.jpg')
+    Comment.create({body: 'you would have gucci loafers', author_id:'2', listing_id: 6})
+# -----------------------------------------------------------------------------------------------------------------------------
+    demo_listing7 = Listing.create!({
+      title: 'New! Derby', 
+      user_id: 7, 
+      price: 800, 
+      shipping_price: 30, 
+      designer_brand: 'ThomBrowne', 
+      size: '11.5', 
+      category: 'Casual Leather Shoes', 
+      condition: 'New', 
+      sub_category: 'Leather', 
+      color: 'Black',
+      country: 'Europe',
+      description: 'Item: thom brown derby
+Size: 11.5
+Condition: new with box
+no trades'})
+
+      
+    file7 = URI.open("https://derailed-seed.s3.us-west-1.amazonaws.com/7.jpg")
+
+    demo_listing7.photo.attach(io: file7, filename: 'TBDB.jpg')
+    Comment.create({body: 'you would have gucci loafers', author_id:'2', listing_id: 7})
+# -----------------------------------------------------------------------------------------------------------------------------
+    demo_listing8 = Listing.create!({
+      title: 'CANCELLED 1/15 Rodeo Santiag Boots Brand New', 
+      user_id: 7, 
+      price: 5000, 
+      shipping_price: 55, 
+      designer_brand: 'Balenciaga', 
+      size: '10', 
+      category: 'Boots', 
+      condition: 'New', 
+      sub_category: 'Leather', 
+      color: 'Black',
+      country: 'UK',
+      description: 'Cancelled calfskin leather rodeo santiag boots from the Summer 2022 red carpet collection
+
+These boots were only made available to VIP clients who pre-ordered them. They were then cancelled and not produced for general release
+
+Very rare piece, less than 15 in existence
+
+Size 42, fits a US 9.5-10 best as they fit nearly a full size big like most Balenciaga footwear
+
+Brand new in box
+
+I will accept reasonable offers if payment ready'})
+
+      
+    file8 = URI.open("https://derailed-seed.s3.us-west-1.amazonaws.com/8.jpg")
+
+    demo_listing8.photo.attach(io: file8, filename: 'balenciaga_rodeo.jpg')
+    Comment.create({body: 'you would have gucci loafers', author_id:'2', listing_id: 8})
+# -----------------------------------------------------------------------------------------------------------------------------
+    demo_listing9 = Listing.create!({
+      title: 'Balenciaga Rhino Derby', 
       user_id: 8, 
-      price: 180, 
-      shipping_price: 12, 
-      designer_brand: 'Nike', 
-      size: '10', category: 'Footwear', 
-      condition: 'Used', 
-      sub_category: 'Sneakers', 
+      price: 1035, 
+      shipping_price: 70, 
+      designer_brand: 'Balenciaga', 
+      size: '10', 
+      category: 'Formal Shoes', 
+      condition: 'Gently Used', 
+      sub_category: 'Leather', 
+      color: 'Black',
+      country: 'Europe',
+      description: 'Selling these incredible rhino derbys in the rare, quickly sold out size 43.
+
+Used once for a photoshoot, like new condition however. judge from the pictures.
+
+Comes with original box and all tags etc.
+
+Product details:
+
+• Smooth calfskin
+• Lace-up derby
+• Chunky design
+• Pyramidal toe shape
+• Tone-on-tone laces
+• 4 eyelets lace-up vamp
+• Thick toothed rubber outsole
+• 30mm arch
+• Made in Italy
+-Material: 100% calfskin
+
+Shipping tracked from Sweden. DHL Express shipping avaliable for a extra fee as well.
+
+Serious offers welcome but im not accepting lowballs.
+Message me on lG for a faster response @olofhohner
+
+All sales final. No returns/refunds. No exchanges. Under any circumstance.
+Please message me if you have any questions, thanks.'})
+
+      
+    file9 = URI.open("https://derailed-seed.s3.us-west-1.amazonaws.com/9.jpg")
+
+    demo_listing9.photo.attach(io: file9, filename: 'Balenciagaderby.jpg')
+    Comment.create({body: 'you would have gucci loafers', author_id:'2', listing_id: 9})
+# -----------------------------------------------------------------------------------------------------------------------------
+    demo_listing10 = Listing.create!({
+      title: 'SS10 Dior Homme laced hi tops', 
+      user_id: 8, 
+      price: 473, 
+      shipping_price: 0, 
+      designer_brand: 'Dior', 
+      size: '8.5', 
+      category: 'Sneakers', 
+      condition: 'Gently Used', 
+      sub_category: 'Hi Top sneakers', 
       color: 'Black',
       country: 'United States',
-      description: 'Size 10 Mens, 11.5 Woman’s
-
-      slightly damaged box shown
-      
-      No lowballs
-      
-      Send offers
-      
-      Same/Next day shipping. USA shipping ONLY.
-      
-      All sales final. No returns or refunds. All sales must be checked out through grailed. Do not ask to purchase through paypal or another website.
-      
-      While I do guarantee authenticity, I do not offer returns on my items as long as you receive what was listed in the pictures and description. A piece not fitting is not an appropriate reason for a return. Thank you for understanding'})
+      description: '1 pair of Dior Homme sneakers
+From Spring-Summer 2010
+Size 41, fits 41-42'})
 
       
-    file11 = URI.open('https://derailed-seed.s3.us-west-1.amazonaws.com/Nike+Dunk+Low+Panda.webp')
+    file10 = URI.open("https://derailed-seed.s3.us-west-1.amazonaws.com/10.jpg")
 
-    demo_listing11.photo.attach(io: file11, filename: 'nike_panda.jpg')
-    Comment.create({body: 'no way ur serious with this price', author_id:1, listing_id: 11})
-    Comment.create({body: '$50? lmk', author_id:1, listing_id: 11})
-#________________________________________________________________________________________________________________
+    demo_listing10.photo.attach(io: file10, filename: 'Diorsneaker.jpg')
+    Comment.create({body: 'you would have gucci loafers', author_id:'2', listing_id: 10})
 
-demo_listing12 = Listing.create!({
-  title: 'Vintage Carhartt Double Knee Canvas Work Pants Jeans Destroyed Wip Black', 
-  user_id: 8, 
-  price: 260, 
-  shipping_price: 9.25, 
-  designer_brand: 'Carhartt', 
-  size: '29', category: 'Bottoms', 
-  condition: 'Used', 
-  sub_category: 'Jeans', 
-  color: 'Black',
-  country: 'United States',
-  description: 'Vintage Carhartt Double Knee Canvas Work Pants
-  - Size: 32-33 x 29, see measurements
-  
-  - Color: Black
-  
-  - Condition: Pre-owned, has wear / holes / distressing throughout. The buttocks area fabric is thin. Original Fit. Made in USA. See all photos for condition.'})
-
-  
-file12 = URI.open('https://derailed-seed.s3.us-west-1.amazonaws.com/s-l400.jpg')
-demo_listing12.photo.attach(io: file12, filename: 'nike_panda.jpg')
-#________________________________________________________________________________________________________________
-
-demo_listing13 = Listing.create!({
-  title: 'LV BACKPACK TRIO', 
-  user_id: 7, 
-  price: 3850, 
-  shipping_price: 0, 
-  designer_brand: 'LV', 
-  size: 'OS', category: 'Accessories', 
-  condition: 'New', 
-  sub_category: 'Bags', 
-  color: 'Black',
-  country: 'United States',
-  description: 'The new Trio backpack is a fashion-forward blend of heritage and modernity, combining Louis Vuitton’s classic Monogram Eclipse canvas with an array of imaginative signature touches by designer Virgil Abloh. Conceived for comfort and convenience, it offers a body-friendly supple texture, a secure magnetic closure system and multiple pockets inside and out.'})
-
-  
-file1 = URI.open('https://derailed-seed.s3.us-west-1.amazonaws.com/louis-vuitton--M45538_PM2_Front+view.jpg')
+# --------------------------------------------------------------------------------------------------------------------------------
 
 
     # More users

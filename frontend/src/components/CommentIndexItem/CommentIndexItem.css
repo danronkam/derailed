@@ -1,0 +1,47 @@
+.comment_container{
+    border-bottom: 1px solid lightgray;
+    padding-top: 2vh;
+}
+
+.comment_username{
+    font-weight: bold;
+    letter-spacing: -.5px;
+}
+
+.comment-header-container{
+    display: flex;
+}
+
+#comment_avatar{
+    font-size: 2vw;
+    padding-right: .5vw;
+}
+
+.comment-buttons{
+    border: 1px solid lightgray;
+    box-shadow: none;
+    box-sizing: border-box;
+    cursor: pointer;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    margin: 0;
+    text-align: center;
+    transition: background-color 250ms ease,border-color 250ms ease,color 250ms ease;
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    appearance: none;
+    text-decoration: none;
+    font-weight: 500;
+    letter-spacing: .03em;
+    line-height: 1.3;
+    font-family: 'Press Start 2P', cursive;
+    text-transform: uppercase;
+    width: auto;
+    height: 40px;
+    color: white;
+    background-color: black;
+    padding-left: 1vw;
+    padding-right: 1vw;
+    margin-bottom: 22px;
+}

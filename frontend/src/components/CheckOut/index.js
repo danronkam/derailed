@@ -36,20 +36,20 @@ const CheckOut = () => {
 
     return(
         <>
-        <div class='buy-bar'>
+        <div className='buy-bar'>
             <h1 id='item-checkout'>Item Checkout </h1>
         </div>
-        <div class='checkout-container'>
-            <div class='checkout-left'>
-                <h4 class='payment-heading'>Shipping address</h4> 
+        <div className='checkout-container'>
+            <div className='checkout-left'>
+                <h4 className='payment-heading'>Shipping address</h4> 
                 <CheckoutShippingForm />
-                <h4 class='payment-heading'>Payment Method</h4>
+                <h4 className='payment-heading'>Payment Method</h4>
                 <button>Pay with PayPal</button>
             </div>
-            <div class='checkout-right'>
-                <div class='checkout-item-container'>
+            <div className='checkout-right'>
+                <div className='checkout-item-container'>
                     <img id='checkout-photo' src={listing.photoUrl} />
-                    <div class='checkout-item-details'>
+                    <div className='checkout-item-details'>
                             <h4>{listing.designerBrand} </h4>
                             <p>{listing.title}   <h5>${listing.price}</h5> </p>
                             <p>Size: {listing.size}</p>
@@ -57,14 +57,14 @@ const CheckOut = () => {
 
                 </div>
                 <h3>Order Details</h3>
-                <div class='order-details'>
+                <div className='order-details'>
          
-                    <div class='order-details-container'>
-                        <div class='listing-price-container'>
+                    <div className='order-details-container'>
+                        <div className='listing-price-container'>
                             <p>Listing Price</p> <br />
                             <p>Shipping</p>
                         </div>
-                        <div class='shipping-price-container'>
+                        <div className='shipping-price-container'>
                         
                             <p>{listing.price}</p> <br />
                             <p>{listing.shippingPrice}</p>
