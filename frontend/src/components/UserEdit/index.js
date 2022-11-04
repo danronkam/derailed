@@ -5,6 +5,8 @@ import { useParams } from "react-router-dom";
 import * as sessionActions from '../../store/session';
 import { useHistory } from "react-router-dom";
 import './UserEdit.css'
+import { useForm } from "react-hook-form";
+import EditForm from "./EditForm";
 
 
 const UserEdit = () => {
@@ -13,10 +15,12 @@ const UserEdit = () => {
     let userData = useSelector(getUser(userId))
     const date = userData.user.createdAt.slice(0, 4)
     const email = userData.user.email
-    const username = userData.user.username
-    const bottom = userData.user.waist_size
-    const top = userData.user.top_size
     const history = useHistory();
+
+    const userInfo = {
+        email: `{email}`,
+        username: `{userData.email}`
+    }
 
     useEffect(() => {
         dispatch(fetchUser(userId))
@@ -65,10 +69,10 @@ const UserEdit = () => {
             <form className='edit-form' onSubmit={handleSubmit}>
                 <div className='form-row-1'>
                     <label htmlFor="user_username"> Username <br />  </label>
-                        <input id='user_username' className='log_in_inputs' value={user.user.username} onChange={e => {setUser({...user, username: e.target.value})}} />
+                        <input id='user_username' className='log_in_inputs' defaultValue={user.user.username} onChange={e => {setUser({...user, username: e.target.value})}} />
                    
                     <label htmlFor="user_email"> Email    </label>
-                        <input id='user_email' className='log_in_inputs' value={email} onChange={e => {setUser({...user, email: e.target.value})}}/>
+                        <input id='user_email' className='log_in_inputs' defaultValue={email} onChange={e => {setUser({...user, email: e.target.value})}}/>
                   
                 </div>
                 <div className='form-row-2'>
@@ -81,6 +85,7 @@ const UserEdit = () => {
             </form>
             <button onClick={logout} className='login_button' >Log Out</button>
         </div>
+        <EditForm user={userData} ></EditForm>
 
         </>
     )
