@@ -393,7 +393,7 @@
 // ----------------------^^THIS BROKE 
 
 import { useState, useEffect } from 'react';
-import { useParams } from 'react-router-dom';
+import { Link, useParams } from 'react-router-dom';
 import { useDispatch, useSelector } from 'react-redux';
 import { getListing, fetchListing, createListing } from '../../store/listings';
 import './ListingCreate.css'
@@ -489,17 +489,17 @@ const ListingCreate = () => {
                             </select>
                         </label>
 
-                        <label>
+                        <label htmlFor='designer-brand'>
     
-                            <input list='designer-brands' class='create-inputs' name='designer-brand' id='designer-brand' value={designer_brand} onChange={e=> {setBrand(e.target.value)}}/>
-                                <datalist id='designer-brands'>
-                                    <option value="Balenciaga"/>
-                                    <option value="Bape"/>
-                                    <option value="Gucci"/>
-                                    <option value="Nike"/>
-                                    <option value="Dior"/>
-                                </datalist>
-                        </label>
+                            <select class='create-inputs' name='designer-brand' id='designer-brand' value={designer_brand} onChange={e=> {setBrand(e.target.value)}}>
+                                    <option value="Balenciaga"> Balenciaga </option>
+                                    <option value="Bape"> Bape </option>
+                                    <option value="Gucci"> Gucci </option>
+                                    <option value="Nike"> Nike</option>
+                                    <option value="Dior"> Dior </option>
+                            </select>
+                        </label> 
+                        <p className='contact-admin'>Don't see the brand you need? <Link className='contact-admin-link' exact to={`/about`}>Contact an Admin</Link></p>
                     </div>
 
                     <div class='right'>
@@ -538,17 +538,20 @@ const ListingCreate = () => {
                     <input id='label' class='create-inputs' placeholder='Item name' value={title} onChange={e=> {setTitle(e.target.value)}}/>
                 <h3 > COLOR </h3>
                     <label htmlFor='color' />
-                    <input list='colors' placeholder='Designer color name' name='color' value={color} id='color' class='create-inputs' onChange={e=> {setColor(e.target.value)}}/>
-                                <datalist id='colors'>
-                                    <option value="Red"/>
-                                    <option value="Orange"/>
-                                    <option value="Yellow"/>
-                                    <option value="Green"/>
-                                    <option value="Blue"/>
-                                    <option value="Indigo"/>
-                                    <option value="Violet"/>
-                                </datalist>
-          
+                    <select  placeholder='Designer color name' name='color' value={color} id='color' class='create-inputs' onChange={e=> {setColor(e.target.value)}}>
+                        <option value="Red">Red</option>
+                        <option value="Orange">Orange</option>
+                        <option value="Yellow">Yellow</option>
+                        <option value="Green">Green</option>
+                        <option value="Blue">Blue</option>
+                        <option value="Indigo">Indigo</option>
+                        <option value="Violet">Violet</option>
+                        <option value="Black">Black</option>
+                        <option value="White">White</option>
+                        <option value="Gray">Gray</option>
+                    </select>
+                <p className='contact-admin'>Don't see the brand you need? <Link className='contact-admin-link' exact to={`/about`}>Contact an Admin</Link></p>
+
 
                 <h3> CONDITION </h3>
                     <label htmlFor='condition'>
@@ -576,11 +579,12 @@ const ListingCreate = () => {
 
                 <h3> SHIPPING FROM </h3>
 
-                    <input list='shipping-countries' name='shipping' id='shipping' value={country} onChange={e=> {setCountry(e.target.value)}}/>
-                                <datalist id='shipping-countries'>
-                                    <option value="Canada"/>
-                                    <option value="United States"/>
-                                </datalist>
+                    <select list='shipping-countries' name='shipping' id='shipping' value={country} onChange={e=> {setCountry(e.target.value)}}>
+                        <option value="Asia"> Asia </option>
+                        <option value="Canada"> Canada </option>
+                        <option value="Europe"> Europe </option>
+                        <option value="United States"> United States </option>
+                    </select>
                     <label htmlFor='shipping_price'>
                         <input  id='shipping_price' name='shipping_price' type='integer' value={shipping_price} onChange={e=> {setShipping(e.target.value)}} />
                     </label>
