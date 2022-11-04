@@ -8,6 +8,10 @@ h3 {
   letter-spacing: 1px;
 }
 
+.create-container{
+  margin-top: 8vh;
+}
+
 .create-inputs {
   width: 20vw;
   height: 5vh;
