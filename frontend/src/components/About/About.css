@@ -1,0 +1,9 @@
+.about-container{
+    height: 100vh;
+}
+
+#pfp{
+    width: 6vw;
+    height: auto;
+    border-radius: 50vw;
+}

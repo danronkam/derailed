@@ -6,7 +6,7 @@ import * as sessionActions from '../../store/session';
 import { useHistory } from "react-router-dom";
 import './UserEdit.css'
 import { useForm } from "react-hook-form";
-import EditForm from "./EditForm";
+import EditForm from './EditForm.js'
 
 
 const UserEdit = () => {
