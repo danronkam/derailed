@@ -46,10 +46,8 @@ h3 {
 }
 
 #description {
-  width: 800px;
-  min-height: 140px;
-  width: 1001px;
-  min-height: 140px;
+  width: 60vw;
+  min-height: 20vh;
 }
 
 #price {

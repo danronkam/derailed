@@ -1,7 +1,7 @@
 .ListingShow-MainContent{
     display: flex;
-    margin-top: 1%;
-    margin-bottom: 5%;
+    margin-top: 1vh;
+    margin-bottom: 25vh;
 }
 
 .rightColumn {
@@ -32,13 +32,13 @@
 
 .leftColumn {
     float: left;
-    height: 700px;
-    width: 60%;
+    height: auto;
+    width: 50vw;
     margin-left: 10%;
 }
 
 .leftColumn > img {
-    height: 100%;
+    height: auto;
     width: auto;
     object-fit: cover;
     /* padding-right: 1%; */

@@ -476,8 +476,10 @@ const ListingCreate = () => {
             <h1 className='create-headers'>Add a new listing</h1>
             <form className="create-form" onSubmit={handleSubmit}>
              <h3 className='create-headers'>DETAILS</h3>   
+             
                 <div className='details-container' >
                     <div className='left'> 
+                    <h3>Category</h3>
                         <label htmlFor='category'>
                             <select name='category' className='create-inputs' value={category} id='category' onChange={e=> {setCategory(e.target.value)}}>
                                 <option selected disabled></option>
@@ -488,6 +490,7 @@ const ListingCreate = () => {
                                 <option value='Slip'>Slip Ons</option>
                             </select>
                         </label>
+                    <h3>Brand</h3>
 
                         <label htmlFor='designer-brand'>
     
@@ -504,6 +507,8 @@ const ListingCreate = () => {
                     </div>
 
                     <div className='right'>
+                    <h3>Tag</h3>
+
                         <label htmlFor='sub_category'>
             
                             <select defaultValue='test' name='sub_category' className='create-inputs' id='sub_category' value={sub_category} onChange={e=> {setSub(e.target.value)}}>
@@ -516,7 +521,8 @@ const ListingCreate = () => {
                             </select>
                         </label>
 
-                    
+                    <h3>Size(US Mens)</h3>
+
                         <select name='size' className='create-inputs' id='size' value={size} onChange={e=> {setSize(e.target.value)}} >
                                 <option selected disabled ></option>
                                 <option value='6'>6</option>
@@ -570,7 +576,7 @@ const ListingCreate = () => {
                 
                 <h3> DESCRIPTION </h3>
 
-                <input type='text' id='description' className='create-inputs' value={description} onChange={e=> {setDescription(e.target.value)}} placeholder='Add details about conditions, hot the garment fits, additonal measurements, shipping policies, retail price, link to retail page, etc'/>
+                <textarea type='text' id='description' className='create-inputs' value={description} onChange={e=> {setDescription(e.target.value)}} placeholder='Add details about conditions, hot the garment fits, additonal measurements, shipping policies, retail price, link to retail page, etc'/>
             </div>
             <div className='details-container-2'>
                 <h3> PRICE </h3>
