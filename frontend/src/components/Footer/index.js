@@ -9,8 +9,8 @@ const Footer = () => {
     return (
         <>
         <div className='footer-links' >
-
             <a href="https://www.grailed.com/" target="_blank">GRAILED</a>
+            <Link exact to={`/about`}>ABOUT</Link>
         </div>
         <div className='footer-icons'>
             <a href='https://github.com/danronkam/' target="_blank">  <i className="fab fa-github-square" /></a>

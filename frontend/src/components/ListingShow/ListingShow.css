@@ -1,6 +1,6 @@
 .ListingShow-MainContent{
     display: flex;
-    margin-top: 1vh;
+    margin-top: 2vh;
     margin-bottom: 25vh;
 }
 
@@ -41,7 +41,7 @@
     height: auto;
     width: auto;
     object-fit: cover;
-    /* padding-right: 1%; */
+    max-width: 50vw;
 }
 
 #see-more {

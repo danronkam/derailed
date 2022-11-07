@@ -6,12 +6,14 @@ import CommentCreate from "../CommentCreate";
 import './ListingShow.css'
 import CommentIndex from "../CommentIndex";
 import { fetchUser, getUser } from "../../store/user";
+import { useHistory } from "react-router-dom";
 
 
 const ListingShow = () => {
     const dispatch = useDispatch()
     const {listingId} = useParams()
     const listing = useSelector(getListing(listingId))
+    const history = useHistory()
     // const listingOwner = useSelector(getUser(listing.userId))
 
 
@@ -29,7 +31,10 @@ const ListingShow = () => {
     }, [listingId])
     
     let buttons;
-    if (sessionUser.id === listing.userId) {
+    if (!listing) {
+        history.push(`/`)
+
+    } else if(sessionUser.id === listing.userId) {
         buttons = (
         <>    
         <Link to={`/checkout/${listing.id}`} ><button className='purchase-button'> Purchase </button> </Link>

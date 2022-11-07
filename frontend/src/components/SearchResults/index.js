@@ -6,6 +6,10 @@ import ListingIndexItem from "../ListingIndexItem";
 
 const SearchResults = () => {
     const {query} = useParams()
+    const searchTerm = query.slice(1).toLowerCase()
+
+    console.log(searchTerm)
+    console.log()
     const dispatch = useDispatch()
     const listings = useSelector(getListings)
 
@@ -18,12 +22,23 @@ const SearchResults = () => {
     let filtered = []
 
     const filterListings = listings.filter(listing => {
-        let searchTerm = query.slice(1).toLowerCase()
         let brand = listing.designerBrand.toLowerCase()
         let title = listing.title.toLowerCase()
-        console.log(title)
-        console.log(title.includes(searchTerm))
-        if(brand === searchTerm || title.includes(searchTerm)) {
+        let description = listing.description.toLowerCase()
+        let tag = listing.subCategory.toLowerCase()
+        // console.log(title)
+        // console.log(title.includes(searchTerm))
+        if(searchTerm.includes(' ')) {
+            let terms = searchTerm.split(' ')
+            console.log(terms)
+            for(let i = 0; i < terms.length; i++) {
+                let term = terms[i]
+                if(brand === term || title.includes(term) || description.includes(term) || tag === term) {
+                    filtered.push(listing)
+                }
+            }
+
+        } else if(brand === searchTerm || title.includes(searchTerm) || description.includes(searchTerm) || tag === searchTerm) {
             filtered.push(listing)
         }
     })

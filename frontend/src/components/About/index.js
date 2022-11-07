@@ -13,7 +13,7 @@ const About = () => {
             <div className='route'>
                 <p> <a href='https://github.com/danronkam' target='_blank'> Github </a> {carat} <a href="https://linkedin.com/in/danronkam" target='_blank'> LinkedIn </a> {carat} <a href="http://danronkam.github.io/" target='_blank'> Portfolio </a> </p>
             </div>
-                <img src='https://media.istockphoto.com/id/526947869/vector/man-silhouette-profile-picture.jpg?s=612x612&w=0&k=20&c=5I7Vgx_U6UPJe9U2sA2_8JFF4grkP7bNmDnsLXTYlSc='></img>
+                <img src='https://derailed-seed.s3.us-west-1.amazonaws.com/1517616254622+(1).jpeg'></img>
             </div>
 
             <div className='rightColumn'>
@@ -28,7 +28,7 @@ const About = () => {
                         <p></p>
                     </div>
                     <div className="item-shipping">
-                        <p className='shipping-paragraph'><strong>FREE </strong> shipping from San Fransisco </p> 
+                        <p className='shipping-paragraph'><strong>FREE </strong> shipping from San Francisco </p> 
 
                     </div>
                 </div>
@@ -36,22 +36,32 @@ const About = () => {
                     
                 </div>
                 <div className='profile-container' >
-                    <a href="http://danronkam.github.io/" className='list-owner' >
+                    <a href="http://danronkam.github.io/" className='list-owner' target='_blank'>
                         <img id='pfp' src="https://derailed-seed.s3.us-west-1.amazonaws.com/dankampfp.jpg"/>
-                        <h3 id='see-more' >See More From This Software Engineer</h3>
+                        <h3 id='about-see-more' >See More From This Software Engineer</h3>
                     </a>
                 </div>
                 <div className='description-container'>
                     <h3 className='description-heading'>Description</h3>
                     <p className='description-content'>
                         I'm a software engineer with a passion for React, Redux, and a love of old media. I use my skills as a software engineer to design seamless user experiences and my background in publishing to stay on top of the latest design trends.
+                        {/* <br />
+                        Derailed was created using real listings from Grailed. If you're interested in anything you see, check out the seed index for links
+                        <br /> */}
                         <br />
                         <br />
-                        Currently looking for:
+                        Derailed was made using real listings from across the internet whose prices I'd describe as a little off rails
+                        <br />
+                        <br /> 
+                        That said I'm Currently looking for:
                         <br />
                         Walers Bonner Samba
                         <br />
                         ASICS Tiger x Vivienne Westwood 
+                        <br />
+                        <br />
+                        If you're selling either of those or would like to talk about anything else,
+                        <a className="email-button" href="mailto:danronkam@gmail.com">Email Me</a>
                     </p>
                 </div>
                 <div >
