@@ -11,12 +11,14 @@ const CategoryIndex = () => {
     const {category} = useParams()
     const listings = useSelector(getListings)
     const [isLoading, setIsLoading] = useState(true);
+    const [noListings, setNoListings] = useState(true)
 
 
     useEffect(() => {
         dispatch(fetchListings())
         setTimeout(function () {
             setIsLoading(false);
+           
         }, 5000);
     },[])
     console.log(category)
@@ -26,15 +28,25 @@ const CategoryIndex = () => {
 
     const filterListings = listings.map(listing => {
         // console.log(listing.category)
-        if((listing.category === category.slice(1)) || (listing.subCategory === category.slice(1))){
-            
+        if(((listing.category === category.slice(1)) || (listing.subCategory === category.slice(1))) && noListings === true ){
+            filtered.push(listing)
+            setNoListings(false)
+        } else if ((listing.category === category.slice(1)) || (listing.subCategory === category.slice(1))) {
             filtered.push(listing)
         }
+
+    
     });
 
     const total = filtered.length
+
+
     console.log(category.slice(1))
     console.log(filtered)
+
+
+
+    
 
     return(
         <>
@@ -53,10 +65,19 @@ const CategoryIndex = () => {
                     <div className='feed-rightside'>  
                         <h2 className='avaliable-listings'>Avaliable Listings</h2>
                         <ul className='feed-list'>
-                            {filtered.map(listing => {
-                                console.log(listing)
-                                return <ListingIndexItem key={listing.id} listing={listing} />
-                            })}
+                            {noListings ? (
+                                <>
+                                <h3> No Listings Avaliable </h3>
+                                </>
+                            ) : (
+                                <>
+                                {filtered.map(listing => {
+                                    console.log(listing)
+                                    return <ListingIndexItem key={listing.id} listing={listing} />
+                                    })}
+                                </>
+                            )}
+                            
                         </ul>
                     </div>
                 </div>

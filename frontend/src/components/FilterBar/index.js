@@ -39,7 +39,7 @@ function FilterBar() {
                                     <Link exact to={`/shop/menswear/:Hitop`}> HI TOP SNEAKERS </Link>
                                     <Link exact to={`/shop/menswear/:Lowtop`}> LOW TOP SNEAKERS </Link>
                                     <Link exact to={`/shop/menswear/:Sandals`}> SANDALS </Link>
-                                    <Link exact to={`/shop/menswear/:Slides`}> SLIP ONS </Link>
+                                    <Link exact to={`/shop/menswear/:Slip`}> SLIP ONS </Link>
 
                                 </div>
                         </div>
