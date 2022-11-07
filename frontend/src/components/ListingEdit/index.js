@@ -4,6 +4,7 @@ import { useParams } from "react-router-dom";
 import { getListing, fetchListing, updateListing, deleteListing } from '../../store/listings';
 import { Link } from "react-router-dom";
 import { useHistory } from "react-router-dom";
+import './ListingEdit.css'
 
 
 
@@ -51,36 +52,36 @@ const ListingEdit = () => {
         console.log(newListing)
         
         dispatch(updateListing({listing: newListing}))
-        history.push('/shop')
+        history.push('/myprofile')
 
     }
     return(
         <>
-            <div className='edit-form-container'>
+            <div className='listing-edit-form-container'>
                 <form className="create-form" onSubmit={handleSubmit}>
-                    <h3>DETAILS</h3>   
+                    <h3 className="details-heading">DETAILS</h3>   
                         <div className='details-container' >
                             <div className='left'> 
                                 <label htmlFor='category'>
                                     <select name='category' className='create-inputs' value={listing.category} id='category'  onChange={e=> {setListing({...listing, category: e.target.value})}}>
-                                        <option disabled>Department / Category</option>
-                                        <option value='Tops'>Tops</option>
-                                        <option value='Bottoms'>Bottoms</option>
-                                        <option value='Outerwear'>Outerwear</option>
-                                        <option value='Footwear'>Footwear</option>
-                                        <option value='Accessories'>Accessories</option>
+                                        <option selected disabled></option>
+                                        <option value='Sneakers'>Sneakers</option>
+                                        <option value='Boots'>Boots</option>
+                                        <option value='Loafers'>Loafers</option>
+                                        <option value='Formal'>Formal</option>
+                                        <option value='Slip'>Slip Ons</option>
                                     </select>
                                 </label>
 
                                 <label htmlFor="edit-brand">
                                     <select className='create-inputs' id='edit-brand' name='edit-brand' value={listing.designer_brand}   onChange={e=> {setListing({...listing, designer_brand: e.target.value})}}>
-                                            <option disabled>Designer / Brand </option>
-                                            <option value='Bape'>Bape</option>
-                                            <option value='Carhartt'>Carhartt</option>
-                                            <option value='Gucci'>Gucci</option>
-                                            <option value='Nike'>Nike</option>
-                                            <option value='Vintage'>Vintage</option>
-                                        </select>
+                                        <option selected disabled></option>
+                                        <option value="Balenciaga"> Balenciaga </option>
+                                        <option value="Bape"> Bape </option>
+                                        <option value="Gucci"> Gucci </option>
+                                        <option value="Nike"> Nike</option>
+                                        <option value="Dior"> Dior </option>
+                                    </select>
             
                                    
                                 </label>
@@ -89,11 +90,11 @@ const ListingEdit = () => {
                             <div className='right'>
                                 <label htmlFor='edit-sub_category'>
                     
-                                    <select name='sub_category' className='create-inputs' id='edit-sub_category' value={listingData.sub_category} onChange={e=> {setListing({...listing, sub_category: e.target.value})}} >
-                                        <option disabled >Department / Category</option>
-                                        <option value='Sneakers'>Sneakers</option>
-                                        <option value='Loafers'>Loafers</option>
-                                        <option value='Sandles'>Sandles</option>
+                                    <select name='sub_category' className='create-inputs' id='edit-sub_category' value={listing.sub_category} onChange={e=> {setListing({...listing, sub_category: e.target.value})}} >
+                                        <option selected disabled ></option>
+                                        <option value='Sneakers'>Hi Top Sneaker</option>
+                                        <option value='Loafers'>Low Sneakers</option>
+                                        <option value='Sandles'>Leather</option>
                                         <option value='Boots'>Boots</option>
                                         <option value='Athletic'>Athletic</option>
                                     </select>
@@ -101,13 +102,15 @@ const ListingEdit = () => {
 
                             
                                 <select name='size' className='create-inputs' id='size' value={listing.size} onChange={e=> {setListing({...listing, size: e.target.value})}}>
-                                        <option disabled >Size (Please Select Category First) </option>
-                                        <option value='XS'>XS</option>
-                                        <option value='S'>S</option>
-                                        <option value='M'>M</option>
-                                        <option value='L'>L</option>
-                                        <option value='XL'>XL</option>
-
+                                    <option selected disabled ></option>
+                                    <option value='6'>6</option>
+                                    <option value='7'>7</option>
+                                    <option value='8'>8</option>
+                                    <option value='9'>9</option>
+                                    <option value='10'>10</option>
+                                    <option value='11'>11</option>
+                                    <option value='12'>12</option>
+                                    <option value='13'>13</option>
                                 </select>
                                 
                             </div>
@@ -120,14 +123,20 @@ const ListingEdit = () => {
                         <h3 > COLOR </h3>
                             <label htmlFor='color' />
                             <select name='color' className='create-inputs' id='color' value={listing.color} onChange={e=> {setListing({...listing, color: e.target.value})}}>
-                                        <option value='Red'>Red</option>
-                                        <option value='Orange'>Orange</option>
-                                        <option value='Yellow'>Yellow</option>
-                                        <option value='Green'>Green</option>
-                                        <option value='Blue'>Blue</option>
-                                        <option value="Indigo">Indigo </option>
-                                        <option value="Violet">Violet </option>
-
+                            <option selected disabled></option>
+                                <option value="Red">Red</option>
+                                <option value="Pink">Pink</option>
+                                <option value="Orange">Orange</option>
+                                <option value="Yellow">Yellow</option>
+                                <option value="Green">Green</option>
+                                <option value="Blue">Blue</option>
+                                <option value="Indigo">Indigo</option>
+                                <option value="Violet">Violet</option>
+                                <option value="Black">Black</option>
+                                <option value="White">White</option>
+                                <option value="Gray">Gray</option>
+                                <option value="Brown">Brown</option>
+                                <option value="Tan">Tan</option>
                             </select>
                 
 
@@ -145,7 +154,7 @@ const ListingEdit = () => {
                     <div className='details-container-3'>
                         <h3> DESCRIPTION </h3>
 
-                            <input type='text' id='description' className='create-inputs' value={listing.description} onChange={e=> {setListing({...listing, description: e.target.value})}} />
+                            <textarea type='text' id='description' className='create-inputs' value={listing.description} onChange={e=> {setListing({...listing, description: e.target.value})}} />
                     </div>
                     <div className='details-container-2'>
                         <h3> PRICE </h3>
@@ -157,11 +166,12 @@ const ListingEdit = () => {
 
                         <h3> SHIPPING FROM </h3>
 
-                            <input list='shipping-countries' name='shipping' id='shipping' value={listing.country} onChange={e=> {setListing({...listing, country: e.target.value})}}/>
-                                        <datalist id='shipping-countries'>
-                                            <option value="Canada"/>
-                                            <option value="United States"/>
-                                        </datalist>
+                            <select name='shipping' id='shipping' value={listing.country} onChange={e=> {setListing({...listing, country: e.target.value})}}>
+                                <option value="Asia"> Asia </option>
+                                <option value="Canada"> Canada </option>
+                                <option value="Europe"> Europe </option>
+                                <option value="United States"> United States </option>
+                            </select>
                             <label htmlFor='shipping_price'>
                                 <input  id='shipping_price' name='shipping_price' type='integer' value={listing.shipping_price} onChange={e=> {setListing({...listing, shipping_price: e.target.value})}} />
                             </label>

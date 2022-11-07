@@ -7,7 +7,9 @@ const HomePage =() => {
     return(
         <>
         <div className='content-container'>
-        <Slider/> 
+            <div className="home-slider-container">
+                <Slider/> 
+            </div>
             <div className='menswear-container'>
                 <h1 className='homepage-titles' >Shop Menswear</h1>
                 <ul className="homepage-lists">
@@ -49,7 +51,6 @@ const HomePage =() => {
                     </li>
                 </ul>
             </div>
-            {/* <img src='https://derailed-seed.s3.us-west-1.amazonaws.com/1.jpg'></img> //image test */}
             <div className='trend-container'>
                 <h1 className='homepage-titles' > Shop Latest Trends</h1>
                 <ul className="homepage-lists">
@@ -74,35 +75,6 @@ const HomePage =() => {
                 </ul>
             </div>
             
-            {/* <div className='style-container'>
-                <h1>Shop by Style</h1>
-                    <ul className="homepage-lists">
-                        <li className='homepage-list-items'>
-                            <img className='style-photos' src='https://derailed-seed.s3.us-west-1.amazonaws.com/istockphoto-1147544807-612x612.jpg'/>
-                            <h3>Footwear</h3>
-                        </li>
-                        <li className='homepage-list-items'>
-                            <img className='style-photos' src='https://derailed-seed.s3.us-west-1.amazonaws.com/istockphoto-1147544807-612x612.jpg'/>
-                            <h3>Outerwear</h3>
-                        </li>
-                        <li className='homepage-list-items'>
-                            <img className='style-photos' src='https://derailed-seed.s3.us-west-1.amazonaws.com/istockphoto-1147544807-612x612.jpg'/>
-                            <h3>Tops</h3>
-                        </li>
-                        <li className='homepage-list-items'>
-                            <img className='style-photos' src='https://derailed-seed.s3.us-west-1.amazonaws.com/istockphoto-1147544807-612x612.jpg'/>
-                            <h3>Bottoms</h3>
-                        </li>
-                        <li className='homepage-list-items'>
-                            <img className='style-photos' src='https://derailed-seed.s3.us-west-1.amazonaws.com/istockphoto-1147544807-612x612.jpg'/>
-                            <h3>Tailoring</h3>
-                        </li>
-                        <li className='homepage-list-items'>
-                            <img className='style-photos' src='https://derailed-seed.s3.us-west-1.amazonaws.com/istockphoto-1147544807-612x612.jpg'/>
-                            <h3>Accessories</h3>
-                        </li>
-                    </ul>
-            </div> */}
             <div className='designer-container'>
                 <h1 className='homepage-titles' >Popular Designers</h1>
                 <div>
