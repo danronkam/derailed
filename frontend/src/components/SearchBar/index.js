@@ -11,15 +11,21 @@ const SearchBar = () => {
     const dispatch = useDispatch();
     const history = useHistory();
 
+    console.log(query)
+
     const handleSubmit = e =>{
         e.preventDefault();
-
+        if(!query) {
+            console.log('yessir')
+        } else {
+            history.push(`/search/:${query}`)
+        }
     }
 
     return(
         <> 
             <div className='search-container'>
-                <form className='search-form'>
+                <form className='search-form' onSubmit={handleSubmit}>
                     <button className='search-icon'> <i className="fas fa-search" /> </button>
                     <input className="search-input"
                             type="text"

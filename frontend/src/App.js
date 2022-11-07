@@ -18,6 +18,7 @@ import DesignerIndex from "./components/DesignerIndex";
 import CategoryIndex from "./components/CategoryIndex";
 import UserIndex from "./components/UserIndex";
 import About from "./components/About";
+import SearchResults from "./components/SearchResults";
 
 
 function App() {
@@ -35,6 +36,9 @@ function App() {
           </Route>
           <Route exact path="/sell">
             <ListingCreate/>
+          </Route>
+          <Route exact path="/search/:query">
+            <SearchResults />
           </Route>
           <Route exact path="/signup">
             <SignupFormPage />

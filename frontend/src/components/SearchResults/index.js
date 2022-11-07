@@ -1,33 +1,30 @@
 import React, { useEffect } from "react";
 import { useDispatch, useSelector } from "react-redux";
-import { fetchListings, getListings } from "../../store/listings";
 import { useParams } from "react-router-dom";
+import { fetchListings, getListings } from "../../store/listings";
 import ListingIndexItem from "../ListingIndexItem";
 
-
-const DesignerIndex = () => {
+const SearchResults = () => {
+    const {query} = useParams()
     const dispatch = useDispatch()
-    const {designerBrand} = useParams()
     const listings = useSelector(getListings)
-    console.log(designerBrand)
 
     useEffect(() => {
         dispatch(fetchListings())
-    },[])
+    }, [])
 
     console.log(listings)
 
     let filtered = []
 
     const filterListings = listings.filter(listing => {
-        if(listing.designerBrand === designerBrand.slice(1)) {
+        console.log(listing.designerBrand)
+        console.log(query)
+        if(listing.designerBrand.toLowerCase() === query.slice(1).toLowerCase()) {
             filtered.push(listing)
         }
-    });
-
+    })
     const total = filtered.length
-    console.log(designerBrand.slice(1))
-    console.log(filtered)
 
     return(
         <>
@@ -46,9 +43,8 @@ const DesignerIndex = () => {
                 </ul>
             </div>
         </div>
-        
         </>
     )
 }
 
-export default DesignerIndex
+export default SearchResults
