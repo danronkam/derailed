@@ -8,7 +8,6 @@ import HomePage from "./components/HomePage";
 import ListingCreate from "./components/ListingCreate";
 import ListingShow from "./components/ListingShow/index"
 import FilterBar from "./components/FilterBar";
-import FilteredIndex from "./components/FilteredIndex";
 import CheckOut from "./components/CheckOut";
 import UserEdit from "./components/UserEdit";
 import UserShow from "./components/UserShow";

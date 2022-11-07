@@ -26,7 +26,6 @@ const CategoryIndex = () => {
     let filtered = []
 
     const filterListings = listings.map(listing => {
-        // console.log(listing.category)
         if(((listing.category === category.slice(1)) || (listing.subCategory === category.slice(1))) && noListings === true ){
             filtered.push(listing)
             setNoListings(false)

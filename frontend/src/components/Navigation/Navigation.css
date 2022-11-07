@@ -66,10 +66,11 @@ li > a {
   align-items: center;
   display: flex;
   justify-content: space-between;
+  padding-left: 5vw;
+  padding-right: 5vw;
 }
 
 .navbar-right{
   display: flex;
 
 }
-
