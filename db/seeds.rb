@@ -580,6 +580,61 @@ demo_listing16.photo.attach(io: file16, filename: 'palacesalmon.jpg')
 
     demo_listing17.photo.attach(io: file17, filename: 'walesbonner.jpg')
 
+# --------------------------------------------------------------------------------------------------------------------------------
+demo_listing18 = Listing.create!({
+    title: 'Comme Des Garcons Homme Plus Nike Dunk', 
+    user_id: 8, 
+    price: 450, 
+    shipping_price: 0, 
+    designer_brand: 'Nike', 
+    size: '8', 
+    category: 'Sneakers', 
+    condition: 'Gently Used', 
+    sub_category: 'Hitop', 
+    color: 'Black',
+    country: 'United States',
+    description: "Gently used condition with minimal signs of wear. Amazing condition for its age!
+
+    Size US8
+    
+    Extremely cool and rare pair!
+    
+    Sold out everywhere
+    
+    I DO NOT trade
+    
+    I DO NOT accept lowballs
+    
+    Shipping WORLDWIDE with two day delivery within US"})
+
+    
+file18 = URI.open("https://derailed-seed.s3.us-west-1.amazonaws.com/8004D0B198D140C5804FC42EDE38BF21.webp")
+
+demo_listing18.photo.attach(io: file18, filename: 'bapestars.jpg')
+
+# --------------------------------------------------------------------------------------------------------------------------------
+
+demo_listing19 = Listing.create!({
+    title: 'Aime leon dore New Balance 550 “ GREEN YELLOW”', 
+    user_id: 7, 
+    price: 371, 
+    shipping_price: 0, 
+    designer_brand: 'New Balance', 
+    size: '10', 
+    category: 'Sneakers', 
+    condition: 'Gently Used', 
+    sub_category: 'Lowtop', 
+    color: 'White',
+    country: 'United States',
+    description: "Aime leon dore new balance 550
+    Size 10
+    Great condition and og all
+    Message with any questions!"})
+
+    
+file19 = URI.open("https://derailed-seed.s3.us-west-1.amazonaws.com/EBBC7EDCDB0E41099A6C2389B62A00AB.webp")
+
+demo_listing19.photo.attach(io: file19, filename: 'bapestars.jpg')
 
     # More users
     # 10.times do 
