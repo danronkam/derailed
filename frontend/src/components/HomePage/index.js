@@ -39,13 +39,13 @@ const HomePage =() => {
                     </li>
                     <li className='homepage-list-items'>
                         <Link exact to={`/shop/menswear/:Slides`}>
-                            <img className='category-photos'alt='' src='https://derailed-seed.s3.us-west-1.amazonaws.com/Tairloring.jpg'/>
+                            <img className='category-photos'alt='' src='https://derailed-seed.s3.us-west-1.amazonaws.com/slides.jpg'/>
                             <h3>Slides</h3>
                         </Link>
                     </li>
                     <li className='homepage-list-items'>
-                        <Link exact to={`/shop/menswear/:Slipon`}>
-                            <img className='category-photos' alt='' src='https://derailed-seed.s3.us-west-1.amazonaws.com/accessories.jpg'/>
+                        <Link exact to={`/shop/menswear/:Slips`}>
+                            <img className='category-photos' alt='' src='https://derailed-seed.s3.us-west-1.amazonaws.com/slip.jpg'/>
                             <h3>Slip Ons</h3>
                         </Link>
                     </li>
@@ -54,22 +54,22 @@ const HomePage =() => {
             <div className='trend-container'>
                 <h1 className='homepage-titles' > Shop Latest Trends</h1>
                 <ul className="homepage-lists">
-                    <Link exact to={`/shop/menswear/:Bottoms`}>
+                    <Link exact to={`/shop/menswear/:Boots`}>
                         <li className='homepage-list-items' >
-                            <img className='trend-photos' alt='' src='https://derailed-seed.s3.us-west-1.amazonaws.com/trend1.jpeg'/>
+                            <img className='trend-photos' alt='' src='https://derailed-seed.s3.us-west-1.amazonaws.com/cowboy_boots.webp'/>
                             <h3>Cowboy Boots</h3>
                         </li>
                     </Link >
                     <Link exact to={`/shop/menswear/:Footwear`}>
                         <li className='homepage-list-items'>
-                            <img className='trend-photos' alt='' src='https://derailed-seed.s3.us-west-1.amazonaws.com/trend2.jpeg'/>
+                            <img className='trend-photos' alt='' src='https://derailed-seed.s3.us-west-1.amazonaws.com/designer_boots.jpg'/>
                             <h3>Designer Boots</h3>
                         </li>
                     </Link>
                     <Link exact to={`/shop/menswear/:Shirts`}>
                         <li className='homepage-list-items'>
-                            <img className='trend-photos' alt='' src='https://derailed-seed.s3.us-west-1.amazonaws.com/trend3.jpeg'/>
-                            <h3>Birkenstock Bostons</h3>
+                            <img className='trend-photos' alt='' src='https://derailed-seed.s3.us-west-1.amazonaws.com/ald-newbalance.webp'/>
+                            <h3>ALD x New Balance</h3>
                         </li>
                     </Link>
                 </ul>
@@ -86,14 +86,14 @@ const HomePage =() => {
                             </Link>
                         </li>
                         <li className='homepage-list-items'>    
-                            <Link to={`/shop/:Carhartt`}>  
-                                <img className='designer-circle' alt='' src='https://derailed-seed.s3.us-west-1.amazonaws.com/carhartt.jpg'/> <br></br>
+                            <Link to={`/shop/:Adidas`}>  
+                                <img className='designer-circle' alt='' src='https://derailed-seed.s3.us-west-1.amazonaws.com/adidas.jpg'/> <br></br>
                            
                             </Link>
                         </li>
                         <li className='homepage-list-items'>    
-                            <Link to={`/shop/:LV`}>  
-                                <img className='designer-circle' alt='' src='https://derailed-seed.s3.us-west-1.amazonaws.com/lv.jpg'/> <br></br>
+                            <Link to={`/shop/:Bape`}>  
+                                <img className='designer-circle' alt='' src='https://derailed-seed.s3.us-west-1.amazonaws.com/bape_black_logo.jpg'/> <br></br>
                               
                             </Link>
                         </li>

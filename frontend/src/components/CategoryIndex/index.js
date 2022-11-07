@@ -4,6 +4,8 @@ import { fetchListings, getListings } from "../../store/listings";
 import { useParams } from "react-router-dom";
 import ListingIndexItem from "../ListingIndexItem";
 import { useState } from "react";
+import { Link } from "react-router-dom";
+import './Category.css'
 
 
 const CategoryIndex = () => {
@@ -58,12 +60,12 @@ const CategoryIndex = () => {
                         <ul className='feed-list'>
                             {noListings ? (
                                 <>
-                                <h3> No Listings Avaliable </h3>
+                                <h3> No Listings Avaliable <Link exact to={`/`} className='return-home'>return home</Link></h3> 
+                                
                                 </>
                             ) : (
                                 <>
                                 {filtered.map(listing => {
-                                    console.log(listing)
                                     return <ListingIndexItem key={listing.id} listing={listing} />
                                     })}
                                 </>
