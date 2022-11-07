@@ -11,25 +11,13 @@ const CheckOut = () => {
     const dispatch = useDispatch()
     const {listingId} = useParams()
     const listing = useSelector(getListing(listingId))
-    const userId = listing.userId
-    const user = useSelector(getUser(userId))
 
     useEffect(() =>{
         dispatch(fetchListing(listingId))
     }, [])
 
-    useEffect(() =>{
-        dispatch(fetchUser(userId))
-    }, [])
-
-    console.log(listing)
-
-    
-
     const shipping = listing.shippingPrice 
     const price = listing.price
-    console.log(shipping)
-    console.log(price)
     const total = shipping + price
 
 
@@ -44,7 +32,7 @@ const CheckOut = () => {
                 <h4 className='payment-heading'>Shipping address</h4> 
                 <CheckoutShippingForm />
                 <h4 className='payment-heading'>Payment Method</h4>
-                <button>Pay with PayPal</button>
+                <button className="paypal-button">Pay with PayPal</button>
             </div>
             <div className='checkout-right'>
                 <div className='checkout-item-container'>
