@@ -18,9 +18,12 @@ const SearchResults = () => {
     let filtered = []
 
     const filterListings = listings.filter(listing => {
-        console.log(listing.designerBrand)
-        console.log(query)
-        if(listing.designerBrand.toLowerCase() === query.slice(1).toLowerCase()) {
+        let searchTerm = query.slice(1).toLowerCase()
+        let brand = listing.designerBrand.toLowerCase()
+        let title = listing.title.toLowerCase()
+        console.log(title)
+        console.log(title.includes(searchTerm))
+        if(brand === searchTerm || title.includes(searchTerm)) {
             filtered.push(listing)
         }
     })
