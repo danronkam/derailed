@@ -15,7 +15,7 @@ const CategoryIndex = () => {
 
 
     useEffect(() => {
-        dispatch(fetchListings())
+        dispatch(fetchListings());
         setTimeout(function () {
             setIsLoading(false);
            
