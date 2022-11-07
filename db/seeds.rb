@@ -399,6 +399,187 @@ Size 41, fits 41-42'})
 
 # --------------------------------------------------------------------------------------------------------------------------------
 
+demo_listing11 = Listing.create!({
+    title: 'Travis Scott Nike Dunk Lows', 
+    user_id: 8, 
+    price: 666, 
+    shipping_price: 0, 
+    designer_brand: 'Nike', 
+    size: '7.5', 
+    category: 'Sneakers', 
+    condition: 'Gently Used', 
+    sub_category: 'Low Top sneakers', 
+    color: 'Black',
+    country: 'United States',
+    description: 'no low balls I know what I have >:-)'})
+
+    
+  file11 = URI.open("https://derailed-seed.s3.us-west-1.amazonaws.com/travi.jpg")
+
+  demo_listing11.photo.attach(io: file11, filename: 'travi.jpg')
+  Comment.create({body: 'trash tbh', author_id:'2', listing_id: 11})
+
+#   --------------------------------------------------------------------------------------------------------------------------------
+
+demo_listing12 = Listing.create!({
+    title: 'Gucci Horsebit Loafers', 
+    user_id: 1, 
+    price: 245, 
+    shipping_price: 20, 
+    designer_brand: 'Gucci', 
+    size: '12', 
+    category: 'Formal', 
+    condition: 'New', 
+    sub_category: 'Loafers', 
+    color: 'Black',
+    country: 'United States',
+    description: 'Black leather
+    Horsebit detail
+    1953 collection: 60th anniversary tag
+    Leather sole
+    Flat
+    .5” height
+    Made in Italy'})
+
+    
+  file12 = URI.open("https://derailed-seed.s3.us-west-1.amazonaws.com/P00461579_b2.jpg")
+
+  demo_listing12.photo.attach(io: file12, filename: 'gucciff.jpg')
+  Comment.create({body: '$50 off? Let me Know', author_id:'2', listing_id: 12})
+
+  #   --------------------------------------------------------------------------------------------------------------------------------
+  
+  demo_listing13 = Listing.create!({
+    title: 'Nike Panda Dunk Lows RETAIL', 
+    user_id: 1, 
+    price: 110, 
+    shipping_price: 10, 
+    designer_brand: 'Nike', 
+    size: '12', 
+    category: 'Sneakers', 
+    condition: 'New', 
+    sub_category: 'Lowtop', 
+    color: 'Black',
+    country: 'United States',
+    description: 'lightly damaged box shown
+
+    No lowballs
+    
+    Send offers
+    
+    Same/Next day shipping. USA shipping ONLY.
+    
+    All sales final. No returns or refunds. All sales must be checked out through grailed. Do not ask to purchase through paypal or another website.
+    
+    While I do guarantee authenticity, I do not offer returns on my items as long as you receive what was listed in the pictures and description. A piece not fitting is not an appropriate reason for a return. Thank you for understanding'})
+
+    
+  file13 = URI.open("https://derailed-seed.s3.us-west-1.amazonaws.com/Nike+Dunk+Low+Panda.webp")
+
+  demo_listing13.photo.attach(io: file13, filename: 'pandaDUNKS.jpg')
+  Comment.create({body: 'BASIC AF', author_id:'2', listing_id: 13})
+
+#   --------------------------------------------------------------------------------------------------------------------------------
+    demo_listing14 = Listing.create!({
+        title: 'Nike COMME DE GARCON CDG DUNKS', 
+        user_id: 7, 
+        price: 500, 
+        shipping_price: 0, 
+        designer_brand: 'Nike', 
+        size: '12', 
+        category: 'Sneakers', 
+        condition: 'New', 
+        sub_category: 'Lowtop', 
+        color: 'Black',
+        country: 'United States',
+        description: "don't really wear them need them gone
+
+        send offers"})
+
+        
+    file14 = URI.open("https://derailed-seed.s3.us-west-1.amazonaws.com/Nike+Air+Foamposite+CDG.webp")
+
+    demo_listing14.photo.attach(io: file14, filename: 'pandaDUNKS.jpg')
+    Comment.create({body: 'damn those some stompers fr', author_id:'2', listing_id: 14})
+    
+#   --------------------------------------------------------------------------------------------------------------------------------
+    demo_listing15 = Listing.create!({
+        title: 'Superstar80s BAPE', 
+        user_id: 6, 
+        price: 180, 
+        shipping_price: 0, 
+        designer_brand: 'Adidas', 
+        size: '9.5', 
+        category: 'Sneakers', 
+        condition: 'Gently Used', 
+        sub_category: 'Lowtop', 
+        color: 'Black',
+        country: 'United States',
+        description: "Used once , in great condition"})
+
+        
+    file15 = URI.open("https://derailed-seed.s3.us-west-1.amazonaws.com/68A3C969F9094FD585B136B503DB0AC1.webp")
+
+    demo_listing15.photo.attach(io: file15, filename: 'bapestars.jpg')
+#   --------------------------------------------------------------------------------------------------------------------------------
+demo_listing16 = Listing.create!({
+    title: 'PALACE SALOMON XT-6 KELP / EBONY / QUARRY - UK 10 / US 10.5', 
+    user_id: 6, 
+    price: 365, 
+    shipping_price: 0, 
+    designer_brand: 'Salomon', 
+    size: '10.5', 
+    category: 'Sneakers', 
+    condition: 'New', 
+    sub_category: 'Lowtop', 
+    color: 'Kelp',
+    country: 'United States',
+    description: "Deadstock with OG box
+    Crispy off road all terrain trainers
+    The tan colorway is the most fire
+    Ships next day in double box via USPS
+    DM for questions
+    All sales are final
+    
+    GOATshit™️
+    Addicted to running"})
+
+    
+file16 = URI.open("https://derailed-seed.s3.us-west-1.amazonaws.com/7741BE95C7BB470CA4B81A10A98DE038.webp")
+
+demo_listing16.photo.attach(io: file16, filename: 'palacesalmon.jpg')
+
+# --------------------------------------------------------------------------------------------------------------------------------
+
+    demo_listing17 = Listing.create!({
+        title: 'Wales Bonner x Samba Black', 
+        user_id: 5, 
+        price: 600, 
+        shipping_price: 0, 
+        designer_brand: 'Adidas', 
+        size: '10', 
+        category: 'Sneakers', 
+        condition: 'Gently Used', 
+        sub_category: 'Lowtop', 
+        color: 'Black',
+        country: 'United States',
+        description: "Cond: 9/10 (Worn a handful of times but kept in good condition)
+        Sizing: TTS
+        - iykyk, extremely rare
+        - og box included, no extra laces
+        - looking for a size US10.5 or 11 !!
+        
+        *SHIPPING US ONLY*
+        *ALL SALES FINAL*
+        *NO RETURNS*
+        
+        Feel free to message me with questions :)"})
+
+        
+    file17 = URI.open("https://derailed-seed.s3.us-west-1.amazonaws.com/9B9324BB4D71489EA005049BA932EDB6.webp")
+
+    demo_listing17.photo.attach(io: file17, filename: 'walesbonner.jpg')
+
 
     # More users
     # 10.times do 
