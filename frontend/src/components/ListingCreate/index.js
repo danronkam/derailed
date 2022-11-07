@@ -405,6 +405,8 @@ const ListingCreate = () => {
     const{listingId} = useParams()
     let listingData = useSelector(getListing(listingId))
     const history = useHistory();
+    const [errors, setErrors] = useState(false)
+    const [wordCount, setWordCount] =useState(true)
 
     const [title, setTitle] = useState('');
     const [price, setPrice] = useState(0);
@@ -435,37 +437,45 @@ const ListingCreate = () => {
         }
     }
 
+    console.log(description.length)
+
 
 
     // const [errors, onSubmit] = useSubmit({
     const handleSubmit = e => {
             // console.log(sessionUser.id)
+        setErrors(false)
         e.preventDefault();
-        const formData = new FormData();
-        formData.append('user_id', sessionUser.id)
-        formData.append('title', title);
-        formData.append('price', price);
-        formData.append('shipping_price', shipping_price);
-        formData.append('designer_brand', designer_brand);
-        formData.append('size', size);
-        formData.append('category', category);
-        formData.append('sub_category', sub_category);
-        formData.append('condition', condition);
-        formData.append('sold', sold);
-        formData.append('country', country);
-        formData.append('color', color);
-        formData.append('description', description);
-        formData.append('photoFile', photoFile);
-        formData.append('photoUrl', photoUrl);
-        //   console.log(formData)
-      
-        if (photoFile) {
-            formData.append('photo', photoFile);
-        }
-        dispatch(createListing(formData))
-
-        //   return createListing(formData);
-        history.push('/myprofile')
+        if(!title || !price || !shipping_price || !designer_brand || !size || !category || !sub_category || !condition || !country || !color || ! description ) {
+            console.log('relax daniel')
+            setErrors(true)
+        } else {
+            const formData = new FormData();
+            formData.append('user_id', sessionUser.id)
+            formData.append('title', title);
+            formData.append('price', price);
+            formData.append('shipping_price', shipping_price);
+            formData.append('designer_brand', designer_brand);
+            formData.append('size', size);
+            formData.append('category', category);
+            formData.append('sub_category', sub_category);
+            formData.append('condition', condition);
+            formData.append('sold', sold);
+            formData.append('country', country);
+            formData.append('color', color);
+            formData.append('description', description);
+            formData.append('photoFile', photoFile);
+            formData.append('photoUrl', photoUrl);
+            //   console.log(formData)
+          
+            if (photoFile) {
+                formData.append('photo', photoFile);
+            }
+            dispatch(createListing(formData))
+    
+            //   return createListing(formData);
+            history.push('/myprofile')
+        }  
     };
 
 
@@ -604,7 +614,18 @@ const ListingCreate = () => {
                 <button type='submit' >PUBLISH</button>
             </div>
         </form>
-            
+            {errors ? (
+                <>
+                    <div className='errors-container'>
+                        <h3 className='errors_text'>Please enter all Fields Correctly</h3>
+                    </div>
+                </>
+            ) : (
+                <>
+                
+                </>
+            )}
+
 
         </div>
         

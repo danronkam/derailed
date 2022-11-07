@@ -12,6 +12,7 @@
 }
 
 .user-show-bar {
+    margin-top: 2vh;
     margin-left: 17vw;
     margin-right: 17vw;
     display: flex;
