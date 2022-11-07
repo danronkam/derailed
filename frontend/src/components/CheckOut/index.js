@@ -2,7 +2,6 @@ import React, { useEffect } from "react";
 import { useDispatch, useSelector } from "react-redux";
 import { useParams } from "react-router-dom";
 import { getListing, fetchListing } from "../../store/listings";
-import { fetchUser, getUser } from "../../store/user";
 import CheckoutShippingForm from "../CheckoutShippingForm";
 import './CheckOut.css'
 

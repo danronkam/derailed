@@ -1,5 +1,14 @@
 #comment_text_area{
     width: 50%;
+    border: 1px solid lightgray;
+    font-size: 14px;
+    font-weight: 300;
+    font-family: 'Inter', sans-serif;
+    color: black;
+}
+
+#comment_text_area:focus{
+    border-color: gray;
 }
 .comment-form-container{
     text-align:center; 

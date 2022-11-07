@@ -1,7 +1,6 @@
 import React from "react";
 import { useDispatch, useSelector } from "react-redux";
 import { Link, useParams } from "react-router-dom";
-import listingsReducer from "../../store/listings";
 import { getUser } from "../../store/user";
 import { deleteComment } from "../../store/comment";
 import './CommentIndexItem.css'
@@ -25,7 +24,6 @@ const CommentIndexItem = (comment) => {
     if(sessionUser.id === user.user.id) {
         buttons = (
             <>
-                <button className="comment-buttons">EDIT</button>
                 <button  className="comment-buttons" onClick={handleDelete}>DELETE</button>
             </>
         )
@@ -46,10 +44,11 @@ const CommentIndexItem = (comment) => {
             </div>
 
             <p className="comment_body">{comment.listing.body} </p>
+            <div className="button_container">
+                {buttons}
+            </div>
         </div>
-        <div className="button_container">
-            {buttons}
-        </div>
+  
         
         </>
     )

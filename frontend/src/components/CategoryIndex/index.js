@@ -19,10 +19,9 @@ const CategoryIndex = () => {
         setTimeout(function () {
             setIsLoading(false);
            
-        }, 5000);
+        }, 2000);
     },[])
-    console.log(category)
-    console.log(listings)
+
 
     let filtered = []
 
@@ -39,14 +38,7 @@ const CategoryIndex = () => {
     });
 
     const total = filtered.length
-
-
-    console.log(category.slice(1))
-    console.log(filtered)
-
-
-
-    
+   
 
     return(
         <>

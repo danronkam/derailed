@@ -8,22 +8,14 @@ import "./CommentCreate.css"
 
 
 const CommentCreate = ({commentData}) => {
-    // const {commentId} = useParams()
-    // let commentData = useSelector(getComment)
-
     const sessionUser = useSelector(state => state.session.user);
     const dispatch = useDispatch();
     const {listingId} = useParams()
     const listing = useSelector(getListing(listingId))
     const [body, setBody] = useState("");
 
-    // const [comment, setComment] = useState(reportData)
-
     const handleSubmit = (e) => {
-    
         e.preventDefault();
-        console.log(sessionUser.id)
-        console.log(listing.id)
         dispatch(createComment({body, author_id: sessionUser.id, listing_id: listing.id}));
     }
 
@@ -35,7 +27,7 @@ const CommentCreate = ({commentData}) => {
 
                 <textarea name='comment' form='comment-form' id="comment_text_area" onChange={(e) => setBody(e.target.value)} ></textarea>
                 <br />
-                <input type='submit' />
+                <input type='submit'className="search-button" />
             </form>
             
         </div>
