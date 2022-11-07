@@ -22,11 +22,11 @@ function SignUpFormModal() {
 
     return (
         <>
-          <button id='sign_up_button' onClick={() => setShowSignModal(true)}>SIGN UP</button>
+          <button id='sign_up_button' className='modal-button' onClick={() => setShowSignModal(true)}>SIGN UP</button>
           {showSignModal && (
             <Modal id='sign_up_modal' onClose={() => setShowSignModal(false)}>
               <SignUpForm />
-              <p>Already have an account? <a onClick={handleClick}>Click Here</a></p>
+              <p>Already have an account? <a onClick={handleClick} className='modal-switch'>Click Here</a></p>
 
             </Modal>
           )}
@@ -34,7 +34,7 @@ function SignUpFormModal() {
             <>
               <Modal id='log_in_modal' onClose={() => setShowLoginModal(false)}>
                 <LoginForm />
-                <p>Don't have an account? <a onClick={handleClick}>Sign Up</a></p>
+                <p>Don't have an account? <a onClick={handleClick} className='modal-switch'>Sign Up</a></p>
 
               </Modal>
 

@@ -80,12 +80,10 @@ const UserEdit = () => {
              
                 </div>
                 <input type='submit' className='login_button' value="Update"/> 
-                {/* <input type='submit'> Update </input> */}
 
             </form>
             <button onClick={logout} className='login_button' >Log Out</button>
         </div>
-        <EditForm user={userData} ></EditForm>
 
         </>
     )

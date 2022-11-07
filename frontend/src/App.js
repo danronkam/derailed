@@ -1,7 +1,5 @@
 import React from "react";
 import { Redirect, Route, Switch } from "react-router-dom";
-// import LoginFormPage from "./components/LoginFormModal/LoginForm";
-import SignupFormPage from "./components/SignupFormPage";
 import Navigation from "./components/Navigation";
 import ListingIndex from "./components/ListingIndex";
 import HomePage from "./components/HomePage";
@@ -38,9 +36,6 @@ function App() {
           </Route>
           <Route exact path="/search/:query">
             <SearchResults />
-          </Route>
-          <Route exact path="/signup">
-            <SignupFormPage />
           </Route>
           <Route exact path="/shop"> 
             <ListingIndex />

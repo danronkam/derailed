@@ -19,8 +19,11 @@
   font-family: 'Press Start 2P', cursive;
   font-size: 10px;
   height: 30px;
-/* margin-left: 1%; */
+}
 
+.modal-switch{
+  cursor: pointer;
+  font-weight: bold;
 }
 
 #modal-content {

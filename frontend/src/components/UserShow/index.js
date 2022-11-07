@@ -10,18 +10,10 @@ import { getUser } from "../../store/user";
 
 const UserShow = ({userId}) => {
     const dispatch = useDispatch()
-    // const {userId} = useParams()
     const user = useSelector(getUser(userId))
     const ID = user.user.id
-    console.log(user)
-    // const user = useSelector(state => state.users)
-    console.log(ID)
 
-    // const userId = user.id
-    // const rawDate = user.createdAt.year
-    // const date = rawDate.slice(0, 4)
     const listings = useSelector(state => Object.values(state.listings))
-    console.log(listings)
     let name = user.user.username
     if(!name) {
         name=user.user.email
@@ -33,8 +25,7 @@ const UserShow = ({userId}) => {
 
     const filterListings = listings.filter(listing => {
         console.log(listing.userId)
-        // console.log(userId)
-        // let user = userId
+
         console.log(ID)
         if(String(listing.userId) === ID) {
             console.log('yes')
@@ -44,7 +35,6 @@ const UserShow = ({userId}) => {
 
     console.log(filtered)
     
-    // console.log(rawDate)
   
     return(
         <>
@@ -78,9 +68,6 @@ const UserShow = ({userId}) => {
         </div>
         </div>
 
-        {/* <h3>{user.user.email}</h3>
-        <h3>{user.user.id}</h3>
-        <h3>{user.user.username}</h3> */}
         </>
     )
 }

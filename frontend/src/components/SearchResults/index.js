@@ -26,8 +26,6 @@ const SearchResults = () => {
         let title = listing.title.toLowerCase()
         let description = listing.description.toLowerCase()
         let tag = listing.subCategory.toLowerCase()
-        // console.log(title)
-        // console.log(title.includes(searchTerm))
         if(searchTerm.includes(' ')) {
             let terms = searchTerm.split(' ')
             console.log(terms)
@@ -47,7 +45,6 @@ const SearchResults = () => {
     return(
         <>
         <div className='listing-bar'>
-            {/* <p>test</p> */}
             <h3>{total} listings</h3>
         </div>
        

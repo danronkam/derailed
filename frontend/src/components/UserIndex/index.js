@@ -12,9 +12,7 @@ const UserIndex = () => {
     const dispatch = useDispatch()
     const {userId} = useParams()
     const listings = useSelector(getListings)
-    const user = useSelector(getUser(userId))
-    console.log(user)
-    console.log(listings)
+
 
 
 
@@ -28,11 +26,9 @@ const UserIndex = () => {
 
     const filterListings = listings.filter(listing => {
         console.log(listing.userId)
-        // console.log(userId)
         let user = userId
         console.log(user)
         if(String(listing.userId) === userId) {
-            console.log('yes')
             filtered.push(listing)
         }
     });
@@ -43,7 +39,6 @@ const UserIndex = () => {
     return(
         <>
         <div className='listing-bar'>
-            {/* <p>test</p> */}
             <h3>{total} listings</h3>
         </div>
         <div className='feed-container'>  

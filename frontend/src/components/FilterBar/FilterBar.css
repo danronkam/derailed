@@ -13,6 +13,10 @@
     padding-right: 5vw;
 }
 
+.click{
+  cursor: pointer;
+}
+
 .dropdown {
     float: left;
     overflow: hidden;

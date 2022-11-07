@@ -13,7 +13,6 @@ import SignUpForm from '../SignUpFormModal/SignUpForm';
 
 function Navigation() {
   const sessionUser = useSelector(state => state.session.user);
-  const history = useHistory();
   const [loginModal, showLoginModal] = useState(false);
   const [signModal, showSignModal] = useState(false);
 
