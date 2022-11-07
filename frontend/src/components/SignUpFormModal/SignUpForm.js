@@ -29,6 +29,13 @@ function SignUpForm() {
           });
     }
 
+    const handleClick = e => {
+      e.preventDefault();
+      console.log('hey')
+      // setShowModal(false)
+  
+    }
+
     return (
       <>
         <h1 className='login-headings'>Sign up</h1> 

@@ -5,7 +5,6 @@
 li {
   display: inline;
   font-size: 15px;
-  /* margin-right: 5%; */
 }
 
 li > a {
@@ -13,7 +12,6 @@ li > a {
 }
 
 #top_left_logo {
-  /* float: left; */
   height: 7vh;
   width: auto;
   margin-left: 5%;
@@ -24,10 +22,6 @@ li > a {
   justify-content: space-between;
   margin-right: 30px;
 }
-
-#home-logo {
-}
-
 
 
 #profile_menu {
@@ -47,11 +41,6 @@ li > a {
   text-decoration: none;
  color: blue;
 }
-
-/* .navbar-container {
-  margin-left: 5%;
-
-} */
 
 
 .navbar {

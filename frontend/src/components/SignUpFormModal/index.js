@@ -1,18 +1,46 @@
 import React, {useState } from "react";
 import { Modal } from "../../context/Modal"; 
 import SignUpForm from "./SignUpForm";
+import LoginForm from "../LoginFormModal/LoginForm";
 import './SignUpForm.css'
 
 function SignUpFormModal() {
-    const [showModal, setShowModal] = useState(false);
+  const [showLoginModal, setShowLoginModal] = useState(false);
+  const [showSignModal, setShowSignModal] = useState(false);
+
+  const handleClick = e => {
+    e.preventDefault();
+    console.log('hey')
+    if(showLoginModal) {
+      setShowLoginModal(false)
+      setShowSignModal(true)
+    } else {
+      setShowLoginModal(true)
+      setShowSignModal(false)
+    }
+  }
 
     return (
         <>
-          <button id='sign_up_button' onClick={() => setShowModal(true)}>SIGN UP</button>
-          {showModal && (
-            <Modal id='sign_up_modal' onClose={() => setShowModal(false)}>
+          <button id='sign_up_button' onClick={() => setShowSignModal(true)}>SIGN UP</button>
+          {showSignModal && (
+            <Modal id='sign_up_modal' onClose={() => setShowSignModal(false)}>
               <SignUpForm />
+              <p>Already have an account? <a onClick={handleClick}>Click Here</a></p>
+
             </Modal>
+          )}
+          {showLoginModal && (
+            <>
+              <Modal id='log_in_modal' onClose={() => setShowLoginModal(false)}>
+                <LoginForm />
+                <p>Don't have an account? <a onClick={handleClick}>Sign Up</a></p>
+
+              </Modal>
+
+            </>
+
+            
           )}
         </>
       );

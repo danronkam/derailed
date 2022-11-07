@@ -13,7 +13,6 @@ import LoginFormModal from "../LoginFormModal";
 import SignUpFormModal from "../SignUpFormModal";
 
 const ListingIndexItem = ({listing}) => {
-    // console.log(listing)
     const dispatch = useDispatch()
     const [loginModal, showLoginModal] = useState(false);
     const [signModal, showSignModal] = useState(false);
@@ -27,11 +26,9 @@ const ListingIndexItem = ({listing}) => {
     const handleClick = e => {
         e.preventDefault();
         if(!sessionUser){
-            console.log('test')
             showLoginModal(true)
         } else {
             history.push(link)
-            // dispatch(fetchListing(listing.id))
         }
 
     }
