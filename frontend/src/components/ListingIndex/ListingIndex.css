@@ -1,7 +1,8 @@
 .feed-container {
     display: grid;
   grid-template-columns: auto auto auto;
-  /* background-color: #2196F3; */
+
+  min-height: 100vh;
   padding: 10px;
   width: 100%;
 
