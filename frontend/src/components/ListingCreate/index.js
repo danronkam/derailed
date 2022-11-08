@@ -30,7 +30,6 @@ const ListingCreate = () => {
     const [photoUrl, setPhotoUrl] = useState(null);
 
     const handleImage = e => {
-        // const fileReader = new FileReader();
         const file = e.currentTarget.files[0]
 
         if (file) {
