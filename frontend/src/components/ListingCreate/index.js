@@ -113,7 +113,7 @@ const ListingCreate = () => {
                                     <option value="Dior"> Dior </option>
                             </select>
                         </label> 
-                        <p className='contact-admin'>Don't see the brand you need? <Link className='contact-admin-link' exact to={`/about`}>Contact an Admin</Link></p>
+                        <p className='contact-admin'>Don't see the brand you need? <Link className='contact-admin-link' to={`/about`}>Contact an Admin</Link></p>
                     </div>
 
                     <div className='right'>
@@ -171,7 +171,7 @@ const ListingCreate = () => {
                         <option value="Brown">Brown</option>
                         <option value="Tan">Tan</option>
                     </select>
-                <p className='contact-admin'>Don't see the brand you need? <Link className='contact-admin-link' exact to={`/about`}>Contact an Admin</Link></p>
+                <p className='contact-admin'>Don't see the brand you need? <Link className='contact-admin-link' to={`/about`}>Contact an Admin</Link></p>
 
 
                 <h3> CONDITION </h3>

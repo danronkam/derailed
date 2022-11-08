@@ -74,7 +74,7 @@ function Slider()  {
             )}
          
             <div className="Containers slider-container">
-                <Link exact to={`/shop/menswear/:Formal`}>
+                <Link to={`/shop/menswear/:Formal`}>
                 <div className='slides'>
                     <div className="slider-left">
                         <h3>Formal Shoes for Any Ocassion</h3>
@@ -89,7 +89,7 @@ function Slider()  {
                 </Link>
             </div>
             <div className="Containers slider-container">
-                <Link exact to={`/shop/menswear/:Sneakers`}>
+                <Link to={`/shop/menswear/:Sneakers`}>
                     <div className='slides'>
                         <div className="slider-left">
                             <h3>Unique Sneakers</h3>
@@ -104,7 +104,7 @@ function Slider()  {
                 </Link>
             </div>
             <div className="Containers slider-container">
-                <Link exact to='/shop'>
+                <Link to='/shop'>
                 <div className='slides'>
                     <div className="slider-left">
                         <h3>Prep Reimagined</h3>

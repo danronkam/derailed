@@ -13,13 +13,13 @@ function FilterBar() {
                             <button className='dropdown-button'> DESIGNERS  
                             </button>
                                 <div className='dropdown-content'>
-                                    <Link exact to={`/shop/:Balenciaga`}> Balenciaga </Link>
-                                    <Link exact to={`/shop/:Bape`}> Bape </Link>
-                                    <Link exact to={`/shop/:Dior`}> Dior </Link>
-                                    <Link exact to={`/shop/:Gucci`}> Gucci </Link>
-                                    <Link exact to={`/shop/:Nike`}> Nike </Link>
-                                    <Link exact to={`/shop/:Stussy`}> Stussy </Link>
-                                    <Link exact to={`/shop/:Vintage`}> Vintage </Link>
+                                    <Link to={`/shop/:Balenciaga`}> Balenciaga </Link>
+                                    <Link to={`/shop/:Bape`}> Bape </Link>
+                                    <Link to={`/shop/:Dior`}> Dior </Link>
+                                    <Link to={`/shop/:Gucci`}> Gucci </Link>
+                                    <Link to={`/shop/:Nike`}> Nike </Link>
+                                    <Link to={`/shop/:Stussy`}> Stussy </Link>
+                                    <Link to={`/shop/:Vintage`}> Vintage </Link>
                                 </div>
                         </div>
                     </div>
@@ -29,23 +29,23 @@ function FilterBar() {
                                 <i className="fa-solid fa-caret-down"></i>
                             </button>
                                 <div className='dropdown-content'>
-                                    <Link exact to={`/shop`}> ALL CATEGORIES</Link>
-                                    <Link exact to={`/shop/menswear/:Boots`}> BOOTS </Link>
-                                    <Link exact to={`/shop/menswear/:Casual`}> CASUAL LEATHER SHOES </Link>
-                                    <Link exact to={`/shop/menswear/:Formal`}> FORMAL SHOES </Link>
-                                    <Link exact to={`/shop/menswear/:Hitop`}> HI TOP SNEAKERS </Link>
-                                    <Link exact to={`/shop/menswear/:Lowtop`}> LOW TOP SNEAKERS </Link>
-                                    <Link exact to={`/shop/menswear/:Sandals`}> SANDALS </Link>
-                                    <Link exact to={`/shop/menswear/:Slip`}> SLIP ONS </Link>
+                                    <Link to={`/shop`}> ALL CATEGORIES</Link>
+                                    <Link to={`/shop/menswear/:Boots`}> BOOTS </Link>
+                                    <Link to={`/shop/menswear/:Casual`}> CASUAL LEATHER SHOES </Link>
+                                    <Link to={`/shop/menswear/:Formal`}> FORMAL SHOES </Link>
+                                    <Link to={`/shop/menswear/:Hitop`}> HI TOP SNEAKERS </Link>
+                                    <Link to={`/shop/menswear/:Lowtop`}> LOW TOP SNEAKERS </Link>
+                                    <Link to={`/shop/menswear/:Sandals`}> SANDALS </Link>
+                                    <Link to={`/shop/menswear/:Slip`}> SLIP ONS </Link>
 
                                 </div>
                         </div>
                     </div>
                     <div className="filter-list-items">
-                        <Link exact to={`/shop/menswear/:Sneakers`} > <button className='filter-bar-links click'>SNEAKERS </button> </Link>
+                        <Link to={`/shop/menswear/:Sneakers`} > <button className='filter-bar-links click'>SNEAKERS </button> </Link>
                     </div>
                     <div className="filter-list-items">
-                        <Link exact to={`/shop`}> <button className='filter-bar-links click'> STAFF PICKS </button> </Link>
+                        <Link to={`/shop`}> <button className='filter-bar-links click'> STAFF PICKS </button> </Link>
                     </div>
             </div>
         </div>

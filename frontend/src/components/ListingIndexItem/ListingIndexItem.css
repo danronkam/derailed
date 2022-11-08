@@ -3,45 +3,24 @@
     height: 255px;
     width: 100%;
     padding-bottom: 00px;
-    /* padding-left: 5%; */
-    /* border-bottom: 1px solid lightgray; */
 
-    /* border-bottom: 1px solid black; */
 }
 
-.feed-details{
-    /* height: fit-content; */
-    /* list-style-type: none;
-    text-decoration: none;
-    padding: 5px;
-    margin-bottom: 15px; */
-}
-
-.listing-brand {
-    /* border-top: 1px solid lightgray; */
-    /* width: 100%; */
-}
-
-/* .listing-title {
-    overflow: hidden;
-    white-space: nowrap;
-} */
 
 .listing-link{
+    cursor: pointer;
     text-decoration: none;
-    /* background-color: yellow;
-    border-bottom: 2px solid green; */
+
     min-width: 250px;
     max-width: 250px;
     height: 350px;
     align-content: center;
     padding-left: 2%;
-    /* padding-bottom: 1%; */
+    margin-bottom: 2vh;
 }
 
 .feed-price {
     font-family: 'Press Start 2P', cursive;
-    /* left: 0; */
     display: flex;
     font-size: 12px;
     padding-top: 1%;
@@ -50,7 +29,6 @@
 .feed-list {
     display: flex;
     flex-wrap: wrap;
-    /* height: fit-content; */
     padding-bottom: 20px;
     align-items: center;
     justify-content: right;

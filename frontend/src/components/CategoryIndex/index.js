@@ -60,7 +60,7 @@ const CategoryIndex = () => {
                         <ul className='feed-list'>
                             {noListings ? (
                                 <>
-                                <h3> No Listings Avaliable <Link exact to={`/`} className='return-home'>return home</Link></h3> 
+                                <h3> No Listings Avaliable <Link to={`/`} className='return-home'>return home</Link></h3> 
                                 
                                 </>
                             ) : (

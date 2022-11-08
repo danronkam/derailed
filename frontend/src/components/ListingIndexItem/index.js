@@ -51,7 +51,7 @@ const ListingIndexItem = ({listing}) => {
             </Modal>
           )}
 
-        <Link onClick={handleClick} className='listing-link' >
+        <a onClick={handleClick} className='listing-link' >
             <li className="feed-items">
                 <img src={listing.photoUrl} className='listing-image'/> 
                 <div className='feed-details'>
@@ -60,7 +60,7 @@ const ListingIndexItem = ({listing}) => {
                     <span className='feed-price'>${listing.price}</span>
                 </div>      
                 </li>
-            </Link>
+            </a>
             {/* <h1>{listing.sub_category}</h1> */}
             {/* <p>{listing.price}</p> */}
 

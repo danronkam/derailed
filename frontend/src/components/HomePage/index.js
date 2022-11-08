@@ -14,37 +14,37 @@ const HomePage =() => {
                 <h1 className='homepage-titles' >Shop Menswear</h1>
                 <ul className="homepage-lists">
                     <li className='homepage-list-items'>
-                        <Link exact to={`/shop/menswear/:Boots`}>
+                        <Link to={`/shop/menswear/:Boots`}>
                             <img className='category-photos' alt='' src='https://derailed-seed.s3.us-west-1.amazonaws.com/footwear.jpg'/>
                             <h3>Boots</h3>
                         </Link>
                     </li>
                     <li className='homepage-list-items'>
-                        <Link exact to={`/shop/menswear/:Sneakers`}>
+                        <Link to={`/shop/menswear/:Sneakers`}>
                             <img className='category-photos' alt='' src='https://derailed-seed.s3.us-west-1.amazonaws.com/trend3.jpeg'/>
                             <h3>Sneakers</h3>
                         </Link>
                     </li>
                     <li className='homepage-list-items'> 
-                        <Link exact to={`/shop/menswear/:Formal`}>
+                        <Link to={`/shop/menswear/:Formal`}>
                             <img className='category-photos' alt='' src='https://derailed-seed.s3.us-west-1.amazonaws.com/IMG_2829.jpg'/>
                             <h3>Formal</h3>
                         </Link>
                     </li>
                     <li className='homepage-list-items'>
-                        <Link exact to={`/shop/menswear/:Loafers`} >
+                        <Link to={`/shop/menswear/:Loafers`} >
                             <img className='category-photos' alt='' src='https://derailed-seed.s3.us-west-1.amazonaws.com/IMG_2852.jpg'/>
                             <h3>Loafers</h3>
                         </Link>
                     </li>
                     <li className='homepage-list-items'>
-                        <Link exact to={`/shop/menswear/:Slides`}>
+                        <Link to={`/shop/menswear/:Slides`}>
                             <img className='category-photos'alt='' src='https://derailed-seed.s3.us-west-1.amazonaws.com/slides.jpg'/>
                             <h3>Slides</h3>
                         </Link>
                     </li>
                     <li className='homepage-list-items'>
-                        <Link exact to={`/shop/menswear/:Slips`}>
+                        <Link to={`/shop/menswear/:Slips`}>
                             <img className='category-photos' alt='' src='https://derailed-seed.s3.us-west-1.amazonaws.com/slip.jpg'/>
                             <h3>Slip Ons</h3>
                         </Link>
@@ -54,19 +54,19 @@ const HomePage =() => {
             <div className='trend-container'>
                 <h1 className='homepage-titles' > Shop Latest Trends</h1>
                 <ul className="homepage-lists">
-                    <Link exact to={`/search/:western%20boots`}>
+                    <Link to={`/search/:western%20boots`}>
                         <li className='homepage-list-items' >
                             <img className='trend-photos' alt='' src='https://derailed-seed.s3.us-west-1.amazonaws.com/cowboy_boots.webp'/>
                             <h3>Cowboy Boots</h3>
                         </li>
                     </Link >
-                    <Link exact to={`/search/:designer%20boots`}>
+                    <Link to={`/search/:designer%20boots`}>
                         <li className='homepage-list-items'>
                             <img className='trend-photos' alt='' src='https://derailed-seed.s3.us-west-1.amazonaws.com/designer_boots.jpg'/>
                             <h3>Designer Boots</h3>
                         </li>
                     </Link>
-                    <Link exact to={`/shop/:ALD`}>
+                    <Link to={`/shop/:ALD`}>
                         <li className='homepage-list-items'>
                             <img className='trend-photos' alt='' src='https://derailed-seed.s3.us-west-1.amazonaws.com/ald-newbalance.webp'/>
                             <h3>ALD x New Balance</h3>
