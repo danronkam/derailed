@@ -21,12 +21,10 @@ class Api::ListingsController < ApplicationController
         # 
         @listing = Listing.new(listing_params)
         # @listing.user_id = current_user.id
-        # console.log(listing_params)
         if @listing.save!
             render :show
           else
             render json: @listing.errors.full_messages, status: :unprocessable_entity
-            console.log('COULD NOT MAKE')
         end
     end
 

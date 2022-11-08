@@ -1,6 +1,7 @@
 .slider-photo{
     width: auto;
-    max-width: 47vw;
+    max-width: 41vw;
+    min-width: 650px;
     height: 60vh;
     object-fit: cover;
 }

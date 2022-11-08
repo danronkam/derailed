@@ -7,7 +7,6 @@ const CommentIndex = ({ listingId }) => {
     const dispatch = useDispatch();
     const comments = useSelector(state => Object.values(state.comments))
     
-    console.log(comments)
     useEffect(() => {
         dispatch(fetchComments(listingId))
     }, [])

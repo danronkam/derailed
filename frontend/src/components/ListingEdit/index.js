@@ -14,7 +14,6 @@ const ListingEdit = () => {
     const history = useHistory();
 
     let listingData = useSelector(getListing(listingId))
-    console.log(listingData)
 
     useEffect(() => {
         dispatch(fetchListing(listingId))
@@ -48,9 +47,7 @@ const ListingEdit = () => {
         newListing.color = listing.color
         newListing.description = listing.description
         newListing.sold = false
-        
-        console.log(newListing)
-        
+                
         dispatch(updateListing({listing: newListing}))
         history.push('/myprofile')
 

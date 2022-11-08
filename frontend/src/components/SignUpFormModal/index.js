@@ -10,7 +10,6 @@ function SignUpFormModal() {
 
   const handleClick = e => {
     e.preventDefault();
-    console.log('hey')
     if(showLoginModal) {
       setShowLoginModal(false)
       setShowSignModal(true)

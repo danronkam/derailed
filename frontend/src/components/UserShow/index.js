@@ -29,17 +29,11 @@ const UserShow = ({userId}) => {
     let filtered = []
 
     const filterListings = listings.filter(listing => {
-        console.log(listing.userId)
 
-        console.log(ID)
         if(String(listing.userId) === ID) {
-            console.log('yes')
             filtered.push(listing)
         }
-    });
-
-    console.log(filtered)
-    
+    });    
   
     return(
         <>

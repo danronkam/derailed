@@ -34,7 +34,6 @@ export const fetchComments = (listingId) => async dispatch =>{
 //i dont think i need a comments show? you dont look at a comment you look at the index
 
 export const createComment = (commentData) => async dispatch => {
-    console.log(commentData)
     const res = await csrfFetch(`/api/comments`, {
         method: 'POST',
         body: JSON.stringify(commentData),

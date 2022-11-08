@@ -8,16 +8,12 @@ const SearchResults = () => {
     const {query} = useParams()
     const searchTerm = query.slice(1).toLowerCase()
 
-    console.log(searchTerm)
-    console.log()
     const dispatch = useDispatch()
     const listings = useSelector(getListings)
 
     useEffect(() => {
         dispatch(fetchListings())
     }, [])
-
-    console.log(listings)
 
     let filtered = []
 
@@ -28,7 +24,6 @@ const SearchResults = () => {
         let tag = listing.subCategory.toLowerCase()
         if(searchTerm.includes(' ')) {
             let terms = searchTerm.split(' ')
-            console.log(terms)
             for(let i = 0; i < terms.length; i++) {
                 let term = terms[i]
                 if(brand === term || title.includes(term) || description.includes(term) || tag === term) {

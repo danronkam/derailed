@@ -1,12 +1,10 @@
 class Api::SessionsController < ApplicationController
   def show
-    # console.log('i am here')
     if current_user
       @user = current_user
       render 'api/users/show'
     else
       render json: { user: nil }
-      # console.log('i am heere')
     end
   end
 
@@ -24,7 +22,6 @@ class Api::SessionsController < ApplicationController
 
   def destroy
     logout!
-    # console.log('i am herer')
     render json: { message: 'success' }
   end
 end

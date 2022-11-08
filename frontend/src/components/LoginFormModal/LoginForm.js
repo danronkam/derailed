@@ -44,7 +44,6 @@ function LoginForm() {
 
   const handleClick = e => {
     e.preventDefault();
-    console.log('hey')
     setShowLoginModal(false)
     // setShowModal(false)
 

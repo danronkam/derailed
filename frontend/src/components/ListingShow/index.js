@@ -19,8 +19,7 @@ const ListingShow = () => {
 
 
     const sessionUser = useSelector(state => state.session.user);
-    console.log(sessionUser)
-    console.log('look here^^')
+
 
     // useEffect(() => {
     //     dispatch(fetchUser(listing.userId))
@@ -55,9 +54,7 @@ const ListingShow = () => {
     // const year = date.slice(0,4)
 
 
-    // console.log('THIS IS THE LISTING OWNER:')
-    // console.log(listing.userId)
-    // console.log(listingOwner)
+
 
     let shipping;
     if(listing.shippingPrice === 0) {
@@ -79,8 +76,6 @@ const ListingShow = () => {
 
     let brand = listing.designerBrand
     let captBrand = capitalize(brand)
-
-    console.log(listing)
 
     // const handlePress = e => {
     //     dispatch() //what am i dispatching from here? i want to pass the item into here into /checkout

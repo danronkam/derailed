@@ -2,7 +2,6 @@ import React from "react";
 import { useForm } from "react-hook-form";
 
 const EditForm = ({user}) => {
-    console.log(user, 'I ANM AN EDIT FORM')
 
     const {register, handleSubmit } = useForm({
         // defaultValues: user

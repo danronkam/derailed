@@ -25,16 +25,13 @@ const UserIndex = () => {
     let filtered = []
 
     const filterListings = listings.filter(listing => {
-        console.log(listing.userId)
         let user = userId
-        console.log(user)
         if(String(listing.userId) === userId) {
             filtered.push(listing)
         }
     });
 
     const total = filtered.length;
-    console.log(filtered)
 
     return(
         <>

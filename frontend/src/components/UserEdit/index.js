@@ -30,7 +30,6 @@ const UserEdit = () => {
     const [user, setUser] = useState(userData)
 
 
-    console.log(user)
 
     const logout = (e) => {
         e.preventDefault();
@@ -47,7 +46,6 @@ const UserEdit = () => {
         newUser.username = user.username
         // user.id = user.user.id
         e.preventDefault()
-        console.log(newUser)
         dispatch(updateUser(newUser))
         history.push("/myprofile")
     }

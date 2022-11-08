@@ -11,12 +11,10 @@ const SearchBar = () => {
     const dispatch = useDispatch();
     const history = useHistory();
 
-    console.log(query)
 
     const handleSubmit = e =>{
         e.preventDefault();
         if(!query) {
-            console.log('yessir')
         } else {
             history.push(`/search/:${query}`)
         }

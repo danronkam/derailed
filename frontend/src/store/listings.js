@@ -73,7 +73,6 @@ export const fetchListing = listingId => async dispatch => {
 
 export const createListing = (listingData) => async dispatch => {
     // debugger
-    console.log(listingData)
     const res = await csrfFetch(`/api/listings`, {
         method: 'POST',
         body: listingData,
@@ -82,7 +81,6 @@ export const createListing = (listingData) => async dispatch => {
         }
     })
     const payload = await res.json()
-    console.log('payload')
     dispatch({type: RECEIVE_LISTING, payload})
 }
 

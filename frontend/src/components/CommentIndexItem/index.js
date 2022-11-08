@@ -11,9 +11,6 @@ const CommentIndexItem = (comment) => {
     const userId = comment.listing.authorId
     const user = useSelector(getUser(userId))
     const sessionUser = useSelector(state => state.session.user);
-    console.log(sessionUser.id)
-    console.log(user.user.id)
-    console.log(comment)
 
     const handleDelete = e => {
         e.preventDefault()

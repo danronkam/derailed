@@ -33,8 +33,7 @@ function Slider()  {
         for (i = 0; i < slides.length; i++) {
             slides[i].style.display = "none";
         }
-        console.log(slides)
-        console.log(sliderIdx)
+
         
         if(sliderIdx !== content.length -1 ) {
             sliderIdx += 1
@@ -43,13 +42,10 @@ function Slider()  {
             slides[sliderIdx].style.display = "block"
             sliderIdx += 1
         }else {
-            console.log('lgtb')
             sliderIdx = 0
             slides[sliderIdx].style.display = "block"
 
         }
-        setTimeout(nextSlide, 8000)
-        console.log(currentSlide)
         
     }
 
@@ -77,6 +73,7 @@ function Slider()  {
             )}
          
             <div className="Containers slider-container">
+                <Link exact to={`/shop/menswear/:Formal`}>
                 <div className='slides'>
                     <div className="slider-left">
                         <h3>Formal Shoes for Any Ocassion</h3>
@@ -88,19 +85,22 @@ function Slider()  {
                         <img src="https://derailed-seed.s3.us-west-1.amazonaws.com/2018-02_GQ_Essential-Dress-Shoes_3x2.webp" className="slider-photo" />
                     </div>
                 </div>
+                </Link>
             </div>
             <div className="Containers slider-container">
-                <div className='slides'>
-                    <div className="slider-left">
-                        <h3>Unique Sneakers</h3>
-                        <h1>OUT THERE DESIGNS</h1>
-                        <button id='shop-button'>SHOP NOW</button>
+                <Link exact to={`/shop/menswear/:Sneakers`}>
+                    <div className='slides'>
+                        <div className="slider-left">
+                            <h3>Unique Sneakers</h3>
+                            <h1>OUT THERE DESIGNS</h1>
+                            <button id='shop-button'>SHOP NOW</button>
+                        </div>
+                        <div className="slider-right">
+                            <div className="MessageInfo"> test 1 </div>
+                            <img src="https://derailed-seed.s3.us-west-1.amazonaws.com/GQ-sneakers.webp" className="slider-photo"/>
+                        </div>
                     </div>
-                    <div className="slider-right">
-                        <div className="MessageInfo"> test 1 </div>
-                        <img src="https://derailed-seed.s3.us-west-1.amazonaws.com/GQ-sneakers.webp" className="slider-photo"/>
-                    </div>
-                </div>
+                </Link>
             </div>
             <div className="Containers slider-container">
                 <Link exact to='/shop'>
