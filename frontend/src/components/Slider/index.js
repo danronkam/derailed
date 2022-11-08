@@ -46,7 +46,8 @@ function Slider()  {
             slides[sliderIdx].style.display = "block"
 
         }
-        
+        setTimeout(nextSlide, 8000)
+
     }
 
 
