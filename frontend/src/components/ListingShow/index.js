@@ -98,7 +98,7 @@ const ListingShow = () => {
                 <div className='rightColumn'>
                     <div className='rightColumn-content'>
                         <div className='item-details'>
-                            <Link> <h3 className='item-brand'>{captBrand}</h3> </Link>
+                            <Link to={`/shop/:${captBrand}`}> <h3 className='item-brand'>{captBrand}</h3> </Link>
                             <p>{listing.title}</p>
                             <p> Size: Men's US {listing.size}</p>
                             <p> Color:  {listing.color}</p>

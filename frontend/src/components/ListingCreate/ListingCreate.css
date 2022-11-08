@@ -12,6 +12,10 @@ h3 {
   margin-top: 8vh;
 }
 
+.contact-admin{
+  font-style: italic;
+}
+
 .create-inputs {
   width: 20vw;
   height: 5vh;
@@ -63,4 +67,14 @@ h3 {
   border: 1px solid lightgray;
   width: 350px;
   height: 38px;
+}
+
+.errors_text{
+  font-family: 'Press Start 2P', cursive;
+  color: red;
+}
+
+.errors-container{
+  position: absolute;
+  margin-left: 30vw;
 }

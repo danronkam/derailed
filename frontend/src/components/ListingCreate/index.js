@@ -74,7 +74,7 @@ const ListingCreate = () => {
             }
             dispatch(createListing(formData))
     
-            history.push('/myprofile')
+            history.push('/shop')
         }  
     };
 
@@ -193,30 +193,26 @@ const ListingCreate = () => {
             </div>
             <div className='details-container-2'>
                 <h3> PRICE </h3>
+
                     <div className='price-container' >
-                        <i className="fas fa-dollar-sign"></i>
-                        <input type='text' id='price' value={price} onChange={e=> {setPrice(e.target.value)}}/>
+                        <input type='text'  value={price} className='create-inputs' onChange={e=> {setPrice(e.target.value)}}/>
                     </div>
 
                 <h3> SHIPPING FROM </h3>
 
-                    <select list='shipping-countries' name='shipping' id='shipping' value={country} onChange={e=> {setCountry(e.target.value)}}>
+                    <select list='shipping-countries' className='create-inputs' name='shipping' id='shipping' value={country} onChange={e=> {setCountry(e.target.value)}}>
                         <option value="Asia"> Asia </option>
                         <option value="Canada"> Canada </option>
                         <option value="Europe"> Europe </option>
                         <option value="United States"> United States </option>
                     </select>
                     <label htmlFor='shipping_price'>
-                        <input  id='shipping_price' name='shipping_price' type='integer' value={shipping_price} onChange={e=> {setShipping(e.target.value)}} />
+                        <input  id='shipping_price' name='shipping_price' type='integer' className='create-inputs' value={shipping_price} onChange={e=> {setShipping(e.target.value)}} />
                     </label>
                 
                 <h3> PHOTO </h3>
                     <input type="file"  onChange={handleImage} />
             </div>
-            <div className='button-container'>
-                <button type='submit' >PUBLISH</button>
-            </div>
-        </form>
             {errors ? (
                 <>
                     <div className='errors-container'>
@@ -228,7 +224,13 @@ const ListingCreate = () => {
                 
                 </>
             )}
+            <div className='button-container'>
+                <button type='submit' className='login_button'>PUBLISH</button>
+            </div>
+            
 
+        </form>
+            
 
         </div>
         
