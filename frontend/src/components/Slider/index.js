@@ -14,7 +14,7 @@ function Slider()  {
 
 
 
-    let sliderIdx = 0
+    let sliderIdx = 2
     useEffect(() => {
         const timer = setTimeout(function () {
             setIsLoading(false);
@@ -48,6 +48,7 @@ function Slider()  {
             slides[sliderIdx].style.display = "block"
 
         }
+        setTimeout(nextSlide, 8000)
         console.log(currentSlide)
         
     }
@@ -84,7 +85,7 @@ function Slider()  {
                     </div>
                     <div className="slider-right">
                         <div className="MessageInfo"> test 1 </div>
-                        <img src="https://derailed-seed.s3.us-west-1.amazonaws.com/rings.png" className="slider-photo" />
+                        <img src="https://derailed-seed.s3.us-west-1.amazonaws.com/2018-02_GQ_Essential-Dress-Shoes_3x2.webp" className="slider-photo" />
                     </div>
                 </div>
             </div>
@@ -97,7 +98,7 @@ function Slider()  {
                     </div>
                     <div className="slider-right">
                         <div className="MessageInfo"> test 1 </div>
-                        <img src="https://derailed-seed.s3.us-west-1.amazonaws.com/puffer.png" className="slider-photo"/>
+                        <img src="https://derailed-seed.s3.us-west-1.amazonaws.com/GQ-sneakers.webp" className="slider-photo"/>
                     </div>
                 </div>
             </div>
@@ -111,20 +112,12 @@ function Slider()  {
                     </div>
                     <div className="slider-right">
                         <div className="MessageInfo"> test 1 </div>
-                        <img src="https://derailed-seed.s3.us-west-1.amazonaws.com/gobstomper-twitter.png"  className="slider-photo" />
+                        <img src="https://derailed-seed.s3.us-west-1.amazonaws.com/GQ-Loafers-Weejuns-050120.webp"  className="slider-photo" />
                     </div>
                 </div>
                 </Link>
             </div>
-          
-                    <button onClick={nextSlide} className='slide-button' id='left'>
-                <i className="fas fa-chevron-left"></i>
-            </button>
-
-
-            <button onClick={nextSlide} className='slide-button' id='right'>
-                <i className="fas fa-chevron-right"></i>
-            </button>
+    
 
 
  
