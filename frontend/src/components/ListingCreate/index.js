@@ -92,7 +92,7 @@ const ListingCreate = () => {
                     <h3>Category</h3>
                         <label htmlFor='category'>
                             <select name='category' className='create-inputs' value={category} id='category' onChange={e=> {setCategory(e.target.value)}}>
-                                <option selected disabled></option>
+                                <option disabled></option>
                                 <option value='Sneakers'>Sneakers</option>
                                 <option value='Boots'>Boots</option>
                                 <option value='Loafers'>Loafers</option>
@@ -105,12 +105,14 @@ const ListingCreate = () => {
                         <label htmlFor='designer-brand'>
     
                             <select className='create-inputs' name='designer-brand' id='designer-brand' value={designer_brand} onChange={e=> {setBrand(e.target.value)}}>
-                                    <option selected disabled></option>
+                                    <option  disabled></option>
                                     <option value="Balenciaga"> Balenciaga </option>
                                     <option value="Bape"> Bape </option>
                                     <option value="Gucci"> Gucci </option>
                                     <option value="Nike"> Nike</option>
                                     <option value="Dior"> Dior </option>
+                                    <option value="Dior"> Other </option>
+
                             </select>
                         </label> 
                         <p className='contact-admin'>Don't see the brand you need? <Link className='contact-admin-link' to={`/about`}>Contact an Admin</Link></p>
@@ -122,7 +124,7 @@ const ListingCreate = () => {
                         <label htmlFor='sub_category'>
             
                             <select defaultValue='test' name='sub_category' className='create-inputs' id='sub_category' value={sub_category} onChange={e=> {setSub(e.target.value)}}>
-                                <option selected disabled ></option>
+                                <option  disabled ></option>
                                 <option value='Sneakers'>Hi Top Sneaker</option>
                                 <option value='Loafers'>Low Sneakers</option>
                                 <option value='Sandles'>Leather</option>
@@ -134,7 +136,7 @@ const ListingCreate = () => {
                     <h3>Size(US Mens)</h3>
 
                         <select name='size' className='create-inputs' id='size' value={size} onChange={e=> {setSize(e.target.value)}} >
-                                <option selected disabled ></option>
+                                <option  disabled ></option>
                                 <option value='6'>6</option>
                                 <option value='7'>7</option>
                                 <option value='8'>8</option>
@@ -156,7 +158,7 @@ const ListingCreate = () => {
                 <h3 > COLOR </h3>
                     <label htmlFor='color' />
                     <select  placeholder='Designer color name' name='color' value={color} id='color' className='create-inputs' onChange={e=> {setColor(e.target.value)}}>
-                        <option selected disabled></option>
+                        <option  disabled></option>
                         <option value="Red">Red</option>
                         <option value="Pink">Pink</option>
                         <option value="Orange">Orange</option>
@@ -177,7 +179,7 @@ const ListingCreate = () => {
                 <h3> CONDITION </h3>
                     <label htmlFor='condition'>
                         <select name='condition' id='condition' className='create-inputs' value={condition} onChange={e=> {setCondition(e.target.value)}}> 
-                                <option selected disabled></option>
+                                <option  disabled></option>
                                 <option value='New/Never Worn'>New/Never Worn</option>
                                 <option value='Gently Used'>Gently Used</option>
                                 <option value='Used'>Used</option>
