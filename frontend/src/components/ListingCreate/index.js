@@ -130,6 +130,8 @@ const ListingCreate = () => {
                                 <option value='Sandles'>Leather</option>
                                 <option value='Boots'>Boots</option>
                                 <option value='Athletic'>Athletic</option>
+                                <option value='NA'>N/A</option>
+
                             </select>
                         </label>
 

@@ -66,7 +66,7 @@ const HomePage =() => {
                             <h3>Designer Boots</h3>
                         </li>
                     </Link>
-                    <Link to={`/shop/:ALD`}>
+                    <Link to={`/shop/:New%20Balance`}>
                         <li className='homepage-list-items'>
                             <img className='trend-photos' alt='' src='https://derailed-seed.s3.us-west-1.amazonaws.com/ald-newbalance.webp'/>
                             <h3>ALD x New Balance</h3>
