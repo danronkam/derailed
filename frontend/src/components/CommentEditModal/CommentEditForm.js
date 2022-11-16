@@ -1,18 +1,26 @@
 import React, { useState } from "react";
 import { useDispatch } from "react-redux";
 import { updateComment } from "../../store/comment";
+import { useHistory } from "react-router-dom";
 
 function CommentEditForm({commentData}) {
     const dispatch = useDispatch()
+    const history = useHistory()
     const [comment, setComment] = useState(commentData);
-    console.log(commentData)
+    const [showEditModal, setShowEditModal] = useState(true)
 
     const handleSubmit = e => {
         e.preventDefault()
         const newComment = {}
         // newComment.id = comment.comment.id
+        newComment.author = commentData.author
+        newComment.authorId = commentData.authorId
+        newComment.id = commentData.id
         newComment.body = comment.body
-        
+        newComment.listingId = commentData.listingId
+
+        dispatch(updateComment({comment: newComment}))
+        setShowEditModal(false)
     }
 
 
@@ -22,6 +30,7 @@ function CommentEditForm({commentData}) {
         <div className="comment-edit-container">
             <form id="comment-edit" onSubmit={handleSubmit}>
                 <textarea form='comment-edit' value={comment.body} onChange={e => {setComment({...comment, body: e.target.value})}} />
+                <br />
                 <input type='submit' className='search-button' />
             </form>
 

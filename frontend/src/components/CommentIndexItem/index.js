@@ -9,9 +9,6 @@ import './CommentIndexItem.css'
 
 const CommentIndexItem = (comment) => {
     const dispatch = useDispatch()
-    // const userId = comment.listing.authorId
-    console.log(comment.commentData.authorId)
-    // const user = useSelector(getUser(userId))
     const sessionUser = useSelector(state => state.session.user);
 
     const handleDelete = e => {
@@ -23,7 +20,7 @@ const CommentIndexItem = (comment) => {
     if(sessionUser.id === comment.commentData.authorId) {
         buttons = (
             <>
-                <CommentEditModal comment={comment}/>
+                <CommentEditModal commentData={comment}/>
                 <button  className="comment-buttons" onClick={handleDelete}>DELETE</button>
             </>
         )
