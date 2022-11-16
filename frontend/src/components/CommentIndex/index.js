@@ -18,7 +18,7 @@ const CommentIndex = ({ listingId }) => {
             <ul className='comment-list'>
                     {comments.map(comment => {
                         // console.log(comment.author)
-                        return <CommentIndexItem key={comment.id} comment={comment} />
+                        return <CommentIndexItem key={comment.id} commentData={comment} />
                     })}
                 </ul>
         </div>

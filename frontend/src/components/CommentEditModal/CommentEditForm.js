@@ -1,19 +1,28 @@
 import React, { useState } from "react";
 import { useDispatch } from "react-redux";
+import { updateComment } from "../../store/comment";
 
-function CommentEditForm({comment}) {
+function CommentEditForm({commentData}) {
     const dispatch = useDispatch()
-    const [body, setBody] = useState("");
-    console.log(comment)
+    const [comment, setComment] = useState(commentData);
+    console.log(commentData)
+
+    const handleSubmit = e => {
+        e.preventDefault()
+        const newComment = {}
+        // newComment.id = comment.comment.id
+        newComment.body = comment.body
+        
+    }
 
 
 
     return(
         <>
         <div className="comment-edit-container">
-            <form id="comment-edit">
-                <textarea form='comment-edit' onChange={(e) => setBody(e.target.value)} />
-                <input type='submit' classname='search-button' />
+            <form id="comment-edit" onSubmit={handleSubmit}>
+                <textarea form='comment-edit' value={comment.body} onChange={e => {setComment({...comment, body: e.target.value})}} />
+                <input type='submit' className='search-button' />
             </form>
 
         </div>

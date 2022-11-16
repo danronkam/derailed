@@ -6,7 +6,7 @@ import { Modal } from "../../context/Modal";
 const CommentEditModal = ({comment}) => {
     const dispatch = useDispatch()
     const [showEditModal, setShowEditModal] = useState(false)
-    // console.log(comment)
+    console.log(comment)
 
     const handleClick = e => {
         e.preventDefault();
@@ -19,7 +19,7 @@ const CommentEditModal = ({comment}) => {
         {showEditModal && (
             <>
                 <Modal onClose={() => setShowEditModal(false)}>
-                    <CommentEditForm comment={comment} />
+                    <CommentEditForm commentData={comment.commentData} />
                 </Modal>
             
             </>
