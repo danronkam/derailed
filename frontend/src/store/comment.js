@@ -46,6 +46,19 @@ export const createComment = (commentData) => async dispatch => {
     dispatch({type: RECEIVE_COMMENT, comment})
 }
 
+export const updateComment = commentData => async dispatch => {
+    const res = await csrfFetch(`/api/comments/${commentData.id}`,{
+        method: 'PATCH',
+        body: JSON.stringify(commentData),
+        headers: {
+            'Content-Type': 'application/json',
+            'Accept': 'application/json'
+        }
+    })
+    const payload = await res.json()
+    dispatch({type: RECEIVE_COMMENT, payload})
+}
+
 export const deleteComment = commentId => async dispatch => {
     const res = await csrfFetch(`/api/comments/${commentId}`, {
         method: 'DELETE'

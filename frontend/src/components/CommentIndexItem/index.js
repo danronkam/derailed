@@ -3,13 +3,15 @@ import { useDispatch, useSelector } from "react-redux";
 import { Link, useParams } from "react-router-dom";
 import { getUser } from "../../store/user";
 import { deleteComment } from "../../store/comment";
+import CommentEditModal from "../CommentEditModal";
 import './CommentIndexItem.css'
 
 
 const CommentIndexItem = (comment) => {
     const dispatch = useDispatch()
-    const userId = comment.listing.authorId
-    const user = useSelector(getUser(userId))
+    // const userId = comment.listing.authorId
+    console.log(comment)
+    // const user = useSelector(getUser(userId))
     const sessionUser = useSelector(state => state.session.user);
 
     const handleDelete = e => {
@@ -18,9 +20,10 @@ const CommentIndexItem = (comment) => {
     }
 
     let buttons;
-    if(sessionUser.id === user.user.id) {
+    if(sessionUser.id) {
         buttons = (
             <>
+                <CommentEditModal comment={comment}/>
                 <button  className="comment-buttons" onClick={handleDelete}>DELETE</button>
             </>
         )
@@ -37,10 +40,10 @@ const CommentIndexItem = (comment) => {
         <div className="comment_container">
             <div className="comment-header-container">
                 <i className="fa-solid fa-circle-user" id='comment_avatar'></i>
-                <Link to={`/users/${user.user.id}`}><p className="comment_username">{user.user.username}</p></Link>
+                <Link to={`/users/${comment.comment.authorId}`}><p className="comment_username">{comment.comment.author}</p></Link>
             </div>
 
-            <p className="comment_body">{comment.listing.body} </p>
+            <p className="comment_body">{comment.comment.body} </p>
             <div className="button_container">
                 {buttons}
             </div>
