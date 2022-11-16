@@ -29,13 +29,15 @@ function Slider()  {
     function nextSlide() {
         var slides = document.getElementsByClassName("Containers");
         // var circles = document.getElementsByClassName("dots");
+
         let i;
         for (i = 0; i < slides.length; i++) {
             slides[i].style.display = "none";
         }
 
-        
-        if(sliderIdx !== content.length -1 ) {
+        if(!slides){
+            
+        }else if(sliderIdx !== content.length -1 ) {
             sliderIdx += 1
             slides[sliderIdx].style.display = "block"
         } else if(sliderIdx === 0) {

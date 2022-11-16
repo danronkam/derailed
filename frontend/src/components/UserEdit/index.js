@@ -12,10 +12,12 @@ import EditForm from './EditForm.js'
 const UserEdit = () => {
     const dispatch = useDispatch()
     const {userId} = useParams()
+    // console.log(userId)
     let userData = useSelector(getUser(userId))
     const date = userData.user.createdAt.slice(0, 4)
     const email = userData.user.email
     const history = useHistory();
+    console.log(userData)
 
     const userInfo = {
         email: `{email}`,
@@ -23,8 +25,8 @@ const UserEdit = () => {
     }
 
     useEffect(() => {
-        dispatch(fetchUser(userId))
-    }, [userId])
+        dispatch(fetchUser(userData.user.id))
+    }, [userData.user.id])
 
 
     const [user, setUser] = useState(userData)
@@ -67,7 +69,7 @@ const UserEdit = () => {
             <form className='edit-form' onSubmit={handleSubmit}>
                 <div className='form-row-1'>
                     <label htmlFor="user_username"> Username <br />  </label>
-                        <input id='user_username' className='log_in_inputs' defaultValue={user.user.username} onChange={e => {setUser({...user, username: e.target.value})}} />
+                        <input id='user_username' className='log_in_inputs' defaultValue={userData.user.username} onChange={e => {setUser({...user, username: e.target.value})}} />
                    
                     <label htmlFor="user_email"> Email    </label>
                         <input id='user_email' className='log_in_inputs' defaultValue={email} onChange={e => {setUser({...user, email: e.target.value})}}/>
