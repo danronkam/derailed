@@ -39,13 +39,27 @@ function Slider()  {
             
         }else if(sliderIdx !== content.length -1 ) {
             sliderIdx += 1
-            slides[sliderIdx].style.display = "block"
+            if(!slides[sliderIdx]){
+                return
+            } else {
+                slides[sliderIdx].style.display = "block"
+            }
         } else if(sliderIdx === 0) {
-            slides[sliderIdx].style.display = "block"
             sliderIdx += 1
+            if(!slides[sliderIdx]){
+                return
+            } else {
+                slides[sliderIdx].style.display = "block"
+            }
+
+
         }else {
             sliderIdx = 0
-            slides[sliderIdx].style.display = "block"
+            if(!slides[sliderIdx]){
+                return
+            } else {
+                slides[sliderIdx].style.display = "block"
+            }
 
         }
         setTimeout(nextSlide, 8000)

@@ -13,14 +13,27 @@ import SignUpForm from '../SignUpFormModal/SignUpForm';
 
 function Navigation() {
   const sessionUser = useSelector(state => state.session.user);
-  const [loginModal, showLoginModal] = useState(false);
-  const [signModal, showSignModal] = useState(false);
+  const [loginModal, setLoginModal] = useState(false);
+  const [signModal, setSignModal] = useState(false);
+  
 
 
+  const handleToggle = e => {
+    e.preventDefault();
+    if(loginModal) {
+      setLoginModal(false)
+      setSignModal(true)
+      console.log(1)
+    } else {
+      setLoginModal(true)
+      setSignModal(false)
+      console.log(2)
+    }
+  }
 
   const handleClick = e => {
     e.preventDefault();
-    showLoginModal(true)
+    setLoginModal(true)
 }
 
   let sessionLinks;
@@ -37,7 +50,7 @@ function Navigation() {
       <>
        
         <Link to={`/shop`}>SHOP</Link>
-        <Link onClick={handleClick}>SELL</Link>
+        <a onClick={handleClick}>SELL</a>
         <LoginFormModal />
         <SignUpFormModal></SignUpFormModal>
 
@@ -63,13 +76,17 @@ function Navigation() {
       </div>
     </div>
     {loginModal && (
-            <Modal id='log_in_modal' onClose={() => showLoginModal(false)}>
+            <Modal id='log_in_modal' onClose={() => setLoginModal(false)}>
             <LoginForm />
+            <p>Don't have an account? <a onClick={handleToggle} className='modal-switch'>Sign Up</a></p>
+
             </Modal>
         )}
          {signModal && (
-            <Modal id='sign_up_modal' onClose={() => showSignModal(false)}>
+            <Modal id='sign_up_modal' onClose={() => setSignModal(false)}>
               <SignUpForm />
+              <p>Already have an account? <a onClick={handleToggle} className='modal-switch'>Click Here</a></p>
+
             </Modal>
           )}
     </>
