@@ -23,11 +23,9 @@ function Navigation() {
     if(loginModal) {
       setLoginModal(false)
       setSignModal(true)
-      console.log(1)
     } else {
       setLoginModal(true)
       setSignModal(false)
-      console.log(2)
     }
   }
 

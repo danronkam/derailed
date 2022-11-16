@@ -47,7 +47,6 @@ export const createComment = (commentData) => async dispatch => {
 }
 
 export const updateComment = commentData => async dispatch => {
-    console.log(commentData)
     const res = await csrfFetch(`/api/comments/${commentData.comment.id}`,{
         method: 'PATCH',
         body: JSON.stringify(commentData),

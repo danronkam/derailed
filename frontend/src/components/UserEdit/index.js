@@ -12,12 +12,10 @@ import EditForm from './EditForm.js'
 const UserEdit = () => {
     const dispatch = useDispatch()
     const {userId} = useParams()
-    // console.log(userId)
     let userData = useSelector(getUser(userId))
     const date = userData.user.createdAt.slice(0, 4)
     const email = userData.user.email
     const history = useHistory();
-    console.log(userData)
 
     const userInfo = {
         email: `{email}`,
