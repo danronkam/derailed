@@ -1,11 +1,16 @@
 # derailed [![My Skills](https://skillicons.dev/icons?i=js,html,css,react,redux,ruby,rails,postgres,aws,heroku,figma)](https://skillicons.dev)
 
 Derailed is a footwear focused clone of [Grailed](https://www.grailed.com/). On the site, users can search through listings to find their grail shoe, hopefully for a price that hasn't gone too off the rails. Once logged in users can create listings of their own, and leave offers on others items for sale. 
+
 	
 [Check it Out!](https://dk-derailed.herokuapp.com/)
 
 
 ![image](https://user-images.githubusercontent.com/101153713/200691008-92dff210-ba5b-4100-88e0-c2935b5d0a88.png)
+# Planning
+
+![image](https://user-images.githubusercontent.com/101153713/212943326-bfaed453-ec5a-48a7-95ea-d2979ccafc6c.png)
+Derailed was designed, created, and deployed during a two week sprint during App Academy's Bootcamp. To stay on task with such tight deadlines, I used Figma to create wireframe guides to follow MVP features, and Scrum methodologies manage time. 
 
 
 # Features
