@@ -1,4 +1,5 @@
-# derailed
+# derailed [![My Skills](https://skillicons.dev/icons?i=js,html,css,react,redux,ruby,rails,postgres,aws,heroku,figma)](https://skillicons.dev)
+
 Derailed is a footwear focused clone of [Grailed](https://www.grailed.com/). On the site, users can search through listings to find their grail shoe, hopefully for a price that hasn't gone too off the rails. Once logged in users can create listings of their own, and leave offers on others items for sale. 
 	
 [Check it Out!](https://dk-derailed.herokuapp.com/)
