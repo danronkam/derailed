@@ -4,15 +4,6 @@ Derailed is a footwear focused clone of [Grailed](https://www.grailed.com/). On 
 	
 [Check it Out!](https://dk-derailed.herokuapp.com/)
 
-# Technologies
-* Javascript
-* HTML & CSS
-* React-Redux
-* Ruby
-* Rails
-* Amazon S3 (AWS)
-* Heroku
-* PostgreSQL
 
 ![image](https://user-images.githubusercontent.com/101153713/200691008-92dff210-ba5b-4100-88e0-c2935b5d0a88.png)
 
