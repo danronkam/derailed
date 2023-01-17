@@ -46,3 +46,7 @@
   .search-button:hover {
     cursor: pointer;
   }
+
+  .return-home{
+    font-style: italic;
+}

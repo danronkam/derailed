@@ -11,8 +11,6 @@ import UserEdit from "./components/UserEdit";
 import UserShow from "./components/UserShow";
 import Footer from "./components/Footer";
 import ListingEdit from "./components/ListingEdit";
-import DesignerIndex from "./components/DesignerIndex";
-import CategoryIndex from "./components/CategoryIndex";
 import UserIndex from "./components/UserIndex";
 import About from "./components/About";
 import SearchResults from "./components/SearchResults";
@@ -24,7 +22,7 @@ function App() {
     <div className='content-container'>
         <Navigation />   
    
-      <FilterBar/>
+        <FilterBar/>
 
       
         <Switch>
@@ -40,11 +38,11 @@ function App() {
           <Route exact path="/shop"> 
             <ListingIndex />
           </Route>
-          <Route exact path="/shop/:designerBrand">
-            <DesignerIndex /> 
+          <Route exact path="/shop/:query">
+            <SearchResults /> 
           </Route>
-          <Route exact path="/shop/menswear/:category">
-            <CategoryIndex /> 
+          <Route exact path="/shop/menswear/:query">
+            <SearchResults /> 
           </Route>
           <Route exact path="/listings/:listingId">
             <ListingShow />
