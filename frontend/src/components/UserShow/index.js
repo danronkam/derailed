@@ -26,6 +26,7 @@ const UserShow = ({userId}) => {
            
         }, 1000);
     },[])
+    
     let filtered = []
 
     const filterListings = listings.filter(listing => {
