@@ -1,16 +1,10 @@
 import React, { useState } from "react";
-import { useDispatch } from "react-redux";
 import { useHistory } from "react-router-dom";
-import { getSearchedListings } from "../../store/listings";
-
-
 import './SearchBar.css'
 
 const SearchBar = () => {
     const [query, setQuery] = useState("");
-    const dispatch = useDispatch();
     const history = useHistory();
-
 
     const handleSubmit = e =>{
         e.preventDefault();

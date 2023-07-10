@@ -3,29 +3,21 @@ import { useDispatch, useSelector } from "react-redux";
 import { getListings, fetchListings } from "../../store/listings";
 import { useParams } from "react-router-dom";
 import ListingIndexItem from "../ListingIndexItem";
-import LoginFormModal from "../LoginFormModal";
 import './UserIndex.css'
-import { fetchUser, getUser } from "../../store/user";
-// import Listin
 
 const UserIndex = () => {
     const dispatch = useDispatch()
     const {userId} = useParams()
     const listings = useSelector(getListings)
 
-
-
-
     useEffect(() => {
-        dispatch(fetchListings())
-        // dispatch(fetchUser(userId))
 
+        dispatch(fetchListings())
     }, [])
 
     let filtered = []
-
     const filterListings = listings.filter(listing => {
-        let user = userId
+
         if(String(listing.userId) === userId) {
             filtered.push(listing)
         }

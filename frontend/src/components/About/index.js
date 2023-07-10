@@ -1,6 +1,5 @@
 import React from "react";
 import './About.css' 
-import { Link } from "react-router-dom";
 
 const About = () => {
 
@@ -13,7 +12,7 @@ const About = () => {
             <div className='route'>
                 <p> <a href='https://github.com/danronkam' target='_blank'> Github </a> {carat} <a href="https://linkedin.com/in/danronkam" target='_blank'> LinkedIn </a> {carat} <a href="http://danronkam.github.io/" target='_blank'> Portfolio </a> </p>
             </div>
-                <img src='https://derailed-seed.s3.us-west-1.amazonaws.com/1517616254622+(1).jpeg'></img>
+                <img src='https://derailed-seed.s3.us-west-1.amazonaws.com/1517616254622+(1).jpeg' alt="bby dan"></img>
             </div>
 
             <div className='rightColumn'>
@@ -37,7 +36,7 @@ const About = () => {
                 </div>
                 <div className='profile-container' >
                     <a href="http://danronkam.github.io/" className='list-owner' target='_blank'>
-                        <img id='pfp' src="https://derailed-seed.s3.us-west-1.amazonaws.com/dankampfp.jpg"/>
+                        <img id='pfp' src="https://derailed-seed.s3.us-west-1.amazonaws.com/dankampfp.jpg" alt="Dan Kam Bored Ape"/>
                         <h3 id='about-see-more' >See More From This Software Engineer</h3>
                     </a>
                 </div>
@@ -45,9 +44,6 @@ const About = () => {
                     <h3 className='description-heading'>Description</h3>
                     <p className='description-content'>
                         I'm a software engineer with a passion for React, Redux, and a love of old media. I use my skills as a software engineer to design seamless user experiences and my background in publishing to stay on top of the latest design trends.
-                        {/* <br />
-                        Derailed was created using real listings from Grailed. If you're interested in anything you see, check out the seed index for links
-                        <br /> */}
                         <br />
                         <br />
                         Derailed was made using real listings from across the internet whose prices I'd describe as a little off rails
