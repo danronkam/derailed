@@ -1,14 +1,13 @@
 import React from "react";
 import { useDispatch, useSelector } from "react-redux";
-import { Link, useParams } from "react-router-dom";
-import { getUser } from "../../store/user";
+import { Link } from "react-router-dom";
 import { deleteComment } from "../../store/comment";
 import CommentEditModal from "../CommentEditModal";
 import './CommentIndexItem.css'
 
 
 const CommentIndexItem = (comment) => {
-    const dispatch = useDispatch()
+    const dispatch = useDispatch();
     const sessionUser = useSelector(state => state.session.user);
 
     const handleDelete = e => {

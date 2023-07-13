@@ -7,19 +7,17 @@ import './CheckOut.css'
 
 
 const CheckOut = () => {
-    const dispatch = useDispatch()
-    const {listingId} = useParams()
-    const listing = useSelector(getListing(listingId))
+    const dispatch = useDispatch();
+    const {listingId} = useParams();
+    const listing = useSelector(getListing(listingId));
 
     useEffect(() =>{
-        dispatch(fetchListing(listingId))
+        dispatch(fetchListing(listingId));
     }, [])
 
-    const shipping = listing.shippingPrice 
-    const price = listing.price
-    const total = shipping + price
-
-
+    const shipping = listing.shippingPrice;
+    const price = listing.price;
+    const total = shipping + price;
 
     return(
         <>
@@ -35,7 +33,7 @@ const CheckOut = () => {
             </div>
             <div className='checkout-right'>
                 <div className='checkout-item-container'>
-                    <img id='checkout-photo' src={listing.photoUrl} />
+                    <img id='checkout-photo' src={listing.photoUrl} alt="customer listing"/>
                     <div className='checkout-item-details'>
                             <h4>{listing.designerBrand} </h4>
                             <p>{listing.title}   <h5>${listing.price}</h5> </p>
@@ -64,10 +62,7 @@ const CheckOut = () => {
                         <h3>${total}</h3>
                 </div>
             </div>
-        </div>
-    
-        
-        
+        </div> 
         </>
     )
 }

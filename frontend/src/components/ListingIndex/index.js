@@ -2,7 +2,6 @@ import { useEffect, useState } from "react";
 import { useDispatch, useSelector } from "react-redux";
 import { getListings, fetchListings } from "../../store/listings";
 import ListingIndexItem from "../ListingIndexItem";
-import LoginFormModal from "../LoginFormModal";
 import './ListingIndex.css'
 
 const ListingIndex = () => {
@@ -18,13 +17,13 @@ const ListingIndex = () => {
         }, 2000);
     }, [])
 
-    const total = listings.length
+    const total = listings.length;
 
     return(
         <>
         {isLoading ? (
                 <div className="slider-container loading-container">
-                   <img src="https://derailed-seed.s3.us-west-1.amazonaws.com/ezgif-2-8d83b97af8.gif" />    
+                   <img src="https://derailed-seed.s3.us-west-1.amazonaws.com/ezgif-2-8d83b97af8.gif" alt="loading"/>    
                </div>
         ) : (
             <>

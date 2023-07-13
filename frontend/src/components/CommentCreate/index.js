@@ -19,7 +19,6 @@ const CommentCreate = ({commentData}) => {
         dispatch(createComment({body, author_id: sessionUser.id, listing_id: listing.id}));
     }
 
-
     return(
         <>
         <div className='comment-form-container' onSubmit={handleSubmit}>

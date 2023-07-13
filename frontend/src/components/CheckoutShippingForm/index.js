@@ -2,7 +2,6 @@ import React from "react";
 import './CheckoutShippingForm.css'
 
 const CheckoutShippingForm = () => {
-
     return(
         <>
         <div className='shippingform-container'>
@@ -57,7 +56,6 @@ const CheckoutShippingForm = () => {
                     </div>
                 </div>
                 
-                {/* <input type='submit' /> */}
             </form>
         </div>
         
