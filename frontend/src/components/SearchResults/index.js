@@ -62,7 +62,6 @@ const SearchResults = () => {
         ) : (
             <>
                 <div className='listing-bar'>
-            {/* <p>test</p> */}
                     <h3>{total} listings</h3>
                 </div>
        

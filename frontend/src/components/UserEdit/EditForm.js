@@ -4,7 +4,7 @@ import { useForm } from "react-hook-form";
 const EditForm = ({user}) => {
 
     const {register, handleSubmit } = useForm({
-        // defaultValues: user
+
     })
 
     const onSubmit = (data) => {
@@ -15,13 +15,11 @@ const EditForm = ({user}) => {
         <>
             <form onSubmit={handleSubmit(onSubmit)}>
                 <input
-                    // ref={register}
                     placeholder="First Name"
                     type="text"
                     name="firstname"
                 />
                 <input
-                    // ref={register}
                     placeholder="Last Name"
                     type="text"
                     name="lastname"

@@ -1,6 +1,5 @@
 import React, { useState } from "react";
 import { useDispatch, useSelector } from "react-redux";
-import { useParams } from "react-router-dom";
 import { fetchUser } from "../../store/user";
 import './UserShow.css'
 import { useEffect } from "react";
@@ -40,7 +39,7 @@ const UserShow = ({userId}) => {
         <>
         {isLoading ? (
                 <div className="slider-container loading-container">
-                   <img src="https://derailed-seed.s3.us-west-1.amazonaws.com/ezgif-2-8d83b97af8.gif" />    
+                   <img src="https://derailed-seed.s3.us-west-1.amazonaws.com/ezgif-2-8d83b97af8.gif" alt="loading gif"/>    
                </div>
         ) : (
             <>

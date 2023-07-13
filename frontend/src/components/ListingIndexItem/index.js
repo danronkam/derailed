@@ -1,11 +1,9 @@
 import React, {useState } from "react";
-import { Link } from "react-router-dom";
 import { useDispatch, useSelector } from "react-redux";
 import './ListingIndexItem.css'
 import { Modal } from '../../context/Modal';
 import LoginForm from "../LoginFormModal/LoginForm";
 import SignUpForm from "../SignUpFormModal/SignUpForm";
-import { fetchListing } from "../../store/listings";
 import { useHistory } from "react-router-dom";
 
 
@@ -13,7 +11,6 @@ import LoginFormModal from "../LoginFormModal";
 import SignUpFormModal from "../SignUpFormModal";
 
 const ListingIndexItem = ({listing}) => {
-    const dispatch = useDispatch()
     const [loginModal, setLoginModal] = useState(false);
     const [signModal, setSignModal] = useState(false);
     const [showLoginModal, setShowLoginModal] = useState(false);
@@ -45,6 +42,7 @@ const ListingIndexItem = ({listing}) => {
         }
       }
 
+      
     
     
 
@@ -68,9 +66,10 @@ const ListingIndexItem = ({listing}) => {
             </Modal>
           )}
 
+{/* //make these links buttons */}
         <a onClick={handleClick} className='listing-link' >
             <li className="feed-items">
-                <img src={listing.photoUrl} className='listing-image'/> 
+                <img src={listing.photoUrl} className='listing-image' alt="listing"/> 
                 <div className='feed-details'>
                     <h3 className='feed-brand'>{capsBrand} {listing.size}</h3>
                     <span className='feed-title'>{listing.title}</span>

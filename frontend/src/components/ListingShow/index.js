@@ -5,7 +5,6 @@ import { fetchListing, getListing } from "../../store/listings";
 import CommentCreate from "../CommentCreate";
 import './ListingShow.css'
 import CommentIndex from "../CommentIndex";
-import { fetchUser, getUser } from "../../store/user";
 import { useHistory } from "react-router-dom";
 
 
@@ -14,16 +13,7 @@ const ListingShow = () => {
     const {listingId} = useParams()
     const listing = useSelector(getListing(listingId))
     const history = useHistory()
-    // const listingOwner = useSelector(getUser(listing.userId))
-
-
-
     const sessionUser = useSelector(state => state.session.user);
-
-
-    // useEffect(() => {
-    //     dispatch(fetchUser(listing.userId))
-    // }, [listing.userId])
 
     useEffect(() => {
         dispatch(fetchListing(listingId))
@@ -51,7 +41,6 @@ const ListingShow = () => {
     
 
     const date = listing.createdAt
-    // const year = date.slice(0,4)
 
 
 
@@ -76,10 +65,6 @@ const ListingShow = () => {
 
     let brand = listing.designerBrand
     let captBrand = capitalize(brand)
-
-    // const handlePress = e => {
-    //     dispatch() //what am i dispatching from here? i want to pass the item into here into /checkout
-    // }
 
     const carat = '>'
 
@@ -142,4 +127,3 @@ const ListingShow = () => {
 
 export default ListingShow
 
-        // {/* <img src={listing.photoURL}></img> */}

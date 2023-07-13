@@ -63,7 +63,6 @@ function Navigation() {
       
         <NavLink  to={`/`} id='home-logo'><img id='top_left_logo' src='https://derailed-seed.s3.us-west-1.amazonaws.com/derailed_gif.gif' /> </NavLink>
         <SearchBar />
-          {/* <img id='top_left_logo' src='https://process.fs.grailed.com/eEumRzf9QyS13BicdH4V' />  */}
         <div className='navbar-right'>
           <ul className='navbar-list'>
             <li className='navbar-links'>
