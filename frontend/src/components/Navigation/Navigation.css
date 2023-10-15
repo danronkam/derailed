@@ -62,7 +62,6 @@ li > a {
   border-bottom: 1px solid lightgray;
   align-items: center;
   display: flex;
-  justify-content: space-between;
   padding-left: 5vw;
   padding-right: 5vw;
 }
@@ -70,4 +69,32 @@ li > a {
 .navbar-right{
   display: flex;
 
+}
+
+@media screen and (max-width: 950px) {
+  .navbar-container{
+    width: 100%;
+  }
+
+  .navbar{
+    justify-content: ;
+  }
+
+  #top_left_logo{
+    max-width: 75px;
+    height: auto;
+    padding-right: 2.5vw;
+  }
+
+  .filterbar-container{
+    display: none;
+  }
+
+  .navbar-right{
+    display: none;
+  }
+
+  .search-container{
+    width: 33vw;
+  }
 }

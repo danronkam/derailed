@@ -19,12 +19,12 @@ import SearchResults from "./components/SearchResults";
 function App() {
   return (
     <>
-    <div className='content-container'>
+    <div className='content-wrapper'>
         <Navigation />   
    
         <FilterBar/>
 
-      
+      <div className="page-container">      
         <Switch>
           <Route exact path="/about">
             <About/>
@@ -74,6 +74,7 @@ function App() {
 
       </div>
     </div>
+  </div>
 
 
     </>

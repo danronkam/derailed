@@ -72,20 +72,22 @@ function Navigation() {
         </div>
       </div>
     </div>
-    {loginModal && (
-            <Modal id='log_in_modal' onClose={() => setLoginModal(false)}>
-            <LoginForm />
-            <p>Don't have an account? <a onClick={handleToggle} className='modal-switch'>Sign Up</a></p>
+    <div className='modal-container'>
+      {loginModal && (
+              <Modal id='log_in_modal' onClose={() => setLoginModal(false)}>
+              <LoginForm />
+              <p>Don't have an account? <a onClick={handleToggle} className='modal-switch'>Sign Up</a></p>
 
-            </Modal>
-        )}
-         {signModal && (
-            <Modal id='sign_up_modal' onClose={() => setSignModal(false)}>
-              <SignUpForm />
-              <p>Already have an account? <a onClick={handleToggle} className='modal-switch'>Click Here</a></p>
-
-            </Modal>
+              </Modal>
           )}
+          {signModal && (
+              <Modal id='sign_up_modal' onClose={() => setSignModal(false)}>
+                <SignUpForm />
+                <p>Already have an account? <a onClick={handleToggle} className='modal-switch'>Click Here</a></p>
+
+              </Modal>
+            )}
+      </div>
     </>
 
   );

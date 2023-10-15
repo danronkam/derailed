@@ -30,11 +30,18 @@ body > #root {
     /* min-height: 100vh; */
 }
 
-.content-container {
+.content-wrapper {
     margin: auto;
     width: 100%;
     height: auto;
     min-height: 100vh;
     /* position: relative; */
     margin-bottom: 10vh;
+}
+
+@media screen and (max-width: 768px) {
+    .content-wrapper{
+        margin: 0;
+        width: 90%;
+    }
 }
