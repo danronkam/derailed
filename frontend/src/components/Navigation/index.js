@@ -10,6 +10,8 @@ import './Navigation.css';
 import { Modal } from '../../context/Modal';
 import LoginForm from '../LoginFormModal/LoginForm';
 import SignUpForm from '../SignUpFormModal/SignUpForm';
+import { slide as Menu } from 'react-burger-menu'
+
 
 function Navigation() {
   const sessionUser = useSelector(state => state.session.user);
@@ -75,9 +77,11 @@ function Navigation() {
           <ul className='navbar-list'>
             <li className='navbar-links'>
               <SignUpFormModal/>
-              
             </li>
           </ul> 
+            <Menu>
+                <a>test</a>
+            </Menu>
         </div>
       </div>
     </div>

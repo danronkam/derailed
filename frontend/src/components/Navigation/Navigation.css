@@ -71,6 +71,18 @@ li > a {
 
 }
 
+.bm-burger-button {
+  position: fixed;
+  width: 36px;
+  height: 30px;
+  left: 90vw;
+  top: 2vh;
+}
+
+.bm-burger-bars {
+  background: #373a47;
+}
+
 @media screen and (max-width: 950px) {
   .navbar-container{
     width: 100%;
