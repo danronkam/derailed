@@ -39,7 +39,7 @@ body > #root {
     margin-bottom: 10vh;
 }
 
-@media screen and (max-width: 768px) {
+@media screen and (max-width: 950px) {
     .content-wrapper{
         margin: 0;
         width: 90%;

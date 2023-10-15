@@ -60,13 +60,22 @@ function Navigation() {
     <>   
     <div className='navbar-container'>
       <div className="navbar"> 
-      
-        <NavLink  to={`/`} id='home-logo'><img id='top_left_logo' src='https://derailed-seed.s3.us-west-1.amazonaws.com/derailed_gif.gif' /> </NavLink>
+        <div className='navImg-wrapper'>
+          <NavLink  to={`/`} id='home-logo'><img id='top_left_logo' src='https://derailed-seed.s3.us-west-1.amazonaws.com/derailed_gif.gif' /> </NavLink>
+        </div>
         <SearchBar />
         <div className='navbar-right'>
           <ul className='navbar-list'>
             <li className='navbar-links'>
               {sessionLinks}
+            </li>
+          </ul> 
+        </div>
+        <div className='navbar-right-mobile'>
+          <ul className='navbar-list'>
+            <li className='navbar-links'>
+              <SignUpFormModal/>
+              
             </li>
           </ul> 
         </div>

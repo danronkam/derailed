@@ -6,7 +6,6 @@
   .search-form {
     display: flex;
     align-items: center;
-    min-width: fit-content;
   }
   
   .search-input:focus, .search-button:focus  {
@@ -49,4 +48,19 @@
 
   .return-home{
     font-style: italic;
+}
+
+@media screen and (max-width: 950px) {
+  .search-input {
+      width: 33vw;
+      border-right: black solid 1px;
+  }
+
+  .search-form{
+    width: 100%;
+  }
+
+  .search-button{
+    display: none;
+  }
 }
