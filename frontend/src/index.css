@@ -39,6 +39,8 @@ body > #root {
     margin-bottom: 10vh;
 }
 
+
+/* Tablet */
 @media screen and (max-width: 950px) {
     .content-wrapper{
         margin: 0;
@@ -47,5 +49,21 @@ body > #root {
 
     .page-container{
         width: 100vw;
+    }
+}
+
+@media screen and (max-width: 970px) {
+
+    .page-container{
+        min-height: 100%;
+        margin-left: 0;
+        padding-bottom: 5vh;
+    }
+
+    #about-container{
+        margin-right: 10vw;
+        margin-left: 0;
+        width: 100vw;
+        border-radius: 0;
     }
 }

@@ -39,16 +39,14 @@ function Slider()  {
          
                 <div className="splash-container"> 
                     <div className="text-wrapper">
-                        <h1>{`${content.title}`}</h1>
-                        <h2>{`${content.sub}`}</h2>
+                        <h1 className="splash-title">{`${content.title}`}</h1>
+                        <h2 className="splash-sub">{`${content.sub}`}</h2>
                         <div className="butt-container">
                             <Link exact to={`${content.butt1.src}`}>{content.butt1.text}</Link>
                             <Link exact to={`${content.butt2.src}`}>{content.butt2.text}</Link>
                         </div>
                         
                     </div>
-
-                    <img src="https://craftsnippets.com/articles_images/placeholder/placeholder.jpg" />
                 </div>
     
 

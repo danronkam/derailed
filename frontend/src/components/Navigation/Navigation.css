@@ -68,7 +68,11 @@ li > a {
 
 .navbar-right{
   display: flex;
+}
 
+
+.navbar-right-mobile{
+  display: none;
 }
 
 .bm-burger-button {
