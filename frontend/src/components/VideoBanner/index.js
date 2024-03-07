@@ -1,5 +1,5 @@
 import React from 'react';
-import './VideoBanner.css'; // Import CSS file for styling
+import './VideoBanner.css'; 
 
 const VideoBanner = ({ videoSrc, title, description, buttonText }) => {
   return (
