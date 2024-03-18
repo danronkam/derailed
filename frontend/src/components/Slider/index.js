@@ -26,29 +26,28 @@ function Slider()  {
          <>
             {isLoading ? (
                 <>
-                    <div className="slider-container loading-container">
+                    <div className="loading-container">
                         <img src="https://derailed-seed.s3.us-west-1.amazonaws.com/ezgif-2-8d83b97af8.gif" />    
                     </div>
 
                 </>
              
             ) : (
-                <div></div>
-            )}
-         
                 <div className="splash-container"> 
                     <div className="text-wrapper">
                         <h1 className="splash-title">{`${content.title}`}</h1>
                         <h2 className="splash-sub">
                             Buy, sell, discover authenticated pieces from the world's top brands.
                         </h2>
-                        <div className="splash-button-container">
-                            <Link exact to={`${content.butt1.src}`} className="splash-button">{content.butt1.text}</Link>
-                            <Link exact to={`${content.butt2.src}`} className="splash-button">{content.butt2.text}</Link>
-                        </div>
-                        
+                    <div className="splash-button-container">
+                        <Link exact to={`${content.butt1.src}`} className="splash-button">{content.butt1.text}</Link>
+                        <Link exact to={`${content.butt2.src}`} className="splash-button">{content.butt2.text}</Link>
                     </div>
+                    
                 </div>
+            </div>
+            )}
+        
     
 
 

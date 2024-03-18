@@ -6,7 +6,6 @@ import './HomePage.css'
 const HomePage =() => {
     return(
         <>
-        <div className='content-container'>
             <div className="slider-container">
                 <Slider/> 
             </div>
@@ -118,7 +117,6 @@ const HomePage =() => {
             <div className="shop-now-container">
 
             </div>
-        </div>
         </>
     )
 }

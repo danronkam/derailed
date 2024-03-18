@@ -11,7 +11,6 @@
 }
 
 
-
 h3 {
     font-weight: 400;
 }
@@ -30,6 +29,8 @@ h3 {
   align-items: center;
   text-align: center;
   color: white;
+  min-height: 70vh;
+  margin-bottom: 10vh;
 }
 
 .splash-button-container{
@@ -50,6 +51,7 @@ h3 {
 
 .splash-button:hover{
   background-color: blue;
+  border: 1px solid blue;
   transition: all .2s ease;
   -webkit-transition: all .2s ease;
 }

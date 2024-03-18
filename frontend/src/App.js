@@ -27,7 +27,7 @@ function App() {
 
 
       <div className="content-container">      
-        <Switch>
+          <Switch>
           <Route exact path="/about">
             <About/>
           </Route>

@@ -63,7 +63,7 @@ function Navigation() {
     <div className='navbar-container'>
       <div className="navbar"> 
         
-          <NavLink  to={`/`} ><img id='top_left_logo' src='https://derailed-seed.s3.us-west-1.amazonaws.com/derailed_gif.gif' /> </NavLink>
+        <NavLink  to={`/`} ><img id='top_left_logo' src='https://derailed-seed.s3.us-west-1.amazonaws.com/derailed_gif.gif' /> </NavLink>
        
         <SearchBar />
         <div className='navbar-right'>
