@@ -53,6 +53,9 @@ li > a {
   width: 100%;
 }
 
+.logo-Hover{
+  cursor: pointer;
+}
 
 .navbar {
   display: flex;

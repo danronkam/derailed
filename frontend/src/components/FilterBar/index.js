@@ -10,7 +10,9 @@ function FilterBar() {
             <div className='filterbar'>
                     <div className="filter-list-items">
                         <div className='dropdown'>
-                            <button className='dropdown-button'> DESIGNERS  
+                            <button className='dropdown-button filter-heading'> 
+                                DESIGNERS
+                                <i className="fa-solid fa-caret-down" />  
                             </button>
                                 <div className='dropdown-content'>
                                     <Link to={`/shop/:Balenciaga`}> Balenciaga </Link>
@@ -25,8 +27,9 @@ function FilterBar() {
                     </div>
                     <div className="filter-list-items">
                         <div className='dropdown'>
-                            <button className='dropdown-button'> CATEGORIES  
-                                <i className="fa-solid fa-caret-down"></i>
+                            <button className='dropdown-button filter-heading'> 
+                                CATEGORIES  
+                                <i className="fa-solid fa-caret-down" />
                             </button>
                                 <div className='dropdown-content'>
                                     <Link to={`/shop`}> ALL CATEGORIES</Link>
@@ -42,10 +45,18 @@ function FilterBar() {
                         </div>
                     </div>
                     <div className="filter-list-items">
-                        <Link to={`/shop/menswear/:Sneakers`} > <button className='filter-bar-links click'>SNEAKERS </button> </Link>
+                        <Link to={`/shop/menswear/:Sneakers`} > 
+                            <button className='filter-bar-links click filter-heading'>
+                                SNEAKERS 
+                            </button> 
+                        </Link>
                     </div>
                     <div className="filter-list-items">
-                        <Link to={`/shop`}> <button className='filter-bar-links click'> STAFF PICKS </button> </Link>
+                        <Link to={`/shop`}> 
+                            <button className='filter-bar-links click filter-heading'> 
+                                STAFF PICKS 
+                            </button> 
+                        </Link>
                     </div>
             </div>
         </div>

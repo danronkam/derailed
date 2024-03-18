@@ -34,18 +34,12 @@ function ProfileButton({ user }) {
     <>
     <div className='dropdown'>
       <button className='dropdown-button'>
-        <i className="fas fa-user-circle"></i>
+        <i className="fas fa-user-circle logo-Hover"></i>
       </button>
       <div className='dropdown-content'>
         <ul className="">
             <Link to={`/myprofile`} userid={userId}>My Profile</Link>
             <Link to={`/myprofile/edit`}>Settings</Link>
-            {/* <p>test</p>
-            <li>{user.username}</li>
-            <li>{user.email}</li>
-            <li>
-              <button onClick={logout}>Log Out</button>
-            </li> */}
           </ul>
       </div>
 

@@ -1,16 +1,12 @@
 .filterbar {
-    height: 3.5vh;
-    background-color: white;
-    position: absolute;
-    left: 0;
-    width: 100vw;
-    border-bottom: 1px solid lightgray;
-    align-items: center;
-    justify-content: space-between;
     display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: yellow;
+    border-bottom: 1px solid lightgray;
+    border-top: 1px solid lightgray;
+    padding-top: 1vh;
     padding-bottom: 1vh;
-    padding-left: 5vw;
-    padding-right: 5vw;
 }
 
 .click{
@@ -43,6 +39,11 @@ button {
     background-color: inherit;
     font-family: 'Inter', sans-serif;
     margin: 0; /* Important for vertical align on mobile phones */
+}
+
+.filter-heading{
+  font-weight: normal;
+  cursor: pointer;
 }
 
 .filter-bar-links:hover {
