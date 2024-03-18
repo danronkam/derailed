@@ -6,7 +6,6 @@ body {
 }
 
 body > #root {
-    max-width: 1280px;
     margin: auto;
     font-weight: 400;
     font-style: normal;
@@ -19,6 +18,11 @@ body > #root {
     line-height: 25px;
     width: 100%;
     height: 100%;
+}
+
+.global-heading{
+
+    
 }
 
 .content-wrapper {
