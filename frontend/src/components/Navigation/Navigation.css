@@ -14,7 +14,6 @@ li > a {
 #top_left_logo {
   height: 7vh;
   width: auto;
-  margin-left: 5%;
 }
 
 .navbar-list{
@@ -50,20 +49,17 @@ li > a {
  color: blue;
 }
 
+.navbar-container{
+  width: 100%;
+}
+
 
 .navbar {
-  z-index: 9999;
-  background-color: white;
-  position: fixed;
-  top: 0;
-  left: 0;
-  width: 100vw;
-  height: 7vh;
-  border-bottom: 1px solid lightgray;
-  align-items: center;
   display: flex;
-  padding-left: 5vw;
-  padding-right: 5vw;
+  justify-content: space-between;
+  align-items: center;
+  background-color: red;
+  z-index: 999999;
 }
 
 .navbar-right{

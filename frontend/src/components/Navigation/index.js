@@ -5,7 +5,7 @@ import ProfileButton from './ProfileButton';
 import LoginFormModal from '../LoginFormModal';
 import SignUpFormModal from '../SignUpFormModal';
 import SearchBar from '../SearchBar';
-import { Link, useHistory } from 'react-router-dom';
+import { Link } from 'react-router-dom';
 import './Navigation.css';
 import { Modal } from '../../context/Modal';
 import LoginForm from '../LoginFormModal/LoginForm';
@@ -62,9 +62,9 @@ function Navigation() {
     <>   
     <div className='navbar-container'>
       <div className="navbar"> 
-        <div className='navImg-wrapper'>
-          <NavLink  to={`/`} id='home-logo'><img id='top_left_logo' src='https://derailed-seed.s3.us-west-1.amazonaws.com/derailed_gif.gif' /> </NavLink>
-        </div>
+        
+          <NavLink  to={`/`} ><img id='top_left_logo' src='https://derailed-seed.s3.us-west-1.amazonaws.com/derailed_gif.gif' /> </NavLink>
+       
         <SearchBar />
         <div className='navbar-right'>
           <ul className='navbar-list'>

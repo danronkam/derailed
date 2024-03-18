@@ -19,12 +19,12 @@ import SearchResults from "./components/SearchResults";
 function App() {
   return (
     <>
-    <div className='content-wrapper'>
+    <div className='page-wrapper'>
         <Navigation />   
    
         <FilterBar/>
 
-      <div className="page-container">      
+      <div className="content-container">      
         <Switch>
           <Route exact path="/about">
             <About/>
