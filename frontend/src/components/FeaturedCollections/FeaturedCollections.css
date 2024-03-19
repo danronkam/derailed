@@ -1,0 +1,14 @@
+.collections-container{
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 1fr 1fr;
+    /* gap: 10px; */
+
+}
+
+.featured-item{
+    background-color: red;
+    border: 2px solid black;
+    max-width: 550px;
+
+}
