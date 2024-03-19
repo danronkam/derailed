@@ -34,12 +34,12 @@ const FeaturedCollections = () => {
         <h1 className="homepage-titles">
             Featured Collections & Stories
         </h1>
-        
+
         <div className="collections-container">
 
             <div className="featured-item">
                 <a className="featured-link" href="http://www.google.com" target="_blank">
-                    <img src="https://t3.ftcdn.net/jpg/02/48/42/64/360_F_248426448_NVKLywWqArG2ADUxDq6QprtIzsF82dMF.jpg">
+                    <img className="featured-item-img" src="https://t3.ftcdn.net/jpg/02/48/42/64/360_F_248426448_NVKLywWqArG2ADUxDq6QprtIzsF82dMF.jpg">
 
                     </img>
                     <div className="featured-item-desc">
@@ -47,9 +47,9 @@ const FeaturedCollections = () => {
                             trend report
                         </h2>
         
-                        <Link className="" exact to="/mens">
+                        <button className="featured-button" exact to="/mens">
                             READ MORE
-                        </Link>
+                        </button>
                     </div>
 
                 </a>
